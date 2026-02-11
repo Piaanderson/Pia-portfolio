@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /case-study/
+
+User-agent: Googlebot-Image
+Disallow: /case-study/
+Disallow: /images/case-study-*
