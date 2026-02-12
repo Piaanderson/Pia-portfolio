@@ -4,198 +4,7 @@ import { ArrowLeft, ArrowRight, Download, Menu } from "lucide-react";
 import type { Metadata } from "next";
 import { PasswordGate } from "@/components/password-gate";
 import { CaseStudySidebar } from "@/components/case-study-sidebar";
-
-/* ------------------------------------------------------------------ */
-/*  Data types                                                         */
-/* ------------------------------------------------------------------ */
-
-type Testimonial = {
-  quote: string;
-  name: string;
-  title: string;
-};
-
-type NarrativeSection = {
-  label: string;
-  heading: string;
-  paragraphs: string[];
-  image?: { src: string; alt: string; caption?: string };
-  testimonial?: Testimonial;
-  principles?: { title: string; description: string }[];
-};
-
-type CaseStudyData = {
-  slug: string;
-  title: string;
-  subtitle: string;
-  type: "hands-on" | "leadership";
-  heroImage: string;
-  intro: string;
-  impact: string;
-  role: string;
-  team: string;
-  timeline: string;
-  frameworkIntro: string;
-  frameworkParts: { label: string; description: string }[];
-  sections: NarrativeSection[];
-  outcomes: { metric: string; description: string }[];
-  reflection: string;
-  nextSlug?: string;
-  nextTitle?: string;
-};
-
-/* ------------------------------------------------------------------ */
-/*  Case study catalogue                                               */
-/* ------------------------------------------------------------------ */
-
-const caseStudyNav = [
-  { slug: "ai-dashboard-redesign", label: "AI Dashboard Redesign", type: "Hands-On" },
-  { slug: "design-system-scale", label: "Design System at Scale", type: "Hands-On" },
-  { slug: "team-transformation", label: "Team Transformation", type: "Leadership" },
-];
-
-const caseStudies: Record<string, CaseStudyData> = {
-  "ai-dashboard-redesign": {
-    slug: "ai-dashboard-redesign",
-    title: "Redesigning an AI Analytics Platform for Every User",
-    subtitle: "Enterprise SaaS Platform",
-    type: "hands-on",
-    heroImage: "/images/case-study-ai-dashboard.jpg",
-    intro:
-      "A Fortune 500 client needed their AI analytics platform redesigned to serve both technical and non-technical users. The existing dashboard was powerful but impenetrable\u2014new users took 2 weeks of training before they could complete basic tasks. Within a year I led the end-to-end redesign, from research through final delivery, creating a system that adapts to each user\u2019s level of expertise.",
-    impact:
-      "Reduced new-user onboarding from 2 weeks to 3 days while maintaining a 92% satisfaction score among power users.",
-    role: "Lead Designer (IC)",
-    team: "2 designers, 1 researcher, 6 engineers",
-    timeline: "4 months",
-    frameworkIntro: "My approach to this redesign had four phases:",
-    frameworkParts: [
-      {
-        label: "DISCOVER",
-        description:
-          "Understand who we were really designing for through deep user research across 4 segments.",
-      },
-      {
-        label: "FRAME",
-        description:
-          "Develop a progressive disclosure framework that organizes complexity into three tiers of user maturity.",
-      },
-      {
-        label: "DESIGN",
-        description:
-          "Move from sketches to interactive prototypes, testing at each fidelity level with real users.",
-      },
-      {
-        label: "VALIDATE",
-        description:
-          "Run a controlled beta with 200 users, measure impact, iterate on feedback before full rollout.",
-      },
-    ],
-    sections: [
-      {
-        label: "DISCOVER",
-        heading: "Understanding who we were really designing for",
-        paragraphs: [
-          "The existing platform tried to serve everyone and ended up serving no one. Power users felt slowed down by guardrails, while newcomers drowned in data density. Before touching a single wireframe, I needed to understand the mental models at play.",
-          "I conducted 24 user interviews across 4 customer segments\u2014data scientists, business analysts, C-suite executives, and operations managers. Each group had fundamentally different needs, vocabulary, and thresholds for complexity.",
-          "The interviews revealed something critical: the problem wasn\u2019t too many features, it was that the interface made no distinction between a first-time viewer and a daily power user.",
-        ],
-        image: {
-          src: "/images/case-study-research.jpg",
-          alt: "Research synthesis wall with affinity-mapped findings",
-          caption:
-            "Affinity mapping findings from 24 user interviews across 4 segments.",
-        },
-        testimonial: {
-          quote:
-            "Pia has this rare ability to sit with ambiguity during research without rushing to solutions. The depth of understanding she built before designing a single screen is what made the final product so strong.",
-          name: "Jordan Mercer",
-          title: "VP of Product, Client Organization",
-        },
-      },
-      {
-        label: "FRAME",
-        heading: "A progressive disclosure framework",
-        paragraphs: [
-          "The core insight from research was that every user falls on a spectrum of analytical sophistication\u2014and their needs change over time. A rigid beginner/expert toggle wouldn\u2019t work.",
-          "Instead, I developed a progressive disclosure framework that organized every feature into three tiers based on frequency of use and user maturity. Tier 1 included the daily essentials visible to everyone by default. Tier 2 surfaced weekly workflows that appeared contextually. Tier 3 held advanced configuration and deep analytics, accessible but never in the way.",
-          "This framework became the shared language between design and engineering for every decision that followed.",
-        ],
-        principles: [
-          {
-            title: "Contextual complexity",
-            description:
-              "Features reveal themselves when the user\u2019s context signals readiness, not through menus or toggles.",
-          },
-          {
-            title: "No dead ends",
-            description:
-              "Every simplified view includes a clear path to the full-power version when needed.",
-          },
-          {
-            title: "AI as invisible guide",
-            description:
-              "The system observes behavior patterns and adapts the interface over time\u2014without the user needing to configure anything.",
-          },
-        ],
-      },
-      {
-        label: "DESIGN",
-        heading: "From wireframes to a living prototype",
-        paragraphs: [
-          "I designed an AI-assisted onboarding flow that adapted to user behavior, surfacing relevant features at the right moment rather than front-loading a tutorial. The first session was completely restructured: instead of a feature tour, users encountered a guided first task that taught the interface through doing.",
-          "I worked through 3 rounds of increasing fidelity\u2014starting with paper sketches to nail information hierarchy, moving to interactive Figma prototypes for flow validation, and finally building a coded prototype with the engineering team to test real data scenarios.",
-          "Each round was tested with users from all 4 segments.",
-        ],
-        image: {
-          src: "/images/case-study-prototype.jpg",
-          alt: "High-fidelity prototype of the redesigned dashboard",
-          caption:
-            "The final dashboard design adapting its layout based on user tier and behavior.",
-        },
-        testimonial: {
-          quote:
-            "What impressed me most was how Pia brought engineering in early. By the time we were building, there were no surprises. The prototype she created with our team was nearly production-ready.",
-          name: "Sam Okafor",
-          title: "Senior Engineering Manager",
-        },
-      },
-      {
-        label: "VALIDATE",
-        heading: "Measuring what matters",
-        paragraphs: [
-          "We ran a 3-week beta with 200 users split across the old and new experiences. The results validated every design decision\u2014but also surfaced two areas where power users needed additional keyboard shortcuts we hadn\u2019t anticipated. We iterated in-sprint and re-tested before full rollout.",
-          "Beyond the quantitative wins, the qualitative feedback shift was even more telling. Support tickets about \u201cI can\u2019t find X\u201d dropped by 75%. Users stopped asking for training sessions and started exploring on their own.",
-        ],
-      },
-    ],
-    outcomes: [
-      {
-        metric: "40%",
-        description:
-          "improvement in task completion rate for new users in their first week",
-      },
-      {
-        metric: "3 days",
-        description: "average onboarding time, down from 2 weeks",
-      },
-      {
-        metric: "92%",
-        description:
-          "post-launch satisfaction score from existing power users",
-      },
-      {
-        metric: "2x",
-        description:
-          "increase in daily active usage of advanced analytics features",
-      },
-    ],
-    reflection:
-      "This project reinforced my belief that the best AI-powered tools are the ones that get out of the way. The biggest unlock wasn\u2019t adding more intelligence to the interface\u2014it was removing decisions the user didn\u2019t need to make. The AI worked best when it was invisible, quietly adapting the experience to each user\u2019s context. If I could do one thing differently, I\u2019d have started the engineering prototype collaboration even earlier. The technical feasibility conversations in phase 3 were invaluable, and having them sooner would have accelerated the whole timeline.",
-    nextSlug: "design-system-scale",
-    nextTitle: "Design System at Scale",
-  },
-};
+import { caseStudyNav, getCaseStudyBySlug } from "@/lib/case-studies";
 
 /* ------------------------------------------------------------------ */
 /*  Metadata                                                           */
@@ -207,7 +16,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const study = caseStudies[slug];
+  const study = getCaseStudyBySlug(slug);
   return {
     title: study
       ? `${study.title} | Pia Anderson`
@@ -236,7 +45,7 @@ export default async function CaseStudyPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const study = caseStudies[slug];
+  const study = getCaseStudyBySlug(slug);
 
   if (!study) {
     return (
@@ -331,15 +140,27 @@ export default async function CaseStudyPage({
               <h1 className="mt-5 font-serif text-4xl font-bold leading-[1.08] text-foreground md:text-5xl lg:text-6xl xl:text-7xl text-balance">
                 {study.title}
               </h1>
+              {study.subhead && (
+                <p className="mt-4 max-w-3xl text-lg leading-relaxed text-foreground/80 md:text-xl">
+                  {study.subhead}
+                </p>
+              )}
             </div>
           </section>
 
           {/* ---- INTRO + METADATA ---- */}
           <section className="px-6 py-12 md:px-10 md:py-20">
             <div className="max-w-5xl">
-              <p className="max-w-3xl text-lg leading-[1.75] text-foreground/80 md:text-xl md:leading-[1.75]">
-                {study.intro}
-              </p>
+              <div className="max-w-3xl">
+                {study.intro.split("\n\n").map((paragraph) => (
+                  <p
+                    key={paragraph}
+                    className="mt-6 text-lg leading-[1.75] text-foreground/80 first:mt-0 md:text-xl md:leading-[1.75]"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
 
               <div className="mt-16 grid gap-10 border-t border-border pt-10 md:grid-cols-[3fr_2fr]">
                 <div>
