@@ -2,51 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PasswordGate } from "@/components/password-gate";
+import { caseStudies } from "@/lib/case-studies";
 
-type CaseStudy = {
-  slug: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string;
-  tags: string[];
-  type: "hands-on" | "leadership";
-};
-
-const caseStudies: CaseStudy[] = [
-  {
-    slug: "ai-dashboard-redesign",
-    title: "AI Dashboard Redesign",
-    subtitle: "Enterprise SaaS Platform",
-    description:
-      "Led the end-to-end redesign of an AI-powered analytics dashboard, improving task completion rates by 40% and reducing onboarding time from 2 weeks to 3 days.",
-    image: "/images/case-study-ai-dashboard.jpg",
-    tags: ["UX Strategy", "AI/ML", "Research", "Hands-On Design"],
-    type: "hands-on",
-  },
-  {
-    slug: "design-system-scale",
-    title: "Design System at Scale",
-    subtitle: "Cross-Platform Component Library",
-    description:
-      "Built and scaled a design system adopted by 12 product teams, reducing design-to-dev handoff time by 60% and establishing a shared design language across web and mobile.",
-    image: "/images/case-study-design-system.jpg",
-    tags: ["Design Systems", "Leadership", "Ops"],
-    type: "leadership",
-  },
-  {
-    slug: "team-transformation",
-    title: "UX Team Transformation",
-    subtitle: "Org Design & Culture",
-    description:
-      "Grew a UX team from 3 to 18 designers, establishing career ladders, rituals, and a research practice that elevated design's influence at the executive level.",
-    image: "/images/case-study-leadership.jpg",
-    tags: ["Team Building", "Mentorship", "Culture"],
-    type: "leadership",
-  },
-];
-
-function TypeBadge({ type }: { type: CaseStudy["type"] }) {
+function TypeBadge({ type }: { type: "hands-on" | "leadership" }) {
   const styles =
     type === "hands-on"
       ? "bg-pink/10 text-pink border-pink/20"
