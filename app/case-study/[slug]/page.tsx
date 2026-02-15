@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { PasswordGate } from "@/components/password-gate";
 import { CaseStudySidebar } from "@/components/case-study-sidebar";
 import { caseStudyNav, getCaseStudyBySlug } from "@/lib/case-studies";
+import { CaseStudyLightbox } from "@/components/case-study-lightbox";
 
 /* ------------------------------------------------------------------ */
 /*  Metadata                                                           */
@@ -161,33 +162,221 @@ export default async function CaseStudyPage({
                   </p>
                 ))}
               </div>
+              {study.introFollowup && (
+                <p className="mt-6 text-lg leading-[1.75] text-foreground/80 md:text-xl md:leading-[1.75]">
+                  {study.introFollowup}
+                </p>
+              )}
+
+              {slug === "design-system-scale" && (
+                <div className="mt-10">
+                  <div className="grid gap-6 sm:grid-cols-3">
+                    {[
+                      { metric: "240", label: "PMs, Devs & QAs upskilled" },
+                      { metric: "1 → 5", label: "UX maturity progression" },
+                      { metric: "1st", label: "unified design system" },
+                    ].map((item) => (
+                      <div
+                        key={item.label}
+                        className="glass rounded-xl p-6 md:p-8"
+                      >
+                        <p className="text-3xl font-bold gradient-text md:text-4xl">
+                          {item.metric}
+                        </p>
+                        <p className="mt-2 text-sm font-medium uppercase tracking-widest text-muted-foreground">
+                          {item.label}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {slug === "ai-dashboard-redesign" && (
+                <div className="mt-10">
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">
+                    18 months post-release
+                  </p>
+                  <div className="mt-6 grid gap-6 sm:grid-cols-3">
+                    {[
+                      { metric: "18,000", label: "Agents created" },
+                      { metric: "3,600+", label: "Workflows built" },
+                      { metric: "4,600", label: "Active consultant users" },
+                    ].map((item) => (
+                      <div
+                        key={item.label}
+                        className="glass rounded-xl p-6 md:p-8"
+                      >
+                        <p className="text-3xl font-bold gradient-text md:text-4xl">
+                          {item.metric}
+                        </p>
+                        <p className="mt-2 text-sm font-medium uppercase tracking-widest text-muted-foreground">
+                          {item.label}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="mt-16 grid gap-10 border-t border-border pt-10 md:grid-cols-[3fr_2fr]">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
-                    Impact
-                  </p>
-                  <p className="mt-3 text-lg leading-relaxed text-foreground">
-                    {study.impact}
-                  </p>
-                </div>
-                <div className="flex flex-col gap-8">
-                  {[
-                    { label: "Role", value: study.role },
-                    { label: "Team", value: study.team },
-                    { label: "Timeline", value: study.timeline },
-                  ].map((meta) => (
-                    <div key={meta.label}>
-                      <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
-                        {meta.label}
-                      </p>
-                      <p className="mt-2 text-base text-foreground">{meta.value}</p>
+                {study.impactHighlights && study.impactHeading ? (
+                  <>
+                    <div className="flex flex-col gap-8">
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                          {study.impactHeading}
+                        </p>
+                        <div className="mt-4 flex flex-col gap-3">
+                          {study.impactHighlights.map((group) => (
+                            <div key={group.label}>
+                              <ul className="space-y-3 text-base text-foreground">
+                                {group.items.map((item) => (
+                                  <li key={item}>{item}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                  ))}
-                </div>
+                    <div className="flex flex-col gap-8">
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                          Role
+                        </p>
+                        {Array.isArray(study.roleDetail) ? (
+                          <ul className="mt-3 space-y-0 text-base leading-relaxed text-foreground">
+                            {study.roleDetail.map((item) => (
+                              <li key={item}>{item}</li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <p className="mt-3 text-base text-foreground">
+                            {study.roleDetail || study.role}
+                          </p>
+                        )}
+                      </div>
+                      <div>
+                        {study.teamTimeline ? (
+                          <div className="mt-1 space-y-6">
+                            <div>
+                              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                                Team
+                              </p>
+                              <p className="mt-2 text-base text-foreground">
+                                {study.teamTimeline[0]}
+                              </p>
+                            </div>
+                            <div>
+                              <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                                Timeline
+                              </p>
+                              <p className="mt-2 text-base text-foreground">
+                                {study.teamTimeline[1]}
+                              </p>
+                            </div>
+                          </div>
+                        ) : (
+                          <div>
+                            <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                              Team &amp; timeline
+                            </p>
+                            <div className="mt-4 space-y-4">
+                              {[
+                                { label: "Team", value: study.team },
+                                { label: "Timeline", value: study.timeline },
+                              ].map((meta) => (
+                                <div key={meta.label}>
+                                  <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                                    {meta.label}
+                                  </p>
+                                  <p className="mt-2 text-base text-foreground">
+                                    {meta.value}
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                        Impact
+                      </p>
+                      <p className="mt-3 text-lg leading-relaxed text-foreground">
+                        {study.impact}
+                      </p>
+                    </div>
+                    <div className="flex flex-col gap-8">
+                      {[
+                        { label: "Role", value: study.role },
+                        { label: "Team", value: study.team },
+                        { label: "Timeline", value: study.timeline },
+                      ].map((meta) => (
+                        <div key={meta.label}>
+                          <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                            {meta.label}
+                          </p>
+                          <div className="mt-2 space-y-1.5 text-base text-foreground">
+                            {meta.value.split("\n").map((line) => (
+                              <p key={line}>{line}</p>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </section>
+
+          {(study.problem || study.constraints) && (
+            <section className="px-6 py-12 md:px-10 md:py-16 border-t border-border/30">
+              <div className="max-w-5xl">
+                <div className="grid gap-12 md:grid-cols-[240px_1fr] md:gap-14 lg:grid-cols-[280px_1fr] lg:gap-20">
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-pink">
+                      The problem
+                    </p>
+                    <h2 className="mt-4 font-serif text-2xl font-bold text-foreground md:text-3xl lg:text-4xl">
+                      The problem
+                    </h2>
+                  </div>
+                  <div className="flex flex-col gap-10">
+                    {study.problem && (
+                      <div className="flex flex-col gap-6">
+                        {study.problem.map((paragraph) => (
+                          <p
+                            key={paragraph}
+                            className="text-lg leading-[1.75] text-foreground/80 md:text-xl md:leading-[1.75]"
+                          >
+                            {paragraph}
+                          </p>
+                        ))}
+                      </div>
+                    )}
+                    {study.constraints && (
+                      <div>
+                        <p className="text-xs font-bold uppercase tracking-[0.2em] text-pink">
+                          Constraints
+                        </p>
+                        <ul className="mt-4 space-y-4 text-base text-foreground">
+                          {study.constraints.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
 
           {/* ---- FRAMEWORK ---- */}
           <section className="px-6 py-8 md:px-10 md:py-12">
@@ -233,32 +422,110 @@ export default async function CaseStudyPage({
                     <h2 className="mt-4 font-serif text-2xl font-bold leading-snug text-foreground md:text-3xl lg:text-4xl text-balance">
                       {section.heading}
                     </h2>
+                    {section.subhead && (
+                      <p className="mt-3 text-sm font-medium text-muted-foreground">
+                        {section.subhead}
+                      </p>
+                    )}
                   </div>
 
                   {/* Right: prose */}
                   <div className="flex flex-col gap-8">
-                    {section.paragraphs.map((p, j) => (
-                      <p key={j} className="text-lg leading-[1.75] text-foreground/80">
-                        {p}
+                    {section.paragraphs.map((p, j) => {
+                      const hasBullets = p.includes("\n* ") || p.startsWith("* ");
+                      if (!hasBullets) {
+                        return (
+                          <p key={j} className="text-lg leading-[1.75] text-foreground/80">
+                            {p}
+                          </p>
+                        );
+                      }
+
+                      const normalized = p.startsWith("* ") ? `\n${p}` : p;
+                      const [lead, ...items] = normalized.split("\n* ");
+                      const filteredItems = items.filter(Boolean);
+                      return (
+                        <div key={j} className="flex flex-col gap-4">
+                          {lead && (
+                            <p className="text-lg leading-[1.75] text-foreground/80">
+                              {lead}
+                            </p>
+                          )}
+                          <ul className="list-disc space-y-2 pl-5 text-lg leading-[1.75] text-foreground/80">
+                            {filteredItems.map((item) => (
+                              <li key={item}>{item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      );
+                    })}
+
+                    {section.decisionList && (
+                      <ol className="list-decimal space-y-4 pl-5 text-lg leading-[1.75] text-foreground/80">
+                        {section.decisionList.map((decision) => (
+                          <li key={decision.title}>
+                            <p>{decision.title}</p>
+                            <ul className="mt-3 list-disc space-y-2 pl-5 text-lg leading-[1.75] text-foreground/80">
+                              {decision.bullets.map((bullet) => (
+                                <li key={bullet}>{bullet}</li>
+                              ))}
+                            </ul>
+                          </li>
+                        ))}
+                      </ol>
+                    )}
+
+                    {section.phaseCards && (
+                      <div className="mt-4 grid gap-6 sm:grid-cols-3">
+                        {section.phaseCards.map((card) => (
+                          <div
+                            key={card.label}
+                            className="glass rounded-xl p-6 md:p-8"
+                          >
+                            <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                              {card.label}
+                            </p>
+                            <p className="mt-3 text-base leading-relaxed text-foreground">
+                              {card.description}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {section.outro && (
+                      <p className="text-lg leading-[1.75] text-foreground/80">
+                        {section.outro}
                       </p>
-                    ))}
+                    )}
 
                     {section.image && (
-                      <figure className="mt-4">
-                        <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
-                          <Image
+                      <>
+                        {section.image.src ===
+                        "/case_study_images/AgentOS%20-%20Journey%20_%20Simple%20Tasks%20to%20Be%20Done%20for%20End%20User.svg" ? (
+                          <CaseStudyLightbox
                             src={section.image.src || "/placeholder.svg"}
                             alt={section.image.alt}
-                            fill
-                            className="object-cover"
+                            caption={section.image.caption}
                           />
-                        </div>
-                        {section.image.caption && (
-                          <figcaption className="mt-3 text-sm text-muted-foreground">
-                            {section.image.caption}
-                          </figcaption>
+                        ) : (
+                          <figure className="mt-4">
+                            <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
+                              <Image
+                                src={section.image.src || "/placeholder.svg"}
+                                alt={section.image.alt}
+                                fill
+                                className="object-cover"
+                              />
+                            </div>
+                            {section.image.caption && (
+                              <figcaption className="mt-3 text-sm text-muted-foreground">
+                                {section.image.caption}
+                              </figcaption>
+                            )}
+                          </figure>
                         )}
-                      </figure>
+                      </>
                     )}
 
                     {section.principles && (
@@ -266,7 +533,7 @@ export default async function CaseStudyPage({
                         {section.principles.map((principle) => (
                           <div
                             key={principle.title}
-                            className="glass glass-hover rounded-xl p-6 md:p-8"
+                            className="glass rounded-xl p-6 md:p-8"
                           >
                             <h3 className="text-base font-semibold text-foreground">
                               {principle.title}
@@ -320,11 +587,24 @@ export default async function CaseStudyPage({
                     Outcomes
                   </h2>
                 </div>
-                <div className="grid gap-6 sm:grid-cols-2">
+                <div className="flex flex-col gap-8">
+                  {slug === "ai-dashboard-redesign" && (
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground md:text-xl">
+                        Success = sustained use by non-technical consultants
+                      </h3>
+                      <p className="mt-4 text-lg leading-[1.75] text-foreground/80">
+                        This product only succeeds if consultants use it repeatedly
+                        in delivery and can translate real engagement needs into
+                        workflows without technical dependency.
+                      </p>
+                    </div>
+                  )}
+                  <div className="grid gap-6 sm:grid-cols-2">
                   {study.outcomes.map((outcome) => (
                     <div
                       key={outcome.metric}
-                      className="glass glass-hover rounded-xl p-8"
+                      className="glass rounded-xl p-8"
                     >
                       <p className="text-4xl font-bold gradient-text md:text-5xl">
                         {outcome.metric}
@@ -334,6 +614,7 @@ export default async function CaseStudyPage({
                       </p>
                     </div>
                   ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -351,9 +632,16 @@ export default async function CaseStudyPage({
                     Reflection
                   </h2>
                 </div>
-                <p className="text-lg leading-[1.75] text-foreground/80">
-                  {study.reflection}
-                </p>
+                <div className="flex flex-col gap-6">
+                  {study.reflection.split("\n\n").map((paragraph) => (
+                    <p
+                      key={paragraph}
+                      className="text-lg leading-[1.75] text-foreground/80"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
