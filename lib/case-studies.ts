@@ -400,7 +400,8 @@ export const caseStudies: CaseStudyData[] = [
   },
   {
     slug: "team-transformation",
-    title: "UX Team Transformation",
+    title: "Design Org in Hypergrowth",
+    subhead: "Scaling PwC Digital UX from 7 to 130 designers in under 2 years",
     subtitle: "Org Design & Culture",
     description:
       "Grew a UX team from 3 to 18 designers, establishing career ladders, rituals, and a research practice that elevated design's influence at the executive level.",
@@ -409,17 +410,118 @@ export const caseStudies: CaseStudyData[] = [
     type: "leadership",
     heroImage: "/images/case-study-leadership.jpg",
     intro:
-      "A Fortune 500 client needed their AI analytics platform redesigned to serve both technical and non-technical users. The existing dashboard was powerful but impenetrable--new users took 2 weeks of training before they could complete basic tasks. Within a year I led the end-to-end redesign, from research through final delivery, creating a system that adapts to each user's level of expertise.",
+      "Hypergrowth breaks teams when culture is left to chance. I treated our design org like a product and built an operating system for people, so we could scale without losing quality or identity.\n\nFrom hiring and onboarding to community rituals, learning programs, and leadership norms, I helped create the structures that made a 130 person UX org feel like one team. We clarified what we stand for through a manifesto, created weekly spaces to share work and whiteboard together, and launched shadowing so newer designers could learn intentionally from specialists. The goal was consistency where it matters, and humanity everywhere else.",
     impact:
-      "Reduced new-user onboarding from 2 weeks to 3 days while maintaining a 92% satisfaction score among power users.",
-    role: "Lead Designer (IC)",
-    team: "2 designers, 1 researcher, 6 engineers",
-    timeline: "4 months",
+      "Grew PwC Digital UX from 7 to 130 in under 2 years while strengthening culture, craft, and consistency",
+    role: "UX Director\nOwned the operating model across hiring, onboarding, community, and enablement",
+    team: "Grew to 5 UX Directors",
+    timeline: "20 months",
     frameworkIntro: "My approach to this redesign had four phases:",
-    frameworkParts: sharedFrameworkParts,
-    sections: sharedSections,
-    outcomes: sharedOutcomes,
-    reflection: sharedReflection,
+    frameworkParts: [
+      {
+        label: "DISCOVER",
+        description:
+          "Map where inconsistency showed up and what the team needed to scale with confidence.",
+      },
+      {
+        label: "FRAME",
+        description:
+          "Define shared standards for quality, fairness, and \"how we work\" so growth did not dilute the bar.",
+      },
+      {
+        label: "DESIGN",
+        description:
+          "Build repeatable systems across hiring, onboarding, community rituals, and learning pathways.",
+      },
+      {
+        label: "VALIDATE",
+        description:
+          "Run it in real hiring and delivery cycles, then refine as the org multiplied.",
+      },
+    ],
+    sections: [
+      {
+        label: "DISCOVER",
+        heading: "Understanding what a small team was doing by instinct",
+        paragraphs: [
+          "When we were seven, the team operated on trust, shared context, and informal habits. It worked because everyone knew everyone. As demand increased, those same informal habits started to show cracks.",
+          "What I noticed early:\n* Interview experiences varied widely, often without a planned agenda\n* Second interview handoffs were thin, which led to repeated questions and uneven evaluation\n* Onboarding relied on tribal knowledge and who you happened to meet first\n* As headcount accelerated, we needed rituals to keep craft visible and community real",
+          "What I did:\n* Partnered with design leads to inventory the existing \"unwritten process\"\n* Identified the moments where inconsistency could create quality risk and fairness risk\n* Defined the outcomes we wanted from scale: consistent evaluation, faster ramp, stronger belonging, and a culture that could survive multiple layers of management",
+        ],
+      },
+      {
+        label: "FRAME",
+        heading: "Principles that guided every system we built",
+        paragraphs: [
+          "Before building artifacts, I aligned leadership on shared principles. This kept the work from becoming \"more process\" and ensured everything we introduced reinforced the culture we wanted.",
+          "The principles we aligned on:\n* Fair and consistent candidate experience\n* Clear expectations and transparent decision making\n* Designers are empowered partners, not order takers\n* Craft stays visible through community and critique\n* Learning is intentional, not accidental\n* Scale should feel supportive, not bureaucratic",
+        ],
+        principles: [
+          {
+            title: "Consistency builds trust",
+            description: "",
+          },
+          {
+            title: "Culture must be designed",
+            description: "",
+          },
+          {
+            title: "Rituals scale better than rules",
+            description: "",
+          },
+        ],
+      },
+      {
+        label: "DESIGN",
+        heading: "The operating system we built across the full designer lifecycle",
+        paragraphs: [
+          "This is where the work became tangible. I created or led the creation of every step, from first touch with a candidate through a guided onboarding and ongoing community programs.",
+          "1. Structured, fair hiring that scales\nHiring was not the headline, but it was foundational. We needed a consistent experience that reduced duplication, improved interviewer handoffs, and ensured candidates were evaluated against the same criteria.",
+          "What I led:\n* Facilitated a working session with leads to gather the best interview questions and why they mattered\n* Divided questions intentionally across first and second interviews\n* Built interview templates that interviewers used live for note taking\n* Added a second interview tab so round two started with full context, not guesswork\n* Created a folder structure to track candidates and decisions cleanly across a high volume pipeline",
+          "2. A documented end to end process, from portfolio to offer\nTo scale, the team needed clarity on ownership and next steps at every stage.",
+          "What I documented:\n* Portfolio review ownership, criteria, and where feedback is captured\n* Interviewer selection guidance and decision recording\n* Second interview scheduling rules and who could participate\n* Offer letter workflow, follow ups, background checks, equipment ordering\n* Pre start expectations and day one experience",
+          "This removed reliance on tribal knowledge and made the candidate and new joiner experience feel intentional.",
+          "3. Onboarding designed like a product\nI created an Onboarding Miro board that combined macro navigation with micro level detail, so new joiners could find what they needed fast, then go deeper only when relevant.",
+          "What the onboarding experience included:\n* A meet and greet led by our friendlies leader\n* A guided walkthrough of the board\n* Action items organized by timeframe: first week, first month, first 60 days, first 90 days\n* Practical setup and delivery readiness: software and device setup, time reporting and HR essentials, how we use the design system, Figma file structure guidance, accessibility practices and working with engineering, product demos and upskilling pathways",
+          "4. Culture artifacts and leadership norms\nAs we grew, we made culture explicit so it could scale through managers and across squads.",
+          "What we created:\n* Manifesto sessions to define who we are and what we stand for\n* Shared leadership expectations that designers have air cover to do the right thing: ask the right questions, advocate for users, escalate when recommendations are not being followed to the detriment of outcomes",
+          "This framed designers as strategic partners who listen for the real problem, not just the first solution.",
+          "5. Community rituals that kept craft visible\nI started weekly peer review sessions. As the org expanded, these evolved into a mix of critique, show and tells, whiteboarding, and team building.",
+          "How it scaled:\n* Continued a central weekly community rhythm to connect the broader org\n* Enabled design managers to create smaller peer reviews within their teams\n* Reinforced shared language for craft and collaboration",
+          "6. Shadowing and intentional learning pathways\nTo help early career designers grow quickly, we created a shadowing program with planned learning sessions over a set period.",
+          "What made it work:\n* Pairing with specialists on the team\n* Clear expectations for what \"good\" looks like\n* Time boxed sessions so learning was protected, not optional\n* Designed to build both skills and relationships",
+          "This became a real signal that growth and mentorship were part of how we operate.",
+        ],
+      },
+      {
+        label: "VALIDATE",
+        heading: "Making the systems real, then improving them as headcount accelerated",
+        paragraphs: [
+          "We validated everything in real cycles, then iterated based on feedback from interviewers, new joiners, and managers.",
+          "What I looked for:\n* Does this reduce confusion or add it\n* Are decisions clearer and more consistent\n* Are new joiners ramping with less friction\n* Do people still feel connected to the org\n* Is craft staying visible as teams multiply",
+          "Because we treated these systems like products, they stayed alive instead of becoming stale documentation.",
+        ],
+      },
+    ],
+    outcomes: [
+      {
+        metric: "7 → 130",
+        description: "team growth",
+      },
+      {
+        metric: "20 months",
+        description: "hypergrowth timeframe",
+      },
+      {
+        metric: "12 → 3 weeks",
+        description: "time to confident onboarding",
+      },
+      {
+        metric: "2 per month",
+        description: "UX community and peer calls",
+      },
+    ],
+    reflection: "This work reinforced something I believe deeply. You cannot scale culture by hoping it survives. You have to design it.\n\nThe biggest shift was treating org growth like a design problem. I balanced structure with humanity, so people had clarity without losing autonomy. If I were expanding this in the future, I would add lightweight measurement earlier, especially around onboarding effectiveness and community health, so the impact is visible even to leaders outside the design org.",
     nextSlug: "ai-dashboard-redesign",
     nextTitle: "AI Dashboard Redesign",
   },
