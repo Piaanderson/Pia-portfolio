@@ -220,12 +220,10 @@
 .glass-light-hover:hover,
 .glass-light-hover:focus-visible {
   background: hsla(0, 0%, 100%, 0.38);
-  border-color: hsla(270, 60%, 70%, 0.35);
+  border-color: hsla(330, 85%, 55%, 0.35);
   box-shadow:
     0 8px 28px hsla(228, 30%, 14%, 0.12),
     0 2px 8px hsla(228, 30%, 14%, 0.06),
-    0 0 20px hsla(270, 60%, 60%, 0.08),
-    0 0 40px hsla(330, 85%, 65%, 0.04),
     inset 0 1px 0 hsla(0, 0%, 100%, 0.6);
 }
 
@@ -236,24 +234,20 @@
 
 .dark .glass-hover:hover,
 .dark .glass-hover:focus-visible {
-  border-color: hsla(270, 60%, 60%, 0.35);
+  border-color: hsla(330, 85%, 60%, 0.4);
   box-shadow:
     0 8px 24px hsla(228, 40%, 4%, 0.4),
     0 2px 8px hsla(228, 40%, 4%, 0.25),
-    0 0 20px hsla(270, 60%, 50%, 0.1),
-    0 0 40px hsla(330, 85%, 60%, 0.05),
     inset 0 1px 0 hsla(220, 80%, 80%, 0.1);
 }
 
 :root:not(.dark) .glass-hover:hover,
 :root:not(.dark) .glass-hover:focus-visible {
   background: hsla(0, 0%, 100%, 0.38);
-  border-color: hsla(270, 60%, 70%, 0.35);
+  border-color: hsla(330, 85%, 55%, 0.35);
   box-shadow:
     0 8px 28px hsla(228, 30%, 14%, 0.12),
     0 2px 8px hsla(228, 30%, 14%, 0.06),
-    0 0 20px hsla(270, 60%, 60%, 0.08),
-    0 0 40px hsla(330, 85%, 65%, 0.04),
     inset 0 1px 0 hsla(0, 0%, 100%, 0.6);
 }
 

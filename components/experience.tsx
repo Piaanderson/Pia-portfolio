@@ -276,7 +276,7 @@ export function Experience() {
                                   key={bullet}
                                   className="flex gap-2 text-sm leading-relaxed text-muted-foreground"
                                 >
-                                  <span style={{ color: "hsl(25, 95%, 50%)" }} className="mt-1" aria-hidden="true">&#10040;</span>
+                                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-muted-foreground/50" aria-hidden="true" />
                                   <span>{bullet}</span>
                                 </li>
                               ))}
@@ -323,9 +323,6 @@ export function Experience() {
                         </p>
                         <p className="text-xs text-muted-foreground">
                           {edu.school}
-                        </p>
-                        <p className="text-xs text-muted-foreground">
-                          {edu.period}
                         </p>
                       </div>
                     ))}
