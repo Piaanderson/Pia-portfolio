@@ -126,14 +126,19 @@ export function Recommendations() {
           </p>
         </div>
 
-        <div className="relative flex items-center gap-4">
+        <div
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Recommendations"
+          className="relative flex items-center gap-4"
+        >
           {/* Left arrow */}
           <button
             onClick={prev}
             aria-label="Previous recommendation"
             className="flex-shrink-0 rounded-full border border-border/40 bg-background/60 p-2.5 text-muted-foreground backdrop-blur-sm transition-colors hover:text-foreground"
           >
-            <ChevronLeft className="h-5 w-5" />
+            <ChevronLeft className="h-5 w-5" aria-hidden="true" />
           </button>
 
           {/* Sliding track */}
@@ -159,7 +164,7 @@ export function Recommendations() {
                     flexShrink: 0,
                   }}
                 >
-                  <Quote className="mb-4 h-6 w-6 text-deep-purple opacity-60" />
+                  <Quote className="mb-4 h-6 w-6 text-deep-purple opacity-60" aria-hidden="true" />
                   <blockquote className="flex-1 text-sm leading-relaxed text-muted-foreground">
                     {`"${rec.quote}"`}
                   </blockquote>
@@ -182,7 +187,7 @@ export function Recommendations() {
             aria-label="Next recommendation"
             className="flex-shrink-0 rounded-full border border-border/40 bg-background/60 p-2.5 text-muted-foreground backdrop-blur-sm transition-colors hover:text-foreground"
           >
-            <ChevronRight className="h-5 w-5" />
+            <ChevronRight className="h-5 w-5" aria-hidden="true" />
           </button>
         </div>
       </div>

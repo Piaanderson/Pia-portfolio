@@ -10,6 +10,37 @@
 
 @layer base {
   :root {
+    --background: 240 20% 97%;
+    --foreground: 228 30% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 228 30% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 228 30% 14%;
+    --primary: 330 85% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 14% 92%;
+    --secondary-foreground: 228 20% 30%;
+    --muted: 240 10% 92%;
+    --muted-foreground: 228 10% 42%;
+    --accent: 270 60% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 228 15% 85%;
+    --input: 228 15% 85%;
+    --ring: 330 85% 50%;
+    --radius: 0.75rem;
+
+    --pink: 330 85% 50%;
+    --orange: 25 95% 48%;
+    --deep-purple: 270 60% 40%;
+    --dark-blue: 228 60% 35%;
+
+    --glass-bg: 0 0% 100%;
+    --glass-border: 228 20% 80%;
+  }
+
+  .dark {
     --background: 228 40% 8%;
     --foreground: 220 20% 92%;
     --card: 228 35% 12%;
@@ -29,7 +60,6 @@
     --border: 228 20% 20%;
     --input: 228 20% 20%;
     --ring: 330 85% 60%;
-    --radius: 0.75rem;
 
     --pink: 330 85% 60%;
     --orange: 25 95% 55%;
@@ -48,10 +78,23 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Global focus-visible styles for all interactive elements */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [role="button"]:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
 }
 
 /* Frosted glass component */
-.glass {
+.dark .glass {
   background: hsla(228, 35%, 14%, 0.4);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -59,7 +102,16 @@
   position: relative;
 }
 
-.glass::before {
+:root:not(.dark) .glass {
+  background: hsla(0, 0%, 100%, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid hsla(228, 20%, 80%, 0.5);
+  position: relative;
+  box-shadow: 0 1px 3px hsla(228, 30%, 14%, 0.04);
+}
+
+.dark .glass::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -79,11 +131,38 @@
   pointer-events: none;
 }
 
-.glass-subtle {
+:root:not(.dark) .glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    hsla(220, 80%, 70%, 0.25) 0%,
+    hsla(270, 60%, 65%, 0.15) 30%,
+    hsla(330, 85%, 65%, 0.1) 60%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.dark .glass-subtle {
   background: hsla(228, 35%, 14%, 0.35);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid hsla(228, 30%, 40%, 0.15);
+}
+
+:root:not(.dark) .glass-subtle {
+  background: hsla(0, 0%, 100%, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid hsla(228, 20%, 80%, 0.4);
 }
 
 /* Light-mode frosted glass */
@@ -121,7 +200,8 @@
   transition: all 0.4s ease;
 }
 
-.glass-light-hover:hover {
+.glass-light-hover:hover,
+.glass-light-hover:focus-visible {
   background: hsla(0, 0%, 100%, 0.5);
   border-color: hsla(270, 60%, 70%, 0.3);
   box-shadow:
@@ -136,7 +216,8 @@
   transition: all 0.4s ease;
 }
 
-.glass-hover:hover {
+.dark .glass-hover:hover,
+.dark .glass-hover:focus-visible {
   border-color: hsla(270, 60%, 60%, 0.35);
   box-shadow:
     0 0 20px hsla(270, 60%, 50%, 0.1),
@@ -144,8 +225,18 @@
     inset 0 1px 0 hsla(220, 80%, 80%, 0.1);
 }
 
+:root:not(.dark) .glass-hover:hover,
+:root:not(.dark) .glass-hover:focus-visible {
+  border-color: hsla(270, 60%, 70%, 0.3);
+  box-shadow:
+    0 0 20px hsla(270, 60%, 60%, 0.08),
+    0 0 40px hsla(330, 85%, 65%, 0.04),
+    0 4px 16px hsla(228, 40%, 8%, 0.06),
+    inset 0 1px 0 hsla(0, 0%, 100%, 0.8);
+}
+
 /* Gradient text utility */
-.gradient-text {
+.dark .gradient-text {
   background: linear-gradient(
     135deg,
     hsl(330, 85%, 60%) 0%,
@@ -155,6 +246,66 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+:root:not(.dark) .gradient-text {
+  background: linear-gradient(
+    135deg,
+    hsl(330, 85%, 45%) 0%,
+    hsl(270, 60%, 45%) 50%,
+    hsl(220, 70%, 45%) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Theme-aware nav glass */
+.dark .nav-glass {
+  background: hsla(228, 40%, 8%, 0.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.6);
+  backdrop-filter: blur(24px) saturate(1.6);
+  border-bottom: 1px solid hsla(228, 30%, 40%, 0.2);
+  box-shadow:
+    0 1px 0 0 hsla(220, 80%, 70%, 0.06),
+    inset 0 -1px 0 0 hsla(270, 60%, 60%, 0.05);
+}
+
+:root:not(.dark) .nav-glass {
+  background: hsla(240, 20%, 97%, 0.6);
+  -webkit-backdrop-filter: blur(24px) saturate(1.6);
+  backdrop-filter: blur(24px) saturate(1.6);
+  border-bottom: 1px solid hsla(228, 15%, 85%, 0.5);
+  box-shadow: 0 1px 3px hsla(228, 30%, 14%, 0.06);
+}
+
+/* Theme-aware sidebar */
+.dark .sidebar-panel {
+  background: hsla(228, 35%, 10%, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+:root:not(.dark) .sidebar-panel {
+  background: hsla(240, 20%, 97%, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.dark .sidebar-fab {
+  background: hsla(228, 35%, 14%, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid hsla(228, 30%, 40%, 0.25);
+  box-shadow: 0 4px 20px hsla(228, 40%, 8%, 0.4);
+}
+
+:root:not(.dark) .sidebar-fab {
+  background: hsla(0, 0%, 100%, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid hsla(228, 15%, 85%, 0.5);
+  box-shadow: 0 4px 20px hsla(228, 30%, 14%, 0.1);
 }
 
 /* Subtle ambient glow */
@@ -178,4 +329,25 @@
 
 .animate-fade-up {
   animation: fade-up 0.6s ease-out forwards;
+}
+
+/* Reduced motion: disable animations and transitions */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .glass-hover,
+  .glass-light-hover {
+    transition: none;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

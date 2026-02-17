@@ -32,14 +32,25 @@ export function CaseStudyLightbox({
     setOrigin({ x, y });
   };
 
+  function handleZoomKeyDown(e: React.KeyboardEvent) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      setIsZoomed((v) => !v);
+    }
+  }
+
   return (
     <Dialog>
       <figure className="mt-4">
         <DialogTrigger asChild>
-          <div className="relative aspect-[16/9] overflow-hidden rounded-xl cursor-zoom-in">
+          <button
+            type="button"
+            className="relative block w-full aspect-[16/9] overflow-hidden rounded-xl cursor-zoom-in text-left"
+            aria-label={`View larger image: ${alt}`}
+          >
             <Image src={src} alt={alt} fill className="object-cover" />
-            <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity hover:opacity-100" />
-          </div>
+            <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity hover:opacity-100 focus-visible:opacity-100" />
+          </button>
         </DialogTrigger>
         {caption && (
           <figcaption className="mt-3 text-sm text-muted-foreground">
@@ -53,19 +64,27 @@ export function CaseStudyLightbox({
           className="relative aspect-[16/9] w-full overflow-hidden rounded-lg bg-black/5"
           onMouseMove={handleMouseMove}
         >
-          <Image
-            src={src}
-            alt={alt}
-            fill
-            className={cn(
-              "object-contain transition-transform duration-200",
-              isZoomed ? "scale-150 cursor-zoom-out" : "scale-100 cursor-zoom-in"
-            )}
-            style={{ transformOrigin: `${origin.x}% ${origin.y}%` }}
-            onClick={() => setIsZoomed((value) => !value)}
-            onContextMenu={(event) => event.preventDefault()}
-          />
-          <div className="pointer-events-none absolute inset-0 bg-black/5" />
+          <div
+            role="button"
+            tabIndex={0}
+            aria-label={isZoomed ? "Zoom out" : "Zoom in"}
+            onClick={() => setIsZoomed((v) => !v)}
+            onKeyDown={handleZoomKeyDown}
+            className="relative h-full w-full"
+          >
+            <Image
+              src={src}
+              alt={alt}
+              fill
+              className={cn(
+                "object-contain transition-transform duration-200",
+                isZoomed ? "scale-150 cursor-zoom-out" : "scale-100 cursor-zoom-in"
+              )}
+              style={{ transformOrigin: `${origin.x}% ${origin.y}%` }}
+              onContextMenu={(event) => event.preventDefault()}
+            />
+          </div>
+          <div className="pointer-events-none absolute inset-0 bg-black/5" aria-hidden="true" />
         </div>
       </DialogContent>
     </Dialog>

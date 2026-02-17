@@ -219,7 +219,7 @@ export function Experience() {
               download
               className="glass glass-hover inline-flex h-12 items-center gap-2 rounded-lg px-6 text-sm font-medium text-foreground"
             >
-              <Download className="h-4 w-4" />
+              <Download className="h-4 w-4" aria-hidden="true" />
               Download Resume
             </a>
           </div>
@@ -230,7 +230,7 @@ export function Experience() {
             <div className="flex-1 lg:max-w-[62%]">
               <div className="relative">
                 {/* Timeline line */}
-                <div className="absolute left-[15px] top-3 bottom-0 w-px bg-white/10" />
+                <div className="absolute left-[15px] top-3 bottom-0 w-px bg-border" />
 
                 <div className="flex flex-col gap-10">
                   {employers.map((employer) => (
@@ -276,7 +276,7 @@ export function Experience() {
                                   key={bullet}
                                   className="flex gap-2 text-sm leading-relaxed text-muted-foreground"
                                 >
-                                  <span style={{ color: "hsl(25, 95%, 50%)" }} className="mt-1">&#10040;</span>
+                                  <span style={{ color: "hsl(25, 95%, 50%)" }} className="mt-1" aria-hidden="true">&#10040;</span>
                                   <span>{bullet}</span>
                                 </li>
                               ))}
@@ -302,7 +302,7 @@ export function Experience() {
                     {coreSkills.map((skill) => (
                       <span
                         key={skill}
-                        className="rounded-full bg-white/5 border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground"
+                        className="rounded-full bg-secondary border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground"
                       >
                         {skill}
                       </span>
@@ -343,7 +343,7 @@ export function Experience() {
                         key={cert}
                         className="flex gap-2 text-sm text-muted-foreground"
                       >
-                        <span style={{ color: "hsl(270, 60%, 45%)" }}>&#9670;</span>
+                        <span style={{ color: "hsl(270, 60%, 45%)" }} aria-hidden="true">&#9670;</span>
                         <span>{cert}</span>
                       </li>
                     ))}
@@ -385,7 +385,7 @@ export function Experience() {
                     {dailyTools.map((tool) => (
                       <span
                         key={tool}
-                        className="rounded-md bg-white/5 border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground"
+                        className="rounded-md bg-secondary border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground"
                       >
                         {tool}
                       </span>
@@ -399,7 +399,7 @@ export function Experience() {
                     {drawerTools.map((tool) => (
                       <span
                         key={tool}
-                        className="rounded-md bg-white/5 border border-border/50 px-3 py-1.5 text-xs text-muted-foreground"
+                        className="rounded-md bg-secondary/50 border border-border/50 px-3 py-1.5 text-xs text-muted-foreground"
                       >
                         {tool}
                       </span>

@@ -27,7 +27,7 @@ export function Contact() {
             href="mailto:pia@example.com"
             className="glass glass-hover inline-flex h-12 w-full items-center justify-center gap-3 rounded-lg px-8 text-sm font-medium text-foreground transition-all sm:w-auto"
           >
-            <Mail className="h-4 w-4" />
+            <Mail className="h-4 w-4" aria-hidden="true" />
             pia@example.com
           </a>
           <a
@@ -36,7 +36,7 @@ export function Contact() {
             rel="noopener noreferrer"
             className="inline-flex h-12 w-full items-center justify-center gap-3 rounded-lg border border-border px-8 text-sm font-medium text-muted-foreground transition-colors hover:border-foreground/20 hover:text-foreground sm:w-auto"
           >
-            <Linkedin className="h-4 w-4" />
+            <Linkedin className="h-4 w-4" aria-hidden="true" />
             LinkedIn
           </a>
         </div>
@@ -58,19 +58,19 @@ export function Contact() {
           <div className="flex items-center gap-4">
             <a
               href="mailto:pia@example.com"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="flex h-11 w-11 items-center justify-center text-muted-foreground transition-colors hover:text-foreground"
               aria-label="Email Pia"
             >
-              <Mail className="h-4 w-4" />
+              <Mail className="h-4 w-4" aria-hidden="true" />
             </a>
             <a
               href="https://linkedin.com/in/piaanderson"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="flex h-11 w-11 items-center justify-center text-muted-foreground transition-colors hover:text-foreground"
               aria-label="Pia's LinkedIn"
             >
-              <Linkedin className="h-4 w-4" />
+              <Linkedin className="h-4 w-4" aria-hidden="true" />
             </a>
           </div>
         </div>

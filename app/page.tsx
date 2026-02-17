@@ -8,7 +8,7 @@ import { Contact } from "@/components/contact";
 
 export default function Page() {
   return (
-    <main className="relative min-h-screen overflow-hidden">
+    <main id="main-content" className="relative min-h-screen overflow-hidden">
       <Navigation />
       <Hero />
       <About />
