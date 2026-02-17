@@ -3,9 +3,11 @@
 import React from "react"
 
 import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -17,7 +19,11 @@ const navLinks = [
 
 export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [isLight, setIsLight] = useState(false);
+  const [overLightSection, setOverLightSection] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     function handleScroll() {
@@ -32,7 +38,7 @@ export function Navigation() {
         }
       });
 
-      setIsLight(overlapsLight);
+      setOverLightSection(overlapsLight);
     }
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -40,16 +46,15 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const darkStyles = {
-    background: "hsla(228, 40%, 8%, 0.4)",
-    backdropFilter: "blur(24px) saturate(1.6)",
-    WebkitBackdropFilter: "blur(24px) saturate(1.6)",
-    borderBottom: "1px solid hsla(228, 30%, 40%, 0.2)",
-    boxShadow:
-      "0 1px 0 0 hsla(220, 80%, 70%, 0.06), inset 0 -1px 0 0 hsla(270, 60%, 60%, 0.05)",
-  } as React.CSSProperties;
+  const isDark = mounted ? resolvedTheme === "dark" : true;
 
-  const lightStyles = {
+  // In dark mode, when nav overlaps a light-bg section, use special styles
+  const sectionLightOverride = isDark && overLightSection;
+
+  // Use dark text when global theme is light OR when over a light section in dark mode
+  const useDarkText = !isDark || sectionLightOverride;
+
+  const sectionLightNavStyles = {
     background: "hsla(245, 10%, 96%, 0.4)",
     backdropFilter: "blur(24px) saturate(1.6)",
     WebkitBackdropFilter: "blur(24px) saturate(1.6)",
@@ -57,10 +62,20 @@ export function Navigation() {
     boxShadow: "0 1px 3px hsla(0, 0%, 0%, 0.04)",
   } as React.CSSProperties;
 
+  const sectionLightMobileStyles = {
+    background: "hsla(245, 10%, 96%, 0.85)",
+    backdropFilter: "blur(20px)",
+    WebkitBackdropFilter: "blur(20px)",
+    borderColor: "hsla(0, 0%, 0%, 0.06)",
+  } as React.CSSProperties;
+
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
-      style={isLight ? lightStyles : darkStyles}
+      aria-label="Main navigation"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        sectionLightOverride ? "" : "nav-glass"
+      }`}
+      style={sectionLightOverride ? sectionLightNavStyles : undefined}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center" aria-label="Home">
@@ -81,7 +96,7 @@ export function Navigation() {
               key={link.href}
               href={link.href}
               className={`text-sm transition-colors duration-500 ${
-                isLight
+                useDarkText
                   ? "text-[#6e6e73] hover:text-[#1d1d1f]"
                   : "text-muted-foreground hover:text-foreground"
               }`}
@@ -89,51 +104,46 @@ export function Navigation() {
               {link.label}
             </a>
           ))}
+          <ThemeToggle />
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          type="button"
-          className={`flex h-11 w-11 items-center justify-center rounded-lg transition-colors duration-500 md:hidden ${
-            isLight ? "text-[#1d1d1f]" : "text-foreground"
-          }`}
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
-        >
-          {mobileOpen ? (
-            <X className="h-5 w-5" />
-          ) : (
-            <Menu className="h-5 w-5" />
-          )}
-        </button>
+        {/* Mobile: theme toggle + hamburger */}
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            className={`flex h-11 w-11 items-center justify-center rounded-lg transition-colors duration-500 ${
+              useDarkText ? "text-[#1d1d1f]" : "text-foreground"
+            }`}
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          >
+            {mobileOpen ? (
+              <X className="h-5 w-5" aria-hidden="true" />
+            ) : (
+              <Menu className="h-5 w-5" aria-hidden="true" />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
       {mobileOpen && (
         <div
+          id="mobile-menu"
+          role="menu"
+          aria-label="Mobile navigation menu"
           className="border-t px-6 pb-6 pt-2 md:hidden"
-          style={
-            isLight
-              ? {
-                  background: "hsla(245, 10%, 96%, 0.85)",
-                  backdropFilter: "blur(20px)",
-                  WebkitBackdropFilter: "blur(20px)",
-                  borderColor: "hsla(0, 0%, 0%, 0.06)",
-                }
-              : {
-                  background: "hsla(228, 35%, 14%, 0.6)",
-                  backdropFilter: "blur(20px)",
-                  WebkitBackdropFilter: "blur(20px)",
-                  borderColor: "hsla(228, 30%, 40%, 0.25)",
-                }
-          }
+          style={sectionLightOverride ? sectionLightMobileStyles : undefined}
         >
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               className={`block py-3 text-base transition-colors ${
-                isLight
+                useDarkText
                   ? "text-[#6e6e73] hover:text-[#1d1d1f]"
                   : "text-muted-foreground hover:text-foreground"
               }`}

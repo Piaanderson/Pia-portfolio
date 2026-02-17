@@ -6,6 +6,7 @@ import { PasswordGate } from "@/components/password-gate";
 import { CaseStudySidebar } from "@/components/case-study-sidebar";
 import { caseStudyNav, getCaseStudyBySlug } from "@/lib/case-studies";
 import { CaseStudyLightbox } from "@/components/case-study-lightbox";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 /* ------------------------------------------------------------------ */
 /*  Metadata                                                           */
@@ -62,7 +63,7 @@ export default async function CaseStudyPage({
             href="/"
             className="mt-8 inline-flex items-center gap-2 text-sm text-pink hover:underline"
           >
-            <ArrowLeft className="h-4 w-4" />
+            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
             Back to Portfolio
           </Link>
         </div>
@@ -71,20 +72,13 @@ export default async function CaseStudyPage({
   }
 
   return (
-    <main className="relative min-h-screen">
+    <main id="main-content" className="relative min-h-screen">
       {/* ================================================================ */}
       {/*  TOP HEADER — matches homepage nav exactly                       */}
       {/* ================================================================ */}
       <nav
-        className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
-        style={{
-          background: "hsla(228, 40%, 8%, 0.4)",
-          backdropFilter: "blur(24px) saturate(1.6)",
-          WebkitBackdropFilter: "blur(24px) saturate(1.6)",
-          borderBottom: "1px solid hsla(228, 30%, 40%, 0.2)",
-          boxShadow:
-            "0 1px 0 0 hsla(220, 80%, 70%, 0.06), inset 0 -1px 0 0 hsla(270, 60%, 60%, 0.05)",
-        }}
+        aria-label="Case study navigation"
+        className="nav-glass fixed top-0 left-0 right-0 z-50 transition-all duration-500"
       >
         {/* Logo area — aligns with sidebar px-6 */}
         <div className="flex items-center justify-between px-6 py-4">
@@ -105,7 +99,7 @@ export default async function CaseStudyPage({
               href="/"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              <ArrowLeft className="h-3.5 w-3.5" />
+              <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
               <span className="hidden sm:inline">Return to Home</span>
               <span className="sm:hidden">Home</span>
             </Link>
@@ -114,10 +108,11 @@ export default async function CaseStudyPage({
               download
               className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              <Download className="h-3.5 w-3.5" />
+              <Download className="h-3.5 w-3.5" aria-hidden="true" />
               <span className="hidden sm:inline">Download Resume</span>
               <span className="sm:hidden">Resume</span>
             </a>
+            <ThemeToggle />
           </div>
         </div>
       </nav>
@@ -662,7 +657,7 @@ export default async function CaseStudyPage({
                       {study.nextTitle}
                     </p>
                   </div>
-                  <ArrowRight className="h-6 w-6 text-muted-foreground transition-all group-hover:translate-x-2 group-hover:text-pink" />
+                  <ArrowRight className="h-6 w-6 text-muted-foreground transition-all group-hover:translate-x-2 group-hover:text-pink" aria-hidden="true" />
                 </Link>
               </div>
             </section>
