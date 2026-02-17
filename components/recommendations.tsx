@@ -74,20 +74,27 @@ export function Recommendations() {
   const [index, setIndex] = useState(LEN);
   const [animate, setAnimate] = useState(true);
 
-  // Measure container
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Measure container and detect mobile
   useEffect(() => {
     const measure = () => {
       if (containerRef.current) setContainerWidth(containerRef.current.clientWidth);
+      setIsMobile(window.innerWidth < 768);
     };
     measure();
     window.addEventListener("resize", measure);
     return () => window.removeEventListener("resize", measure);
   }, []);
 
-  // Card width: two cards visible with one gap between them
-  const cardW = containerWidth > 0 ? (containerWidth - GAP) / 2 : 0;
-  const step = cardW + GAP;
-  const offset = -(index * step);
+  // Card width: 1 card on mobile, 2 cards on desktop
+  const cardW = containerWidth > 0
+    ? isMobile
+      ? containerWidth
+      : (containerWidth - GAP) / 2
+    : 0;
+  const step = cardW + (isMobile ? 0 : GAP);
+  const offset = -(index * (cardW + GAP));
 
   const prev = () => { setAnimate(true); setIndex((i) => i - 1); };
   const next = () => { setAnimate(true); setIndex((i) => i + 1); };
@@ -147,8 +154,8 @@ export function Recommendations() {
                   key={`${rec.name}-${i}`}
                   className="glass flex flex-col rounded-xl p-6 md:p-8"
                   style={{
-                    width: cardW > 0 ? `${cardW}px` : "calc((100% - 32px) / 2)",
-                    minWidth: cardW > 0 ? `${cardW}px` : "calc((100% - 32px) / 2)",
+                    width: cardW > 0 ? `${cardW}px` : isMobile ? "100%" : "calc((100% - 32px) / 2)",
+                    minWidth: cardW > 0 ? `${cardW}px` : isMobile ? "100%" : "calc((100% - 32px) / 2)",
                     flexShrink: 0,
                   }}
                 >
