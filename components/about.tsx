@@ -17,10 +17,7 @@ export function About() {
       data-theme={isDark ? undefined : "light"}
     >
       <div
-        className={`relative overflow-clip px-6 py-20 md:px-12 md:py-28 lg:px-16 ${
-          isDark ? "" : ""
-        }`}
-        style={isDark ? undefined : { background: "#f3f1f8" }}
+        className="relative overflow-clip px-6 py-20 md:px-12 md:py-28 lg:px-16"
       >
 
         <div className="relative z-10 mx-auto max-w-4xl text-center">

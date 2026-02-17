@@ -8,14 +8,26 @@ import { Experience } from "@/components/experience";
 import { Recommendations } from "@/components/recommendations";
 import { Contact } from "@/components/contact";
 import { GradientWave } from "@/components/ui/gradient-wave";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+
+const darkColors = ["#030414", "#0a1128", "#130f35", "#030427", "#150d30", "#250c20"];
+const lightColors = ["#ffffff", "#ebe0f0", "#d6c9ea", "#c9cde8", "#e8d0e4", "#f0d6e8"];
 
 export default function Page() {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  const isDark = mounted ? resolvedTheme === "dark" : true;
+
   return (
     <>
       {/* Fixed gradient wave background behind entire page */}
       <div className="fixed inset-0 z-0">
         <GradientWave
-          colors={["#030414", "#0a1128", "#130f35", "#030427", "#1f1240", "#351230"]}
+          key={isDark ? "dark" : "light"}
+          colors={isDark ? darkColors : lightColors}
           shadowPower={4}
           darkenTop={false}
           noiseSpeed={0.000005}
