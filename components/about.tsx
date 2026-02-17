@@ -18,25 +18,10 @@ export function About() {
     >
       <div
         className={`relative overflow-clip px-6 py-20 md:px-12 md:py-28 lg:px-16 ${
-          isDark ? "bg-background" : ""
+          isDark ? "" : ""
         }`}
         style={isDark ? undefined : { background: "#f3f1f8" }}
       >
-        {/* Palette washes */}
-        <div className="pointer-events-none sticky top-0 -mb-[1px] h-0 w-full">
-          <div
-            className="absolute -top-64 -left-32 h-[500px] w-[500px] rounded-full opacity-[0.12]"
-            style={{ background: "radial-gradient(circle, hsl(270, 60%, 65%) 0%, transparent 70%)" }}
-          />
-          <div
-            className="absolute -top-24 -right-24 h-[400px] w-[400px] rounded-full opacity-[0.10]"
-            style={{ background: "radial-gradient(circle, hsl(330, 85%, 65%) 0%, transparent 70%)" }}
-          />
-          <div
-            className="absolute top-20 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full opacity-[0.06]"
-            style={{ background: "radial-gradient(circle, hsl(220, 70%, 60%) 0%, transparent 70%)" }}
-          />
-        </div>
 
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <h2 className={`font-serif text-3xl font-bold md:text-4xl lg:text-5xl ${

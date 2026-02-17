@@ -7,28 +7,6 @@ export function Hero() {
       className="relative flex items-center justify-center overflow-hidden px-6 pt-20"
       style={{ height: "100dvh" }}
     >
-      {/* Background gradient blurs */}
-      <div
-        className="ambient-glow -left-32 -bottom-32 h-[500px] w-[500px] rounded-full opacity-30"
-        style={{
-          background:
-            "radial-gradient(circle, hsl(330, 85%, 60%) 0%, transparent 70%)",
-        }}
-      />
-      <div
-        className="ambient-glow -right-32 bottom-0 h-[400px] w-[400px] rounded-full opacity-20"
-        style={{
-          background:
-            "radial-gradient(circle, hsl(220, 70%, 55%) 0%, transparent 70%)",
-        }}
-      />
-      <div
-        className="ambient-glow left-1/2 top-1/4 h-[600px] w-[600px] -translate-x-1/2 rounded-full opacity-10"
-        style={{
-          background:
-            "radial-gradient(circle, hsl(270, 60%, 50%) 0%, transparent 70%)",
-        }}
-      />
 
       <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center gap-8 md:flex-row md:gap-16">
         {/* Headshot */}
