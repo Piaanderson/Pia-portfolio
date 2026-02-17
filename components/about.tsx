@@ -76,7 +76,7 @@ export function About() {
 
           {/* Philosophy blurb */}
           <div className={`mx-auto mt-16 max-w-2xl rounded-2xl p-8 md:p-10 ${
-            isDark ? "glass glass-hover" : "glass-light glass-light-hover"
+            isDark ? "glass" : "glass-light"
           }`}>
             <p className={`text-sm font-medium uppercase tracking-wider ${
               isDark ? "text-muted-foreground" : "text-[#6e6e73]"
