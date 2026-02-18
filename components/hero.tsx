@@ -36,11 +36,10 @@ export function Hero() {
             <span className="gradient-text text-balance">Pia Anderson</span>
           </h1>
           <p className="mt-4 text-lg font-medium text-foreground md:text-xl">
-            UX Leader Shaping the Future of AI-Powered Experiences
+            Scaling Design. Shaping Systems. Raising the Bar.
           </p>
           <p className="mt-3 max-w-lg text-base leading-relaxed text-muted-foreground">
-            From strategy to execution, I lead teams building AI-powered,
-            user-first solutions that move business and people forward.
+            I build and scale UX organizations while staying close to the work. From defining product vision to shaping interaction models and systems, I dive into the details when craft and clarity matter most.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a

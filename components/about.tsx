@@ -25,13 +25,13 @@ export function About() {
             isDark ? "text-foreground" : "text-[#1d1d1f]"
           }`}>
             <span className="gradient-text">
-              Director of User Experience
+              Principal UX Leader
             </span>
           </h2>
           <p className={`mx-auto mt-6 max-w-2xl text-base leading-relaxed md:text-lg md:leading-relaxed ${
             isDark ? "text-muted-foreground" : "text-[#6e6e73]"
           }`}>
-            {"I'm a proven UX leader focused on designing AI-powered, human-centered products that deliver meaningful outcomes. I've led cross-functional teams, scaled design organizations, and shaped experiences used by millions. Whether building from zero or transforming legacy systems, I bring clarity, craft, and a deep commitment to the people doing the work."}
+            {"I design AI powered, human centered products that drive real outcomes. I've led cross functional teams, scaled design organizations, and shaped systems used by millions. Whether building from zero or transforming legacy platforms, I bring clarity, craft, and a deep commitment to the people doing the work."}
           </p>
 
           {/* Key highlights */}
@@ -86,7 +86,7 @@ export function About() {
             <p className={`mt-4 text-base leading-relaxed md:text-lg md:leading-relaxed ${
               isDark ? "text-foreground" : "text-[#1d1d1f]"
             }`}>
-              {"Great design isn't just about pixels — it's about people. I believe in building inclusive, accessible experiences rooted in research, and in creating cultures where designers can do the best work of their careers."}
+              {"Great design aligns user needs with business intent. I'm committed to accessible systems, rigorous thinking, and creating environments where teams deliver meaningful, measurable impact."}
             </p>
           </div>
         </div>
