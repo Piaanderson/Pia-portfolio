@@ -240,7 +240,7 @@ export default async function CaseStudyPage({
                           Role
                         </p>
                         {Array.isArray(study.roleDetail) ? (
-                          <ul className="mt-3 space-y-0 text-base leading-relaxed text-foreground">
+                          <ul className="mt-3 list-disc space-y-1 pl-5 text-base leading-relaxed text-foreground">
                             {study.roleDetail.map((item) => (
                               <li key={item}>{item}</li>
                             ))}
@@ -595,6 +595,45 @@ export default async function CaseStudyPage({
                       </p>
                     </div>
                   )}
+                  {slug === "southwest-opssuite" && (
+                    <div className="space-y-8">
+                      <div>
+                        <h3 className="text-lg font-semibold text-foreground md:text-xl">
+                          Operational speed and coordination
+                        </h3>
+                        <ul className="mt-4 list-disc space-y-2 pl-5 text-lg leading-[1.75] text-foreground/80">
+                          <li>Mega-station shutdown planning reduced from 4 to 6 hours to minutes</li>
+                          <li>Faster cross-team action because scheduling, dispatch, ground ops, and customer support can move immediately on a shared plan</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-foreground md:text-xl">
+                          Business outcomes
+                        </h3>
+                        <ul className="mt-4 list-disc space-y-2 pl-5 text-lg leading-[1.75] text-foreground/80">
+                          <li>1 to 1.8 percentage points year over year OTP improvement attributed to the Baker’s impact on proactive operational decisions</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-foreground md:text-xl">
+                          User experience outcomes
+                        </h3>
+                        <ul className="mt-4 list-disc space-y-2 pl-5 text-lg leading-[1.75] text-foreground/80">
+                          <li>Turn Management quote that validates the interaction strategy: “An integrated view eliminates the need to toggle… this saves time and allows me to focus on the operational challenges.”</li>
+                          <li>Gate Management credibility and “custom tailored” validation</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-foreground md:text-xl">
+                          Scale readiness
+                        </h3>
+                        <ul className="mt-4 list-disc space-y-2 pl-5 text-lg leading-[1.75] text-foreground/80">
+                          <li>Research depth and breadth that kept design grounded in real work: over a hundred employee conversations, four station visits, and thousands of captured notes and artifacts</li>
+                          <li>A design system that enabled multiple designers to ship multiple apps while staying coherent, plus mode support across wildly different devices and environments</li>
+                        </ul>
+                      </div>
+                    </div>
+                  )}
                   <div className="grid gap-6 sm:grid-cols-2">
                   {study.outcomes.map((outcome) => (
                     <div
@@ -642,7 +681,10 @@ export default async function CaseStudyPage({
           </section>
 
           {/* ---- NEXT CASE STUDY ---- */}
-          {study.nextSlug && (
+          {study.nextSlug && (() => {
+            const nextStudy = getCaseStudyBySlug(study.nextSlug);
+            const nextLabel = nextStudy?.title ?? study.nextTitle;
+            return nextLabel ? (
             <section className="px-6 pt-4 pb-24 md:px-10">
               <div className="max-w-5xl">
                 <Link
@@ -654,14 +696,15 @@ export default async function CaseStudyPage({
                       Next Case Study
                     </p>
                     <p className="mt-2 font-serif text-xl font-bold text-foreground md:text-2xl">
-                      {study.nextTitle}
+                      {nextLabel}
                     </p>
                   </div>
                   <ArrowRight className="h-6 w-6 text-muted-foreground transition-all group-hover:translate-x-2 group-hover:text-pink" aria-hidden="true" />
                 </Link>
               </div>
             </section>
-          )}
+          ) : null;
+          })()}
         </PasswordGate>
       </div>
     </main>

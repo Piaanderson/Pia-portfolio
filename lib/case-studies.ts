@@ -166,6 +166,110 @@ const agentOsSections: NarrativeSection[] = sharedSections.map((section, index) 
     : section
 );
 
+const swaOpsSuiteDecisionsSection: NarrativeSection = {
+  label: "KEY DESIGN DECISIONS",
+  heading: "Key Design Decisions",
+  paragraphs: [],
+  decisionList: [
+    {
+      title: "Single pane for day-of-operations",
+      bullets: [
+        "Unified view of crew, aircraft, and disruptions instead of toggling between legacy tools",
+        "Role-based workspaces so ops controllers see what they need without clutter",
+      ],
+    },
+    {
+      title: "Action-first, not data-first",
+      bullets: [
+        "Surfaced next-best actions (reassign crew, swap aircraft, notify stations) instead of raw data dumps",
+        "Reduced cognitive load so controllers could act quickly during irregular operations",
+      ],
+    },
+    {
+      title: "Progressive disclosure for complexity",
+      bullets: [
+        "Summary cards and status at a glance; drill-down for constraints, history, and audit trail",
+        "Designed for both quick triage and deep investigation when needed",
+      ],
+    },
+    {
+      title: "Accessibility and shift-friendly use",
+      bullets: [
+        "High contrast and clear hierarchy for 24/7 control room environments",
+        "Keyboard-first flows and screen reader support as requirements from day one",
+      ],
+    },
+  ],
+};
+
+const swaOpsSuiteSections: NarrativeSection[] = [
+  {
+    label: "DISCOVER",
+    heading: "Understanding how ops controllers really work",
+    paragraphs: [
+      "Southwest’s operations control relied on a mix of legacy systems and tribal knowledge. I ran contextual interviews and shadowing in the Ops Center to capture:",
+      "* Who does what during normal vs. irregular operations\n* Where controllers lost time switching tools or reconciling data\n* What “good” looks like when weather or mechanicals hit\n* Technical and regulatory constraints that would shape the product",
+      "In parallel, I met with station ops, crew scheduling, and tech leads to map the full flow from disruption to recovery. The opportunity was a single OpsSuite that could replace fragmented tools while fitting into existing procedures and training.",
+    ],
+    image: {
+      src: "/images/case-study-research.jpg",
+      alt: "Research synthesis from ops center observations",
+      caption:
+        "Findings from ops center shadowing and interviews with controllers and crew scheduling.",
+    },
+  },
+  {
+    label: "FRAME",
+    heading: "One suite that scales from routine to irregular ops",
+    paragraphs: [
+      "We framed the experience around a simple mental model:",
+      "* A single workspace with crew, fleet, and disruptions in one place\n* Clear actions and recommendations, not just status\n* A path from alert to resolution with audit trail and handoffs",
+      "Then we translated this into a phased plan:",
+    ],
+    outro:
+      "Phased rollout (pilot control room → broader ops → integration with crew and station tools) so we could validate with real users before full deployment.",
+    principles: [
+      {
+        title: "Alpha",
+        description: "prove the unified view and core recovery actions in one control room",
+      },
+      {
+        title: "Beta",
+        description: "expand to more roles and scenarios; harden for 24/7 use",
+      },
+      {
+        title: "v1",
+        description: "broad rollout and integration with crew scheduling and station systems",
+      },
+    ],
+  },
+  swaOpsSuiteDecisionsSection,
+  {
+    label: "DESIGN",
+    heading: "From concept to demo-ready OpsSuite prototype",
+    paragraphs: [
+      "I built an end-to-end Figma prototype that covered:",
+      "* Unified dashboard with crew, aircraft, and disruption cards\n* Action panels (reassign, swap, notify) with guardrails and confirmation\n* Timeline and constraint views for deeper investigation\n* Shift-friendly visual hierarchy and accessibility considerations",
+      "I also produced a demo script and a short demo video so stakeholders could see the experience without live control-room demos. The prototype became the alignment artifact for scope and rollout.",
+    ],
+    image: {
+      src: "/images/case-study-prototype.jpg",
+      alt: "OpsSuite prototype showing unified operations view",
+      caption:
+        "OpsSuite dashboard and action flows for day-of-operations and irregular ops.",
+    },
+  },
+  {
+    label: "VALIDATE",
+    heading: "Testing with real controllers before build",
+    paragraphs: [
+      "We used the prototype in walkthroughs with ops controllers and crew scheduling:",
+      "* Did the unified view match how they thought about the day?\n* Were actions and language clear under time pressure?\n* Where did they get stuck or second-guess?\n* What was missing for handoffs and audit?",
+      "Each round refined the product and the rollout plan so the build team had validated requirements.",
+    ],
+  },
+];
+
 const sharedOutcomes = [
   {
     metric: "40%",
@@ -213,6 +317,9 @@ const sharedReflection =
 
 const agentOsReflection =
   "AgentOS reinforced a leadership principle I rely on: a strong prototype can become the strategy tool when ambiguity is high. It creates shared language, accelerates decisions, and turns abstract debates into tangible tradeoffs.\n\nIf I did it again, I would still prototype early, but I'd formalize decision checkpoints sooner, so the growing stakeholder set stayed aligned as the team scaled.";
+
+const swaOpsSuiteReflection =
+  "Designing for airline operations reinforced a simple truth. You cannot simplify the domain, but you can remove the friction that makes experts slower than they should be. The biggest lesson I carried forward is that information design is performance design. Hierarchy, stable layout landmarks, and progressive disclosure are what make dense screens usable when stress is high and attention is split.\n\nIt also sharpened how I think about accessibility. Dark, light, and high-contrast were not features, they were working conditions across the NOC and the field. Designing for those extremes improved the whole system, especially reducing reliance on color and making status semantics more explicit.\n\nFinally, adoption comes from partnership, not presentation. Co-design with SODs, frequent demos, and post-launch shadowing helped the suite feel credible on day one. Pairing closely with engineering to maintain design – dev parity made that credibility scalable as the suite grew.";
 
 export const caseStudies: CaseStudyData[] = [
   {
@@ -296,6 +403,82 @@ export const caseStudies: CaseStudyData[] = [
       },
     ],
     reflection: agentOsReflection,
+    nextSlug: "southwest-opssuite",
+    nextTitle: "Southwest Airlines OpsSuite",
+  },
+  {
+    slug: "southwest-opssuite",
+    title: "Southwest Airlines OpsSuite",
+    subhead:
+      "Designing high stakes operational tools for extreme information density, multi-monitor workflows, and 24 hour environments",
+    subtitle: "Airline Operations · Internal Tooling",
+    description:
+      "Led hands-on discovery, framing, and design of a unified operations suite for Southwest’s Ops Center, reducing tool-switching and surfacing action-oriented workflows for irregular operations.",
+    image: "/images/case-study-opssuite.jpg",
+    tags: ["UX Strategy", "Operations", "Research", "Hands-On Design"],
+    type: "hands-on",
+    heroImage: "/images/case-study-opssuite.jpg",
+    intro:
+      "Southwest modernized a suite of internal operations applications used in the Network Operations Center and across stations. Before Ops Suite, teams relied heavily on manual artifacts and expert driven workarounds. Paper support was everywhere, alongside whiteboards and informal coordination rituals.",
+    introFollowup:
+      "The suite shipped into a brand-new facility as the OCC transitioned into the new NOC, which raised the bar for credibility and day-one readiness.",
+    problem: [
+      "Controllers spent significant time switching between systems and reconciling data instead of making decisions. During irregular operations, the cognitive load was high and actions were reactive rather than guided.",
+      "Legacy tools were built for specific functions (crew, fleet, delays) but not for the end-to-end flow that controllers actually need on the board.",
+    ],
+    constraints: [
+      "Strict regulatory and safety requirements; any new tool had to fit existing procedures and training.",
+      "24/7 control room environment demanded accessibility, shift-friendly visuals, and reliability.",
+      "Timeline pressure to show a coherent direction before competing internal efforts fragmented the vision.",
+    ],
+    impactHeading: "Impact at a glance",
+    impactHighlights: [
+      {
+        label: "Impact",
+        items: [
+          "Reduced severe-event shutdown planning from 4 to 6 hours to minutes with The Baker, generating recovery plans downstream teams could execute immediately.",
+          "The Baker was used successfully hundreds of times in a single winter season and was linked to 1 to 1.8 percentage points year over year on-time performance improvement.",
+        ],
+      },
+      {
+        label: "What changed",
+        items: [
+          "Delivered a cohesive Ops Suite across NOC multi-monitor workflows and airport field conditions, including dark mode, light mode, and a high-contrast view for glare, older monitors, and outdoor tablets.",
+          "Built the Ops Suite design library into a design system with design – dev parity, aligning Sketch assets to reusable coded components through tight pairing with engineering.",
+        ],
+      },
+    ],
+    roleDetail: [
+      "Hands on product design lead across the Ops Suite",
+      "Designed Gate Management, The Baker, and Flight Audit",
+      "Led design for Turn Management and Shipment Management",
+      "Built the Ops Suite design system, aligning Sketch assets to reusable coded components with an FED partner",
+    ],
+    teamTimeline: [
+      "Started as 2 designers, 1 researcher, 2 front-end developers",
+      "Grew to 5 designers over the 18 months",
+    ],
+    impact:
+      "Delivered a unified OpsSuite concept and demo-ready prototype that aligned stakeholders and gave the build team validated requirements for crew, fleet, and disruption management.",
+    role: "Lead Designer (IC)",
+    team: "Product, Ops leadership, Engineering partners",
+    timeline: "18 months",
+    frameworkIntro: "My approach had four phases:",
+    frameworkParts: sharedFrameworkParts,
+    sections: swaOpsSuiteSections,
+    outcomes: [
+      {
+        metric: "4+ hrs → minutes",
+        description:
+          "Cut severe event shutdown planning with The Baker.",
+      },
+      {
+        metric: "1–1.8 pts",
+        description:
+          "Year over year on-time performance improvement.",
+      },
+    ],
+    reflection: swaOpsSuiteReflection,
     nextSlug: "design-system-scale",
     nextTitle: "Design System at Scale",
   },
