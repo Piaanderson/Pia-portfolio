@@ -459,8 +459,8 @@ export default async function CaseStudyPage({
                       <ol className="list-decimal space-y-4 pl-5 text-lg leading-[1.75] text-foreground/80">
                         {section.decisionList.map((decision) => (
                           <li key={decision.title}>
-                            <p>{decision.title}</p>
-                            <ul className="mt-3 list-disc space-y-2 pl-5 text-lg leading-[1.75] text-foreground/80">
+                            <p className="font-bold">{decision.title}</p>
+                            <ul className="mt-3 list-none space-y-2 text-lg leading-[1.75] text-foreground/80">
                               {decision.bullets.map((bullet) => (
                                 <li key={bullet}>{bullet}</li>
                               ))}

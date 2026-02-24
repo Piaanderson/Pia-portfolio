@@ -172,31 +172,39 @@ const swaOpsSuiteDecisionsSection: NarrativeSection = {
   paragraphs: [],
   decisionList: [
     {
-      title: "Single pane for day-of-operations",
+      title: "Density without chaos",
       bullets: [
-        "Unified view of crew, aircraft, and disruptions instead of toggling between legacy tools",
-        "Role-based workspaces so ops controllers see what they need without clutter",
+        "We tightened the baseline grid and created spacing rules that increased density while preserving rhythm and scan paths.",
       ],
     },
     {
-      title: "Action-first, not data-first",
+      title: "Status semantics beyond color",
       bullets: [
-        "Surfaced next-best actions (reassign crew, swap aircraft, notify stations) instead of raw data dumps",
-        "Reduced cognitive load so controllers could act quickly during irregular operations",
+        "We designed redundant cues so meaning holds up on older monitors, in glare, and for users who cannot rely on color alone.",
       ],
     },
     {
-      title: "Progressive disclosure for complexity",
+      title: "Progressive disclosure that respects experts",
       bullets: [
-        "Summary cards and status at a glance; drill-down for constraints, history, and audit trail",
-        "Designed for both quick triage and deep investigation when needed",
+        "Summary first for speed, depth on demand for investigation, without forcing everyone into the same level of detail.",
       ],
     },
     {
-      title: "Accessibility and shift-friendly use",
+      title: "Stable landmarks and spatial memory",
       bullets: [
-        "High contrast and clear hierarchy for 24/7 control room environments",
-        "Keyboard-first flows and screen reader support as requirements from day one",
+        "Consistent placement of high-signal information so frequent users can build muscle memory across long shifts.",
+      ],
+    },
+    {
+      title: "Trust signals and clear states",
+      bullets: [
+        "Operational tools live or die on credibility. We made system states explicit and used consistent patterns for timestamps, confidence cues, and exception handling.",
+      ],
+    },
+    {
+      title: "Design system built while shipping product",
+      bullets: [
+        "The Ops Suite design library evolved into a design system with design – dev parity. I designed in Sketch while pairing closely with an FED partner who coded reusable components in parallel. When dark mode became necessary, we defined the token approach together. As complexity grew, we tightened grid rules and updated components and screens side by side.",
       ],
     },
   ],
@@ -207,9 +215,10 @@ const swaOpsSuiteSections: NarrativeSection[] = [
     label: "DISCOVER",
     heading: "Understanding how ops controllers really work",
     paragraphs: [
-      "Southwest’s operations control relied on a mix of legacy systems and tribal knowledge. I ran contextual interviews and shadowing in the Ops Center to capture:",
-      "* Who does what during normal vs. irregular operations\n* Where controllers lost time switching tools or reconciling data\n* What “good” looks like when weather or mechanicals hit\n* Technical and regulatory constraints that would shape the product",
-      "In parallel, I met with station ops, crew scheduling, and tech leads to map the full flow from disruption to recovery. The opportunity was a single OpsSuite that could replace fragmented tools while fitting into existing procedures and training.",
+      "We began by grounding the work in real operational behavior, not assumptions. The team conducted contextual inquiry in the OCC and visited four stations, observing station huddles, ramp turns, and transfer drivers. We spoke with over a hundred employees and captured thousands of notes, sketches, and photos to keep design decisions anchored to reality.",
+      "From discovery, two themes stood out.",
+      "First, the domain is intrinsically complex. The job requires constant tradeoffs, coordination across departments, and rapid decision making under uncertainty. The opportunity was not to simplify that complexity, but to reduce extraneous cognitive load created by poor information presentation and tool fragmentation.",
+      "Second, environment and hardware constraints were non-negotiable. NOC supervisors work across five monitors and need modular, configurable views. Gate agents often rely on a single smaller display that may be older or inconsistent in color. Ground crews need high-contrast readability outdoors. These realities shaped the system from day one.",
     ],
     image: {
       src: "/images/case-study-research.jpg",
@@ -222,24 +231,24 @@ const swaOpsSuiteSections: NarrativeSection[] = [
     label: "FRAME",
     heading: "One suite that scales from routine to irregular ops",
     paragraphs: [
-      "We framed the experience around a simple mental model:",
-      "* A single workspace with crew, fleet, and disruptions in one place\n* Clear actions and recommendations, not just status\n* A path from alert to resolution with audit trail and handoffs",
-      "Then we translated this into a phased plan:",
+      "We framed the solution as a cohesive suite, not a set of disconnected apps. The goal was shared patterns, shared semantics, and predictable behavior across tools, so users could transfer learning quickly during disruption.",
+      "Three framing decisions guided the suite.",
     ],
-    outro:
-      "Phased rollout (pilot control room → broader ops → integration with crew and station tools) so we could validate with real users before full deployment.",
     principles: [
       {
-        title: "Alpha",
-        description: "prove the unified view and core recovery actions in one control room",
+        title: "Modular layouts for multi-monitor workflows",
+        description:
+          "NOC supervisors needed to compose their workspace across five monitors. We designed screens and components to be modular so users could arrange views that match their role and operational mode.",
       },
       {
-        title: "Beta",
-        description: "expand to more roles and scenarios; harden for 24/7 use",
+        title: "Mode strategy driven by working conditions",
+        description:
+          "Dark mode for the NOC, light mode for stations, and a high-contrast view for glare, outdoor tablets, and older displays. This was both a usability requirement and an accessibility accelerator because it pushed us to clarify status semantics beyond color.",
       },
       {
-        title: "v1",
-        description: "broad rollout and integration with crew scheduling and station systems",
+        title: "Information hierarchy as the primary interaction model",
+        description:
+          "The suite required dense screens that still scan fast. We used stable landmarks, grouping, and progressive disclosure to keep the most important signals readable at a glance, while preserving expert depth when needed.",
       },
     ],
   },
@@ -248,9 +257,25 @@ const swaOpsSuiteSections: NarrativeSection[] = [
     label: "DESIGN",
     heading: "From concept to demo-ready OpsSuite prototype",
     paragraphs: [
-      "I built an end-to-end Figma prototype that covered:",
-      "* Unified dashboard with crew, aircraft, and disruption cards\n* Action panels (reassign, swap, notify) with guardrails and confirmation\n* Timeline and constraint views for deeper investigation\n* Shift-friendly visual hierarchy and accessibility considerations",
-      "I also produced a demo script and a short demo video so stakeholders could see the experience without live control-room demos. The prototype became the alignment artifact for scope and rollout.",
+      "I designed three core products in the suite, while leading the design direction across the others to ensure coherence.",
+      "Throughout, we treated demos as collaboration points, not reveals. Frequent reviews with departmental leads and user representatives helped the suite feel credible before launch.",
+    ],
+    principles: [
+      {
+        title: "Gate Management",
+        description:
+          "Built for gate agents working on constrained displays in bright environments. Emphasis on legibility, clear status communication, and fast paths for common tasks.",
+      },
+      {
+        title: "Recovery Optimizer, The Baker",
+        description:
+          "Designed for Supervisors on Duty, where decision speed and confidence matter most during disruption. I owned interaction and visual design and led task validation, with regular user connection and co-design sessions to shape workflows around real judgment calls.",
+      },
+      {
+        title: "Flight Audit",
+        description:
+          "Designed to support accuracy and review without slowing teams down, using consistent patterns from the design system.",
+      },
     ],
     image: {
       src: "/images/case-study-prototype.jpg",
@@ -263,9 +288,8 @@ const swaOpsSuiteSections: NarrativeSection[] = [
     label: "VALIDATE",
     heading: "Testing with real controllers before build",
     paragraphs: [
-      "We used the prototype in walkthroughs with ops controllers and crew scheduling:",
-      "* Did the unified view match how they thought about the day?\n* Were actions and language clear under time pressure?\n* Where did they get stuck or second-guess?\n* What was missing for handoffs and audit?",
-      "Each round refined the product and the rollout plan so the build team had validated requirements.",
+      "Validation was continuous rather than end-loaded. I ran task validation testing across user types and used co-design sessions with SODs to de-risk workflows early. We also held regular demos and feedback sessions with operational leads so changes were shaped in the open, not introduced as a surprise.",
+      "After launch, we shadowed real usage and continued iterating as opportunities emerged to smooth workflows and handle edge cases.",
     ],
   },
 ];
@@ -300,6 +324,26 @@ const sharedFrameworkParts = [
   {
     label: "FRAME",
     description: "Define a shared workflow model + decide what v0 must prove",
+  },
+  {
+    label: "DESIGN",
+    description: "Build a demo-ready prototype + design for two skill levels",
+  },
+  {
+    label: "VALIDATE",
+    description:
+      "Put the prototype in front of real users, then translate learnings into build ready requirements",
+  },
+];
+
+const swaFrameworkParts = [
+  {
+    label: "DISCOVER",
+    description: "Understanding how ops controllers really work",
+  },
+  {
+    label: "FRAME",
+    description: "One suite that scales from routine to irregular ops",
   },
   {
     label: "DESIGN",
@@ -423,13 +467,8 @@ export const caseStudies: CaseStudyData[] = [
     introFollowup:
       "The suite shipped into a brand-new facility as the OCC transitioned into the new NOC, which raised the bar for credibility and day-one readiness.",
     problem: [
-      "Controllers spent significant time switching between systems and reconciling data instead of making decisions. During irregular operations, the cognitive load was high and actions were reactive rather than guided.",
-      "Legacy tools were built for specific functions (crew, fleet, delays) but not for the end-to-end flow that controllers actually need on the board.",
-    ],
-    constraints: [
-      "Strict regulatory and safety requirements; any new tool had to fit existing procedures and training.",
-      "24/7 control room environment demanded accessibility, shift-friendly visuals, and reliability.",
-      "Timeline pressure to show a coherent direction before competing internal efforts fragmented the vision.",
+      "Southwest operations teams ran high-stakes work through fragmented tools and heavy manual artifacts. Paper, clipboards, and long whiteboards were still essential to keep the network moving. Training took years, and the most seasoned supervisors were difficult to backfill during irregular operations, which limited flexibility when disruptions hit.",
+      "The environment constraints were just as real as the workflow constraints. The NOC is a dark room with soft purple lighting running 24 hours a day, while stations and ramp teams work in bright sun on varied hardware, including older monitors and weather-proof tablets. A single visual mode or a one-size layout would fail.",
     ],
     impactHeading: "Impact at a glance",
     impactHighlights: [
@@ -464,7 +503,7 @@ export const caseStudies: CaseStudyData[] = [
     team: "Product, Ops leadership, Engineering partners",
     timeline: "18 months",
     frameworkIntro: "My approach had four phases:",
-    frameworkParts: sharedFrameworkParts,
+    frameworkParts: swaFrameworkParts,
     sections: swaOpsSuiteSections,
     outcomes: [
       {
