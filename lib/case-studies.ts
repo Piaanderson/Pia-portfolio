@@ -374,7 +374,7 @@ export const caseStudies: CaseStudyData[] = [
     subtitle: "Enterprise SaaS Platform",
     description:
       "Led the end-to-end redesign of an AI-powered analytics dashboard, improving task completion rates by 40% and reducing onboarding time from 2 weeks to 3 days.",
-    image: "/images/case-study-ai-dashboard.jpg",
+    image: "/images/case-study-agentos-hero.png",
     tags: ["UX Strategy", "AI/ML", "Research", "Hands-On Design"],
     type: "hands-on",
     heroImage: "/images/case-study-agentos-hero.png",
@@ -458,7 +458,7 @@ export const caseStudies: CaseStudyData[] = [
     subtitle: "Airline Operations · Internal Tooling",
     description:
       "Led hands-on discovery, framing, and design of a unified operations suite for Southwest’s Ops Center, reducing tool-switching and surfacing action-oriented workflows for irregular operations.",
-    image: "/images/case-study-opssuite.jpg",
+    image: "/images/case-study-opssuite-hero.png",
     tags: ["UX Strategy", "Operations", "Research", "Hands-On Design"],
     type: "hands-on",
     heroImage: "/images/case-study-opssuite-hero.png",
@@ -530,7 +530,7 @@ export const caseStudies: CaseStudyData[] = [
     subtitle: "UX Maturity Transformation",
     description:
       "Built and scaled a design system adopted by 12 product teams, reducing design-to-dev handoff time by 60% and establishing a shared design language across web and mobile.",
-    image: "/images/case-study-design-system.jpg",
+    image: "/images/case-study-tax-ux-maturity-hero.png",
     tags: ["Design Systems", "Leadership", "Ops"],
     type: "leadership",
     intro:
@@ -628,7 +628,7 @@ export const caseStudies: CaseStudyData[] = [
     subtitle: "Org Design & Culture",
     description:
       "Grew a UX team from 3 to 18 designers, establishing career ladders, rituals, and a research practice that elevated design's influence at the executive level.",
-    image: "/images/case-study-leadership.jpg",
+    image: "/images/case-study-design-org-hypergrowth-hero.png",
     tags: ["Team Building", "Mentorship", "Culture"],
     type: "leadership",
     intro:
