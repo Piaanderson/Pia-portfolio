@@ -700,6 +700,7 @@ export function GradientWave({
   useEffect(() => {
     if (!containerRef.current) return;
 
+    let startId: number | undefined;
     const canvas = document.createElement("canvas");
     Object.assign(canvas.style, {
       position: "absolute",
@@ -731,12 +732,17 @@ export function GradientWave({
       if (deform.noiseFlow !== undefined) vertDeform.noiseFlow.value = deform.noiseFlow;
       if (deform.noiseSeed !== undefined) vertDeform.noiseSeed.value = deform.noiseSeed;
 
-      if (isPlaying) gradient.start();
+      if (isPlaying) {
+        startId = requestAnimationFrame(() => {
+          gradientRef.current?.start();
+        });
+      }
     } catch (error) {
       console.error("Failed to initialize gradient:", error);
     }
 
     return () => {
+      if (startId !== undefined) cancelAnimationFrame(startId);
       gradientRef.current?.stop();
       if (containerRef.current?.contains(canvas)) {
         containerRef.current.removeChild(canvas);
