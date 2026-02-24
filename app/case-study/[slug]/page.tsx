@@ -141,11 +141,25 @@ export default async function CaseStudyPage({
                   {study.subhead}
                 </p>
               )}
+              {study.heroImage && (
+                <div className="mt-10 overflow-hidden rounded-xl border border-border/50 bg-muted/30">
+                  <div className="relative aspect-[16/10] w-full">
+                    <Image
+                      src={study.heroImage}
+                      alt="Case study hero"
+                      fill
+                      className="object-cover"
+                      priority
+                      sizes="(max-width: 1024px) 100vw, 1024px"
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           </section>
 
           {/* ---- INTRO + METADATA ---- */}
-          <section className="px-6 py-12 md:px-10 md:py-20">
+          <section className="px-6 pt-6 pb-12 md:px-10 md:pt-10 md:pb-20">
             <div className="max-w-5xl">
               <div className="max-w-3xl">
                 {study.intro.split("\n\n").map((paragraph) => (

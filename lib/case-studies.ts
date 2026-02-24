@@ -377,7 +377,7 @@ export const caseStudies: CaseStudyData[] = [
     image: "/images/case-study-ai-dashboard.jpg",
     tags: ["UX Strategy", "AI/ML", "Research", "Hands-On Design"],
     type: "hands-on",
-    heroImage: "/images/case-study-ai-dashboard.jpg",
+    heroImage: "/images/case-study-agentos-hero.png",
     intro:
       "Agent creation was trapped behind Python experts. In summer 2025, three teams were independently building agent tooling, but all three were Python-first. That meant the people with the clearest use cases, consultants and business teams, were effectively locked out. Bringing their ideas to life was dependent on a small pool of technical experts to create agents and workflows.",
     introFollowup:
@@ -461,7 +461,7 @@ export const caseStudies: CaseStudyData[] = [
     image: "/images/case-study-opssuite.jpg",
     tags: ["UX Strategy", "Operations", "Research", "Hands-On Design"],
     type: "hands-on",
-    heroImage: "/images/case-study-opssuite.jpg",
+    heroImage: "/images/case-study-opssuite-hero.png",
     intro:
       "Southwest modernized a suite of internal operations applications used in the Network Operations Center and across stations. Before Ops Suite, teams relied heavily on manual artifacts and expert driven workarounds. Paper support was everywhere, alongside whiteboards and informal coordination rituals.",
     introFollowup:
@@ -524,6 +524,7 @@ export const caseStudies: CaseStudyData[] = [
   {
     slug: "design-system-scale",
     title: "Tax Technology UX Maturity Transformation",
+    heroImage: "/images/case-study-tax-ux-maturity-hero.png",
     subhead:
       "Building a UX function and raising UX maturity from level 1 to level 5 in 2 years",
     subtitle: "UX Maturity Transformation",
@@ -532,7 +533,6 @@ export const caseStudies: CaseStudyData[] = [
     image: "/images/case-study-design-system.jpg",
     tags: ["Design Systems", "Leadership", "Ops"],
     type: "leadership",
-    heroImage: "/images/case-study-design-system.jpg",
     intro:
       "When I joined the Tax Technology team, the products were genuinely best in class in capability. They solved complex, specialized tax workflows better than competitors. But we were still losing work in pitches because competitors looked more modern, and stakeholders equated visual polish with overall quality.\n\nTax leadership asked the product org to bring in UX and make it a real part of how work got done. I was one of the first three UX hires brought in to lead that change. Early on, the team was highly capable and delivery oriented, but UX was seen as a cost, a slowdown, and a challenge to established ways of working. Two years later, UX was embedded in pods, PMs expected UX artifacts before story writing, and cross functional teams were actively using research and design methods inside the Agile rhythm.\n\nThis journey aligns to Nielsen Norman Group's UX Maturity Model, moving from early stage adoption to Integrated UX where user centered practices become consistent, scalable, and supported by leadership.",
     impact:
@@ -623,6 +623,7 @@ export const caseStudies: CaseStudyData[] = [
   {
     slug: "team-transformation",
     title: "Design Org in Hypergrowth",
+    heroImage: "/images/case-study-design-org-hypergrowth-hero.png",
     subhead: "Scaling PwC Digital UX from 7 to 130 designers in under 2 years",
     subtitle: "Org Design & Culture",
     description:
@@ -630,7 +631,6 @@ export const caseStudies: CaseStudyData[] = [
     image: "/images/case-study-leadership.jpg",
     tags: ["Team Building", "Mentorship", "Culture"],
     type: "leadership",
-    heroImage: "/images/case-study-leadership.jpg",
     intro:
       "Hypergrowth breaks teams when culture is left to chance. I treated our design org like a product and built an operating system for people, so we could scale without losing quality or identity.\n\nFrom hiring and onboarding to community rituals, learning programs, and leadership norms, I helped create the structures that made a 130 person UX org feel like one team. We clarified what we stand for through a manifesto, created weekly spaces to share work and whiteboard together, and launched shadowing so newer designers could learn intentionally from specialists. The goal was consistency where it matters, and humanity everywhere else.",
     impact:
