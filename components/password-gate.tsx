@@ -5,7 +5,11 @@ import React from "react"
 import { useState, useEffect, useRef, type ReactNode } from "react";
 import { Lock, Eye, EyeOff, ArrowRight, Mail, X, Copy, Check } from "lucide-react";
 
-const CORRECT_PASSWORD = "portfolio2026";
+const ALLOWED_PASSWORDS = [
+  "StrongUXLeadership2025",
+  "StrongUXLeadership2026",
+  "PrincipalUX2026",
+];
 const STORAGE_KEY = "pia-portfolio-unlocked";
 
 export function PasswordGate({ children }: { children: ReactNode }) {
@@ -79,7 +83,7 @@ export function PasswordGate({ children }: { children: ReactNode }) {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (password === CORRECT_PASSWORD) {
+    if (ALLOWED_PASSWORDS.includes(password.trim())) {
       sessionStorage.setItem(STORAGE_KEY, "true");
       setIsUnlocked(true);
       setError(false);
