@@ -5,10 +5,11 @@ import { PasswordGate } from "@/components/password-gate";
 import { caseStudies } from "@/lib/case-studies";
 
 function TypeBadge({ type }: { type: "hands-on" | "leadership" }) {
+  // Colors chosen to stay legible on white card images in both light and dark mode
   const styles =
     type === "hands-on"
-      ? "bg-pink/10 text-pink border-pink/20"
-      : "bg-deep-purple/10 text-[hsl(270,60%,65%)] border-deep-purple/20";
+      ? "bg-[hsl(330,45%,95%)] text-[hsl(330,70%,32%)] border-[hsl(330,40%,82%)]"
+      : "bg-[hsl(270,40%,94%)] text-[hsl(270,55%,28%)] border-[hsl(270,35%,80%)]";
 
   return (
     <span
@@ -66,7 +67,7 @@ export function CaseStudies() {
                     {study.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full bg-secondary px-2.5 py-1 text-xs text-secondary-foreground"
+                        className="rounded-full bg-muted/90 px-2.5 py-1 text-xs font-medium text-foreground/90"
                       >
                         {tag}
                       </span>

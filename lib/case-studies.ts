@@ -10,11 +10,19 @@ export type NarrativeSection = {
   paragraphs: string[];
   image?: { src: string; alt: string; caption?: string };
   testimonial?: Testimonial;
-  principles?: { title: string; description: string }[];
+  principles?: {
+    title: string;
+    description: string;
+    image?: { src: string; alt: string; caption?: string };
+  }[];
   phaseCards?: { label: string; description: string }[];
   outro?: string;
   subhead?: string;
-  decisionList?: { title: string; bullets: string[] }[];
+  decisionList?: {
+    title: string;
+    bullets: string[];
+    image?: { src: string; alt: string; caption?: string };
+  }[];
 };
 
 export type CaseStudyData = {
@@ -153,18 +161,29 @@ const sharedSections: NarrativeSection[] = [
   },
 ];
 
-const agentOsSections: NarrativeSection[] = sharedSections.map((section, index) =>
-  index === 0
-    ? {
-        ...section,
-        image: {
-          src: "/case_study_images/AgentOS%20-%20Journey%20_%20Simple%20Tasks%20to%20Be%20Done%20for%20End%20User.svg",
-          alt: "AgentOS journey: simple tasks to be done for end user",
-          caption: "AgentOS journey from simple tasks to end-user outcomes.",
-        },
-      }
-    : section
-);
+const agentOsSections: NarrativeSection[] = sharedSections.map((section, index) => {
+  if (index === 0) {
+    return {
+      ...section,
+      image: {
+        src: "/case_study_images/AgentOS%20-%20Journey%20_%20Simple%20Tasks%20to%20Be%20Done%20for%20End%20User.svg",
+        alt: "AgentOS journey: simple tasks to be done for end user",
+        caption: "AgentOS journey from simple tasks to end-user outcomes.",
+      },
+    };
+  }
+  if (section.label === "DESIGN") {
+    return {
+      ...section,
+      image: {
+        src: "/images/case-study-agentos-design-workflow.png",
+        alt: "Example workflow interface showing agent builder and run workflow",
+        caption: "End-to-end Figma prototype: workflow authoring and agent overview.",
+      },
+    };
+  }
+  return section;
+});
 
 const swaOpsSuiteDecisionsSection: NarrativeSection = {
   label: "KEY DESIGN DECISIONS",
@@ -206,6 +225,11 @@ const swaOpsSuiteDecisionsSection: NarrativeSection = {
       bullets: [
         "The Ops Suite design library evolved into a design system with design – dev parity. I designed in Sketch while pairing closely with an FED partner who coded reusable components in parallel. When dark mode became necessary, we defined the token approach together. As complexity grew, we tightened grid rules and updated components and screens side by side.",
       ],
+      image: {
+        src: "/images/case-study-opssuite-design-system.png",
+        alt: "Ops Living UI Guide showing design system components, typography, and color palettes for light and dark mode",
+        caption: "Ops Suite design system: components, typography, and tokens aligned with coded components.",
+      },
     },
   ],
 };
@@ -221,8 +245,8 @@ const swaOpsSuiteSections: NarrativeSection[] = [
       "Second, environment and hardware constraints were non-negotiable. NOC supervisors work across five monitors and need modular, configurable views. Gate agents often rely on a single smaller display that may be older or inconsistent in color. Ground crews need high-contrast readability outdoors. These realities shaped the system from day one.",
     ],
     image: {
-      src: "/images/case-study-research.jpg",
-      alt: "Research synthesis from ops center observations",
+      src: "/images/case-study-opssuite-noc.png",
+      alt: "Network Operations Center with blue ambient lighting and multi-monitor workstations",
       caption:
         "Findings from ops center shadowing and interviews with controllers and crew scheduling.",
     },
@@ -264,24 +288,29 @@ const swaOpsSuiteSections: NarrativeSection[] = [
       {
         title: "Gate Management",
         description:
-          "Built for gate agents working on constrained displays in bright environments. Emphasis on legibility, clear status communication, and fast paths for common tasks.",
+          "Built for gate agents and ground crew working on constrained displays in bright environments. Emphasis on legibility, clear status communication, and fast paths for common tasks.",
       },
       {
         title: "Recovery Optimizer, The Baker",
         description:
           "Designed for Supervisors on Duty, where decision speed and confidence matter most during disruption. I owned interaction and visual design and led task validation, with regular user connection and co-design sessions to shape workflows around real judgment calls.",
+        image: {
+          src: "/images/case-study-opssuite-recovery-optimizer.png",
+          alt: "NOC control room with purple ambient lighting, Recovery Optimizer on central monitor showing flight and recovery data",
+          caption: "Recovery Optimizer in the NOC – flight and recovery data on multi-monitor workstation.",
+        },
       },
       {
-        title: "Flight Audit",
+        title: "Station Settings",
         description:
           "Designed to support accuracy and review without slowing teams down, using consistent patterns from the design system.",
       },
     ],
     image: {
-      src: "/images/case-study-prototype.jpg",
-      alt: "OpsSuite prototype showing unified operations view",
+      src: "/images/case-study-opssuite-baggage-truck.png",
+      alt: "Baggage truck: tablet displaying schedule in ground support vehicle on airport tarmac",
       caption:
-        "OpsSuite dashboard and action flows for day-of-operations and irregular ops.",
+        "Ops Suite in the field – Gate Schedule on a weatherproof tablet in a ground support vehicle.",
     },
   },
   {

@@ -479,6 +479,13 @@ export default async function CaseStudyPage({
                                 <li key={bullet}>{bullet}</li>
                               ))}
                             </ul>
+                            {decision.image && (
+                              <CaseStudyLightbox
+                                src={decision.image.src}
+                                alt={decision.image.alt}
+                                caption={decision.image.caption}
+                              />
+                            )}
                           </li>
                         ))}
                       </ol>
@@ -509,47 +516,32 @@ export default async function CaseStudyPage({
                     )}
 
                     {section.image && (
-                      <>
-                        {section.image.src ===
-                        "/case_study_images/AgentOS%20-%20Journey%20_%20Simple%20Tasks%20to%20Be%20Done%20for%20End%20User.svg" ? (
-                          <CaseStudyLightbox
-                            src={section.image.src || "/placeholder.svg"}
-                            alt={section.image.alt}
-                            caption={section.image.caption}
-                          />
-                        ) : (
-                          <figure className="mt-4">
-                            <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
-                              <Image
-                                src={section.image.src || "/placeholder.svg"}
-                                alt={section.image.alt}
-                                fill
-                                className="object-cover"
-                              />
-                            </div>
-                            {section.image.caption && (
-                              <figcaption className="mt-3 text-sm text-muted-foreground">
-                                {section.image.caption}
-                              </figcaption>
-                            )}
-                          </figure>
-                        )}
-                      </>
+                      <CaseStudyLightbox
+                        src={section.image.src || "/placeholder.svg"}
+                        alt={section.image.alt}
+                        caption={section.image.caption}
+                      />
                     )}
 
                     {section.principles && (
                       <div className="mt-4 flex flex-col gap-5">
                         {section.principles.map((principle) => (
-                          <div
-                            key={principle.title}
-                            className="glass rounded-xl p-6 md:p-8"
-                          >
-                            <h3 className="text-base font-semibold text-foreground">
-                              {principle.title}
-                            </h3>
-                            <p className="mt-2 text-base leading-relaxed text-muted-foreground">
-                              {principle.description}
-                            </p>
+                          <div key={principle.title} className="flex flex-col gap-5">
+                            {principle.image && (
+                              <CaseStudyLightbox
+                                src={principle.image.src}
+                                alt={principle.image.alt}
+                                caption={principle.image.caption}
+                              />
+                            )}
+                            <div className="glass rounded-xl p-6 md:p-8">
+                              <h3 className="text-base font-semibold text-foreground">
+                                {principle.title}
+                              </h3>
+                              <p className="mt-2 text-base leading-relaxed text-muted-foreground">
+                                {principle.description}
+                              </p>
+                            </div>
                           </div>
                         ))}
                       </div>
@@ -636,6 +628,11 @@ export default async function CaseStudyPage({
                           <li>Turn Management quote that validates the interaction strategy: “An integrated view eliminates the need to toggle… this saves time and allows me to focus on the operational challenges.”</li>
                           <li>Gate Management credibility and “custom tailored” validation</li>
                         </ul>
+                        <CaseStudyLightbox
+                          src="/images/case-study-opssuite-station-settings.png"
+                          alt="Station Settings interface for Phoenix Sky Harbor, showing ops zones and gate operational settings"
+                          caption="Station Settings – ops zones and gate configuration for station personnel."
+                        />
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-foreground md:text-xl">

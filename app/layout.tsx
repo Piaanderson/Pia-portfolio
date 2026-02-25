@@ -25,9 +25,6 @@ export const metadata: Metadata = {
   title: "Pia Anderson | UX Leader",
   description:
     "UX Leader shaping the future of AI-powered experiences. Portfolio showcasing strategy, leadership, and hands-on design work.",
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
