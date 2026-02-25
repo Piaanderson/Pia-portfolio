@@ -442,29 +442,47 @@ export default async function CaseStudyPage({
                   <div className="flex flex-col gap-8">
                     {section.paragraphs.map((p, j) => {
                       const hasBullets = p.includes("\n* ") || p.startsWith("* ");
-                      if (!hasBullets) {
-                        return (
-                          <p key={j} className="text-lg leading-[1.75] text-foreground/80">
-                            {p}
-                          </p>
-                        );
-                      }
-
-                      const normalized = p.startsWith("* ") ? `\n${p}` : p;
-                      const [lead, ...items] = normalized.split("\n* ");
-                      const filteredItems = items.filter(Boolean);
+                      const showExtraImages = section.extraImages?.afterParagraphIndex === j;
+                      const content = !hasBullets ? (
+                        <p className="text-lg leading-[1.75] text-foreground/80">{p}</p>
+                      ) : (
+                        (() => {
+                          const normalized = p.startsWith("* ") ? `\n${p}` : p;
+                          const [lead, ...items] = normalized.split("\n* ");
+                          const filteredItems = items.filter(Boolean);
+                          return (
+                            <div className="flex flex-col gap-4">
+                              {lead && (
+                                <p className="text-lg leading-[1.75] text-foreground/80">{lead}</p>
+                              )}
+                              <ul className="list-disc space-y-2 pl-5 text-lg leading-[1.75] text-foreground/80">
+                                {filteredItems.map((item) => (
+                                  <li key={item}>{item}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          );
+                        })()
+                      );
                       return (
                         <div key={j} className="flex flex-col gap-4">
-                          {lead && (
-                            <p className="text-lg leading-[1.75] text-foreground/80">
-                              {lead}
-                            </p>
+                          {content}
+                          {showExtraImages && section.extraImages && (
+                            <div className="mt-4 flex flex-col gap-4">
+                              {section.extraImages.images.map((img, i) => (
+                                <CaseStudyLightbox
+                                  key={i}
+                                  src={img.src}
+                                  alt={img.alt}
+                                  caption={
+                                    i === section.extraImages!.images.length - 1
+                                      ? section.extraImages!.caption
+                                      : undefined
+                                  }
+                                />
+                              ))}
+                            </div>
                           )}
-                          <ul className="list-disc space-y-2 pl-5 text-lg leading-[1.75] text-foreground/80">
-                            {filteredItems.map((item) => (
-                              <li key={item}>{item}</li>
-                            ))}
-                          </ul>
                         </div>
                       );
                     })}

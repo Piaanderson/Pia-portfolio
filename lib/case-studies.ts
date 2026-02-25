@@ -23,6 +23,12 @@ export type NarrativeSection = {
     bullets: string[];
     image?: { src: string; alt: string; caption?: string };
   }[];
+  /** Images to render after a specific paragraph index; shared caption for all */
+  extraImages?: {
+    afterParagraphIndex: number;
+    images: { src: string; alt: string }[];
+    caption?: string;
+  };
 };
 
 export type CaseStudyData = {
@@ -615,6 +621,14 @@ export const caseStudies: CaseStudyData[] = [
           "* created a shared component library, then evolved it into a design system for designers and developers\n* established reusable patterns across products so teams could move faster with more consistency\n* embedded designers into pods so discovery and delivery happened together, not as handoffs\n* ran steady enablement through brown bags, lunch and learns, and ongoing coaching in working sessions",
           "Because our users were internal, we could move quickly on contextual inquiry and task based validation. That speed helped teams see the cause and effect between user insight, design decisions, and build outcomes.",
         ],
+        extraImages: {
+          afterParagraphIndex: 1,
+          images: [
+            { src: "/images/case-study-tax-design-system-exploration-1.png", alt: "Design system exploration wall: Forms & Buttons and Grids boards covered with UI component printouts and sticky notes" },
+            { src: "/images/case-study-tax-design-system-exploration-2.png", alt: "Team at the design system exploration wall, reviewing and placing component printouts" },
+          ],
+          caption: "Design System exploration – We pulled components from multiple applications to compare variations and align on next steps for each type.",
+        },
       },
       {
         label: "VALIDATE",
@@ -625,6 +639,14 @@ export const caseStudies: CaseStudyData[] = [
           "* PMs asked for journeys, workflows, and validation findings\n* engineers joined co design sessions and whiteboarding\n* QA partnered earlier on usability and acceptance criteria\n* stakeholders attended user sessions and heard feedback first hand",
           "This is where UX stopped being a role and became a habit, which is the practical signal of an Integrated maturity stage.",
         ],
+        extraImages: {
+          afterParagraphIndex: 3,
+          images: [
+            { src: "/images/case-study-tax-nng-training-1.png", alt: "NN/g trainer presenting Design Thinking to the product dev team" },
+            { src: "/images/case-study-tax-nng-training-2.png", alt: "Product dev team in NNg upskilling session with laptops and materials" },
+          ],
+          caption: "NNg trainers spent 5 days with the entire Tax Technology org – PMs, Devs, QA, and Stakeholders to solidify our commitment to Design Thinking.",
+        },
       },
     ],
     outcomes: [
