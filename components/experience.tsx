@@ -158,19 +158,27 @@ const stats = [
   { value: "30+", label: "Satisfied Clients" },
 ];
 
-const dailyTools = ["Figma", "Miro", "ChatGPT", "Copilot", "Microsoft365"];
+const dailyTools = [
+  "ChatGPT enterprise",
+  "v0",
+  "Cursor",
+  "Microsoft 365",
+  "Figma",
+  "Miro",
+];
 
 const drawerTools = [
+  "CoPilot",
+  "Gemini",
+  "Lovable",
+  "Replit",
+  "Creative Cloud",
   "Sketch",
-  "UXPin",
-  "Bezel",
-  "Photoshop",
-  "Illustrator",
-  "InDesign",
-  "Relay",
-  "Fol.dr",
-  "ProCamera",
-  "InVision",
+  "UXpin",
+  "ADO",
+  "Jira",
+  "Deque Axe Monitor",
+  "Stark",
 ];
 
 /* ------------------------------------------------------------------ */
@@ -390,7 +398,7 @@ export function Experience() {
                   </div>
 
                   <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    Other Tools in the Drawer
+                    Other tools
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {drawerTools.map((tool) => (

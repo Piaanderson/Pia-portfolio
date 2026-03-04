@@ -50,7 +50,7 @@ export function Hero() {
             </a>
             <a
               href="#resume"
-              className="inline-flex h-12 items-center justify-center rounded-lg border border-border px-8 text-sm font-medium text-muted-foreground transition-colors hover:border-foreground/20 hover:text-foreground"
+              className="glass glass-hover inline-flex h-12 items-center justify-center rounded-lg px-8 text-sm font-medium text-foreground transition-all"
             >
               View Resume
             </a>
