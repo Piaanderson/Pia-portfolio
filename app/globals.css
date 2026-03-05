@@ -38,6 +38,12 @@
 
     --glass-bg: 0 0% 100%;
     --glass-border: 228 20% 80%;
+
+    /* Text colors for UI that must appear light regardless of active theme
+       (e.g., nav overlapping the light About section while dark mode is on).
+       Defined only in :root so .dark never overrides them. */
+    --on-light-text: hsl(228, 10%, 42%);
+    --on-light-text-strong: hsl(228, 30%, 14%);
   }
 
   .dark {

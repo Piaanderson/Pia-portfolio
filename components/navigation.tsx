@@ -95,7 +95,7 @@ export function Navigation() {
               href={link.href}
               className={`text-sm transition-colors duration-500 ${
                 useDarkText
-                  ? "text-[#6e6e73] hover:text-[#1d1d1f]"
+                  ? "text-[var(--on-light-text)] hover:text-[var(--on-light-text-strong)]"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -111,7 +111,7 @@ export function Navigation() {
           <button
             type="button"
             className={`flex h-11 w-11 items-center justify-center rounded-lg transition-colors duration-500 ${
-              useDarkText ? "text-[#1d1d1f]" : "text-foreground"
+              useDarkText ? "text-[var(--on-light-text-strong)]" : "text-foreground"
             }`}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-expanded={mobileOpen}
@@ -138,12 +138,9 @@ export function Navigation() {
             <a
               key={link.href}
               href={link.href}
-              // useDarkText forces light-mode palette values when the nav overlaps
-              // the light About section while dark theme is active — CSS tokens
-              // would resolve to dark-mode values and be unreadable there.
               className={`block py-3 text-base transition-colors ${
                 useDarkText
-                  ? "text-[#6e6e73] hover:text-[#1d1d1f]"
+                  ? "text-[var(--on-light-text)] hover:text-[var(--on-light-text-strong)]"
                   : "text-muted-foreground hover:text-foreground"
               }`}
               onClick={() => setMobileOpen(false)}
