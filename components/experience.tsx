@@ -245,7 +245,7 @@ export function Experience() {
                     <div key={employer.name} className="relative">
                       {/* Employer header */}
                       <div className="relative mb-6 flex items-center gap-4 pl-10">
-                        <div className="absolute left-[8px] top-1/2 h-[15px] w-[15px] -translate-y-1/2 rounded-full border-2 border-[hsl(330,85%,50%)] bg-background" />
+                        <div className="absolute left-[8px] top-1/2 h-[15px] w-[15px] -translate-y-1/2 rounded-full border-2 border-[hsl(var(--pink))] bg-background" />
                         <div>
                           <h3 className="text-lg font-bold text-foreground">
                             {employer.name}
@@ -264,7 +264,7 @@ export function Experience() {
                             className="glass relative rounded-xl p-5 md:p-6"
                           >
                             {/* Role dot */}
-                            <div className="absolute -left-[29px] top-6 h-[10px] w-[10px] rounded-full bg-[hsl(270,60%,45%)]" />
+                            <div className="absolute -left-[29px] top-6 h-[10px] w-[10px] rounded-full bg-[hsl(var(--deep-purple))]" />
 
                             <h4 className="text-base font-semibold text-foreground">
                               {role.title}
@@ -348,7 +348,7 @@ export function Experience() {
                         key={cert}
                         className="flex gap-2 text-sm text-muted-foreground"
                       >
-                        <span style={{ color: "hsl(270, 60%, 45%)" }} aria-hidden="true">&#9670;</span>
+                        <span style={{ color: "hsl(var(--deep-purple))" }} aria-hidden="true">&#9670;</span>
                         <span>{cert}</span>
                       </li>
                     ))}
@@ -360,7 +360,7 @@ export function Experience() {
                   className="overflow-hidden rounded-xl p-6"
                   style={{
                     background:
-                      "linear-gradient(135deg, hsl(270, 60%, 30%) 0%, hsl(330, 85%, 45%) 50%, hsl(25, 95%, 50%) 100%)",
+                      "linear-gradient(135deg, hsl(var(--deep-purple)) 0%, hsl(var(--pink)) 50%, hsl(var(--orange)) 100%)",
                   }}
                 >
                   <div className="flex flex-col gap-4 text-center">

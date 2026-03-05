@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react"
-
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
@@ -133,8 +131,6 @@ export function Navigation() {
       {mobileOpen && (
         <div
           id="mobile-menu"
-          role="menu"
-          aria-label="Mobile navigation menu"
           className="border-t px-6 pb-6 pt-2 md:hidden"
           style={sectionLightOverride ? sectionLightMobileStyles : undefined}
         >
@@ -142,6 +138,9 @@ export function Navigation() {
             <a
               key={link.href}
               href={link.href}
+              // useDarkText forces light-mode palette values when the nav overlaps
+              // the light About section while dark theme is active — CSS tokens
+              // would resolve to dark-mode values and be unreadable there.
               className={`block py-3 text-base transition-colors ${
                 useDarkText
                   ? "text-[#6e6e73] hover:text-[#1d1d1f]"

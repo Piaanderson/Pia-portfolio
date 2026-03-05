@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react"
-
 import { useState, useEffect, useRef, type ReactNode } from "react";
 import { Lock, Eye, EyeOff, ArrowRight, Mail, X, Copy, Check } from "lucide-react";
 
