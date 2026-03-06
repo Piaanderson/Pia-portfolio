@@ -117,7 +117,7 @@ export function Recommendations() {
   return (
     <section className="relative px-6 pt-24 pb-8 md:pt-32 md:pb-10">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-16 text-center">
+        <div className="mb-16 text-left">
           <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
             What People Say
           </h2>

@@ -24,7 +24,7 @@ export function CaseStudies() {
   return (
     <section id="work" className="relative px-6 py-24 md:py-32">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-16 text-center">
+        <div className="mb-16 text-left">
           <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
             Selected Work
           </h2>

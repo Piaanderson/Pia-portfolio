@@ -21,12 +21,14 @@ export function About() {
       >
 
         <div className="relative z-10 mx-auto max-w-4xl text-center">
-          <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
-            <span className="gradient-text">
-              Principal UX Leader
-            </span>
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg md:leading-relaxed">
+          <div className="mx-auto max-w-2xl text-left">
+            <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
+              <span className="gradient-text">
+                Principal UX Leader
+              </span>
+            </h2>
+          </div>
+          <p className="mx-auto mt-6 max-w-2xl text-left text-base leading-relaxed text-muted-foreground md:text-lg md:leading-relaxed">
             {"I design AI powered, human centered products that drive real outcomes. I've led cross functional teams, scaled design organizations, and shaped systems used by millions. Whether building from zero or transforming legacy platforms, I bring clarity, craft, and a deep commitment to the people doing the work."}
           </p>
 
@@ -59,7 +61,7 @@ export function About() {
           </div>
 
           {/* Philosophy blurb */}
-          <div className={`mx-auto mt-16 max-w-2xl rounded-2xl p-8 md:p-10 ${isDark ? "glass" : "glass-light"}`}>
+          <div className={`mx-auto mt-16 max-w-2xl rounded-2xl p-8 md:p-10 text-left ${isDark ? "glass" : "glass-light"}`}>
             <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
               My Philosophy
             </p>
