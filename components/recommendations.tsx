@@ -157,6 +157,9 @@ export function Recommendations() {
               {track.map((rec, i) => (
                 <div
                   key={`${rec.name}-${i}`}
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label={`${(i % LEN) + 1} of ${LEN}`}
                   className="glass flex flex-col rounded-xl p-6 md:p-8"
                   style={{
                     width: cardW > 0 ? `${cardW}px` : isMobile ? "100%" : "calc((100% - 32px) / 2)",

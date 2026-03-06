@@ -146,7 +146,7 @@ export default async function CaseStudyPage({
                   <div className="relative aspect-[16/10] w-full">
                     <Image
                       src={study.heroImage}
-                      alt="Case study hero"
+                      alt={study.title}
                       fill
                       className="object-cover"
                       priority
@@ -416,9 +416,9 @@ export default async function CaseStudyPage({
           </section>
 
           {/* ---- NARRATIVE SECTIONS ---- */}
-          {study.sections.map((section, i) => (
+          {study.sections.map((section) => (
             <section
-              key={i}
+              key={section.heading}
               className="px-6 py-16 md:px-10 md:py-24 border-t border-border/30"
             >
               <div className="max-w-5xl">
@@ -440,9 +440,9 @@ export default async function CaseStudyPage({
 
                   {/* Right: prose */}
                   <div className="flex flex-col gap-8">
-                    {section.paragraphs.map((p, j) => {
+                    {section.paragraphs.map((p, paragraphIndex) => {
                       const hasBullets = p.includes("\n* ") || p.startsWith("* ");
-                      const showExtraImages = section.extraImages?.afterParagraphIndex === j;
+                      const showExtraImages = section.extraImages?.afterParagraphIndex === paragraphIndex;
                       const content = !hasBullets ? (
                         <p className="text-lg leading-[1.75] text-foreground/80">{p}</p>
                       ) : (
@@ -465,17 +465,17 @@ export default async function CaseStudyPage({
                         })()
                       );
                       return (
-                        <div key={j} className="flex flex-col gap-4">
+                        <div key={paragraphIndex} className="flex flex-col gap-4">
                           {content}
                           {showExtraImages && section.extraImages && (
                             <div className="mt-4 flex flex-col gap-4">
-                              {section.extraImages.images.map((img, i) => (
+                              {section.extraImages.images.map((img, imgIndex) => (
                                 <CaseStudyLightbox
-                                  key={i}
+                                  key={img.src}
                                   src={img.src}
                                   alt={img.alt}
                                   caption={
-                                    i === section.extraImages!.images.length - 1
+                                    imgIndex === section.extraImages!.images.length - 1
                                       ? section.extraImages!.caption
                                       : undefined
                                   }
