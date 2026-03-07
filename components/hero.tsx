@@ -10,20 +10,7 @@ export function Hero() {
     <section
       id="home"
       className="relative flex min-h-[100dvh] flex-col overflow-hidden px-6 pt-20"
-      style={{
-        background:
-          "linear-gradient(180deg, hsl(228, 50%, 12%) 0%, hsl(240, 45%, 18%) 100%)",
-      }}
     >
-      {/* Subtle glow behind content */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-30"
-        style={{
-          background:
-            "radial-gradient(ellipse 80% 50% at 60% 40%, hsl(270, 60%, 40%) 0%, transparent 50%)",
-        }}
-      />
-
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center pb-12">
         {/*
           Name + headshot composition:
@@ -49,6 +36,8 @@ export function Hero() {
               left: "30%",
               transform: "translateX(-50%)",
               backgroundImage: HERO_GRADIENT,
+              backgroundSize: "300% 100%", // tune this to widen/narrow the slice
+              backgroundPosition: "0% 0%",  // 0% = start of gradient (pink side)
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -90,6 +79,8 @@ export function Hero() {
               left: "50%",
               transform: "translateX(-50%)",
               backgroundImage: HERO_GRADIENT,
+              backgroundSize: "300% 100%", // keep in sync with "Pia" above
+              backgroundPosition: "100% 0%", // 100% = end of gradient (orange side)
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
