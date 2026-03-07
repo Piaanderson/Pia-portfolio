@@ -31,7 +31,11 @@ export function Hero() {
           - Headshot centered (z-10, middle)
           - "Anderson" lower line, ~85% line-height down, shifted left (z-20, front)
         */}
-        <div className="relative mx-auto w-full" style={{ height: "clamp(380px, 55vw, 620px)" }}>
+        {/* Locked-ratio composition container — scales as one unit */}
+        <div
+          className="relative mx-auto w-full"
+          style={{ aspectRatio: "1152 / 620", maxWidth: "1152px" }}
+        >
           <h1 className="sr-only">Pia Anderson</h1>
 
           {/* "Pia" - back layer */}
@@ -41,7 +45,7 @@ export function Hero() {
             style={{
               fontSize: "clamp(6rem, 16vw, 15rem)",
               lineHeight: 1,
-              top: "0%",
+              top: "-2%",
               left: "30%",
               transform: "translateX(-50%)",
               backgroundImage: HERO_GRADIENT,
@@ -58,8 +62,8 @@ export function Hero() {
           <div
             className="absolute z-10"
             style={{
-              width: "clamp(200px, 32vw, 380px)",
-              height: "clamp(280px, 46vw, 540px)",
+              width: "33%",
+              height: "87%",
               top: "50%",
               left: "50%",
               transform: "translate(-46%, -50%)",
