@@ -5,6 +5,9 @@ import { Linkedin, User, Users, LayoutGrid } from "lucide-react";
 const HERO_GRADIENT =
   "linear-gradient(135deg, hsl(330, 85%, 60%) 0%, hsl(270, 60%, 55%) 40%, hsl(25, 95%, 55%) 100%)";
 
+const ANDERSON_GRADIENT =
+  "linear-gradient(135deg, rgba(240, 66, 153, 1) 69%, rgba(125, 14, 191, 1) 82%, rgba(249, 122, 31, 1) 100%)";
+
 export function Hero() {
   return (
     <section
@@ -32,8 +35,8 @@ export function Hero() {
             style={{
               fontSize: "clamp(6rem, 16vw, 15rem)",
               lineHeight: 1,
-              top: "-2%",
-              left: "30%",
+              top: "28px",
+              left: "349px",
               transform: "translateX(-50%)",
               backgroundImage: HERO_GRADIENT,
               backgroundSize: "300% 100%", // tune this to widen/narrow the slice
@@ -78,12 +81,13 @@ export function Hero() {
               top: "23%",
               left: "50%",
               transform: "translateX(-50%)",
-              backgroundImage: HERO_GRADIENT,
-              backgroundSize: "300% 100%", // keep in sync with "Pia" above
-              backgroundPosition: "100% 0%", // 100% = end of gradient (orange side)
+              backgroundImage: ANDERSON_GRADIENT,
+              backgroundSize: "300% 100%",
+              backgroundPosition: "100% 0%",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
+              color: "transparent",
               filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.3))",
             }}
           >
