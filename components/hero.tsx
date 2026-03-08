@@ -24,7 +24,7 @@ export function Hero() {
         {/* Locked-ratio composition container — scales as one unit */}
         <div
           className="relative mx-auto w-full"
-          style={{ aspectRatio: "1152 / 620", maxWidth: "1152px" }}
+          style={{ aspectRatio: "1152 / 620", maxWidth: "1152px", containerType: "inline-size" }}
         >
           <h1 className="sr-only">Pia Anderson</h1>
 
@@ -33,10 +33,10 @@ export function Hero() {
             aria-hidden="true"
             className="absolute z-0 font-serif font-bold"
             style={{
-              fontSize: "clamp(6rem, 16vw, 15rem)",
+              fontSize: "max(3.5rem, 16cqw)",
               lineHeight: 1,
-              top: "28px",
-              left: "349px",
+              top: "4.5%",
+              left: "36.3%",
               transform: "translateX(-50%)",
               backgroundImage: HERO_GRADIENT,
               backgroundSize: "300% 100%", // tune this to widen/narrow the slice
@@ -76,10 +76,10 @@ export function Hero() {
             aria-hidden="true"
             className="absolute z-20 font-serif font-bold whitespace-nowrap"
             style={{
-              fontSize: "clamp(5.5rem, 17vw, 17rem)",
+              fontSize: "max(3.5rem, 17cqw)",
               lineHeight: 1,
               top: "23%",
-              left: "50%",
+              left: "56%",
               transform: "translateX(-50%)",
               backgroundImage: ANDERSON_GRADIENT,
               backgroundSize: "300% 100%",
