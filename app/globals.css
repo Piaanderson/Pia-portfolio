@@ -39,6 +39,9 @@
     --glass-bg: 0 0% 100%;
     --glass-border: 228 20% 80%;
 
+    --hero-name-shadow: drop-shadow(-1px 1px 1px rgba(0,0,0,0.18)) drop-shadow(-2px 2px 3px rgba(0,0,0,0.12)) drop-shadow(-3px 3px 5px rgba(0,0,0,0.08));
+    --hero-tagline-shadow: drop-shadow(-1px 1px 1px rgba(0,0,0,0.14)) drop-shadow(-2px 2px 3px rgba(0,0,0,0.09)) drop-shadow(-3px 3px 5px rgba(0,0,0,0.05));
+
     /* Text colors for UI that must appear light regardless of active theme
        (e.g., nav overlapping the light About section while dark mode is on).
        Defined only in :root so .dark never overrides them. */
@@ -74,6 +77,9 @@
 
     --glass-bg: 228 35% 14%;
     --glass-border: 228 30% 28%;
+
+    --hero-name-shadow: drop-shadow(-1px 1px 1px rgba(0,0,0,0.7)) drop-shadow(-2px 2px 3px rgba(0,0,0,0.5)) drop-shadow(-4px 4px 6px rgba(0,0,0,0.3));
+    --hero-tagline-shadow: drop-shadow(-1px 1px 1px rgba(0,0,0,0.6)) drop-shadow(-2px 2px 3px rgba(0,0,0,0.4)) drop-shadow(-3px 3px 5px rgba(0,0,0,0.2));
   }
 }
 

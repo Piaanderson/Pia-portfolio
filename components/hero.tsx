@@ -44,7 +44,7 @@ export function Hero() {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
               color: "transparent",
-              filter: "drop-shadow(-1px 1px 1px rgba(0,0,0,0.7)) drop-shadow(-2px 2px 3px rgba(0,0,0,0.5)) drop-shadow(-4px 4px 6px rgba(0,0,0,0.3))",
+              filter: "var(--hero-name-shadow)",
             }}
           >
             Pia
@@ -90,7 +90,7 @@ export function Hero() {
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
               color: "transparent",
-              filter: "drop-shadow(-1px 1px 1px rgba(0,0,0,0.7)) drop-shadow(-2px 2px 3px rgba(0,0,0,0.5)) drop-shadow(-4px 4px 6px rgba(0,0,0,0.3))",
+              filter: "var(--hero-name-shadow)",
             }}
           >
             Anderson
@@ -105,7 +105,7 @@ export function Hero() {
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             backgroundClip: "text",
-            filter: "drop-shadow(-1px 1px 1px rgba(0,0,0,0.6)) drop-shadow(-2px 2px 3px rgba(0,0,0,0.4)) drop-shadow(-3px 3px 5px rgba(0,0,0,0.2))",
+            filter: "var(--hero-tagline-shadow)",
           }}
         >
           Scaling Design. Shaping Systems. Raising the Bar.
