@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Linkedin, User, Users, LayoutGrid } from "lucide-react";
+import { Linkedin, Users, Layers, MonitorSmartphone } from "lucide-react";
 
 const HERO_GRADIENT =
   "linear-gradient(135deg, hsl(330, 85%, 60%) 0%, hsl(270, 60%, 55%) 40%, hsl(25, 95%, 55%) 100%)";
@@ -99,7 +99,7 @@ export function Hero() {
 
         {/* Tagline */}
         <p
-          className="relative z-10 mt-4 text-center text-lg font-medium md:text-xl"
+          className="relative z-30 -mt-[22%] text-center text-xl font-medium md:text-2xl"
           style={{
             backgroundImage: "linear-gradient(135deg, hsl(330, 85%, 65%) 0%, hsl(290, 60%, 60%) 60%, hsl(25, 90%, 60%) 100%)",
             WebkitBackgroundClip: "text",
@@ -111,41 +111,54 @@ export function Hero() {
         </p>
 
         {/* Stat boxes */}
-        <div className="relative z-10 mx-auto mt-10 grid max-w-2xl grid-cols-3 gap-4 md:mt-12 md:gap-6">
+        <div className="relative z-30 mx-auto mt-6 grid max-w-2xl grid-cols-3 gap-3 md:mt-8 md:gap-5">
           {[
-            { value: "20+", label: "Years in UX", Icon: User },
-            { value: "130+", label: "Team Members Led", Icon: Users },
-            { value: "30+", label: "Enterprise Clients", Icon: LayoutGrid },
-          ].map(({ value, label, Icon }) => (
+            {
+              value: "20+", label: "Direct Reports", Icon: Users,
+              gradient: "linear-gradient(135deg, hsl(230, 80%, 60%) 0%, hsl(270, 70%, 65%) 100%)",
+              iconColor: "hsl(230, 80%, 65%)",
+            },
+            {
+              value: "130+", label: "Person Team", Icon: Layers,
+              gradient: "linear-gradient(135deg, hsl(330, 85%, 60%) 0%, hsl(290, 70%, 60%) 100%)",
+              iconColor: "hsl(320, 80%, 60%)",
+            },
+            {
+              value: "30+", label: "Design Systems", Icon: MonitorSmartphone,
+              gradient: "linear-gradient(135deg, hsl(35, 95%, 55%) 0%, hsl(15, 90%, 55%) 100%)",
+              iconColor: "hsl(25, 95%, 55%)",
+            },
+          ].map(({ value, label, Icon, gradient }) => (
             <div
               key={label}
-              className="flex flex-col items-center rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-center backdrop-blur-sm md:px-6 md:py-5"
+              className="flex flex-col rounded-xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-sm md:px-5 md:py-4"
               style={{
                 boxShadow:
                   "0 0 0 1px rgba(255,255,255,0.05), inset 0 1px 0 rgba(255,255,255,0.06)",
               }}
             >
-              <div className="mb-2 flex items-center gap-2">
+              <div className="flex items-start gap-2">
                 <Icon
-                  className="h-5 w-5 shrink-0"
-                  style={{ color: "hsl(290, 60%, 65%)" }}
+                  className="mt-1 h-5 w-5 shrink-0 text-white/90 md:h-6 md:w-6"
                   aria-hidden="true"
                 />
-                <span
-                  className="text-2xl font-bold md:text-3xl"
-                  style={{
-                    backgroundImage: HERO_GRADIENT,
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                  }}
-                >
-                  {value}
-                </span>
+                <div className="flex flex-col">
+                  <span
+                    className="text-2xl font-bold md:text-3xl"
+                    style={{
+                      backgroundImage: gradient,
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                    }}
+                  >
+                    {value}
+                  </span>
+                  <span className="mt-0.5 text-xs font-medium text-white/60 md:text-sm">
+                    {label}
+                  </span>
+                </div>
               </div>
-              <span className="block text-xs font-medium text-white/60 md:text-sm">
-                {label}
-              </span>
             </div>
           ))}
         </div>
