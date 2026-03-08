@@ -76,7 +76,7 @@ export function Navigation() {
       style={sectionLightOverride ? sectionLightNavStyles : undefined}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center" aria-label="Home">
+        <Link href="/#home" className="flex items-center" aria-label="Home">
           <Image
             src="/images/pia-logo.png"
             alt="Pia Anderson"

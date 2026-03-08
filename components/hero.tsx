@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Linkedin, Users, Layers, MonitorSmartphone } from "lucide-react";
 
 const HERO_GRADIENT =
-  "linear-gradient(135deg, hsl(330, 85%, 60%) 0%, hsl(270, 60%, 55%) 40%, hsl(25, 95%, 55%) 100%)";
+  "linear-gradient(135deg, rgba(240, 66, 153, 1) 13%, rgba(139, 10, 245, 1) 40%, rgba(249, 122, 31, 1) 100%)";
 
 const ANDERSON_GRADIENT =
-  "linear-gradient(135deg, rgba(240, 66, 153, 1) 69%, rgba(125, 14, 191, 1) 82%, rgba(249, 122, 31, 1) 100%)";
+  "linear-gradient(135deg, rgba(246, 30, 138, 1) 22%, rgba(139, 10, 245, 1) 50%, rgba(249, 122, 31, 1) 80%)";
 
 export function Hero() {
   return (
@@ -44,7 +43,8 @@ export function Hero() {
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
-              filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.3))",
+              color: "transparent",
+              filter: "drop-shadow(-1px 1px 1px rgba(0,0,0,0.7)) drop-shadow(-2px 2px 3px rgba(0,0,0,0.5)) drop-shadow(-4px 4px 6px rgba(0,0,0,0.3))",
             }}
           >
             Pia
@@ -81,16 +81,16 @@ export function Hero() {
               fontSize: "max(3.5rem, 17cqw)",
               lineHeight: 1,
               top: "27%",
-              left: "55%",
+              left: "49%",
               transform: "translateX(-50%)",
               backgroundImage: ANDERSON_GRADIENT,
-              backgroundSize: "300% 100%",
-              backgroundPosition: "100% 0%",
+              backgroundSize: "150% 100%",
+              backgroundPosition: "50% 0%",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
               color: "transparent",
-              filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.3))",
+              filter: "drop-shadow(-1px 1px 1px rgba(0,0,0,0.7)) drop-shadow(-2px 2px 3px rgba(0,0,0,0.5)) drop-shadow(-4px 4px 6px rgba(0,0,0,0.3))",
             }}
           >
             Anderson
@@ -99,123 +99,32 @@ export function Hero() {
 
         {/* Tagline */}
         <p
-          className="relative z-30 -mt-[22%] text-center text-xl font-medium md:text-2xl"
+          className="relative z-30 -mt-[22%] text-center text-base font-medium sm:text-xl md:text-2xl"
           style={{
-            backgroundImage: "linear-gradient(135deg, hsl(330, 85%, 65%) 0%, hsl(290, 60%, 60%) 60%, hsl(25, 90%, 60%) 100%)",
+            backgroundImage: "linear-gradient(135deg, rgba(246, 30, 138, 1) 11%, rgba(139, 10, 245, 1) 45%, rgba(249, 122, 31, 1) 89%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             backgroundClip: "text",
+            filter: "drop-shadow(-1px 1px 1px rgba(0,0,0,0.6)) drop-shadow(-2px 2px 3px rgba(0,0,0,0.4)) drop-shadow(-3px 3px 5px rgba(0,0,0,0.2))",
           }}
         >
           Scaling Design. Shaping Systems. Raising the Bar.
         </p>
 
-        {/* Stat boxes */}
-        <div className="relative z-30 mx-auto mt-6 grid max-w-2xl grid-cols-3 gap-3 md:mt-8 md:gap-5">
-          {[
-            {
-              value: "20+", label: "Direct Reports", Icon: Users,
-              gradient: "linear-gradient(135deg, hsl(230, 80%, 60%) 0%, hsl(270, 70%, 65%) 100%)",
-              iconColor: "hsl(230, 80%, 65%)",
-            },
-            {
-              value: "130+", label: "Person Team", Icon: Layers,
-              gradient: "linear-gradient(135deg, hsl(330, 85%, 60%) 0%, hsl(290, 70%, 60%) 100%)",
-              iconColor: "hsl(320, 80%, 60%)",
-            },
-            {
-              value: "30+", label: "Design Systems", Icon: MonitorSmartphone,
-              gradient: "linear-gradient(135deg, hsl(35, 95%, 55%) 0%, hsl(15, 90%, 55%) 100%)",
-              iconColor: "hsl(25, 95%, 55%)",
-            },
-          ].map(({ value, label, Icon, gradient }) => (
-            <div
-              key={label}
-              className="flex flex-col rounded-xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-sm md:px-5 md:py-4"
-              style={{
-                boxShadow:
-                  "0 0 0 1px rgba(255,255,255,0.05), inset 0 1px 0 rgba(255,255,255,0.06)",
-              }}
-            >
-              <div className="flex items-start gap-2">
-                <Icon
-                  className="mt-1 h-5 w-5 shrink-0 text-white/90 md:h-6 md:w-6"
-                  aria-hidden="true"
-                />
-                <div className="flex flex-col">
-                  <span
-                    className="text-2xl font-bold md:text-3xl"
-                    style={{
-                      backgroundImage: gradient,
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text",
-                    }}
-                  >
-                    {value}
-                  </span>
-                  <span className="mt-0.5 text-xs font-medium text-white/60 md:text-sm">
-                    {label}
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
         {/* CTA buttons */}
         <div className="relative z-10 mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap items-center justify-center md:mt-12">
           <Link
             href="#work"
-            className="inline-flex h-12 items-center justify-center rounded-full px-8 text-sm font-medium text-white transition-all hover:opacity-90"
-            style={{
-              background: "rgba(255,255,255,0.06)",
-              border: "1.5px solid",
-              borderColor: "hsl(310, 60%, 55%)",
-              backdropFilter: "blur(8px)",
-            }}
+            className="glass glass-hover inline-flex h-12 items-center justify-center gap-2 rounded-lg px-8 text-sm font-medium text-foreground"
           >
             View My Work
           </Link>
           <Link
             href="#resume"
-            className="inline-flex h-12 items-center justify-center rounded-full px-8 text-sm font-medium text-white transition-all hover:opacity-90"
-            style={{
-              background: "rgba(255,255,255,0.06)",
-              border: "1.5px solid",
-              borderColor: "hsl(310, 60%, 55%)",
-              backdropFilter: "blur(8px)",
-            }}
+            className="glass glass-hover inline-flex h-12 items-center justify-center gap-2 rounded-lg px-8 text-sm font-medium text-foreground"
           >
             View Resume
           </Link>
-        </div>
-
-        {/* Social icons - bottom right */}
-        <div className="relative z-10 mt-12 flex items-center justify-center gap-3 md:mt-16 md:justify-end">
-          <a
-            href="#"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/5 text-sm font-semibold text-white/90 backdrop-blur-sm transition-colors hover:border-white/40 hover:text-white"
-            aria-label="X (Twitter)"
-          >
-            𝕏
-          </a>
-          <a
-            href="https://www.linkedin.com/in/piaanderson"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white/90 backdrop-blur-sm transition-colors hover:border-white/40 hover:text-white"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="h-5 w-5" aria-hidden="true" />
-          </a>
-          <a
-            href="#"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/5 text-xs font-bold text-white/90 backdrop-blur-sm transition-colors hover:border-white/40 hover:text-white"
-            aria-label="Behance"
-          >
-            Be
-          </a>
         </div>
       </div>
     </section>
