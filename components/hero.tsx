@@ -35,8 +35,8 @@ export function Hero() {
             style={{
               fontSize: "max(3.5rem, 16cqw)",
               lineHeight: 1,
-              top: "4.5%",
-              left: "36.3%",
+              top: "9.5%",
+              left: "37%",
               transform: "translateX(-50%)",
               backgroundImage: HERO_GRADIENT,
               backgroundSize: "300% 100%", // tune this to widen/narrow the slice
@@ -59,6 +59,8 @@ export function Hero() {
               top: "50%",
               left: "50%",
               transform: "translate(-46%, -50%)",
+              WebkitMaskImage: "linear-gradient(to bottom, black 40%, transparent 75%)",
+              maskImage: "linear-gradient(to bottom, black 40%, transparent 75%)",
             }}
           >
             <Image
@@ -78,8 +80,8 @@ export function Hero() {
             style={{
               fontSize: "max(3.5rem, 17cqw)",
               lineHeight: 1,
-              top: "23%",
-              left: "56%",
+              top: "27%",
+              left: "55%",
               transform: "translateX(-50%)",
               backgroundImage: ANDERSON_GRADIENT,
               backgroundSize: "300% 100%",
