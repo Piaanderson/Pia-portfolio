@@ -85,7 +85,7 @@ export const caseStudies: CaseStudyData[] = [
     subtitle: "AI-First Internal Platform · In Progress",
     description:
       "Leading UX vision and front-end delivery for an AI experience layer that unifies budget creation, staffing, and engagement monitoring across three legacy systems.",
-    image: "/images/case-study-agentos-hero.png",
+    image: "/images/case-study-forge-hero.png",
     tags: ["UX Strategy", "AI/ML", "Front-End Dev", "Systems Thinking"],
     type: "hybrid",
 
@@ -98,9 +98,8 @@ export const caseStudies: CaseStudyData[] = [
         text: "Project Forge enters pilot in July 2026. This case study covers the strategic and design decisions made to date. Outcomes will be updated as pilot data becomes available.",
       },
       image: {
-        alt: "Project Forge interface showing the budget builder or comparison view",
-        placeholder:
-          "Project Forge interface showing the budget builder or comparison view",
+        src: "/images/case-study-forge-hero.png",
+        alt: "Project Forge portfolio overview dashboard showing engagement health metrics, AI chat assistant, and attention queue",
       },
       status: "In Progress – Entering Pilot July 2026",
     },

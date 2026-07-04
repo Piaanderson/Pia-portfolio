@@ -292,8 +292,8 @@ export default function Page() {
           </h2>
 
           {/* Featured card */}
-          <a
-            href="#work"
+          <Link
+            href="/case-study/project-forge"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
@@ -316,21 +316,16 @@ export default function Page() {
             <div
               style={{
                 aspectRatio: "16/11",
-                background: "repeating-linear-gradient(45deg, var(--pa-strA) 0 12px, var(--pa-strB) 12px 24px)",
                 position: "relative",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
+                overflow: "hidden",
               }}
             >
-              <div
-                style={{
-                  position: "absolute",
-                  width: "60%",
-                  height: "60%",
-                  borderRadius: "50%",
-                  background: "radial-gradient(circle, rgba(226,62,126,.3), transparent 70%)",
-                }}
+              <Image
+                src="/images/case-study-forge-hero.png"
+                alt="Project Forge portfolio overview dashboard"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
               />
             </div>
             <div
@@ -383,13 +378,13 @@ export default function Page() {
                 Project Forge
               </h3>
               <p style={{ fontSize: "16px", lineHeight: 1.5, color: "var(--pa-body)" }}>
-                The gaps between PwC&apos;s budgeting, staffing, and monitoring tools cost teams hours of redundant work and unreliable data. I designed the AI experience layer that closes them.
+                I designed at the prompt and shipped code alongside engineers to build an AI experience layer across three disconnected internal systems. Every lesson feeds back into the AI-first delivery model I am building for 80 designers.
               </p>
               <p style={{ fontSize: "13px", color: "var(--pa-muted2)", fontWeight: 500 }}>
                 Lead Designer, Strategist &amp; Front-End Developer
               </p>
             </div>
-          </a>
+          </Link>
 
           {/* Standard cards grid */}
           <div
