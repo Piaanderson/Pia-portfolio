@@ -22,7 +22,7 @@ const caseStudies = [
     title: "Agent Workflow Builder",
     desc: "Three teams were building the same AI agent tool in isolation. I designed the unified solution that became PwC’s firm-wide platform for 250+ deployed agents.",
     role: "UX Director (Hands-on)",
-    slug: "ai-dashboard-redesign",
+    slug: "agent-os",
     image: "/images/case-study-agentos-hero.png",
   },
   {
@@ -36,14 +36,14 @@ const caseStudies = [
     title: "Design Org in Hypergrowth",
     desc: "I grew a design team from a small group to 130 people in under two years, with retention that outpaced the industry.",
     role: "UX Director",
-    slug: "team-transformation",
+    slug: "pwc-digital-leadership",
     image: "/images/case-study-design-org-hypergrowth-hero.png",
   },
   {
     title: "UX Maturity Transformation",
     desc: "A team of 60+ engineers had never worked with a designer. Two years later, they refused to start a sprint without one.",
     role: "UX Manager",
-    slug: "design-system-scale",
+    slug: "pwc-tax-tech",
     image: "/images/case-study-tax-ux-maturity-hero.png",
   },
 ];
