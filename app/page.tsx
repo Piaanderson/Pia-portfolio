@@ -3,6 +3,7 @@
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { GradientWave } from "@/components/ui/gradient-wave";
+import { RotatingQuotes } from "@/components/rotating-quotes";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -220,27 +221,8 @@ export default function Page() {
             >
               I lead design teams that deliver in code, not just Figma files. Over 20 years I have built UX practices inside resistant organizations, designed complex operational software, and now I am shaping how enterprise teams work with AI.
             </p>
+            <RotatingQuotes />
             <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
-              <a
-                href="#work"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  background: "var(--pa-ctaBg)",
-                  color: "var(--pa-ctaText)",
-                  fontWeight: 600,
-                  fontSize: "15px",
-                  padding: "12px 22px",
-                  borderRadius: "999px",
-                  textDecoration: "none",
-                }}
-              >
-                See selected work
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
               <Link
                 href="/about"
                 style={{
