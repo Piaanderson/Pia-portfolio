@@ -55,8 +55,9 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       fontFamily: {
-        sans: ['var(--font-inter)'],
-        serif: ['var(--font-playfair)'],
+        sans: ['var(--font-sans)', 'Hanken Grotesk', 'sans-serif'],
+        serif: ['var(--font-serif)', 'Newsreader', 'serif'],
+        mono: ['var(--font-mono)', 'JetBrains Mono', 'monospace'],
       },
       keyframes: {
         'accordion-down': {

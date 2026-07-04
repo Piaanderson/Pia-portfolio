@@ -1,130 +1,211 @@
 "use client";
 
-import React from "react"
-
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "@/components/theme-toggle";
-
-const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Work", href: "#work" },
-  { label: "Resume", href: "#resume" },
-  { label: "Contact", href: "#contact" },
-];
 
 export function Navigation() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [overLightSection, setOverLightSection] = useState(false);
-  const { resolvedTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
+  const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
-  useEffect(() => {
-    function handleScroll() {
-      const navHeight = 64;
-      const lightSections = document.querySelectorAll('[data-theme="light"]');
-      let overlapsLight = false;
-
-      lightSections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top < navHeight && rect.bottom > navHeight) {
-          overlapsLight = true;
-        }
-      });
-
-      setOverLightSection(overlapsLight);
-    }
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const isDark = mounted ? resolvedTheme === "dark" : true;
 
-  // In dark mode, when nav overlaps a light-bg section, use special styles
-  const sectionLightOverride = isDark && overLightSection;
+  function toggleTheme() {
+    const next = isDark ? "light" : "dark";
+    setTheme(next);
+    try {
+      localStorage.setItem("pa-theme", next);
+    } catch {}
+  }
 
-  // Use dark text when global theme is light OR when over a light section in dark mode
-  const useDarkText = !isDark || sectionLightOverride;
-
-  const sectionLightNavStyles = {
-    background: "hsla(245, 10%, 96%, 0.4)",
-    backdropFilter: "blur(24px) saturate(1.6)",
-    WebkitBackdropFilter: "blur(24px) saturate(1.6)",
-    borderBottom: "1px solid hsla(0, 0%, 0%, 0.06)",
-    boxShadow: "0 1px 3px hsla(0, 0%, 0%, 0.04)",
-  } as React.CSSProperties;
-
-  const sectionLightMobileStyles = {
-    background: "hsla(245, 10%, 96%, 0.85)",
-    backdropFilter: "blur(20px)",
-    WebkitBackdropFilter: "blur(20px)",
-    borderColor: "hsla(0, 0%, 0%, 0.06)",
-  } as React.CSSProperties;
+  const isAboutActive = pathname === "/about";
 
   return (
     <nav
       aria-label="Main navigation"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        sectionLightOverride ? "" : "nav-glass"
-      }`}
-      style={sectionLightOverride ? sectionLightNavStyles : undefined}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 50,
+        padding: "22px 28px 0",
+      }}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center" aria-label="Home">
+      <div
+        className="nav-pill"
+        style={{
+          maxWidth: 1040,
+          margin: "0 auto",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 18,
+          padding: "9px 9px 9px 22px",
+          borderRadius: 999,
+          background: "var(--pa-navPillBg, rgba(10,17,40,.18))",
+          backdropFilter: "blur(60px) saturate(1.8)",
+          WebkitBackdropFilter: "blur(60px) saturate(1.8)",
+          border: "1px solid var(--pa-glassBorder)",
+          boxShadow: "var(--pa-glassShadow)",
+        }}
+      >
+        <Link href="/" aria-label="Pia Anderson - home" style={{ display: "flex", alignItems: "center" }}>
           <Image
             src="/images/pia-logo.png"
-            alt="Pia Anderson"
-            width={40}
-            height={40}
-            className="h-9 w-auto"
+            alt="PiA"
+            width={90}
+            height={30}
+            style={{ height: 30, width: "auto", display: "block" }}
             priority
           />
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`text-sm transition-colors duration-500 ${
-                useDarkText
-                  ? "text-[#6e6e73] hover:text-[#1d1d1f]"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {link.label}
-            </a>
-          ))}
-          <ThemeToggle />
+        <div
+          className="hidden md:flex"
+          style={{
+            alignItems: "center",
+            gap: 22,
+            fontSize: 14.5,
+            fontWeight: 500,
+            color: "var(--pa-navlink)",
+          }}
+        >
+          <Link
+            href="/#work"
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
+            Work
+          </Link>
+          <Link
+            href="/about"
+            style={{
+              color: isAboutActive ? "var(--pa-text)" : "inherit",
+              textDecoration: "none",
+              fontWeight: isAboutActive ? 600 : 500,
+              paddingBottom: isAboutActive ? 3 : 0,
+              background: isAboutActive
+                ? "linear-gradient(90deg, #9b1f76, #e23e7e, #ff9d4d) left bottom/100% 2px no-repeat"
+                : "none",
+            }}
+          >
+            About
+          </Link>
+          {/* Theme toggle */}
+          <button
+            onClick={toggleTheme}
+            type="button"
+            aria-label="Toggle light and dark mode"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: 38,
+              height: 38,
+              borderRadius: "50%",
+              border: "1px solid var(--pa-bstrong)",
+              background: "var(--pa-trackBg)",
+              color: "var(--pa-navlink)",
+              cursor: "pointer",
+              padding: 0,
+              flex: "none",
+            }}
+          >
+            {mounted && isDark ? (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} width={17} height={17} strokeLinecap="round" strokeLinejoin="round">
+                <circle cx={12} cy={12} r={4.2} />
+                <path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4" />
+              </svg>
+            ) : mounted ? (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} width={17} height={17} strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+              </svg>
+            ) : (
+              <span style={{ width: 17, height: 17 }} />
+            )}
+          </button>
+
+          {/* LinkedIn CTA */}
+          <a
+            href="https://www.linkedin.com/in/uxpiaanderson/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 6,
+              background: "var(--pa-ctaBg)",
+              color: "var(--pa-ctaText)",
+              textDecoration: "none",
+              fontWeight: 600,
+              padding: "11px 20px",
+              borderRadius: 999,
+            }}
+          >
+            LinkedIn
+            <svg viewBox="0 0 24 24" fill="currentColor" width={12} height={12}>
+              <path d="M14 3h7v7h-2V6.4l-8.3 8.3-1.4-1.4L17.6 5H14V3zM5 5h5v2H7v10h10v-3h2v5H5V5z" />
+            </svg>
+          </a>
         </div>
 
-        {/* Mobile: theme toggle + hamburger */}
+        {/* Mobile hamburger */}
         <div className="flex items-center gap-2 md:hidden">
-          <ThemeToggle />
+          <button
+            onClick={toggleTheme}
+            type="button"
+            aria-label="Toggle light and dark mode"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: 38,
+              height: 38,
+              borderRadius: "50%",
+              border: "1px solid var(--pa-bstrong)",
+              background: "var(--pa-trackBg)",
+              color: "var(--pa-navlink)",
+              cursor: "pointer",
+              padding: 0,
+            }}
+          >
+            {mounted && isDark ? (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} width={17} height={17} strokeLinecap="round" strokeLinejoin="round">
+                <circle cx={12} cy={12} r={4.2} />
+                <path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4" />
+              </svg>
+            ) : mounted ? (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} width={17} height={17} strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+              </svg>
+            ) : null}
+          </button>
           <button
             type="button"
-            className={`flex h-11 w-11 items-center justify-center rounded-lg transition-colors duration-500 ${
-              useDarkText ? "text-[#1d1d1f]" : "text-foreground"
-            }`}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-expanded={mobileOpen}
-            aria-controls="mobile-menu"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: 38,
+              height: 38,
+              background: "transparent",
+              border: "none",
+              color: "var(--pa-navlink)",
+              cursor: "pointer",
+            }}
           >
-            {mobileOpen ? (
-              <X className="h-5 w-5" aria-hidden="true" />
-            ) : (
-              <Menu className="h-5 w-5" aria-hidden="true" />
-            )}
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
@@ -132,26 +213,52 @@ export function Navigation() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div
-          id="mobile-menu"
-          role="menu"
-          aria-label="Mobile navigation menu"
-          className="border-t px-6 pb-6 pt-2 md:hidden"
-          style={sectionLightOverride ? sectionLightMobileStyles : undefined}
+          style={{
+            maxWidth: 1040,
+            margin: "12px auto 0",
+            padding: "16px 24px",
+            borderRadius: 16,
+          background: "var(--pa-glassBg)",
+          backdropFilter: "blur(40px) saturate(1.6)",
+          WebkitBackdropFilter: "blur(40px) saturate(1.6)",
+          border: "1px solid var(--pa-glassBorder)",
+          }}
+          className="md:hidden"
         >
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`block py-3 text-base transition-colors ${
-                useDarkText
-                  ? "text-[#6e6e73] hover:text-[#1d1d1f]"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-              onClick={() => setMobileOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
+          <Link
+            href="/#work"
+            onClick={() => setMobileOpen(false)}
+            style={{ display: "block", padding: "10px 0", color: "var(--pa-navlink)", textDecoration: "none", fontSize: 15 }}
+          >
+            Work
+          </Link>
+          <Link
+            href="/about"
+            onClick={() => setMobileOpen(false)}
+            style={{ display: "block", padding: "10px 0", color: "var(--pa-navlink)", textDecoration: "none", fontSize: 15 }}
+          >
+            About
+          </Link>
+          <a
+            href="https://www.linkedin.com/in/uxpiaanderson/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 6,
+              marginTop: 8,
+              background: "var(--pa-ctaBg)",
+              color: "var(--pa-ctaText)",
+              textDecoration: "none",
+              fontWeight: 600,
+              padding: "11px 20px",
+              borderRadius: 999,
+              fontSize: 14,
+            }}
+          >
+            LinkedIn
+          </a>
         </div>
       )}
     </nav>

@@ -38,6 +38,39 @@
 
     --glass-bg: 0 0% 100%;
     --glass-border: 228 20% 80%;
+
+    /* Handoff design tokens - light theme */
+    --pa-bg: #f4f1ea;
+    --pa-bg2: #ffffff;
+    --pa-bg3: #eeebe3;
+    --pa-text: #15213f;
+    --pa-text2: #2d3a5c;
+    --pa-body: #3d4763;
+    --pa-muted: #737c97;
+    --pa-muted2: #8a93ad;
+    --pa-muted3: #8a93ad;
+    --pa-qtext: #2d3a5c;
+    --pa-accent: #c0267a;
+    --pa-border: rgba(21,33,63,.1);
+    --pa-bstrong: rgba(21,33,63,.14);
+    --pa-chip: #f1f0ec;
+    --pa-navlink: #46506b;
+    --pa-foot: #46506b;
+    --pa-copy: #9aa1b8;
+    --pa-shadow: rgba(21,33,63,.24);
+    --pa-trackBg: rgba(21,33,63,.12);
+    --pa-heroGlow: rgba(192,38,122,.16);
+    --pa-ctaBg: #15213f;
+    --pa-ctaText: #f7f5f0;
+    --pa-glassBg: rgba(244,241,234,.78);
+    --pa-glassBorder: rgba(21,33,63,.12);
+    --pa-glassShadow: 0 4px 16px rgba(21,33,63,.10), 0 1px 4px rgba(21,33,63,.06), inset 0 1px 0 rgba(255,255,255,.5);
+    --pa-navPillBg: rgba(255,255,255,.12);
+    --pa-amb: radial-gradient(62% 88% at 50% -16%, rgba(21,33,63,.16), rgba(192,38,122,.09) 45%, transparent 72%);
+    --pa-strA: rgba(21,33,63,.06);
+    --pa-strB: rgba(21,33,63,.025);
+    --pa-warmGlow: radial-gradient(circle, rgba(255,157,77,.34), rgba(226,62,126,.16) 46%, transparent 72%);
+    --pa-vigEdge: transparent;
   }
 
   .dark {
@@ -68,6 +101,39 @@
 
     --glass-bg: 228 35% 14%;
     --glass-border: 228 30% 28%;
+
+    /* Handoff design tokens - dark theme */
+    --pa-bg: #0a1128;
+    --pa-bg2: #0f1733;
+    --pa-bg3: #080d20;
+    --pa-text: #eef0f6;
+    --pa-text2: #c8cde2;
+    --pa-body: #c2c8e0;
+    --pa-muted: #9aa3c4;
+    --pa-muted2: #8b93b6;
+    --pa-muted3: #7e87a8;
+    --pa-qtext: #d4d8ea;
+    --pa-accent: #ff9d4d;
+    --pa-border: rgba(255,255,255,.08);
+    --pa-bstrong: rgba(255,255,255,.14);
+    --pa-chip: rgba(255,255,255,.06);
+    --pa-navlink: #c2c8e0;
+    --pa-foot: #aeb4d0;
+    --pa-copy: #5d668a;
+    --pa-shadow: rgba(0,0,0,.5);
+    --pa-trackBg: rgba(255,255,255,.08);
+    --pa-heroGlow: rgba(226,62,126,.28);
+    --pa-ctaBg: #eef0f6;
+    --pa-ctaText: #0a1128;
+    --pa-glassBg: rgba(10,17,40,.82);
+    --pa-glassBorder: rgba(255,255,255,.12);
+    --pa-glassShadow: 0 4px 12px rgba(0,0,0,.35), 0 1px 3px rgba(0,0,0,.25), inset 0 1px 0 rgba(220,230,255,.06);
+    --pa-navPillBg: rgba(10,17,40,.15);
+    --pa-amb: radial-gradient(62% 88% at 50% -16%, rgba(226,62,126,.32), rgba(255,157,77,.13) 45%, transparent 72%);
+    --pa-strA: rgba(255,255,255,.05);
+    --pa-strB: rgba(255,255,255,.015);
+    --pa-warmGlow: radial-gradient(circle, rgba(255,157,77,.30), rgba(226,62,126,.18) 46%, transparent 72%);
+    --pa-vigEdge: #0a1128;
   }
 }
 
@@ -93,8 +159,34 @@
   }
 }
 
-/* Frosted glass component */
-.dark .glass {
+/* Frosted glass component - handoff spec */
+.glass {
+  position: relative;
+  background: var(--pa-glassBg);
+  backdrop-filter: blur(40px) saturate(1.6);
+  -webkit-backdrop-filter: blur(40px) saturate(1.6);
+  border: 1px solid var(--pa-glassBorder);
+  box-shadow: var(--pa-glassShadow);
+}
+
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg,
+    hsl(220 80% 70% / .35) 0%, hsl(270 60% 65% / .2) 30%,
+    hsl(330 85% 65% / .15) 60%, hsl(25 95% 60% / .1) 80%, transparent 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Legacy glass for case study pages */
+.dark .glass-legacy {
   background: hsla(228, 35%, 14%, 0.4);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -106,7 +198,7 @@
     inset 0 1px 0 hsla(220, 80%, 80%, 0.06);
 }
 
-:root:not(.dark) .glass {
+:root:not(.dark) .glass-legacy {
   background: hsla(0, 0%, 100%, 0.3);
   backdrop-filter: blur(24px) saturate(1.4);
   -webkit-backdrop-filter: blur(24px) saturate(1.4);
@@ -116,46 +208,6 @@
     0 4px 16px hsla(228, 30%, 14%, 0.08),
     0 1px 4px hsla(228, 30%, 14%, 0.05),
     inset 0 1px 0 hsla(0, 0%, 100%, 0.5);
-}
-
-.dark .glass::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(
-    135deg,
-    hsla(220, 80%, 70%, 0.3) 0%,
-    hsla(270, 60%, 60%, 0.15) 30%,
-    hsla(330, 85%, 60%, 0.1) 60%,
-    transparent 100%
-  );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
-:root:not(.dark) .glass::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(
-    135deg,
-    hsla(220, 80%, 70%, 0.3) 0%,
-    hsla(270, 60%, 65%, 0.2) 30%,
-    hsla(330, 85%, 65%, 0.12) 60%,
-    transparent 100%
-  );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
 }
 
 .dark .glass-subtle {

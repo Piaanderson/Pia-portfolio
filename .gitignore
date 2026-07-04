@@ -5,8 +5,23 @@ __v0_jsx-dev-runtime.ts
 instrumentation-client.js
 instrumentation-client.ts
 
-# Common ignores
+# Dependencies
 node_modules/
+
+# Next.js build
 .next/
+out/
+
+# Build artifacts
+tsconfig.tsbuildinfo
+
+# Environment files
+.env
 .env*.local
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# Old project backup
+pia-anderson-portfolio-feb26-old/
