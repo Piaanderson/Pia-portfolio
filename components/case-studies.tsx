@@ -4,18 +4,26 @@ import { ArrowRight } from "lucide-react";
 import { PasswordGate } from "@/components/password-gate";
 import { caseStudies } from "@/lib/case-studies";
 
-function TypeBadge({ type }: { type: "hands-on" | "leadership" }) {
-  // Colors chosen to stay legible on white card images in both light and dark mode
+function TypeBadge({ type }: { type: "hands-on" | "leadership" | "hybrid" }) {
   const styles =
     type === "hands-on"
       ? "bg-[hsl(330,45%,95%)] text-[hsl(330,70%,32%)] border-[hsl(330,40%,82%)]"
-      : "bg-[hsl(270,40%,94%)] text-[hsl(270,55%,28%)] border-[hsl(270,35%,80%)]";
+      : type === "hybrid"
+        ? "bg-[hsl(200,40%,94%)] text-[hsl(200,55%,28%)] border-[hsl(200,35%,80%)]"
+        : "bg-[hsl(270,40%,94%)] text-[hsl(270,55%,28%)] border-[hsl(270,35%,80%)]";
+
+  const label =
+    type === "hands-on"
+      ? "Hands-On"
+      : type === "hybrid"
+        ? "Hybrid"
+        : "Leadership";
 
   return (
     <span
       className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium ${styles}`}
     >
-      {type === "hands-on" ? "Hands-On" : "Leadership"}
+      {label}
     </span>
   );
 }
