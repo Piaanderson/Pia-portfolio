@@ -841,7 +841,7 @@ const homepageCardCopy: Record<
   Pick<HomepageWorkCard, "title" | "desc" | "role">
 > = {
   "project-forge": {
-    title: "Project Forge",
+    title: "AI and Experience Layer",
     desc: "I designed at the prompt and shipped code alongside engineers to build an AI experience layer across three disconnected internal systems. Every lesson feeds back into the AI-first delivery model I am building for 80 designers.",
     role: "Lead Designer, Strategist & Front-End Developer",
   },
