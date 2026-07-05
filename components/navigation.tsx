@@ -22,24 +22,27 @@ export function Navigation() {
   }
 
   const isAboutActive = pathname === "/about";
+  const isCaseStudyPage = pathname.startsWith("/case-study/");
 
   return (
     <nav
       aria-label="Main navigation"
+      className={isCaseStudyPage ? "nav-case-study" : undefined}
       style={{
         position: "fixed",
         top: 0,
         left: 0,
         right: 0,
         zIndex: 50,
-        padding: "22px 28px 0",
+        padding: isCaseStudyPage ? "22px 24px 0" : "22px 28px 0",
       }}
     >
       <div
         className="nav-pill"
         style={{
-          maxWidth: 1040,
-          margin: "0 auto",
+          maxWidth: isCaseStudyPage ? undefined : 1040,
+          width: isCaseStudyPage ? "100%" : undefined,
+          margin: isCaseStudyPage ? 0 : "0 auto",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -209,9 +212,11 @@ export function Navigation() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div
+          className="nav-mobile-menu"
           style={{
-            maxWidth: 1040,
-            margin: "12px auto 0",
+            maxWidth: isCaseStudyPage ? undefined : 1040,
+            width: isCaseStudyPage ? "100%" : undefined,
+            margin: isCaseStudyPage ? "12px 0 0" : "12px auto 0",
             padding: "16px 24px",
             borderRadius: 16,
           background: "var(--pa-glassBg)",
