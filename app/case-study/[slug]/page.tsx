@@ -435,7 +435,7 @@ export default async function CaseStudyPage({
         </PasswordGate>
       </div>
 
-      <Footer />
+      <Footer insetForSidebar />
     </main>
   );
 }

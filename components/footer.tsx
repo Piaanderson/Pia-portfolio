@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { RESUME_DOWNLOAD_NAME, RESUME_HREF } from "@/lib/site";
 
-export function Footer() {
+export function Footer({ insetForSidebar = false }: { insetForSidebar?: boolean }) {
   return (
     <footer
+      className={insetForSidebar ? "md:ml-[260px]" : undefined}
       style={{
         borderTop: "1px solid var(--pa-border)",
         background: "var(--pa-bg3)",

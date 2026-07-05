@@ -114,8 +114,8 @@ export function CaseStudySidebar({
           ))}
         </div>
 
-        {/* Bottom: resume link */}
-        <div className="mt-auto border-t border-border/20 px-6 py-5">
+        {/* Bottom: resume link — height matches footer inner row (86px, 30px vertical padding) */}
+        <div className="mt-auto flex min-h-[86px] items-center border-t border-border/20 px-6 py-[30px]">
           <a
             href={RESUME_HREF}
             download={RESUME_DOWNLOAD_NAME}
