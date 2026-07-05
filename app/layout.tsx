@@ -2,6 +2,7 @@ import React from "react"
 import type { Metadata, Viewport } from "next";
 import { Newsreader, Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeColorMeta } from "@/components/theme-color-meta";
 
 import "./globals.css";
 
@@ -27,7 +28,10 @@ const jetbrainsMono = JetBrains_Mono({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0a1128",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f4f1ea" },
+    { color: "#0a1128" },
+  ],
 };
 
 export const metadata: Metadata = {
@@ -59,6 +63,7 @@ export default function RootLayout({
           disableTransitionOnChange
           storageKey="pa-theme"
         >
+          <ThemeColorMeta />
           {children}
         </ThemeProvider>
       </body>
