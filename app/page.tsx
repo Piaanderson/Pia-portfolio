@@ -67,12 +67,11 @@ export default function Page() {
     if (!mounted) return;
 
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const elements = document.querySelectorAll("[data-reveal]");
+    const elements = document.querySelectorAll<HTMLElement>("[data-reveal]");
+    const showElement = (el: HTMLElement) => el.classList.add("is-visible");
 
     if (prefersReduced) {
-      elements.forEach((el) => {
-        (el as HTMLElement).style.opacity = "1";
-      });
+      elements.forEach(showElement);
       return;
     }
 
@@ -81,9 +80,7 @@ export default function Page() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const el = entry.target as HTMLElement;
-            el.style.transition = "opacity 0.7s ease, transform 0.7s ease";
-            el.style.opacity = "1";
-            el.style.transform = "translateY(0)";
+            showElement(el);
             observer.unobserve(el);
           }
         });
@@ -91,19 +88,11 @@ export default function Page() {
       { threshold: 0.1 }
     );
 
-    elements.forEach((el) => {
-      const htmlEl = el as HTMLElement;
-      htmlEl.style.opacity = "0";
-      htmlEl.style.transform = "translateY(20px)";
-      observer.observe(el);
-    });
+    elements.forEach((el) => observer.observe(el));
 
     // Safety fallback
     const fallbackTimer = setTimeout(() => {
-      elements.forEach((el) => {
-        (el as HTMLElement).style.opacity = "1";
-        (el as HTMLElement).style.transform = "translateY(0)";
-      });
+      elements.forEach(showElement);
     }, 1200);
 
     return () => {
@@ -118,9 +107,9 @@ export default function Page() {
   const deform = isDark ? darkDeform : lightDeform;
 
   return (
-    <div>
+    <div className="overflow-x-clip">
       {/* Fixed gradient wave background */}
-      <div className="fixed inset-0 z-0" style={{ overflowX: "clip" }}>
+      <div className="fixed inset-0 z-0 overflow-x-clip">
         <GradientWave
           key={isDark ? "dark" : "light"}
           colors={colors}
@@ -139,101 +128,37 @@ export default function Page() {
         {/* Hero */}
         <section
           data-reveal
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1.15fr 0.85fr",
-            gap: "48px",
-            padding: "120px 40px 60px",
-            maxWidth: "1040px",
-            margin: "0 auto",
-            alignItems: "center",
-          }}
-          className="hero-grid"
+          className="hero-grid reveal-section mx-auto grid max-w-[1040px] grid-cols-1 items-center gap-8 px-5 pb-10 pt-[124px] md:grid-cols-[1.15fr_0.85fr] md:gap-12 md:px-10 md:pb-[60px] md:pt-[120px]"
         >
           <div>
-            <p
-              style={{
-                fontFamily: "var(--font-mono)",
-                fontSize: "12.5px",
-                letterSpacing: "2.4px",
-                textTransform: "uppercase",
-                color: "var(--pa-muted)",
-                marginBottom: "26px",
-                background: "linear-gradient(90deg, #9b1f76, #e23e7e, #ff9d4d) left bottom/100% 2px no-repeat",
-                paddingBottom: "6px",
-                display: "inline-block",
-              }}
-            >
+            <p className="role-treatment">
               UX DIRECTOR
             </p>
-            <h1
-              style={{
-                fontFamily: "var(--font-serif)",
-                fontWeight: 500,
-                fontSize: "74px",
-                lineHeight: 0.98,
-                letterSpacing: "-1px",
-                color: "var(--pa-text)",
-                marginBottom: "24px",
-              }}
-              className="hero-heading"
-            >
+            <h1 className="hero-heading mb-6 font-serif text-[48px] font-medium leading-[0.98] tracking-[-1px] text-pa-text md:text-[74px]">
               Pia Anderson
             </h1>
-            <p
-              style={{
-                fontSize: "18.5px",
-                lineHeight: 1.55,
-                color: "var(--pa-body)",
-                maxWidth: "30em",
-                marginBottom: "32px",
-              }}
-            >
+            <p className="mb-8 max-w-[30em] text-[18.5px] leading-[1.55] text-pa-body">
               I lead design teams that deliver in code, not just Figma files. Over 20 years I have built UX practices inside resistant organizations, designed complex operational software, and now I am shaping how enterprise teams work with AI.
             </p>
             <RotatingQuotes />
-            <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
+            <div className="flex flex-wrap gap-[14px]">
               <Link
                 href="/about"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  border: "1px solid var(--pa-bstrong)",
-                  color: "var(--pa-text)",
-                  fontWeight: 600,
-                  fontSize: "15px",
-                  padding: "12px 22px",
-                  borderRadius: "999px",
-                  textDecoration: "none",
-                  background: "transparent",
-                }}
+                className="inline-flex items-center rounded-full border border-pa-bstrong bg-transparent px-[22px] py-3 text-[15px] font-semibold text-pa-text no-underline"
               >
                 About Pia
               </Link>
             </div>
           </div>
 
-          <div
-            style={{
-              position: "relative",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              minHeight: "440px",
-            }}
-          >
+          <div className="relative flex min-h-[440px] items-center justify-center">
             <Image
               src="/images/pia-headshot-circle.jpg"
               alt="Pia Anderson"
               width={380}
               height={380}
               priority
-              style={{
-                borderRadius: "50%",
-                border: "5px solid var(--pa-bg2)",
-                boxShadow: "0 22px 48px var(--pa-shadow)",
-                position: "relative",
-              }}
+              className="relative h-auto w-full max-w-[380px] rounded-full border-[5px] border-pa-bg2 shadow-pa-soft"
             />
           </div>
         </section>
@@ -242,189 +167,75 @@ export default function Page() {
         <section
           id="work"
           data-reveal
-          style={{
-            maxWidth: "1040px",
-            margin: "0 auto",
-            padding: "30px 40px 70px",
-            scrollMarginTop: "96px",
-          }}
+          className="reveal-section mx-auto max-w-[1040px] scroll-mt-24 px-10 pb-[70px] pt-[30px]"
         >
-          <h2
-            style={{
-              fontFamily: "var(--font-serif)",
-              fontSize: "30px",
-              fontWeight: 500,
-              color: "var(--pa-text)",
-              marginBottom: "28px",
-            }}
-          >
+          <h2 className="mb-7 font-serif text-[30px] font-medium text-pa-text">
             Selected Work
           </h2>
 
           {/* Featured card */}
           <Link
             href={`/case-study/${homepageFeaturedCard.slug}`}
-            className="featured-work-card"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              background: "var(--pa-bg2)",
-              border: "1px solid var(--pa-border)",
-              borderRadius: "16px",
-              overflow: "hidden",
-              textDecoration: "none",
-              color: "inherit",
-              marginBottom: "22px",
-              transition: "border-color 0.3s ease",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.borderColor = "rgba(226,62,126,.5)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.borderColor = "var(--pa-border)";
-            }}
+            className="featured-work-card mb-[22px] grid grid-cols-1 overflow-hidden rounded-2xl border border-pa-border bg-pa-bg2 text-inherit no-underline transition-colors hover:border-[#e23e7e]/50 md:grid-cols-2"
           >
-            <div
-              style={{
-                aspectRatio: "16/11",
-                position: "relative",
-                overflow: "hidden",
-              }}
-            >
+            <div className="relative aspect-[16/11] overflow-hidden">
               <Image
                 src={homepageFeaturedCard.image}
                 alt="Project Forge portfolio overview dashboard"
                 fill
-                style={{ objectFit: "cover" }}
+                className="object-cover"
                 priority
               />
             </div>
-            <div
-              style={{
-                padding: "38px 40px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                gap: "12px",
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
-                <span
-                  style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: "11px",
-                    textTransform: "uppercase",
-                    letterSpacing: "1.6px",
-                    color: "var(--pa-accent)",
-                    fontWeight: 600,
-                  }}
-                >
+            <div className="flex flex-col justify-center gap-3 px-10 py-[38px]">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="font-mono text-[11px] font-semibold uppercase tracking-[1.6px] text-pa-accent">
                   {homepageFeaturedCard.badge}
                 </span>
-                <span
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "5px",
-                    fontSize: "11px",
-                    color: "var(--pa-muted)",
-                    background: "var(--pa-chip)",
-                    padding: "3px 9px",
-                    borderRadius: "20px",
-                  }}
-                >
+                <span className="inline-flex items-center gap-[5px] rounded-[20px] bg-pa-chip px-[9px] py-[3px] text-[11px] text-pa-muted">
                   <LockIcon />
                   Protected
                 </span>
               </div>
-              <h3
-                style={{
-                  fontFamily: "var(--font-serif)",
-                  fontSize: "30px",
-                  fontWeight: 600,
-                  lineHeight: 1.05,
-                  color: "var(--pa-text)",
-                }}
-              >
+              <h3 className="font-serif text-[30px] font-semibold leading-[1.05] text-pa-text">
                 {homepageFeaturedCard.title}
               </h3>
-              <p style={{ fontSize: "16px", lineHeight: 1.5, color: "var(--pa-body)" }}>
+              <p className="text-base leading-[1.5] text-pa-body">
                 {homepageFeaturedCard.desc}
               </p>
-              <p style={{ fontSize: "13px", color: "var(--pa-muted2)", fontWeight: 500 }}>
+              <p className="text-[13px] font-medium text-pa-muted2">
                 {homepageFeaturedCard.role}
               </p>
             </div>
           </Link>
 
           {/* Standard cards grid */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "22px",
-            }}
-            className="work-cards-grid"
-          >
+          <div className="work-cards-grid grid grid-cols-1 gap-[22px] md:grid-cols-2">
             {homepageWorkCards.map((study) => (
               <Link
                 key={study.slug}
                 href={`/case-study/${study.slug}`}
-                style={{
-                  display: "block",
-                  background: "var(--pa-bg2)",
-                  border: "1px solid var(--pa-border)",
-                  borderRadius: "14px",
-                  overflow: "hidden",
-                  textDecoration: "none",
-                  color: "inherit",
-                  transition: "border-color 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(226,62,126,.4)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = "var(--pa-border)";
-                }}
+                className="block overflow-hidden rounded-[14px] border border-pa-border bg-pa-bg2 text-inherit no-underline transition-colors hover:border-[#e23e7e]/40"
               >
-                <div style={{ position: "relative", aspectRatio: "16/8" }}>
+                <div className="relative aspect-[16/8]">
                   <Image
                     src={study.image}
                     alt={study.title}
                     fill
-                    style={{ objectFit: "cover" }}
+                    className="object-cover"
                   />
                 </div>
-                <div style={{ padding: "24px 26px 28px" }}>
-                  <h3
-                    style={{
-                      fontFamily: "var(--font-serif)",
-                      fontSize: "21px",
-                      fontWeight: 600,
-                      color: "var(--pa-text)",
-                      marginBottom: "8px",
-                    }}
-                  >
+                <div className="px-[26px] pb-7 pt-6">
+                  <h3 className="mb-2 font-serif text-[21px] font-semibold text-pa-text">
                     {study.title}
                   </h3>
-                  <p style={{ fontSize: "14px", lineHeight: 1.5, color: "var(--pa-body)", marginBottom: "12px" }}>
+                  <p className="mb-3 text-sm leading-[1.5] text-pa-body">
                     {study.desc}
                   </p>
-                  <p style={{ fontSize: "12.5px", color: "var(--pa-muted3)", fontWeight: 500, marginBottom: "8px" }}>
+                  <p className="mb-2 text-[12.5px] font-medium text-pa-muted3">
                     {study.role}
                   </p>
-                  <span
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "5px",
-                      fontSize: "11px",
-                      color: "var(--pa-muted)",
-                      background: "var(--pa-chip)",
-                      padding: "3px 9px",
-                      borderRadius: "20px",
-                    }}
-                  >
+                  <span className="inline-flex items-center gap-[5px] rounded-[20px] bg-pa-chip px-[9px] py-[3px] text-[11px] text-pa-muted">
                     <LockIcon />
                     Protected
                   </span>
@@ -437,82 +248,30 @@ export default function Page() {
         {/* Testimonials */}
         <section
           data-reveal
-          style={{
-            width: "100%",
-            padding: "54px 0 64px",
-            background: "var(--pa-bg3)",
-            borderTop: "1px solid var(--pa-border)",
-          }}
+          className="reveal-section w-full border-t border-pa-border bg-pa-bg3 py-[54px] pb-16"
         >
-          <div style={{ maxWidth: "1040px", margin: "0 auto", padding: "0 40px" }}>
-            <h2
-              style={{
-                fontFamily: "var(--font-serif)",
-                fontSize: "30px",
-                fontWeight: 500,
-                color: "var(--pa-text)",
-                marginBottom: "30px",
-              }}
-            >
+          <div className="mx-auto max-w-[1040px] px-10">
+            <h2 className="mb-[30px] font-serif text-[30px] font-medium text-pa-text">
               What colleagues say
             </h2>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr 1fr",
-                gap: "22px",
-              }}
-              className="testimonials-grid"
-            >
+            <div className="testimonials-grid grid grid-cols-1 gap-[22px] md:grid-cols-3">
               {testimonials.map((t) => (
                 <div
                   key={t.initials}
-                  className="glass"
-                  style={{
-                    borderRadius: "16px",
-                    padding: "34px 32px",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
+                  className="glass flex flex-col rounded-2xl px-8 py-[34px]"
                 >
-                  <p
-                    style={{
-                      fontStyle: "italic",
-                      fontFamily: "var(--font-sans)",
-                      fontSize: "17px",
-                      lineHeight: 1.55,
-                      color: "var(--pa-qtext)",
-                      marginBottom: "26px",
-                      flex: 1,
-                    }}
-                  >
+                  <p className="mb-[26px] flex-1 text-[17px] italic leading-[1.55] text-pa-qtext">
                     &ldquo;{t.quote}&rdquo;
                   </p>
-                  <div style={{ display: "flex", gap: "15px", alignItems: "center" }}>
-                    <div
-                      style={{
-                        width: "46px",
-                        height: "46px",
-                        borderRadius: "50%",
-                        background: "var(--pa-chip)",
-                        border: "1px solid var(--pa-border)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        fontSize: "14px",
-                        fontWeight: 600,
-                        letterSpacing: "0.5px",
-                        color: "var(--pa-muted2)",
-                        flexShrink: 0,
-                      }}
-                    >
+                  <div className="flex items-center gap-[15px]">
+                    <div className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-full border border-pa-border bg-pa-chip text-sm font-semibold tracking-[0.5px] text-pa-muted2">
                       {t.initials}
                     </div>
                     <div>
-                      <p style={{ fontSize: "14.5px", fontWeight: 600, color: "var(--pa-text)", margin: 0 }}>
+                      <p className="m-0 text-[14.5px] font-semibold text-pa-text">
                         {t.name}
                       </p>
-                      <p style={{ fontSize: "13px", color: "var(--pa-muted2)", marginTop: "2px", margin: 0 }}>
+                      <p className="m-0 mt-[2px] text-[13px] text-pa-muted2">
                         {t.role}
                       </p>
                     </div>
@@ -526,57 +285,20 @@ export default function Page() {
         {/* Toolkit */}
         <section
           data-reveal
-          style={{
-            maxWidth: "1040px",
-            margin: "0 auto",
-            padding: "54px 40px 60px",
-          }}
+          className="reveal-section mx-auto max-w-[1040px] px-10 pb-[60px] pt-[54px]"
         >
-          <h2
-            style={{
-              fontFamily: "var(--font-serif)",
-              fontSize: "30px",
-              fontWeight: 500,
-              color: "var(--pa-text)",
-              marginBottom: "32px",
-            }}
-          >
+          <h2 className="mb-8 font-serif text-[30px] font-medium text-pa-text">
             Toolkit
           </h2>
           {toolkitRows.map((row, i) => (
             <div
               key={row.label}
-              className="toolkit-row"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "220px 1fr",
-                gap: "32px",
-                alignItems: "baseline",
-                padding: "18px 0",
-                borderTop: "1px solid var(--pa-border)",
-                borderBottom: i === toolkitRows.length - 1 ? "1px solid var(--pa-border)" : undefined,
-              }}
+              className={`toolkit-row grid grid-cols-1 items-baseline gap-2 border-t border-pa-border py-[18px] md:grid-cols-[220px_1fr] md:gap-8 ${i === toolkitRows.length - 1 ? "border-b border-pa-border" : ""}`}
             >
-              <span
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "12px",
-                  letterSpacing: "1.4px",
-                  textTransform: "uppercase",
-                  fontWeight: 600,
-                  color: row.accent ? "var(--pa-accent)" : "var(--pa-muted)",
-                }}
-              >
+              <span className={`font-mono text-xs font-semibold uppercase tracking-[1.4px] ${row.accent ? "text-pa-accent" : "text-pa-muted"}`}>
                 {row.label}
               </span>
-              <span
-                style={{
-                  fontFamily: "var(--font-sans)",
-                  fontSize: "17px",
-                  lineHeight: 1.7,
-                  color: "var(--pa-text2)",
-                }}
-              >
+              <span className="text-[17px] leading-[1.7] text-pa-text2">
                 {row.tools}
               </span>
             </div>
@@ -585,33 +307,6 @@ export default function Page() {
 
         <Footer />
       </main>
-
-      {/* Responsive styles */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .hero-grid {
-            grid-template-columns: 1fr !important;
-            padding: 40px 20px !important;
-            gap: 32px !important;
-          }
-          .hero-heading {
-            font-size: 48px !important;
-          }
-          .work-cards-grid {
-            grid-template-columns: 1fr !important;
-          }
-          .featured-work-card {
-            grid-template-columns: 1fr !important;
-          }
-          .testimonials-grid {
-            grid-template-columns: 1fr !important;
-          }
-          .toolkit-row {
-            grid-template-columns: 1fr !important;
-            gap: 8px !important;
-          }
-        }
-      `}</style>
     </div>
   );
 }

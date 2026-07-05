@@ -4,68 +4,31 @@ import { RESUME_DOWNLOAD_NAME, RESUME_HREF } from "@/lib/site";
 export function Footer({ insetForSidebar = false }: { insetForSidebar?: boolean }) {
   return (
     <footer
-      className={insetForSidebar ? "md:ml-[260px]" : undefined}
-      style={{
-        borderTop: "1px solid var(--pa-border)",
-        background: "var(--pa-bg3)",
-      }}
+      className={`${insetForSidebar ? "md:ml-[260px]" : ""} border-t border-pa-border bg-pa-bg3`}
     >
-      <div
-        style={{
-          maxWidth: 1040,
-          margin: "0 auto",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-          gap: 16,
-          padding: "30px 40px",
-        }}
-      >
-        <div
-          style={{
-            fontFamily: "var(--font-serif), Newsreader, serif",
-            fontSize: 17,
-            fontWeight: 600,
-            color: "var(--pa-text)",
-          }}
-        >
+      <div className="mx-auto flex max-w-[1040px] flex-wrap items-center justify-between gap-4 px-10 py-[30px]">
+        <div className="font-serif text-[17px] font-semibold text-pa-text">
           Pia Anderson
         </div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 26,
-            fontFamily: "var(--font-sans), Hanken Grotesk, sans-serif",
-            fontSize: 13.5,
-            color: "var(--pa-foot)",
-          }}
-        >
+        <div className="flex items-center gap-[26px] text-[13.5px] text-pa-foot">
           <a
             href="https://www.linkedin.com/in/uxpiaanderson/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "inherit", textDecoration: "none" }}
+            className="text-inherit no-underline transition-opacity hover:opacity-80"
           >
             LinkedIn
           </a>
           <a
             href="mailto:pia@piaanderson.com"
-            style={{ color: "inherit", textDecoration: "none" }}
+            className="text-inherit no-underline transition-opacity hover:opacity-80"
           >
             pia@piaanderson.com
           </a>
           <a
             href={RESUME_HREF}
             download={RESUME_DOWNLOAD_NAME}
-            style={{
-              color: "inherit",
-              textDecoration: "none",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 5,
-            }}
+            className="inline-flex items-center gap-[5px] text-inherit no-underline transition-opacity hover:opacity-80"
           >
             Resume PDF
             <svg
@@ -73,19 +36,13 @@ export function Footer({ insetForSidebar = false }: { insetForSidebar?: boolean 
               fill="currentColor"
               width={11}
               height={11}
-              style={{ opacity: 0.7 }}
+              className="opacity-70"
             >
               <path d="M12 16l-5-5h3V4h4v7h3l-5 5zM5 20v-2h14v2H5z" />
             </svg>
           </a>
         </div>
-        <div
-          style={{
-            fontFamily: "var(--font-sans), Hanken Grotesk, sans-serif",
-            fontSize: 12,
-            color: "var(--pa-copy)",
-          }}
-        >
+        <div className="text-xs text-pa-copy">
           &copy; 2026 Pia Anderson
         </div>
       </div>

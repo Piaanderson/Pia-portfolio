@@ -1,183 +1,56 @@
-"use client";
-
-import { useEffect } from "react";
 import Image from "next/image";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { RevealOnScroll } from "@/components/reveal-on-scroll";
 import { RESUME_DOWNLOAD_NAME, RESUME_HREF } from "@/lib/site";
 
 export default function AboutPage() {
-  // Scroll reveal
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mq.matches) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const el = entry.target as HTMLElement;
-            el.style.opacity = "1";
-            el.style.transform = "translateY(0)";
-            observer.unobserve(el);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const els = document.querySelectorAll("[data-reveal]");
-    els.forEach((el) => {
-      const htmlEl = el as HTMLElement;
-      htmlEl.style.opacity = "0";
-      htmlEl.style.transform = "translateY(20px)";
-      htmlEl.style.transition =
-        "opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1)";
-      observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  const sectionGrid = "relative z-[1] mx-auto grid max-w-[1040px] grid-cols-1 items-start gap-[54px] px-5 md:grid-cols-[400px_1fr] md:px-10";
 
   return (
-    <div
-      style={{
-        fontFamily: "var(--font-sans), 'Hanken Grotesk', sans-serif",
-        position: "relative",
-        minHeight: "100vh",
-        backgroundColor: "var(--pa-bg)",
-        color: "var(--pa-text)",
-        overflowX: "hidden",
-        transition: "background-color .4s ease, color .4s ease",
-      }}
-    >
+    <div className="relative min-h-screen overflow-x-hidden bg-pa-bg font-sans text-pa-text transition-colors duration-[400ms]">
       {/* Ambient gradient overlay */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          height: 440,
-          background: "var(--pa-amb)",
-          pointerEvents: "none",
-          zIndex: 0,
-        }}
-      />
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[440px] bg-pa-ambient" />
 
       <Navigation />
 
       {/* Hero Section */}
-      <section
-        className="about-page-section"
-        data-reveal
-        style={{
-          position: "relative",
-          zIndex: 1,
-          maxWidth: 1040,
-          margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "400px 1fr",
-          gap: 54,
-          padding: "110px 40px 0",
-          alignItems: "start",
-        }}
-      >
+      <RevealOnScroll as="section" className={`${sectionGrid} pt-[124px]`}>
         {/* Photo column */}
-        <div style={{ position: "relative" }}>
+        <div className="relative">
           {/* Warm glow behind photo */}
-          <div
-            style={{
-              position: "absolute",
-              inset: "-6% -8% -5%",
-              background: "var(--pa-warmGlow)",
-              filter: "blur(34px)",
-              zIndex: 0,
-              borderRadius: 18,
-            }}
-          />
+          <div className="absolute inset-[-6%_-8%_-5%] z-0 rounded-[18px] bg-pa-warm-glow blur-[34px]" />
           {/* Photo container */}
-          <div
-            className="about-hero-photo"
-            style={{
-              position: "relative",
-              zIndex: 1,
-              width: "100%",
-              height: 660,
-              borderRadius: 18,
-              overflow: "hidden",
-              boxShadow: "0 26px 60px var(--pa-shadow)",
-            }}
-          >
+          <div className="about-hero-photo relative z-[1] h-[300px] w-full overflow-hidden rounded-[18px] shadow-pa-photo md:h-[660px]">
             <Image
               src="/images/pia-office.jpg"
               alt="Pia Anderson"
               fill
-              style={{ objectFit: "cover", objectPosition: "50% 22%" }}
+              className="object-cover object-[50%_22%]"
               priority
             />
             {/* Vignette overlay */}
             <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                background:
-                  "radial-gradient(120% 110% at 50% 32%, transparent 54%, var(--pa-vigEdge) 100%)",
-                pointerEvents: "none",
-              }}
+              className="pointer-events-none absolute inset-0 [background:radial-gradient(120%_110%_at_50%_32%,transparent_54%,var(--pa-vigEdge)_100%)]"
             />
           </div>
         </div>
 
         {/* Text column */}
         <div>
-          <p
-            style={{
-              fontFamily: "var(--font-mono), 'JetBrains Mono', monospace",
-              fontSize: 12,
-              letterSpacing: 3,
-              textTransform: "uppercase",
-              color: "var(--pa-accent)",
-              marginBottom: 18,
-            }}
-          >
+          <p className="mb-[18px] font-mono text-xs uppercase tracking-[3px] text-pa-accent">
             ABOUT
           </p>
-          <h1
-            style={{
-              fontFamily: "var(--font-serif), Newsreader, serif",
-              fontSize: 62,
-              fontWeight: 500,
-              lineHeight: 0.98,
-              letterSpacing: -1,
-              color: "var(--pa-text)",
-              marginBottom: 34,
-            }}
-          >
+          <h1 className="mb-[34px] font-serif text-[62px] font-medium leading-[0.98] tracking-[-1px] text-pa-text">
             Pia Anderson
           </h1>
-          <p
-            style={{
-              fontSize: 20,
-              lineHeight: 1.6,
-              letterSpacing: -0.1,
-              color: "var(--pa-text)",
-              marginBottom: 26,
-            }}
-          >
+          <p className="mb-[26px] text-xl leading-[1.6] tracking-[-0.1px] text-pa-text">
             I started my career as a designer who could not stop asking why the
             systems behind the screen were so much harder to use than they needed
             to be. Twenty years later, that question still drives everything I
             do.
           </p>
-          <p
-            style={{
-              fontSize: 17,
-              lineHeight: 1.75,
-              color: "var(--pa-body)",
-              marginBottom: 24,
-            }}
-          >
+          <p className="mb-6 text-[17px] leading-[1.75] text-pa-body">
             At PwC, I have grown a design team from seven to over 130,
             established UX as a discipline inside a tax technology group that had
             never employed a designer, and led the design of AI platforms now
@@ -186,14 +59,7 @@ export default function AboutPage() {
             software at projekt202 that changed how Southwest Airlines recovers
             from weather disruptions.
           </p>
-          <p
-            style={{
-              fontSize: 17,
-              lineHeight: 1.75,
-              color: "var(--pa-body)",
-              margin: 0,
-            }}
-          >
+          <p className="m-0 text-[17px] leading-[1.75] text-pa-body">
             What I keep coming back to is the space between systems. The places
             where tools do not talk to each other, where teams work in silos, and
             where users build workarounds because nobody designed the
@@ -204,108 +70,39 @@ export default function AboutPage() {
             work.
           </p>
         </div>
-      </section>
+      </RevealOnScroll>
 
       {/* Background Section */}
-      <section
-        className="about-page-section"
-        data-reveal
-        style={{
-          position: "relative",
-          zIndex: 1,
-          maxWidth: 1040,
-          margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "400px 1fr",
-          gap: 54,
-          padding: "56px 40px 0",
-          alignItems: "start",
-        }}
-      >
+      <RevealOnScroll as="section" className={`${sectionGrid} pt-14`}>
         {/* Label column */}
-        <p
-          style={{
-            fontFamily: "var(--font-mono), 'JetBrains Mono', monospace",
-            fontSize: 11,
-            letterSpacing: 2,
-            textTransform: "uppercase",
-            color: "var(--pa-muted)",
-            paddingTop: 4,
-          }}
-        >
+        <p className="pt-1 font-mono text-[11px] uppercase tracking-[2px] text-pa-muted">
           BACKGROUND
         </p>
 
         {/* Content column */}
         <div>
           {/* Hairline divider */}
-          <div
-            style={{
-              height: 1,
-              background: "var(--pa-border)",
-              marginBottom: 30,
-            }}
-          />
+          <div className="mb-[30px] h-px bg-pa-border" />
 
-          <div
-            className="about-bg-inner-grid"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: 40,
-            }}
-          >
+          <div className="about-bg-inner-grid grid grid-cols-1 gap-10 md:grid-cols-2">
             {/* Education */}
             <div>
-              <p
-                style={{
-                  fontFamily: "var(--font-mono), 'JetBrains Mono', monospace",
-                  fontSize: 11,
-                  letterSpacing: 2,
-                  textTransform: "uppercase",
-                  color: "var(--pa-muted)",
-                  marginBottom: 16,
-                }}
-              >
+              <p className="mb-4 font-mono text-[11px] uppercase tracking-[2px] text-pa-muted">
                 EDUCATION
               </p>
-              <div style={{ marginBottom: 14 }}>
-                <p
-                  style={{
-                    fontSize: 15,
-                    lineHeight: 1.5,
-                    color: "var(--pa-text2)",
-                  }}
-                >
+              <div className="mb-[14px]">
+                <p className="text-[15px] leading-[1.5] text-pa-text2">
                   Communication Design
                 </p>
-                <p
-                  style={{
-                    fontSize: 13,
-                    color: "var(--pa-muted2)",
-                    marginTop: 2,
-                  }}
-                >
+                <p className="mt-0.5 text-[13px] text-pa-muted2">
                   University of North Texas
                 </p>
               </div>
               <div>
-                <p
-                  style={{
-                    fontSize: 15,
-                    lineHeight: 1.5,
-                    color: "var(--pa-text2)",
-                  }}
-                >
+                <p className="text-[15px] leading-[1.5] text-pa-text2">
                   Multi Media and Animation
                 </p>
-                <p
-                  style={{
-                    fontSize: 13,
-                    color: "var(--pa-muted2)",
-                    marginTop: 2,
-                  }}
-                >
+                <p className="mt-0.5 text-[13px] text-pa-muted2">
                   Art Institute of Dallas
                 </p>
               </div>
@@ -313,126 +110,47 @@ export default function AboutPage() {
 
             {/* Certifications */}
             <div>
-              <p
-                style={{
-                  fontFamily: "var(--font-mono), 'JetBrains Mono', monospace",
-                  fontSize: 11,
-                  letterSpacing: 2,
-                  textTransform: "uppercase",
-                  color: "var(--pa-muted)",
-                  marginBottom: 16,
-                }}
-              >
+              <p className="mb-4 font-mono text-[11px] uppercase tracking-[2px] text-pa-muted">
                 CERTIFICATIONS
               </p>
-              <p
-                style={{
-                  fontSize: 15,
-                  lineHeight: 1.5,
-                  color: "var(--pa-text2)",
-                  marginBottom: 14,
-                }}
-              >
+              <p className="mb-[14px] text-[15px] leading-[1.5] text-pa-text2">
                 IAAP Certified Professional in Accessibility Core Competencies
                 (CPACC)
               </p>
-              <p
-                style={{
-                  fontSize: 15,
-                  lineHeight: 1.5,
-                  color: "var(--pa-text2)",
-                }}
-              >
+              <p className="text-[15px] leading-[1.5] text-pa-text2">
                 Nielsen Norman Group UX Master Certification
               </p>
             </div>
           </div>
         </div>
-      </section>
+      </RevealOnScroll>
 
       {/* Connect Section */}
-      <section
-        className="about-page-section"
-        data-reveal
-        style={{
-          position: "relative",
-          zIndex: 1,
-          maxWidth: 1040,
-          margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "400px 1fr",
-          gap: 54,
-          padding: "56px 40px 84px",
-          alignItems: "start",
-        }}
-      >
+      <RevealOnScroll as="section" className={`${sectionGrid} pb-[84px] pt-14`}>
         {/* Label column */}
-        <p
-          style={{
-            fontFamily: "var(--font-mono), 'JetBrains Mono', monospace",
-            fontSize: 11,
-            letterSpacing: 2,
-            textTransform: "uppercase",
-            color: "var(--pa-muted)",
-            paddingTop: 8,
-          }}
-        >
+        <p className="pt-2 font-mono text-[11px] uppercase tracking-[2px] text-pa-muted">
           CONNECT
         </p>
 
         {/* Content column */}
         <div>
           {/* Hairline divider */}
-          <div
-            style={{
-              height: 1,
-              background: "var(--pa-border)",
-              marginBottom: 30,
-            }}
-          />
+          <div className="mb-[30px] h-px bg-pa-border" />
 
-          <h2
-            style={{
-              fontFamily: "var(--font-serif), Newsreader, serif",
-              fontSize: 30,
-              fontWeight: 500,
-              letterSpacing: -0.5,
-              color: "var(--pa-text)",
-              marginBottom: 14,
-            }}
-          >
+          <h2 className="mb-[14px] font-serif text-[30px] font-medium tracking-[-0.5px] text-pa-text">
             Let&apos;s talk
           </h2>
-          <p
-            style={{
-              fontSize: 17.5,
-              lineHeight: 1.6,
-              color: "var(--pa-body)",
-              maxWidth: "30em",
-              marginBottom: 24,
-            }}
-          >
+          <p className="mb-6 max-w-[30em] text-[17.5px] leading-[1.6] text-pa-body">
             If you want to talk about design leadership, AI-first delivery, or
             what I could bring to your team, I am easy to find.
           </p>
 
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+          <div className="flex flex-wrap gap-3">
             <a
               href="https://www.linkedin.com/in/uxpiaanderson/"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                background: "var(--pa-ctaBg)",
-                color: "var(--pa-ctaText)",
-                fontWeight: 600,
-                fontSize: 15,
-                padding: "12px 21px",
-                borderRadius: 999,
-                textDecoration: "none",
-              }}
+              className="inline-flex items-center gap-2 rounded-full bg-pa-cta px-[21px] py-3 text-[15px] font-semibold text-pa-cta-text no-underline"
             >
               LinkedIn
               <svg
@@ -452,37 +170,14 @@ export default function AboutPage() {
             </a>
             <a
               href="mailto:pia@piaanderson.com"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                border: "1px solid var(--pa-bstrong)",
-                color: "var(--pa-text)",
-                fontWeight: 600,
-                fontSize: 15,
-                padding: "12px 21px",
-                borderRadius: 999,
-                textDecoration: "none",
-                background: "transparent",
-              }}
+              className="inline-flex items-center rounded-full border border-pa-bstrong bg-transparent px-[21px] py-3 text-[15px] font-semibold text-pa-text no-underline"
             >
               pia@piaanderson.com
             </a>
             <a
               href={RESUME_HREF}
               download={RESUME_DOWNLOAD_NAME}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                border: "1px solid var(--pa-bstrong)",
-                color: "var(--pa-text)",
-                fontWeight: 600,
-                fontSize: 15,
-                padding: "12px 21px",
-                borderRadius: 999,
-                textDecoration: "none",
-                background: "transparent",
-              }}
+              className="inline-flex items-center gap-2 rounded-full border border-pa-bstrong bg-transparent px-[21px] py-3 text-[15px] font-semibold text-pa-text no-underline"
             >
               Resume
               <svg
@@ -503,26 +198,9 @@ export default function AboutPage() {
             </a>
           </div>
         </div>
-      </section>
+      </RevealOnScroll>
 
       <Footer />
-
-      {/* Responsive styles */}
-      <style dangerouslySetInnerHTML={{ __html: `
-        @media (max-width: 768px) {
-          .about-page-section {
-            grid-template-columns: 1fr !important;
-            padding-left: 20px !important;
-            padding-right: 20px !important;
-          }
-          .about-hero-photo {
-            height: 300px !important;
-          }
-          .about-bg-inner-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}} />
     </div>
   );
 }

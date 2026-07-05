@@ -8,6 +8,31 @@
   }
 }
 
+@layer components {
+  .role-treatment {
+    font-family: var(--font-mono), JetBrains Mono, monospace;
+    font-size: 12.5px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: var(--pa-muted);
+    margin-bottom: 26px;
+    padding-bottom: 6px;
+    display: inline-block;
+    background: linear-gradient(90deg, #9b1f76, #e23e7e, #ff9d4d) left bottom/100% 2px no-repeat;
+  }
+
+  .reveal-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1);
+  }
+
+  .reveal-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @layer base {
   :root {
     --background: 240 20% 97%;
@@ -435,6 +460,12 @@
 
 /* Reduced motion: disable animations and transitions */
 @media (prefers-reduced-motion: reduce) {
+  .reveal-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
   .animate-fade-up {
     animation: none;
     opacity: 1;

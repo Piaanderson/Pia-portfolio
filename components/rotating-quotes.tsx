@@ -83,51 +83,21 @@ export function RotatingQuotes() {
       aria-live="polite"
       aria-atomic="true"
       ref={containerRef}
-      style={{
-        position: "relative",
-        width: "100%",
-        minHeight: containerHeight > 0 ? `${containerHeight}px` : undefined,
-        marginTop: "36px",
-        marginBottom: "36px",
-      }}
+      className="relative my-9 w-full"
+      style={{ minHeight: containerHeight > 0 ? `${containerHeight}px` : undefined }}
     >
       {quotes.map((quote, i) => (
         <div
           key={i}
           ref={(el) => { quoteRefs.current[i] = el; }}
           aria-hidden={i !== activeIndex}
-          style={{
-            position: i === 0 && containerHeight === 0 ? "relative" : "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            opacity: i === activeIndex ? 1 : 0,
-            transition: mounted ? "opacity 700ms ease-in-out" : "none",
-            pointerEvents: i === activeIndex ? "auto" : "none",
-          }}
+          className={`${i === 0 && containerHeight === 0 ? "relative" : "absolute"} left-0 top-0 w-full ${i === activeIndex ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"} ${mounted ? "transition-opacity duration-700 ease-in-out" : ""}`}
         >
-          <blockquote style={{ margin: 0, padding: 0 }}>
-            <p
-              style={{
-                fontFamily: "var(--font-serif)",
-                fontStyle: "italic",
-                fontSize: "20px",
-                lineHeight: 1.55,
-                color: "var(--pa-text)",
-                margin: 0,
-                maxWidth: "30em",
-              }}
-            >
+          <blockquote className="m-0 p-0">
+            <p className="m-0 max-w-[30em] font-serif text-xl italic leading-[1.55] text-pa-text">
               &ldquo;{quote.text}&rdquo;
             </p>
-            <footer
-              style={{
-                marginTop: "14px",
-                fontSize: "14.5px",
-                color: "var(--pa-muted)",
-                fontStyle: "normal",
-              }}
-            >
+            <footer className="mt-[14px] text-[14.5px] not-italic text-pa-muted">
               &ndash; {quote.name}, {quote.title}
             </footer>
           </blockquote>

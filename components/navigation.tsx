@@ -27,74 +27,35 @@ export function Navigation() {
   return (
     <nav
       aria-label="Main navigation"
-      className={isCaseStudyPage ? "nav-case-study" : undefined}
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 50,
-        padding: isCaseStudyPage ? "22px 24px 0" : "22px 28px 0",
-      }}
+      className={`fixed inset-x-0 top-0 z-50 pt-[22px] ${isCaseStudyPage ? "nav-case-study px-6" : "px-7"}`}
     >
       <div
-        className="nav-pill"
-        style={{
-          maxWidth: isCaseStudyPage ? undefined : 1040,
-          width: isCaseStudyPage ? "100%" : undefined,
-          margin: isCaseStudyPage ? 0 : "0 auto",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: 18,
-          padding: "9px 9px 9px 22px",
-          borderRadius: 999,
-          background: "var(--pa-navPillBg, rgba(10,17,40,.18))",
-          backdropFilter: "blur(60px) saturate(1.8)",
-          WebkitBackdropFilter: "blur(60px) saturate(1.8)",
-          border: "1px solid var(--pa-glassBorder)",
-          boxShadow: "var(--pa-glassShadow)",
-        }}
+        className={`nav-pill flex items-center justify-between gap-[18px] rounded-full border border-pa-glass-border bg-pa-nav-pill px-[22px] py-[9px] pr-[9px] shadow-pa-glass backdrop-blur-[60px] backdrop-saturate-[1.8] ${isCaseStudyPage ? "w-full" : "mx-auto max-w-[1040px]"}`}
       >
-        <Link href="/" aria-label="Pia Anderson - home" style={{ display: "flex", alignItems: "center" }}>
+        <Link href="/" aria-label="Pia Anderson - home" className="flex items-center">
           <Image
             src="/images/pia-logo.png"
             alt="PiA"
             width={90}
             height={30}
-            style={{ height: 30, width: "auto", display: "block" }}
+            className="block h-[30px] w-auto"
             priority
           />
         </Link>
 
         {/* Desktop nav */}
         <div
-          className="hidden md:flex"
-          style={{
-            alignItems: "center",
-            gap: 22,
-            fontSize: 14.5,
-            fontWeight: 500,
-            color: "var(--pa-navlink)",
-          }}
+          className="hidden items-center gap-[22px] text-[14.5px] font-medium text-pa-navlink md:flex"
         >
           <Link
             href="/#work"
-            style={{ color: "inherit", textDecoration: "none" }}
+            className="no-underline transition-opacity hover:opacity-80"
           >
             Work
           </Link>
           <Link
             href="/about"
-            style={{
-              color: isAboutActive ? "var(--pa-text)" : "inherit",
-              textDecoration: "none",
-              fontWeight: isAboutActive ? 600 : 500,
-              paddingBottom: isAboutActive ? 3 : 0,
-              background: isAboutActive
-                ? "linear-gradient(90deg, #9b1f76, #e23e7e, #ff9d4d) left bottom/100% 2px no-repeat"
-                : "none",
-            }}
+            className={`no-underline transition-opacity hover:opacity-80 ${isAboutActive ? "bg-[linear-gradient(90deg,#9b1f76,#e23e7e,#ff9d4d)] bg-left-bottom bg-[length:100%_2px] bg-no-repeat pb-[3px] font-semibold text-pa-text" : "font-medium text-inherit"}`}
           >
             About
           </Link>
@@ -103,20 +64,7 @@ export function Navigation() {
             onClick={toggleTheme}
             type="button"
             aria-label="Toggle light and dark mode"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: 38,
-              height: 38,
-              borderRadius: "50%",
-              border: "1px solid var(--pa-bstrong)",
-              background: "var(--pa-trackBg)",
-              color: "var(--pa-navlink)",
-              cursor: "pointer",
-              padding: 0,
-              flex: "none",
-            }}
+            className="inline-flex h-[38px] w-[38px] flex-none items-center justify-center rounded-full border border-pa-bstrong [background:var(--pa-trackBg)] p-0 text-pa-navlink"
           >
             {mounted && isDark ? (
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} width={17} height={17} strokeLinecap="round" strokeLinejoin="round">
@@ -128,7 +76,7 @@ export function Navigation() {
                 <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
               </svg>
             ) : (
-              <span style={{ width: 17, height: 17 }} />
+              <span className="h-[17px] w-[17px]" />
             )}
           </button>
 
@@ -137,17 +85,7 @@ export function Navigation() {
             href="https://www.linkedin.com/in/uxpiaanderson/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 6,
-              background: "var(--pa-ctaBg)",
-              color: "var(--pa-ctaText)",
-              textDecoration: "none",
-              fontWeight: 600,
-              padding: "11px 20px",
-              borderRadius: 999,
-            }}
+            className="inline-flex items-center gap-[6px] rounded-full bg-pa-cta px-5 py-[11px] font-semibold text-pa-cta-text no-underline transition-opacity hover:opacity-90"
           >
             LinkedIn
             <svg viewBox="0 0 24 24" fill="currentColor" width={12} height={12}>
@@ -162,19 +100,7 @@ export function Navigation() {
             onClick={toggleTheme}
             type="button"
             aria-label="Toggle light and dark mode"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: 38,
-              height: 38,
-              borderRadius: "50%",
-              border: "1px solid var(--pa-bstrong)",
-              background: "var(--pa-trackBg)",
-              color: "var(--pa-navlink)",
-              cursor: "pointer",
-              padding: 0,
-            }}
+            className="inline-flex h-[38px] w-[38px] items-center justify-center rounded-full border border-pa-bstrong [background:var(--pa-trackBg)] p-0 text-pa-navlink"
           >
             {mounted && isDark ? (
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} width={17} height={17} strokeLinecap="round" strokeLinejoin="round">
@@ -192,17 +118,7 @@ export function Navigation() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: 38,
-              height: 38,
-              background: "transparent",
-              border: "none",
-              color: "var(--pa-navlink)",
-              cursor: "pointer",
-            }}
+            className="flex h-[38px] w-[38px] items-center justify-center border-none bg-transparent text-pa-navlink"
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -212,30 +128,19 @@ export function Navigation() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div
-          className="nav-mobile-menu md:hidden"
-          style={{
-            maxWidth: isCaseStudyPage ? undefined : 1040,
-            width: isCaseStudyPage ? "100%" : undefined,
-            margin: isCaseStudyPage ? "12px 0 0" : "12px auto 0",
-            padding: "16px 24px",
-            borderRadius: 16,
-          background: "var(--pa-glassBg)",
-          backdropFilter: "blur(40px) saturate(1.6)",
-          WebkitBackdropFilter: "blur(40px) saturate(1.6)",
-          border: "1px solid var(--pa-glassBorder)",
-          }}
+          className={`nav-mobile-menu mt-3 rounded-2xl border border-pa-glass-border bg-pa-glass-bg px-6 py-4 shadow-pa-glass backdrop-blur-[40px] backdrop-saturate-[1.6] md:hidden ${isCaseStudyPage ? "w-full" : "mx-auto max-w-[1040px]"}`}
         >
           <Link
             href="/#work"
             onClick={() => setMobileOpen(false)}
-            style={{ display: "block", padding: "10px 0", color: "var(--pa-navlink)", textDecoration: "none", fontSize: 15 }}
+            className="block py-[10px] text-[15px] text-pa-navlink no-underline"
           >
             Work
           </Link>
           <Link
             href="/about"
             onClick={() => setMobileOpen(false)}
-            style={{ display: "block", padding: "10px 0", color: "var(--pa-navlink)", textDecoration: "none", fontSize: 15 }}
+            className="block py-[10px] text-[15px] text-pa-navlink no-underline"
           >
             About
           </Link>
@@ -243,19 +148,7 @@ export function Navigation() {
             href="https://www.linkedin.com/in/uxpiaanderson/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 6,
-              marginTop: 8,
-              background: "var(--pa-ctaBg)",
-              color: "var(--pa-ctaText)",
-              textDecoration: "none",
-              fontWeight: 600,
-              padding: "11px 20px",
-              borderRadius: 999,
-              fontSize: 14,
-            }}
+            className="mt-2 inline-flex items-center gap-[6px] rounded-full bg-pa-cta px-5 py-[11px] text-sm font-semibold text-pa-cta-text no-underline"
           >
             LinkedIn
           </a>
