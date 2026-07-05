@@ -154,12 +154,12 @@ export default async function CaseStudyPage({
   }
 
   return (
-    <main id="main-content" className="relative min-h-screen">
+    <main id="main-content" className="relative flex min-h-screen flex-col">
       <Navigation />
 
       <CaseStudySidebar currentSlug={slug} caseStudies={caseStudyNav} />
 
-      <div className="md:pl-[260px]">
+      <div className="flex flex-1 flex-col md:pl-[260px]">
         <PasswordGate>
           {/* ---- HERO ---- */}
           <section className="px-6 pt-28 pb-4 md:px-10 md:pt-32 md:pb-8">

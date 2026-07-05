@@ -102,8 +102,9 @@ export function PasswordGate({ children }: { children: ReactNode }) {
   }
 
   return (
-    <div className="flex flex-col items-center px-6 py-16">
-      <div className="glass rounded-2xl p-8 md:p-10 max-w-xl w-full text-center">
+    <div className="flex min-h-0 flex-1 flex-col px-6 pb-16 pt-28 md:px-10 md:pt-32">
+      <div className="flex w-full flex-1 items-center justify-center">
+        <div className="glass w-full max-w-xl rounded-2xl p-8 text-center md:p-10">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-secondary">
           <Lock className="h-6 w-6 text-muted-foreground" aria-hidden="true" />
         </div>
@@ -179,6 +180,7 @@ export function PasswordGate({ children }: { children: ReactNode }) {
             Request the password
           </button>
         </p>
+        </div>
       </div>
 
       {/* Email popup — proper dialog pattern */}

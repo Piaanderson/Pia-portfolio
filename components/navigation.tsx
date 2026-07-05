@@ -212,7 +212,7 @@ export function Navigation() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div
-          className="nav-mobile-menu"
+          className="nav-mobile-menu md:hidden"
           style={{
             maxWidth: isCaseStudyPage ? undefined : 1040,
             width: isCaseStudyPage ? "100%" : undefined,
@@ -224,7 +224,6 @@ export function Navigation() {
           WebkitBackdropFilter: "blur(40px) saturate(1.6)",
           border: "1px solid var(--pa-glassBorder)",
           }}
-          className="md:hidden"
         >
           <Link
             href="/#work"
