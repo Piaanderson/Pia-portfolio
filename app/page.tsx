@@ -8,6 +8,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { homepageFeaturedCard, homepageWorkCards } from "@/lib/case-studies";
 
 const darkColors = ["#030414", "#0a1128", "#130f35", "#030427", "#150d30", "#250c20"];
 const lightColors = ["#ffffff", "#f0e8f8", "#e2d4f2", "#d8daf0", "#f0dce8", "#f8e8f0"];
@@ -16,37 +17,6 @@ const gradientNoiseFrequency: [number, number] = [0.00009, 0.00018];
 
 const darkDeform = { incline: 0.15, noiseAmp: 90, noiseFlow: 1.2, noiseSpeed: 6 };
 const lightDeform = { incline: 0.15, noiseAmp: 90, noiseFlow: 1.6, noiseSpeed: 8 };
-
-const caseStudies = [
-  {
-    title: "Agent Workflow Builder",
-    desc: "Three teams were building the same AI agent tool in isolation. I designed the unified solution that became PwC’s firm-wide platform for 250+ deployed agents.",
-    role: "UX Director (Hands-on)",
-    slug: "agent-os",
-    image: "/images/case-study-agentos-hero.png",
-  },
-  {
-    title: "Airline Operational Suite",
-    desc: "When a storm strikes a major airport, Southwest went from needing 4 to 6 hours to recover to needing minutes.",
-    role: "UX Manager, Design Systen Founder",
-    slug: "southwest-opssuite",
-    image: "/images/case-study-opssuite-hero.png",
-  },
-  {
-    title: "Design Org in Hypergrowth",
-    desc: "I grew a design team from a small group to 130 people in under two years, with retention that outpaced the industry.",
-    role: "UX Director",
-    slug: "pwc-digital-leadership",
-    image: "/images/case-study-design-org-hypergrowth-hero.png",
-  },
-  {
-    title: "UX Maturity Transformation",
-    desc: "A team of 60+ engineers had never worked with a designer. Two years later, they refused to start a sprint without one.",
-    role: "UX Manager",
-    slug: "pwc-tax-tech",
-    image: "/images/case-study-tax-ux-maturity-hero.png",
-  },
-];
 
 const testimonials = [
   {
@@ -293,7 +263,8 @@ export default function Page() {
 
           {/* Featured card */}
           <Link
-            href="/case-study/project-forge"
+            href={`/case-study/${homepageFeaturedCard.slug}`}
+            className="featured-work-card"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
@@ -321,7 +292,7 @@ export default function Page() {
               }}
             >
               <Image
-                src="/images/case-study-forge-hero.png"
+                src={homepageFeaturedCard.image}
                 alt="Project Forge portfolio overview dashboard"
                 fill
                 style={{ objectFit: "cover" }}
@@ -348,7 +319,7 @@ export default function Page() {
                     fontWeight: 600,
                   }}
                 >
-                  Featured &middot; Current
+                  {homepageFeaturedCard.badge}
                 </span>
                 <span
                   style={{
@@ -375,13 +346,13 @@ export default function Page() {
                   color: "var(--pa-text)",
                 }}
               >
-                Project Forge
+                {homepageFeaturedCard.title}
               </h3>
               <p style={{ fontSize: "16px", lineHeight: 1.5, color: "var(--pa-body)" }}>
-                I designed at the prompt and shipped code alongside engineers to build an AI experience layer across three disconnected internal systems. Every lesson feeds back into the AI-first delivery model I am building for 80 designers.
+                {homepageFeaturedCard.desc}
               </p>
               <p style={{ fontSize: "13px", color: "var(--pa-muted2)", fontWeight: 500 }}>
-                Lead Designer, Strategist &amp; Front-End Developer
+                {homepageFeaturedCard.role}
               </p>
             </div>
           </Link>
@@ -395,7 +366,7 @@ export default function Page() {
             }}
             className="work-cards-grid"
           >
-            {caseStudies.map((study) => (
+            {homepageWorkCards.map((study) => (
               <Link
                 key={study.slug}
                 href={`/case-study/${study.slug}`}
@@ -436,15 +407,27 @@ export default function Page() {
                   >
                     {study.title}
                   </h3>
-                  <p style={{ fontSize: "14px", lineHeight: 1.5, color: "var(--pa-body)", marginBottom: "10px" }}>
+                  <p style={{ fontSize: "14px", lineHeight: 1.5, color: "var(--pa-body)", marginBottom: "12px" }}>
                     {study.desc}
                   </p>
-                  <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                  <p style={{ fontSize: "12.5px", color: "var(--pa-muted3)", fontWeight: 500, marginBottom: "8px" }}>
+                    {study.role}
+                  </p>
+                  <span
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "5px",
+                      fontSize: "11px",
+                      color: "var(--pa-muted)",
+                      background: "var(--pa-chip)",
+                      padding: "3px 9px",
+                      borderRadius: "20px",
+                    }}
+                  >
                     <LockIcon />
-                    <span style={{ fontSize: "12.5px", color: "var(--pa-muted3)", fontWeight: 500 }}>
-                      {study.role}
-                    </span>
-                  </div>
+                    Protected
+                  </span>
                 </div>
               </Link>
             ))}
@@ -615,6 +598,9 @@ export default function Page() {
             font-size: 48px !important;
           }
           .work-cards-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .featured-work-card {
             grid-template-columns: 1fr !important;
           }
           .testimonials-grid {

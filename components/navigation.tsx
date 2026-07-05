@@ -18,11 +18,7 @@ export function Navigation() {
   const isDark = mounted ? resolvedTheme === "dark" : true;
 
   function toggleTheme() {
-    const next = isDark ? "light" : "dark";
-    setTheme(next);
-    try {
-      localStorage.setItem("pa-theme", next);
-    } catch {}
+    setTheme(isDark ? "light" : "dark");
   }
 
   const isAboutActive = pathname === "/about";

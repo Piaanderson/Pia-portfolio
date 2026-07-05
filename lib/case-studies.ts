@@ -819,3 +819,71 @@ export const caseStudyNav = caseStudies.map((study) => ({
 export function getCaseStudyBySlug(slug: string) {
   return caseStudies.find((study) => study.slug === slug);
 }
+
+/* ------------------------------------------------------------------ */
+/*  Homepage work cards (single source of truth for slugs + images)    */
+/* ------------------------------------------------------------------ */
+
+export type HomepageWorkCard = {
+  slug: string;
+  title: string;
+  desc: string;
+  role: string;
+  image: string;
+};
+
+export type HomepageFeaturedCard = HomepageWorkCard & {
+  badge: string;
+};
+
+const homepageCardCopy: Record<
+  string,
+  Pick<HomepageWorkCard, "title" | "desc" | "role">
+> = {
+  "project-forge": {
+    title: "Project Forge",
+    desc: "I designed at the prompt and shipped code alongside engineers to build an AI experience layer across three disconnected internal systems. Every lesson feeds back into the AI-first delivery model I am building for 80 designers.",
+    role: "Lead Designer, Strategist & Front-End Developer",
+  },
+  "agent-os": {
+    title: "Agent Workflow Builder",
+    desc: "Three teams were building the same AI agent tool in isolation. I designed the unified solution that became PwC’s firm-wide platform for 250+ deployed agents.",
+    role: "UX Director (Hands-on)",
+  },
+  "southwest-opssuite": {
+    title: "Airline Operational Suite",
+    desc: "When a storm strikes a major airport, Southwest went from needing 4 to 6 hours to recover to needing minutes.",
+    role: "UX Manager, Design System Founder",
+  },
+  "pwc-digital-leadership": {
+    title: "Design Org in Hypergrowth",
+    desc: "I grew a design team from a small group to 130 people in under two years, with retention that outpaced the industry.",
+    role: "UX Director",
+  },
+  "pwc-tax-tech": {
+    title: "UX Maturity Transformation",
+    desc: "A team of 60+ engineers had never worked with a designer. Two years later, they refused to start a sprint without one.",
+    role: "UX Manager",
+  },
+};
+
+function buildHomepageWorkCard(slug: string): HomepageWorkCard {
+  const study = getCaseStudyBySlug(slug);
+  const copy = homepageCardCopy[slug];
+  if (!study || !copy) {
+    throw new Error(`Missing homepage work card data for slug: ${slug}`);
+  }
+  return { slug, image: study.image, ...copy };
+}
+
+export const homepageFeaturedCard: HomepageFeaturedCard = {
+  ...buildHomepageWorkCard("project-forge"),
+  badge: "Featured · Current",
+};
+
+export const homepageWorkCards: HomepageWorkCard[] = [
+  "agent-os",
+  "southwest-opssuite",
+  "pwc-digital-leadership",
+  "pwc-tax-tech",
+].map(buildHomepageWorkCard);

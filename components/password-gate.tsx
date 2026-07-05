@@ -218,10 +218,10 @@ export function PasswordGate({ children }: { children: ReactNode }) {
 
             <div className="mt-5 flex items-center gap-2 rounded-lg bg-secondary/60 border border-border px-4 py-3">
               <Mail className="h-4 w-4 text-muted-foreground flex-shrink-0" aria-hidden="true" />
-              <span className="text-sm text-foreground flex-1">pia@example.com</span>
+              <span className="text-sm text-foreground flex-1">pia@piaanderson.com</span>
               <button
                 onClick={() => {
-                  navigator.clipboard.writeText("pia@example.com");
+                  navigator.clipboard.writeText("pia@piaanderson.com");
                   setCopied(true);
                   setTimeout(() => setCopied(false), 2000);
                 }}
@@ -240,7 +240,7 @@ export function PasswordGate({ children }: { children: ReactNode }) {
             </div>
 
             <a
-              href="mailto:pia@example.com?subject=Portfolio%20Access%20Request&body=Hi%20Pia%2C%0A%0AI'd%20love%20to%20view%20your%20case%20studies.%20Could%20you%20share%20the%20password%3F%0A%0AThanks!"
+              href="mailto:pia@piaanderson.com?subject=Portfolio%20Access%20Request&body=Hi%20Pia%2C%0A%0AI'd%20love%20to%20view%20your%20case%20studies.%20Could%20you%20share%20the%20password%3F%0A%0AThanks!"
               className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-pink px-5 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
             >
               Open in Email Client

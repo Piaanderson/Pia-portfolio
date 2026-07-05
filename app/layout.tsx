@@ -57,6 +57,7 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange
+          storageKey="pa-theme"
         >
           {children}
         </ThemeProvider>

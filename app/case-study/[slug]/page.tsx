@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Download, ImageIcon } from "lucide-react";
+import { ArrowLeft, ArrowRight, ImageIcon } from "lucide-react";
 import type { Metadata } from "next";
 import { PasswordGate } from "@/components/password-gate";
 import { CaseStudySidebar } from "@/components/case-study-sidebar";
 import { caseStudyNav, getCaseStudyBySlug } from "@/lib/case-studies";
 import type { ImagePlacement, QuoteBlock } from "@/lib/case-studies";
 import { CaseStudyLightbox } from "@/components/case-study-lightbox";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
 
 /* ------------------------------------------------------------------ */
 /*  Metadata                                                           */
@@ -154,60 +155,14 @@ export default async function CaseStudyPage({
 
   return (
     <main id="main-content" className="relative min-h-screen">
-      {/* ================================================================ */}
-      {/*  TOP HEADER                                                       */}
-      {/* ================================================================ */}
-      <nav
-        aria-label="Case study navigation"
-        className="nav-glass fixed top-0 left-0 right-0 z-50 transition-all duration-500"
-      >
-        <div className="flex items-center justify-between px-6 py-4">
-          <Link href="/" className="flex items-center" aria-label="Home">
-            <Image
-              src="/images/pia-logo.png"
-              alt="Pia Anderson"
-              width={40}
-              height={40}
-              className="h-9 w-auto"
-              priority
-            />
-          </Link>
+      <Navigation />
 
-          <div className="flex items-center gap-6">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
-              <span className="hidden sm:inline">Return to Home</span>
-              <span className="sm:hidden">Home</span>
-            </Link>
-            <a
-              href="/Pia_Anderson_Resume.pdf"
-              download
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              <Download className="h-3.5 w-3.5" aria-hidden="true" />
-              <span className="hidden sm:inline">Download Resume</span>
-              <span className="sm:hidden">Resume</span>
-            </a>
-            <ThemeToggle />
-          </div>
-        </div>
-      </nav>
-
-      {/* ================================================================ */}
-      {/*  LEFT SIDEBAR                                                     */}
-      {/* ================================================================ */}
       <CaseStudySidebar currentSlug={slug} caseStudies={caseStudyNav} />
 
-      {/* ================================================================ */}
-      {/*  MAIN CONTENT                                                     */}
-      {/* ================================================================ */}
       <div className="md:pl-[260px]">
         <PasswordGate>
           {/* ---- HERO ---- */}
-          <section className="px-6 pt-28 pb-4 md:px-10 md:pt-36 md:pb-8">
+          <section className="px-6 pt-28 pb-4 md:px-10 md:pt-32 md:pb-8">
             <div className="max-w-5xl">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">
                 {study.subtitle}
@@ -479,6 +434,8 @@ export default async function CaseStudyPage({
             })()}
         </PasswordGate>
       </div>
+
+      <Footer />
     </main>
   );
 }

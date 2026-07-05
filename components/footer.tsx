@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RESUME_DOWNLOAD_NAME, RESUME_HREF } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -55,8 +56,8 @@ export function Footer() {
             pia@piaanderson.com
           </a>
           <a
-            href="/Pia-Anderson-Resume.pdf"
-            download
+            href={RESUME_HREF}
+            download={RESUME_DOWNLOAD_NAME}
             style={{
               color: "inherit",
               textDecoration: "none",

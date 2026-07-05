@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Download, Menu, X } from "lucide-react";
+import { RESUME_DOWNLOAD_NAME, RESUME_HREF } from "@/lib/site";
 
 type CaseStudyNavItem = {
   slug: string;
@@ -69,7 +70,7 @@ export function CaseStudySidebar({
         ref={sidebarRef}
         aria-label="Case studies"
         tabIndex={-1}
-        className={`sidebar-panel fixed left-0 top-0 z-[70] flex h-full w-[260px] flex-col border-r border-border/30 pt-[72px] transition-transform duration-300 md:z-40 md:translate-x-0 ${
+        className={`sidebar-panel fixed left-0 top-0 z-[70] flex h-full w-[260px] flex-col border-r border-border/30 pt-[96px] transition-transform duration-300 md:z-40 md:translate-x-0 ${
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -116,8 +117,8 @@ export function CaseStudySidebar({
         {/* Bottom: resume link */}
         <div className="mt-auto border-t border-border/20 px-6 py-5">
           <a
-            href="/Pia_Anderson_Resume.pdf"
-            download
+            href={RESUME_HREF}
+            download={RESUME_DOWNLOAD_NAME}
             className="inline-flex items-center gap-2 text-xs text-muted-foreground transition-colors hover:text-foreground"
           >
             <Download className="h-3.5 w-3.5" aria-hidden="true" />

@@ -1,17 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
+import { useEffect } from "react";
 import Image from "next/image";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { RESUME_DOWNLOAD_NAME, RESUME_HREF } from "@/lib/site";
 
 export default function AboutPage() {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
   // Scroll reveal
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -42,9 +37,7 @@ export default function AboutPage() {
     });
 
     return () => observer.disconnect();
-  }, [mounted]);
-
-  if (!mounted) return null;
+  }, []);
 
   return (
     <div
@@ -475,8 +468,8 @@ export default function AboutPage() {
               pia@piaanderson.com
             </a>
             <a
-              href="/Pia-Anderson-Resume.pdf"
-              download
+              href={RESUME_HREF}
+              download={RESUME_DOWNLOAD_NAME}
               style={{
                 display: "inline-flex",
                 alignItems: "center",
