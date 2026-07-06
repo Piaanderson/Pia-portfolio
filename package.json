@@ -9,6 +9,9 @@
     "lint": "eslint .",
     "generate-favicon": "node scripts/generate-favicon.cjs"
   },
+  "engines": {
+    "node": ">=22"
+  },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-accordion": "1.2.2",
