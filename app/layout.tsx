@@ -1,24 +1,37 @@
 import React from "react"
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Newsreader, Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeColorMeta } from "@/components/theme-color-meta";
 
 import "./globals.css";
 
-const inter = Inter({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-serif",
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
 });
 
-const playfair = Playfair_Display({
+const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-sans",
+  weight: ["400", "500", "600", "700"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["400", "500"],
 });
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0a1128",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f4f1ea" },
+    { color: "#0a1128" },
+  ],
 };
 
 export const metadata: Metadata = {
@@ -35,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-background" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
+        className={`${hankenGrotesk.variable} ${newsreader.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
         <a
           href="#main-content"
@@ -48,7 +61,9 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange
+          storageKey="pa-theme"
         >
+          <ThemeColorMeta />
           {children}
         </ThemeProvider>
       </body>
