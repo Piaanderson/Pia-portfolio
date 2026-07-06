@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import {
   CASE_STUDY_COOKIE_NAME,
-  CASE_STUDY_COOKIE_VALUE,
   CASE_STUDY_SESSION_SECONDS,
+  createCaseStudyAccessToken,
   isCaseStudyAuthConfigured,
   isCaseStudyPasswordValid,
 } from "@/lib/case-study-auth";
@@ -34,7 +34,11 @@ export async function POST(request: Request) {
 
   if (!isCaseStudyAuthConfigured()) {
     return NextResponse.json(
-      { ok: false, message: "Password protection is not configured." },
+      {
+        ok: false,
+        message:
+          "Password protection is not configured. Set CASE_STUDY_PASSWORD or CASE_STUDY_PASSWORDS.",
+      },
       { status: 500 }
     );
   }
@@ -46,6 +50,17 @@ export async function POST(request: Request) {
     );
   }
 
+  const accessToken = await createCaseStudyAccessToken();
+  if (!accessToken) {
+    return NextResponse.json(
+      {
+        ok: false,
+        message: "Unable to create access session. Please try again.",
+      },
+      { status: 500 }
+    );
+  }
+
   const response = NextResponse.json({
     ok: true,
     redirectTo: sanitizeNextPath(nextPath),
@@ -53,7 +68,7 @@ export async function POST(request: Request) {
 
   response.cookies.set({
     name: CASE_STUDY_COOKIE_NAME,
-    value: CASE_STUDY_COOKIE_VALUE,
+    value: accessToken,
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax",

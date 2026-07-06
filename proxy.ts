@@ -2,12 +2,12 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import {
   CASE_STUDY_COOKIE_NAME,
-  CASE_STUDY_COOKIE_VALUE,
+  isCaseStudyAccessTokenValid,
 } from "@/lib/case-study-auth";
 
-export function proxy(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const accessCookie = request.cookies.get(CASE_STUDY_COOKIE_NAME)?.value;
-  if (accessCookie === CASE_STUDY_COOKIE_VALUE) {
+  if (await isCaseStudyAccessTokenValid(accessCookie)) {
     return NextResponse.next();
   }
 

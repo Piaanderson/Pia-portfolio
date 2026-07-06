@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, ImageIcon } from "lucide-react";
+import { ArrowRight, ImageIcon } from "lucide-react";
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { CaseStudySidebar } from "@/components/case-study-sidebar";
 import { caseStudyNav, getCaseStudyBySlug } from "@/lib/case-studies";
 import type { ImagePlacement, QuoteBlock } from "@/lib/case-studies";
@@ -120,25 +121,7 @@ export default async function CaseStudyPage({
   const study = getCaseStudyBySlug(slug);
 
   if (!study) {
-    return (
-      <main className="flex min-h-screen items-center justify-center px-6">
-        <div className="text-center">
-          <h1 className="font-serif text-3xl font-bold text-foreground">
-            Case Study Not Found
-          </h1>
-          <p className="mt-4 text-muted-foreground">
-            {"This case study doesn't exist yet."}
-          </p>
-          <Link
-            href="/"
-            className="mt-8 inline-flex items-center gap-2 text-sm text-pink hover:underline"
-          >
-            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-            Back to Portfolio
-          </Link>
-        </div>
-      </main>
-    );
+    notFound();
   }
 
   return (

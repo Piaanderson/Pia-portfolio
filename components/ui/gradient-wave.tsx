@@ -698,7 +698,8 @@ export function GradientWave({
   const gradientRef = useRef<Gradient | null>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    const container = containerRef.current;
+    if (!container) return;
 
     let startId: number | undefined;
     const canvas = document.createElement("canvas");
@@ -710,7 +711,7 @@ export function GradientWave({
       height: "100%",
       display: "block",
     });
-    containerRef.current.appendChild(canvas);
+    container.appendChild(canvas);
 
     try {
       const gradient = new Gradient(canvas, colors);
@@ -744,8 +745,8 @@ export function GradientWave({
     return () => {
       if (startId !== undefined) cancelAnimationFrame(startId);
       gradientRef.current?.stop();
-      if (containerRef.current?.contains(canvas)) {
-        containerRef.current.removeChild(canvas);
+      if (container.contains(canvas)) {
+        container.removeChild(canvas);
       }
     };
   }, [
