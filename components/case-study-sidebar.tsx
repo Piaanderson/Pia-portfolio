@@ -21,15 +21,24 @@ export function CaseStudySidebar({
   const [mobileOpen, setMobileOpen] = useState(false);
   const sidebarRef = useRef<HTMLElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
+  const mobileWasOpen = useRef(false);
 
   // Focus management: move focus into sidebar on open, return on close
   useEffect(() => {
+    let timer: ReturnType<typeof setTimeout> | undefined;
+
     if (mobileOpen) {
-      const timer = setTimeout(() => sidebarRef.current?.focus(), 50);
-      return () => clearTimeout(timer);
-    } else if (triggerRef.current) {
+      timer = setTimeout(() => sidebarRef.current?.focus(), 50);
+    } else if (mobileWasOpen.current && triggerRef.current) {
       triggerRef.current.focus();
     }
+
+    mobileWasOpen.current = mobileOpen;
+    return () => {
+      if (timer) {
+        clearTimeout(timer);
+      }
+    };
   }, [mobileOpen]);
 
   // Close on Escape

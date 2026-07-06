@@ -8,7 +8,10 @@ export default function AboutPage() {
   const sectionGrid = "relative z-[1] mx-auto grid max-w-[1040px] grid-cols-1 items-start gap-[54px] px-5 md:grid-cols-[400px_1fr] md:px-10";
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-pa-bg font-sans text-pa-text transition-colors duration-[400ms]">
+    <main
+      id="main-content"
+      className="relative min-h-screen overflow-x-hidden bg-pa-bg font-sans text-pa-text transition-colors duration-[400ms]"
+    >
       {/* Ambient gradient overlay */}
       <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[440px] bg-pa-ambient" />
 
@@ -201,6 +204,6 @@ export default function AboutPage() {
       </RevealOnScroll>
 
       <Footer />
-    </div>
+    </main>
   );
 }

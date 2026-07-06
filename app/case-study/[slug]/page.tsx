@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, ImageIcon } from "lucide-react";
 import type { Metadata } from "next";
-import { PasswordGate } from "@/components/password-gate";
 import { CaseStudySidebar } from "@/components/case-study-sidebar";
 import { caseStudyNav, getCaseStudyBySlug } from "@/lib/case-studies";
 import type { ImagePlacement, QuoteBlock } from "@/lib/case-studies";
@@ -77,19 +76,8 @@ function ImageBlock({ image }: { image: ImagePlacement }) {
 }
 
 function QuoteCallout({ quote }: { quote: QuoteBlock }) {
-  if (quote.placeholder) {
-    return (
-      <blockquote className="mt-8 rounded-xl border-2 border-dashed border-border/60 bg-muted/10 p-8 md:p-10">
-        <p className="text-base italic text-muted-foreground/60">
-          &ldquo;{quote.quote}&rdquo;
-        </p>
-        <footer className="mt-4">
-          <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground/40">
-            Quote pending
-          </p>
-        </footer>
-      </blockquote>
-    );
+  if (quote.placeholder || /\bTBD\b/i.test(quote.quote)) {
+    return null;
   }
 
   return (
@@ -160,9 +148,8 @@ export default async function CaseStudyPage({
       <CaseStudySidebar currentSlug={slug} caseStudies={caseStudyNav} />
 
       <div className="flex flex-1 flex-col md:pl-[260px]">
-        <PasswordGate>
-          {/* ---- HERO ---- */}
-          <section className="px-6 pt-28 pb-4 md:px-10 md:pt-32 md:pb-8">
+        {/* ---- HERO ---- */}
+        <section className="px-6 pt-28 pb-4 md:px-10 md:pt-32 md:pb-8">
             <div className="max-w-5xl">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">
                 {study.subtitle}
@@ -216,10 +203,10 @@ export default async function CaseStudyPage({
                 </div>
               )}
             </div>
-          </section>
+        </section>
 
-          {/* ---- THE PROBLEM ---- */}
-          <section className="px-6 py-12 md:px-10 md:py-16 border-t border-border/30">
+        {/* ---- THE PROBLEM ---- */}
+        <section className="px-6 py-12 md:px-10 md:py-16 border-t border-border/30">
             <div className="max-w-5xl">
               <div className="grid gap-10 md:grid-cols-[240px_1fr] md:gap-14 lg:grid-cols-[280px_1fr] lg:gap-20">
                 <div className="md:sticky md:top-24 md:self-start">
@@ -245,10 +232,10 @@ export default async function CaseStudyPage({
                 </div>
               </div>
             </div>
-          </section>
+        </section>
 
-          {/* ---- MY ROLE ---- */}
-          <section className="px-6 py-12 md:px-10 md:py-16 border-t border-border/30">
+        {/* ---- MY ROLE ---- */}
+        <section className="px-6 py-12 md:px-10 md:py-16 border-t border-border/30">
             <div className="max-w-5xl">
               <div className="grid gap-10 md:grid-cols-[240px_1fr] md:gap-14 lg:grid-cols-[280px_1fr] lg:gap-20">
                 <div className="md:sticky md:top-24 md:self-start">
@@ -278,56 +265,56 @@ export default async function CaseStudyPage({
                 </div>
               </div>
             </div>
-          </section>
+        </section>
 
-          {/* ---- DECISIONS ---- */}
-          {study.decisions.map((decision, i) => (
-            <section
-              key={i}
-              className="px-6 py-16 md:px-10 md:py-24 border-t border-border/30"
-            >
-              <div className="max-w-5xl">
-                <div className="grid gap-10 md:grid-cols-[240px_1fr] md:gap-14 lg:grid-cols-[280px_1fr] lg:gap-20">
-                  <div className="md:sticky md:top-24 md:self-start">
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-pink">
-                      {decision.subtitle || `Decision ${i + 1}`}
+        {/* ---- DECISIONS ---- */}
+        {study.decisions.map((decision, i) => (
+          <section
+            key={i}
+            className="px-6 py-16 md:px-10 md:py-24 border-t border-border/30"
+          >
+            <div className="max-w-5xl">
+              <div className="grid gap-10 md:grid-cols-[240px_1fr] md:gap-14 lg:grid-cols-[280px_1fr] lg:gap-20">
+                <div className="md:sticky md:top-24 md:self-start">
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-pink">
+                    {decision.subtitle || `Decision ${i + 1}`}
+                  </p>
+                  <h2 className="mt-4 font-serif text-2xl font-bold leading-snug text-foreground md:text-3xl lg:text-4xl text-balance">
+                    {decision.title}
+                  </h2>
+                </div>
+
+                <div className="flex flex-col gap-6">
+                  {decision.paragraphs.map((p, j) => (
+                    <p
+                      key={j}
+                      className="text-lg leading-[1.75] text-foreground/80"
+                    >
+                      {p}
                     </p>
-                    <h2 className="mt-4 font-serif text-2xl font-bold leading-snug text-foreground md:text-3xl lg:text-4xl text-balance">
-                      {decision.title}
-                    </h2>
-                  </div>
+                  ))}
 
-                  <div className="flex flex-col gap-6">
-                    {decision.paragraphs.map((p, j) => (
-                      <p
-                        key={j}
-                        className="text-lg leading-[1.75] text-foreground/80"
-                      >
-                        {p}
+                  {decision.image && <ImageBlock image={decision.image} />}
+
+                  {decision.reflectionCallout && (
+                    <aside className="mt-4 rounded-xl border-l-4 border-pink/40 bg-pink/5 p-6 md:p-8">
+                      <p className="text-base leading-relaxed text-foreground/80">
+                        {decision.reflectionCallout}
                       </p>
-                    ))}
+                    </aside>
+                  )}
 
-                    {decision.image && <ImageBlock image={decision.image} />}
-
-                    {decision.reflectionCallout && (
-                      <aside className="mt-4 rounded-xl border-l-4 border-pink/40 bg-pink/5 p-6 md:p-8">
-                        <p className="text-base leading-relaxed text-foreground/80">
-                          {decision.reflectionCallout}
-                        </p>
-                      </aside>
-                    )}
-
-                    {decision.quote && (
-                      <QuoteCallout quote={decision.quote} />
-                    )}
-                  </div>
+                  {decision.quote && (
+                    <QuoteCallout quote={decision.quote} />
+                  )}
                 </div>
               </div>
-            </section>
-          ))}
+            </div>
+          </section>
+        ))}
 
-          {/* ---- OUTCOMES ---- */}
-          <section className="px-6 py-16 md:px-10 md:py-24 border-t border-border/30">
+        {/* ---- OUTCOMES ---- */}
+        <section className="px-6 py-16 md:px-10 md:py-24 border-t border-border/30">
             <div className="max-w-5xl">
               <div className="grid gap-10 md:grid-cols-[240px_1fr] md:gap-14 lg:grid-cols-[280px_1fr] lg:gap-20">
                 <div className="md:sticky md:top-24 md:self-start">
@@ -375,10 +362,10 @@ export default async function CaseStudyPage({
                 </div>
               </div>
             </div>
-          </section>
+        </section>
 
-          {/* ---- REFLECTION ---- */}
-          <section className="px-6 py-16 md:px-10 md:py-24 border-t border-border/30">
+        {/* ---- REFLECTION ---- */}
+        <section className="px-6 py-16 md:px-10 md:py-24 border-t border-border/30">
             <div className="max-w-5xl">
               <div className="grid gap-10 md:grid-cols-[240px_1fr] md:gap-14 lg:grid-cols-[280px_1fr] lg:gap-20">
                 <div>
@@ -401,38 +388,37 @@ export default async function CaseStudyPage({
                 </div>
               </div>
             </div>
-          </section>
+        </section>
 
-          {/* ---- NEXT CASE STUDY ---- */}
-          {study.nextSlug &&
-            (() => {
-              const nextStudy = getCaseStudyBySlug(study.nextSlug);
-              const nextLabel = nextStudy?.title;
-              return nextLabel ? (
-                <section className="px-6 pt-4 pb-24 md:px-10">
-                  <div className="max-w-5xl">
-                    <Link
-                      href={`/case-study/${study.nextSlug}`}
-                      className="glass glass-hover group flex items-center justify-between rounded-2xl p-8 md:p-12"
-                    >
-                      <div>
-                        <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
-                          Next Case Study
-                        </p>
-                        <p className="mt-2 font-serif text-xl font-bold text-foreground md:text-2xl">
-                          {nextLabel}
-                        </p>
-                      </div>
-                      <ArrowRight
-                        className="h-6 w-6 text-muted-foreground transition-all group-hover:translate-x-2 group-hover:text-pink"
-                        aria-hidden="true"
-                      />
-                    </Link>
-                  </div>
-                </section>
-              ) : null;
-            })()}
-        </PasswordGate>
+        {/* ---- NEXT CASE STUDY ---- */}
+        {study.nextSlug &&
+          (() => {
+            const nextStudy = getCaseStudyBySlug(study.nextSlug);
+            const nextLabel = nextStudy?.title;
+            return nextLabel ? (
+              <section className="px-6 pt-4 pb-24 md:px-10">
+                <div className="max-w-5xl">
+                  <Link
+                    href={`/case-study/${study.nextSlug}`}
+                    className="glass glass-hover group flex items-center justify-between rounded-2xl p-8 md:p-12"
+                  >
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                        Next Case Study
+                      </p>
+                      <p className="mt-2 font-serif text-xl font-bold text-foreground md:text-2xl">
+                        {nextLabel}
+                      </p>
+                    </div>
+                    <ArrowRight
+                      className="h-6 w-6 text-muted-foreground transition-all group-hover:translate-x-2 group-hover:text-pink"
+                      aria-hidden="true"
+                    />
+                  </Link>
+                </div>
+              </section>
+            ) : null;
+          })()}
       </div>
 
       <Footer insetForSidebar />
