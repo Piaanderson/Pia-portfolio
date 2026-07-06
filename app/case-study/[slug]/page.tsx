@@ -194,10 +194,10 @@ export default async function CaseStudyPage({
               <div className="grid gap-10 md:grid-cols-[240px_1fr] md:gap-14 lg:grid-cols-[280px_1fr] lg:gap-20">
                 <div className="md:sticky md:top-24 md:self-start">
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-pink">
-                    Context
+                    {study.problem.sideLabel || "Context"}
                   </p>
                   <h2 className="mt-4 font-serif text-2xl font-bold text-foreground md:text-3xl lg:text-4xl">
-                    The Problem
+                    {study.problem.heading || "The Problem"}
                   </h2>
                 </div>
                 <div className="flex flex-col gap-6">
@@ -212,12 +212,20 @@ export default async function CaseStudyPage({
                   {study.problem.image && (
                     <ImageBlock image={study.problem.image} />
                   )}
+                  {study.problem.contextCallout && (
+                    <aside className="mt-4 rounded-xl border-l-4 border-pink/40 bg-pink/5 p-6 md:p-8">
+                      <p className="text-base leading-relaxed text-foreground/80">
+                        {study.problem.contextCallout}
+                      </p>
+                    </aside>
+                  )}
                 </div>
               </div>
             </div>
         </section>
 
         {/* ---- MY ROLE ---- */}
+        {study.role.paragraphs.length > 0 && (
         <section className="px-6 py-12 md:px-10 md:py-16 border-t border-border/30">
             <div className="max-w-5xl">
               <div className="grid gap-10 md:grid-cols-[240px_1fr] md:gap-14 lg:grid-cols-[280px_1fr] lg:gap-20">
@@ -249,6 +257,7 @@ export default async function CaseStudyPage({
               </div>
             </div>
         </section>
+        )}
 
         {/* ---- DECISIONS ---- */}
         {study.decisions.map((decision, i) => (
@@ -297,6 +306,7 @@ export default async function CaseStudyPage({
         ))}
 
         {/* ---- OUTCOMES ---- */}
+        {(study.outcomes.metrics.length > 0 || (study.outcomes.prose && study.outcomes.prose.length > 0)) && (
         <section className="px-6 py-16 md:px-10 md:py-24 border-t border-border/30">
             <div className="max-w-5xl">
               <div className="grid gap-10 md:grid-cols-[240px_1fr] md:gap-14 lg:grid-cols-[280px_1fr] lg:gap-20">
@@ -340,12 +350,17 @@ export default async function CaseStudyPage({
                     ))}
 
                   {study.outcomes.quote && (
-                    <QuoteCallout quote={study.outcomes.quote} />
+                    Array.isArray(study.outcomes.quote)
+                      ? study.outcomes.quote.map((q, i) => (
+                          <QuoteCallout key={i} quote={q} />
+                        ))
+                      : <QuoteCallout quote={study.outcomes.quote} />
                   )}
                 </div>
               </div>
             </div>
         </section>
+        )}
 
         {/* ---- REFLECTION ---- */}
         <section className="px-6 py-16 md:px-10 md:py-24 border-t border-border/30">

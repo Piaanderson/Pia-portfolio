@@ -50,8 +50,11 @@ export type CaseStudyData = {
   };
 
   problem: {
+    heading?: string;
+    sideLabel?: string;
     paragraphs: string[];
     image?: ImagePlacement;
+    contextCallout?: string;
   };
 
   role: {
@@ -64,7 +67,7 @@ export type CaseStudyData = {
   outcomes: {
     metrics: OutcomeMetric[];
     prose?: string[];
-    quote?: QuoteBlock;
+    quote?: QuoteBlock | QuoteBlock[];
   };
 
   reflection: {
@@ -111,11 +114,6 @@ export const caseStudies: CaseStudyData[] = [
         "Comparing budget options is where the downstream problems start. To give a client two or three alternatives, teams must create full duplicate projects as drafts because there is no way to hold multiple budgets within a single project. There is no side-by-side view, no way to adjust one draft while referencing another. Those duplicate projects all flow into Deployment requesting the same resources with slight variations, and the Deployment team has to make calls and send emails to sort out which version to staff.",
         "The monitoring side is just as limited. Dashboards report on yesterday and today with no predictive capability. If a resource is overbilling, the system can take 30 days or more to surface a red flag without manual weekly checks. Teams download spreadsheets and run reports outside the system to see what is coming rather than what has already happened. Compounding all of this, users have little confidence in the data itself. There is no transparency into where numbers originate, when they were last refreshed, or whether conflicting data sources exist behind the scenes.",
       ],
-      image: {
-        alt: "Diagram showing the three legacy systems and the pain points across budget creation, staffing, and monitoring",
-        placeholder:
-          "Diagram showing the three legacy systems and pain points across budget creation, staffing, and monitoring",
-      },
     },
 
     role: {
@@ -138,16 +136,6 @@ export const caseStudies: CaseStudyData[] = [
           `The precedent already existed inside PwC. An internal tool called Astro takes a similar approach with time and expense, hoteling, and metrics reporting. Astro adds AI and a better experience on top of older systems without replacing them. That metaphor resonated immediately with every stakeholder group I presented it to. It turned a threatening conversation (\u201cwe are replacing your system\u201d) into a collaborative one (\u201cwe are making your system more useful to more people\u201d).`,
           `I pressed our senior stakeholders to stop framing the project as a replacement, even internally. The messaging mattered. If data teams and product owners of the legacy systems heard \u201creplacement,\u201d cooperation would slow or stop entirely. Even if Forge does eventually replace those systems, that outcome is years away, and aiming for it now would have stalled the work that could ship in months.`,
         ],
-        image: {
-          alt: "Architecture concept showing the experience layer sitting above the three legacy systems",
-          placeholder:
-            "Architecture concept showing the experience layer above three legacy systems",
-        },
-        quote: {
-          quote:
-            "Stakeholder or partner reaction to the experience-layer strategy, particularly about how it changed willingness to cooperate or reframed what the project could accomplish.",
-          placeholder: true,
-        },
       },
       {
         title: "Two equally powerful paths to the same result",
@@ -157,16 +145,6 @@ export const caseStudies: CaseStudyData[] = [
           "My solution was to build both paths with equal depth and keep them in sync. AI helpers are built into the screens and flows directly: smarter defaults, suggestions based on past engagements, and one-click actions that eliminate the repetitive dropdown work from the legacy tools. The chat interface can do everything the screens can, and when a user issues a command through chat, the updates appear in the main interface in real time, as if the user had entered them manually. Nothing happens behind a curtain.",
           "That transparency is the trust mechanism. Users who are skeptical of AI chat can ignore it entirely and still benefit from the AI-assisted screens. Users who prefer chat can watch every change reflected in the interface they already understand. Over time, as users see the AI producing accurate results in the screen-based helpers, the chat path becomes less intimidating. Neither audience is a second-class experience.",
         ],
-        image: {
-          alt: "Side-by-side showing the screen-based budget builder with AI helpers and the chat interface producing the same result",
-          placeholder:
-            "Side-by-side: screen-based budget builder with AI helpers and chat interface producing the same result",
-        },
-        quote: {
-          quote:
-            "User reaction from research or demos about the AI helpers, the transparency of the chat interface, or the moment they realized both paths produced the same result.",
-          placeholder: true,
-        },
       },
       {
         title: "Making budget comparison possible for the first time",
@@ -175,16 +153,6 @@ export const caseStudies: CaseStudyData[] = [
           "In Forge, multiple draft budgets live within a single project. The comparison experience is the design problem worth unpacking here. It needed to work in two contexts: the linear format of the chat interface and a visual side-by-side view on the main screen. The challenge was information density. A single budget contains enough detail that simplifying it for comparison risked hiding the information teams need to make a decision. Showing everything made comparison impossible at any useful scale.",
           "It took three rounds of simplification to get the budget screen itself lean enough to support comparison. From there, I focused on the minimum information required to compare meaningfully and the visual hierarchy that would allow teams to scan two, three, or five options without losing the ability to dive into any single one. The flow I designed lets users compare at the summary level, select any draft to inspect in detail, make changes to any draft and see the comparison update immediately, then choose one to move forward. Only the chosen budget proceeds to Deployment and approvals. The version confusion that plagued the legacy workflow is eliminated by design rather than by policy.",
         ],
-        image: {
-          alt: "The budget comparison view showing multiple drafts side by side with visual hierarchy for scanning",
-          placeholder:
-            "Budget comparison view with multiple drafts side by side",
-        },
-        quote: {
-          quote:
-            "User or stakeholder reaction to seeing the budget comparison for the first time, particularly about the pain of the old process vs. the new experience.",
-          placeholder: true,
-        },
       },
       {
         title: "Designing at the prompt",
@@ -194,11 +162,6 @@ export const caseStudies: CaseStudyData[] = [
           "The learning curve was steep and specific. I learned about meaningful commit organization, appropriate PR sizing, linter compliance, and accessibility testing that went well beyond color contrast into focus indicators and ARIA attributes. The dashboards required hand-coding because the AI tools were not yet capable of producing the combined data visualizations I needed. That constraint taught me where the tools have real limits and where a designer working at the prompt needs to be prepared to write code directly.",
           "This experience was not incidental to the project. It was the reason I asked to lead the design. For the past year, I have been pushing 80 designers toward a delivery model that puts front-end code into GitHub rather than handing off Figma files. I needed to understand the friction, the workflow, and the collaboration patterns from the inside. Every lesson from Project Forge feeds directly back into how I coach the team on AI-first delivery.",
         ],
-        image: {
-          alt: "A pull request or code review screenshot showing the designer-engineer collaboration workflow",
-          placeholder:
-            "Pull request or code review screenshot showing designer-engineer collaboration",
-        },
         reflectionCallout:
           "I have been designing at the prompt and building my own solutions for over a year, but working inside a shared repository with engineers is a fundamentally different skill. The collaboration patterns, the review expectations, and the discipline of small, well-organized commits changed how I think about what \"delivering design\" means.",
       },
@@ -206,10 +169,6 @@ export const caseStudies: CaseStudyData[] = [
 
     outcomes: {
       metrics: [],
-      prose: [
-        "Project Forge enters pilot in July 2026 with a partner team. I am handing the day-to-day design to a senior designer who will work with the newly added front-end developer and the engineering pod. I will continue to set the design vision and direction, lead stakeholder alignment, and provide director-level oversight.",
-        "The pilot will generate the usage data and user feedback that this case study currently lacks. This page will be updated with outcomes as they become available.",
-      ],
     },
 
     reflection: {
@@ -256,11 +215,6 @@ export const caseStudies: CaseStudyData[] = [
         "PwC had three separate teams building agent workflow tools. Each team reported to different stakeholders, served different audiences, and used different technical approaches. None of them were coordinating with each other.",
         "The business risk was straightforward: three parallel investments solving the same problem, with no shared front end and no path to a unified product. Left unchecked, PwC would have shipped three competing tools internally before any of them reached a client.",
       ],
-      image: {
-        alt: "Diagram showing the three separate efforts converging into one",
-        placeholder:
-          "Diagram or visual showing the three separate efforts converging into one",
-      },
     },
 
     role: {
@@ -281,11 +235,6 @@ export const caseStudies: CaseStudyData[] = [
           "Nick and I spent the early weeks in discovery sessions with all three teams, mapping where the requirements overlapped and where they genuinely diverged. The overlaps were larger than anyone expected. The divergences were mostly about audience: some teams had built for engineers, others for consultants, and one was targeting client-facing use cases. The unified product needed to serve all three audiences without collapsing into a lowest-common-denominator compromise.",
           "The trade-off was speed. Building one product took longer than shipping any single team's existing tool. We had to make the case to leadership that the longer path would produce something PwC could actually scale, while three separate tools would create a maintenance and governance burden that compounded over time.",
         ],
-        image: {
-          alt: "Early discovery artifact showing the requirements mapping across three teams",
-          placeholder:
-            "Discovery artifact: requirements mapping across three teams, or whiteboard/Miro capture from convergence sessions",
-        },
       },
       {
         title: "Designing for people who do not write code",
@@ -308,10 +257,6 @@ export const caseStudies: CaseStudyData[] = [
           "The phasing decisions were as much about organizational buy-in as they were about technical sequencing. Each phase needed to deliver enough visible value to keep stakeholders from the original three teams invested. If any group felt their priorities had been permanently shelved, we risked losing the coalition that made the unified product possible.",
           "I defined the UX scope for each phase and the handoff criteria for the senior designer who would carry the product through the Agile build. That handoff was deliberate: I had spent three months building the design foundation and needed to return full attention to leading the broader UX team.",
         ],
-        image: {
-          alt: "Roadmap or phasing artifact showing the alpha/beta/v1 breakdown",
-          placeholder: "Roadmap artifact showing alpha → beta → v1 phasing",
-        },
       },
     ],
 
@@ -343,11 +288,6 @@ export const caseStudies: CaseStudyData[] = [
       prose: [
         "The drag-and-drop canvas builder I prototyped survived into the production product. PwC's April 2025 press release describes the interface as making workflow creation accessible to both technical and non-technical users, which was the core design problem I set out to solve.",
       ],
-      quote: {
-        quote:
-          "User quote TBD – checking with Nick Fico and Andy Carlson for attribution.",
-        placeholder: true,
-      },
     },
 
     reflection: {
@@ -438,11 +378,6 @@ export const caseStudies: CaseStudyData[] = [
           "During my first research interviews in the NOC, I recognized something the existing software had ignored. The NOC operates in perpetual darkness with monitors as the primary light source, while station agents and ramp crews work on bright tarmacs and in sunlit gate areas.",
           "I pitched a dark mode to the solution architect after those interviews. They built it in a single evening because the design system I was building supported theming from the start.",
         ],
-        image: {
-          alt: "Same screen shown in dark mode (NOC) and light mode (station), demonstrating the environmental adaptation",
-          placeholder:
-            "Side-by-side: same screen in dark mode (NOC) and light mode (station)",
-        },
       },
       {
         title: "Starting the design system wrong and recovering",
@@ -482,12 +417,20 @@ export const caseStudies: CaseStudyData[] = [
       prose: [
         "The unified dashboards across the suite eliminated reliance on paper and whiteboards. Custom views for each role reduced cognitive overload and allowed less-experienced staff to contribute more quickly.",
       ],
-      quote: {
-        quote:
-          "The ability to track turn progress and have flight details, delayed customers, and connecting crews in an integrated view eliminates the need to toggle; this saves time and allows me to focus on operational challenges.",
-        attribution: "Turn Management User",
-        role: "Southwest Airlines",
-      },
+      quote: [
+        {
+          quote:
+            "It feels like for the first time as a company we are ahead of the curve.",
+          attribution: "User",
+          role: "Southwest Airlines",
+        },
+        {
+          quote:
+            "The ability to track turn progress and have flight details, delayed customers, and connecting crews in an integrated view eliminates the need to toggle; this saves time and allows me to focus on operational challenges.",
+          attribution: "User",
+          role: "Southwest Airlines",
+        },
+      ],
     },
 
     reflection: {
@@ -535,11 +478,6 @@ export const caseStudies: CaseStudyData[] = [
         "When prospective clients saw the software in a pitch, they compared interfaces. Competitors with less capable tools but more polished interfaces won work on the perception that a better-looking product meant a better product. Tax leadership recognized the pattern and made the call: the technology team needed UX.",
         "The gap was not cosmetic. The organization had no UX roles, no design process, and no shared understanding of what user-centered design even meant. That is NN/g's Stage 1 (Absent), and the team's initial reaction confirmed it. We were met not with enthusiasm but with skepticism. Why are these people on my budget? Why are they slowing us down? Why should we change a process that already ships working software?",
       ],
-      image: {
-        alt: "Representative screenshot of the pre-UX interface state, conveying the powerful but unpolished contrast",
-        placeholder:
-          "Pre-UX product interface showing powerful-but-unpolished state",
-      },
     },
 
     role: {
@@ -559,10 +497,8 @@ export const caseStudies: CaseStudyData[] = [
           "The earliest wins came from cleaning up screens the teams already had. No new process. No new meetings. No asking anyone to change their workflow. Just visibly better interfaces on products the engineers already owned and cared about. That earned enough goodwill to open doors for the next step.",
           "I organized a series of brown bags and lunch-and-learns on UX as a discipline: what it was, why it mattered, and real examples of its impact in the broader technology industry. These were not mandatory. Attendance was voluntary, and it grew over time as word spread that the sessions were worth the hour. In every meeting we attended, we answered questions patiently and without defensiveness. The resistance was legitimate. These were experienced professionals being told their process needed to change by people they had not asked for.",
         ],
-        image: {
-          alt: "Photo from a brown bag session or collaborative whiteboard moment",
-          placeholder: "Brown bag session or collaborative whiteboard moment",
-        },
+        reflectionCallout:
+          "The key insight was sequencing. We did not ask anyone to change their process until they had already seen the results of ours. Trust came from evidence, not authority.",
       },
       {
         title: "Building shared infrastructure across the product suite",
@@ -589,16 +525,6 @@ export const caseStudies: CaseStudyData[] = [
           "The contextual inquiries happened at the practitioners' desks, in the middle of their actual workflow. Within the first few sessions, a pattern emerged that nobody in the stakeholder conversations had mentioned. The application we had been asked to redesign was the one piece of the workflow that practitioners said worked well. The real bottleneck was a sister application upstream in the process. Practitioners had been compensating for its failures so routinely that the pain had become invisible to the people requesting the redesign.",
           "I presented the findings to stakeholders and recommended redirecting the effort to the sister application. That recommendation saved the team from rebuilding the one tool their users trusted while the actual problem continued unchecked. It also gave leadership a concrete example of what research could do that no amount of visual polish could: change what gets built, not just how it looks.",
         ],
-        image: {
-          alt: "Contextual inquiry artifacts, workflow mapping, or findings presentation",
-          placeholder:
-            "Contextual inquiry artifacts or workflow mapping from the Boston research redirect",
-        },
-        quote: {
-          quote:
-            "Quote from Jake Wilson on the impact of this research redirect.",
-          placeholder: true,
-        },
       },
       {
         title: "Making UX everyone's responsibility",
@@ -640,17 +566,12 @@ export const caseStudies: CaseStudyData[] = [
         {
           label: "Sustainability",
           value:
-            "When I transitioned to PwC Digital, the practice I built did not depend on the people who started it.",
+            "When I transitioned to PwC Digital, David and Mike had moved on from the firm, and I handed a smooth-running team to the next manager. The practice I built did not depend on the people who started it.",
         },
       ],
       prose: [
         "The strongest evidence that the initiative worked was what happened next. PwC Digital recruited me to replicate the model at a larger scale, helping them grow their design team rapidly during a period of expansion. The Tax Technology transformation became the proof of concept for a broader organizational investment in UX.",
       ],
-      quote: {
-        quote:
-          "Quote from Tax Technology leadership or a PM on the impact of UX integration.",
-        placeholder: true,
-      },
     },
 
     reflection: {
@@ -693,24 +614,18 @@ export const caseStudies: CaseStudyData[] = [
     },
 
     problem: {
+      heading: "The Situation and My Role",
+      sideLabel: "Context",
       paragraphs: [
         "PwC Digital was a new venture inside PwC Advisory. Sector teams across the firm had built internal tools with commercial potential, and PwC wanted to sell them as products. New engagements came in every week. The design team needed to grow from 7 people to over a hundred, fast, with no playbook for how to do it.",
         "When I arrived as a Senior Manager, there was no structured hiring process, no coordination between interview rounds, and no formal onboarding. New designers learned the team through proximity and luck. I was promoted to Director as the team scaled and became the head of design's deputy. I created or led the creation of every system described in this case study.",
       ],
-      image: {
-        alt: "The onboarding Miro board zoomed out, showing the full macro structure",
-        placeholder:
-          "Onboarding Miro board macro view — signals the work was designed, not improvised",
-      },
+      contextCallout:
+        "There was no inherited process, no design ops support, and no template for what a 130-person consulting product design team was supposed to look like. We built it while running it.",
     },
 
     role: {
-      paragraphs: [
-        "When I arrived as a Senior Manager, there was no structured hiring process, no coordination between interview rounds, and no formal onboarding. New designers learned the team through proximity and luck.",
-        "I was promoted to Director as the team scaled and became the head of design's deputy. I created or led the creation of every system described in this case study.",
-      ],
-      contextCallout:
-        "There was no inherited process, no design ops support, and no template for what a 130-person consulting product design team was supposed to look like. We built it while running it.",
+      paragraphs: [],
     },
 
     decisions: [
@@ -722,11 +637,6 @@ export const caseStudies: CaseStudyData[] = [
           "Onboarding needed the same rigor. I designed an onboarding Miro board using macro and micro navigation; the zoomed-out view shows the full map, and zooming in reveals exactly what a new joiner needs. The content covered tool setup, Figma file conventions, accessibility standards, working with developers, and product demos. Each new hire received a specific action list for their first week, first month, first 60 days, and first 90 days.",
           "On day one, a \"friendlies\" leader welcomed them, walked them through the board, and answered the questions people are sometimes embarrassed to ask their direct manager that first week.",
         ],
-        image: {
-          alt: "Miro board at macro zoom alongside a zoomed-in section showing first-week action items",
-          placeholder:
-            "Miro onboarding board: macro view and zoomed-in first-week action items",
-        },
         quote: {
           quote:
             "This award is really about your impact on our collaboration. You are truly, wonderfully easy to work with and your approach to the whole team — bringing us all together regularly, coaxing contributions from multiple people and sharing best practices widely — has made us better.",
@@ -741,11 +651,6 @@ export const caseStudies: CaseStudyData[] = [
           "The work was not wrong. It just did not require a Director.",
           "I petitioned our Partner to create a Design Ops role. Once that person was up to speed, I shifted to reviewing portfolios and second interviews alongside the other directors. She and I met two to three times a week to stay aligned on everything else. I stayed connected to every new hire. The difference was that I could also lead the team that was already there.",
         ],
-        image: {
-          alt: "Before/after diagram of time allocation — 60–70% hiring logistics before Design Ops versus the rebalanced split after",
-          placeholder:
-            "Time allocation before/after: 60–70% hiring logistics vs. rebalanced split after Design Ops",
-        },
         reflectionCallout:
           "That decision is the one I am most glad I made quickly. The right time to build operational support is before you feel the strain, not after.",
       },
@@ -757,11 +662,6 @@ export const caseStudies: CaseStudyData[] = [
           "We ran sessions to define a team manifesto. The leadership team was consistent about one thing above all: every designer had our support to push back on bad decisions and escalate when their recommendations were being ignored to the detriment of the product. The role was not to take design orders. It was to understand the problem beneath the ask and advocate for the user.",
           "That message, repeated by every leader on the team, was part of why people stayed.",
         ],
-        image: {
-          alt: "Team photo, show-and-tell in progress, or the team manifesto artifact",
-          placeholder:
-            "Team photo, show-and-tell session, or manifesto artifact",
-        },
         quote: {
           quote:
             "That's something I like about you. Being open, honest and human makes you relatable and, at least from my point of view, even easier to respect and appreciate. I've noticed that as people climb the ladder here there's a tendency to adopt an attitude of aloofness. If I'm ever lucky enough to make Director, I quite frankly hope to be like you. Human.",
