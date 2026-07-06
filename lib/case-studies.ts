@@ -747,12 +747,12 @@ const homepageCardCopy: Record<
   },
   "agent-os": {
     title: "Agent Workflow Builder",
-    desc: "Three teams were building the same AI agent tool in isolation. I designed the unified solution that became PwC’s firm-wide platform for 250+ deployed agents.",
+    desc: "Three teams were building the same AI agent tool in isolation. I designed the unified solution that became the firm-wide platform for 250+ deployed agents.",
     role: "UX Director (Hands-on)",
   },
   "southwest-opssuite": {
     title: "Airline Operational Suite",
-    desc: "When a storm strikes a major airport, Southwest went from needing 4 to 6 hours to recover to needing minutes.",
+    desc: "When a storm strikes a major airport, only one went from needing 4 to 6 hours to recover to needing minutes.",
     role: "UX Manager, Design System Founder",
   },
   "pwc-digital-leadership": {

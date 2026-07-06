@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { homepageFeaturedCard, homepageWorkCards } from "@/lib/case-studies";
+import { CASE_STUDY_COOKIE_NAME } from "@/lib/case-study-auth";
 
 const darkColors = ["#030414", "#0a1128", "#130f35", "#030427", "#150d30", "#250c20"];
 const lightColors = ["#ffffff", "#f0e8f8", "#e2d4f2", "#d8daf0", "#f0dce8", "#f8e8f0"];
@@ -60,8 +61,12 @@ function LockIcon() {
 export default function Page() {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [hasAccess, setHasAccess] = useState(false);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    setHasAccess(document.cookie.includes(CASE_STUDY_COOKIE_NAME));
+  }, []);
 
   useEffect(() => {
     if (!mounted) return;
@@ -183,7 +188,7 @@ export default function Page() {
                 src={homepageFeaturedCard.image}
                 alt="Project Forge portfolio overview dashboard"
                 fill
-                className="object-cover"
+                className={`object-cover transition-[filter] duration-500 ${!hasAccess ? "blur-md" : ""}`}
                 priority
               />
             </div>
@@ -211,18 +216,18 @@ export default function Page() {
 
           {/* Standard cards grid */}
           <div className="work-cards-grid grid grid-cols-1 gap-[22px] md:grid-cols-2">
-            {homepageWorkCards.map((study) => (
+            {homepageWorkCards.map((study, idx) => (
               <Link
                 key={study.slug}
                 href={`/case-study/${study.slug}`}
                 className="block overflow-hidden rounded-[14px] border border-pa-border bg-pa-bg2 text-inherit no-underline transition-colors hover:border-[#e23e7e]/40"
               >
-                <div className="relative aspect-[16/8]">
+                <div className="relative aspect-[16/8] overflow-hidden">
                   <Image
                     src={study.image}
                     alt={study.title}
                     fill
-                    className="object-cover"
+                    className={`object-cover transition-[filter] duration-500 ${idx < 2 && !hasAccess ? "blur-md" : ""}`}
                   />
                 </div>
                 <div className="px-[26px] pb-7 pt-6">
