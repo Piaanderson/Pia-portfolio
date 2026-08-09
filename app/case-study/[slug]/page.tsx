@@ -225,20 +225,42 @@ export default async function CaseStudyPage({
                 </div>
               )}
 
-              {study.hero.image && (
+              {study.hero.imagePair && (
+                <div className="mt-10 grid grid-cols-2 gap-4">
+                  {[study.hero.imagePair.before, study.hero.imagePair.after].map(
+                    (img, idx) => (
+                      <div
+                        key={idx}
+                        className="overflow-hidden rounded-xl border border-border/50 bg-muted/30"
+                      >
+                        <Image
+                          src={img.src!}
+                          alt={img.alt}
+                          width={1024}
+                          height={683}
+                          className="h-auto w-full"
+                          priority
+                          sizes="(max-width: 1024px) 50vw, 512px"
+                        />
+                      </div>
+                    ),
+                  )}
+                </div>
+              )}
+
+              {study.hero.image && !study.hero.imagePair && (
                 <div className="mt-10">
                   {study.hero.image.src ? (
                     <div className="overflow-hidden rounded-xl border border-border/50 bg-muted/30">
-                      <div className="relative aspect-[16/10] w-full">
-                        <Image
-                          src={study.hero.image.src}
-                          alt={study.hero.image.alt}
-                          fill
-                          className="object-cover"
-                          priority
-                          sizes="(max-width: 1024px) 100vw, 1024px"
-                        />
-                      </div>
+                      <Image
+                        src={study.hero.image.src}
+                        alt={study.hero.image.alt}
+                        width={1920}
+                        height={1200}
+                        className="h-auto w-full"
+                        priority
+                        sizes="(max-width: 1024px) 100vw, 1024px"
+                      />
                     </div>
                   ) : (
                     <ImageBlock image={study.hero.image} />

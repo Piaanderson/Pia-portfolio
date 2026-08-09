@@ -50,6 +50,10 @@ export type CaseStudyData = {
     subhead: string;
     metricCallout?: MetricCallout;
     image?: ImagePlacement;
+    imagePair?: {
+      before: ImagePlacement;
+      after: ImagePlacement;
+    };
     status?: string;
   };
 
@@ -542,9 +546,15 @@ export const caseStudies: CaseStudyData[] = [
       metricCallout: {
         text: "60–70 team members certified in UX methods by Nielsen Norman Group. UX designers embedded on every product with a user interface. Generative research established as standard operating procedure.",
       },
-      image: {
-        src: "/case-studies/pwc-tax-tech/hero-ux-maturity-stages.png",
-        alt: "UX Maturity transformation hero",
+      imagePair: {
+        before: {
+          src: "/case-studies/pwc-tax-tech/hero-before-ux-maturity.png",
+          alt: "Before: an organization hostile toward UX — no user research, no budget, no UX team, deadline-first culture",
+        },
+        after: {
+          src: "/case-studies/pwc-tax-tech/hero-after-ux-maturity.png",
+          alt: "After: integrated user-centered design — research, accessibility, collaboration, and continuous improvement as standard practice",
+        },
       },
     },
 
@@ -587,8 +597,8 @@ export const caseStudies: CaseStudyData[] = [
           "This was the period when the organization moved through NN/g's Stage 3 (Emergent), where UX work was happening but inconsistently and at the initiative of individual managers, and into Stage 4 (Structured), where the organization recognized UX as a discipline with dedicated roles, processes, and a shared methodology.",
         ],
         image: {
-          src: "/case-studies/pwc-tax-tech/design-system-exploration-1.png",
-          alt: "Design system exploration wall: Forms & Buttons and Grids boards covered with UI component printouts and sticky notes",
+          src: "/case-studies/pwc-tax-tech/design-system-exploration-boards.jpeg",
+          alt: "Four design system exploration boards covering forms, grids, typography, icons, and modals",
           caption:
             "Design system exploration – pulling components from multiple applications to compare variations and align on standards.",
         },
@@ -598,14 +608,6 @@ export const caseStudies: CaseStudyData[] = [
             alt: "Tax Technology design team reviewing component boards labeled Forms and Buttons, Grids and Data Viz, and Text and Icons",
             caption:
               "Component audit workshop — the team aligned on shared patterns across eight to ten products.",
-          },
-          {
-            src: "/case-studies/pwc-tax-tech/design-system-exploration-boards.jpeg",
-            alt: "Four design system exploration boards covering forms, grids, typography, icons, and modals",
-          },
-          {
-            src: "/case-studies/pwc-tax-tech/design-system-exploration-2.png",
-            alt: "Close-up of design system component comparison boards with sticky-note feedback",
           },
         ],
       },
@@ -634,18 +636,12 @@ export const caseStudies: CaseStudyData[] = [
           "After certification, the culture shifted in ways that were hard to reverse. Engineers volunteered for whiteboarding sessions. PMs built journey mapping into their planning process. Team members asked to sit in on task validation sessions and hear user feedback firsthand. PMs required UX artifacts and deliverables before the team would begin writing user stories or entering the first sprint.",
         ],
         image: {
-          src: "/case-studies/pwc-tax-tech/nng-training-1.png",
-          alt: "NN/g trainer presenting Design Thinking to the product dev team",
+          src: "/case-studies/pwc-tax-tech/nng-design-thinking-session.jpeg",
+          alt: "Nielsen Norman Group trainer presenting Generating Big Ideas with Design Thinking to the Tax Technology team",
           caption:
-            "NNg trainers spent 5 days with the entire Tax Technology org — PMs, Devs, QA, and Stakeholders.",
+            "NN/g trainers spent 5 days with the entire Tax Technology org — PMs, Devs, QA, and Stakeholders.",
         },
         images: [
-          {
-            src: "/case-studies/pwc-tax-tech/nng-design-thinking-session.jpeg",
-            alt: "Nielsen Norman Group trainer presenting Generating Big Ideas with Design Thinking to the Tax Technology team",
-            caption:
-              "NN/g certification week — Design Thinking training for PMs, developers, QA, and stakeholders.",
-          },
           {
             src: "/case-studies/pwc-tax-tech/nng-training-2.png",
             alt: "Tax Technology team in a classroom setting during NN/g UX certification training",
