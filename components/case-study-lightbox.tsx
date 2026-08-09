@@ -100,7 +100,9 @@ export function CaseStudyLightbox({
                 className={
                   isSvg
                     ? "relative h-full w-full object-contain"
-                    : "object-cover object-top"
+                    : objectPosition
+                      ? "object-cover"
+                      : "object-cover object-top"
                 }
                 style={objectPosition ? { objectPosition } : undefined}
               />

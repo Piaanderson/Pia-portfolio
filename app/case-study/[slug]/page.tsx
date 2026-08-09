@@ -252,17 +252,39 @@ export default async function CaseStudyPage({
               {study.hero.image && !study.hero.imagePair && (
                 <div className="mt-10">
                   {study.hero.image.src ? (
-                    <div className="overflow-hidden rounded-xl border border-border/50 bg-muted/30">
-                      <Image
-                        src={study.hero.image.src}
-                        alt={study.hero.image.alt}
-                        width={1920}
-                        height={1200}
-                        className="h-auto w-full"
-                        priority
-                        sizes="(max-width: 1024px) 100vw, 1024px"
-                      />
-                    </div>
+                    study.hero.image.flexHeight ? (
+                      <div className="overflow-hidden rounded-xl border border-border/50 bg-muted/30">
+                        <Image
+                          src={study.hero.image.src}
+                          alt={study.hero.image.alt}
+                          width={1920}
+                          height={1200}
+                          className="h-auto w-full"
+                          priority
+                          sizes="(max-width: 1024px) 100vw, 1024px"
+                        />
+                      </div>
+                    ) : (
+                      <div className="relative aspect-[16/9] overflow-hidden rounded-xl border border-border/50 bg-muted/30">
+                        <Image
+                          src={study.hero.image.src}
+                          alt={study.hero.image.alt}
+                          fill
+                          className={
+                            study.hero.image.objectPosition
+                              ? "object-cover"
+                              : "object-cover object-top"
+                          }
+                          style={
+                            study.hero.image.objectPosition
+                              ? { objectPosition: study.hero.image.objectPosition }
+                              : undefined
+                          }
+                          priority
+                          sizes="(max-width: 1024px) 100vw, 1024px"
+                        />
+                      </div>
+                    )
                   ) : (
                     <ImageBlock image={study.hero.image} />
                   )}

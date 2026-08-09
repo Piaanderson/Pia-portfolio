@@ -201,6 +201,7 @@ export const caseStudies: CaseStudyData[] = [
             alt: "Project Forge portfolio overview dashboard on a laptop, showing engagement health metrics, AI chat assistant, and attention queue",
             caption:
               "Portfolio overview — engagement health, AI chat assistant, and attention queue in a single unified view.",
+            objectPosition: "center",
             afterParagraph: 3,
           },
         ],
@@ -286,20 +287,22 @@ export const caseStudies: CaseStudyData[] = [
       image: {
         src: "/case-studies/agent-os/hero-workflow-environment-review.png",
         alt: "Agent OS canvas builder showing the drag-and-drop workflow interface",
+        objectPosition: "center",
       },
     },
 
     problem: {
       paragraphs: [
-        "PwC had three separate teams building agent workflow tools. Each team reported to different stakeholders, served different audiences, and used different technical approaches. None of them were coordinating with each other.",
-        "The business risk was straightforward: three parallel investments solving the same problem, with no shared front end and no path to a unified product. Left unchecked, PwC would have shipped three competing tools internally before any of them reached a client.",
+        "PwC had three separate teams building agent workflow tools. Each team reported to different stakeholders, with different audiences, and different technical approaches.",
+        "Three parallel investments solving the same problem differently, with no path to a unified product was a business risk. Left unchecked, the firm would have shipped three competing tools but only one could reach clients.",
       ],
     },
 
     role: {
       paragraphs: [
-        "Nick Fico, a Director-level PM, and I were brought in to make sense of the situation. Before this project had a full team, it was the two of us figuring out what should be built, how to bring three solutions together, and what the new team should look like.",
-        "I met with each of the three teams to understand their requirements and what they were building. I conducted stakeholder and user research, created the Figma prototype for the unified solution, and wrote and produced the demo video that partners used to present Agent OS to clients. I led the UX direction for the first three months, then worked with Nick and the solution architects to break the product into an alpha, beta, and v1 release roadmap before handing it off to a senior designer who joined the Agile build team.",
+        "A Director-level PM and I were brought in to make sense of the situation. Before forming a full team, the two of us would align on how to bring three solutions together.",
+        "I met with each of the teams to understand their requirements and roadmap, conducted stakeholder and user research. I then created the Figma prototype for the unified solution, produced the demo video, and wrote the Partner demo script to present Agent OS to clients.",
+        "I led the UX direction for the first three months, then worked with Nick and the solution architects to break the product into an alpha, beta, and v1 release roadmap before handing it off to a senior designer who joined the Agile build team.",
       ],
       contextCallout:
         "This was a Director-level engagement where I chose to go deep into the hands-on design work. The complexity of unifying three technical architectures into one coherent interface demanded it. It meant late nights balancing prototype work with leading the broader UX team, but the impact on the firm justified the investment.",
@@ -309,43 +312,45 @@ export const caseStudies: CaseStudyData[] = [
       {
         title: "One product, not three",
         paragraphs: [
-          "The first and most consequential decision was not a design decision at all. It was the recommendation that PwC build a single unified platform rather than pick a winner among the three existing efforts or let them continue independently.",
-          "Each team had built something valuable. Each team's stakeholders had opinions about how the combined product should work. Merging the efforts meant none of them would get exactly what they had envisioned, and every team had people who felt ownership over their original solution.",
-          "Nick and I spent the early weeks in discovery sessions with all three teams, mapping where the requirements overlapped and where they genuinely diverged. The overlaps were larger than anyone expected. The divergences were mostly about audience: some teams had built for engineers, others for consultants, and one was targeting client-facing use cases. The unified product needed to serve all three audiences without collapsing into a lowest-common-denominator compromise.",
-          "The trade-off was speed. Building one product took longer than shipping any single team's existing tool. We had to make the case to leadership that the longer path would produce something PwC could actually scale, while three separate tools would create a maintenance and governance burden that compounded over time.",
+          "The first and most consequential decision was not a design decision at all. It was the recommendation that the firm build a single unified platform rather than pick a winner among the three existing efforts.",
+          "The early weeks were spent in discovery sessions with all three teams, mapping where the requirements overlapped and diverged.",
+          "The overlaps were mostly around audience. One team had built for engineers, another for consultants, and one client-facing use cases. The unified product needed to serve all three audiences without succumbing into a lowest-common-denominator compromise.",
+          "Each team had built something valuable and their stakeholders had unique goals to be achieved. Rethinking from the higher level was needed, rather than merging such varying solutions.",
+          "The trade-off was speed. Building from scratch took longer than modifying an existing tool. We had to make the case to leadership that the longer path would produce something PwC could actually scale, while separate tools would create a compounding maintenance and governance burden.",
         ],
         image: {
           src: "/case-studies/agent-os/journey-simple-tasks.svg",
           alt: "Agent OS user journey diagram mapping simple tasks to be done for end users",
           caption:
             "Journey mapping during discovery — aligning three teams on what non-technical users actually needed to accomplish.",
+          objectPosition: "center",
         },
       },
       {
         title: "Designing for people who do not write code",
         paragraphs: [
-          "The three existing tools had been built by technical teams for technical users. The architects and engineers who created them thought in terms of SDKs, orchestration graphs, and API integrations. That was the right level of abstraction for the people who had built the tools. It was the wrong level for the consultants and business users who would need to create agent workflows at scale.",
-          "My job was to understand what the technical teams had built well enough to translate it into an interface that a non-technical user could operate confidently. The drag-and-drop canvas builder became the centerpiece of that translation. Users could assemble agents into workflows visually, connect them to enterprise systems, and see the data flow without writing a line of code.",
+          "The three existing tools had been built by technical teams for technical users. The architects and engineers who created them thought in terms of SDKs, orchestration graphs, and API integrations.",
+          "That was the right level of abstraction for the people building the tools. But it was wrong for the consultants and business users needing to create agent workflows at scale.",
+          "My job was to understand what the technical teams had built well enough to translate it into an interface that a non-technical user could operate confidently.",
+          "The drag-and-drop canvas builder became the centerpiece of that translation. Users could assemble agents into workflows visually, connect them to enterprise systems, and see the data flow without writing a line of code.",
           "The harder part was defending those design decisions to the technical stakeholders. They had built the original solutions and felt, reasonably, that simplifying the interface meant losing capability. Every abstraction I introduced had to prove that it preserved the underlying power while removing the jargon that would stop a business user from getting started. Some of those conversations were tense. The architects needed to see that the canvas builder was not dumbing down their work; it was making their work usable by the people who would actually generate revenue with it.",
         ],
         image: {
           src: "/case-studies/agent-os/canvas-builder-prototype.png",
           alt: "The drag-and-drop canvas builder prototype from Figma, showing a workflow being assembled visually",
           caption:
-            "Agent OS canvas builder: drag-and-drop workflow assembly for non-technical users.",
+            "Drag-and-drop orchestration view — agent groups, supervisors, and compliance agents connected without writing code.",
+          objectPosition: "center",
+          afterParagraph: 1,
         },
         images: [
           {
-            src: "/case-studies/agent-os/canvas-builder-laptop.png",
-            alt: "Agent OS canvas builder displayed on a laptop in a workspace setting",
+            src: "/case-studies/agent-os/hero-workflow-environment-review.png",
+            alt: "Agent OS canvas builder showing the drag-and-drop workflow interface",
             caption:
               "The canvas builder prototype in context — the interface designed to translate technical orchestration into visual assembly.",
-          },
-          {
-            src: "/case-studies/agent-os/workflow-orchestration-laptop.png",
-            alt: "Agent OS workflow orchestration screen on a laptop showing agent groups and compliance agents connected in a flow",
-            caption:
-              "Workflow orchestration view — agent groups, supervisors, and compliance agents connected without writing code.",
+            objectPosition: "center",
+            afterParagraph: 3,
           },
         ],
       },
@@ -361,6 +366,7 @@ export const caseStudies: CaseStudyData[] = [
           alt: "Agent OS dashboard home screen on a laptop showing SDLC overview, code analytics, and agent workflow entry points",
           caption:
             "Agent OS home — the unified entry point that replaced three separate tools with one firm-wide platform.",
+          objectPosition: "center",
         },
       },
     ],
