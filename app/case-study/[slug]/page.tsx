@@ -52,6 +52,7 @@ function ImageBlock({ image }: { image: ImagePlacement }) {
         alt={image.alt}
         caption={image.caption}
         flexHeight={image.flexHeight}
+        objectPosition={image.objectPosition}
       />
     );
   }
@@ -347,6 +348,9 @@ export default async function CaseStudyPage({
                 </div>
                 <div className="flex flex-col gap-4">
                   {study.role.paragraphs.map((p, i) => {
+                    const logosAfter = study.role.toolLogos?.filter(
+                      (l) => l.afterParagraph === i,
+                    );
                     if (p.startsWith("## ")) {
                       return (
                         <h3
@@ -358,12 +362,25 @@ export default async function CaseStudyPage({
                       );
                     }
                     return (
-                      <p
-                        key={i}
-                        className="text-lg leading-[1.75] text-foreground/80 md:text-xl md:leading-[1.75]"
-                      >
-                        {p}
-                      </p>
+                      <Fragment key={i}>
+                        <p className="text-lg leading-[1.75] text-foreground/80 md:text-xl md:leading-[1.75]">
+                          {p}
+                        </p>
+                        {logosAfter && logosAfter.length > 0 && (
+                          <div className="mt-2 flex items-center gap-6">
+                            {logosAfter.map((logo) => (
+                              <Image
+                                key={logo.src}
+                                src={logo.src}
+                                alt={logo.alt}
+                                width={40}
+                                height={40}
+                                className="rounded-lg"
+                              />
+                            ))}
+                          </div>
+                        )}
+                      </Fragment>
                     );
                   })}
                   {study.role.contextCallout && (

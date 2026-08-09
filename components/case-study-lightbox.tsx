@@ -15,6 +15,7 @@ type CaseStudyLightboxProps = {
   alt: string;
   caption?: string;
   flexHeight?: boolean;
+  objectPosition?: string;
 };
 
 function CaseStudyImage({
@@ -48,6 +49,7 @@ export function CaseStudyLightbox({
   alt,
   caption,
   flexHeight,
+  objectPosition,
 }: CaseStudyLightboxProps) {
   const [isZoomed, setIsZoomed] = useState(false);
   const [origin, setOrigin] = useState({ x: 50, y: 50 });
@@ -95,7 +97,12 @@ export function CaseStudyLightbox({
               <CaseStudyImage
                 src={src}
                 alt={alt}
-                className={isSvg ? "relative h-full w-full object-contain" : "object-cover"}
+                className={
+                  isSvg
+                    ? "relative h-full w-full object-contain"
+                    : "object-cover object-top"
+                }
+                style={objectPosition ? { objectPosition } : undefined}
               />
             )}
             <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity hover:opacity-100 focus-visible:opacity-100" />

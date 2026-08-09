@@ -9,6 +9,7 @@ export type ImagePlacement = {
   caption?: string;
   placeholder?: string;
   flexHeight?: boolean;
+  objectPosition?: string;
   afterParagraph?: number;
 };
 
@@ -69,6 +70,7 @@ export type CaseStudyData = {
   role: {
     paragraphs: string[];
     contextCallout?: string;
+    toolLogos?: { src: string; alt: string; afterParagraph: number }[];
   };
 
   decisions: Decision[];
@@ -141,6 +143,12 @@ export const caseStudies: CaseStudyData[] = [
         "## Strategic vision then hand off",
         "Before and during the pilot, Mitali and I created the proof of concept that earned buy-in, then I evolved the UI across four main experience flows: pursuit, budget, staffing, and monitoring. I am now transitioning the project to a Design Manager who will steer the direction through Beta and launch.",
       ],
+      toolLogos: [
+        { src: "/case-studies/project-forge/tools/figma.png", alt: "Figma", afterParagraph: 2 },
+        { src: "/case-studies/project-forge/tools/reality-composer.png", alt: "Reality Composer", afterParagraph: 2 },
+        { src: "/case-studies/project-forge/tools/lovable.png", alt: "Lovable", afterParagraph: 2 },
+        { src: "/case-studies/project-forge/tools/github.png", alt: "GitHub", afterParagraph: 2 },
+      ],
       contextCallout:
         "Directors go deep when the work calls for their specific specialty. Mine is seeing a complex ecosystem, understanding how its pieces connect, and simplifying it into something centralized and usable. That is what this project needed, and the hands-on investment solidified the strategic vision for the people building it.",
     },
@@ -155,7 +163,7 @@ export const caseStudies: CaseStudyData[] = [
           "I pushed for Project Forge to be an AI and experience layer that sits above the existing systems rather than replacing them. PwC already had an internal precedent: Astro, which adds AI and a better experience on top of time and expense, hoteling, and metrics reporting without replacing the underlying systems.",
           `That metaphor resonated immediately. It turned a threatening conversation (\u201cwe are replacing your system\u201d) into a collaborative one (\u201cwe are making your system more useful to more people\u201d).`,
           "## Controlling the message",
-          `I pressed our senior stakeholders to stop framing the project as a replacement, even internally. If data teams heard \u201creplacement,\u201d cooperation would slow or stop entirely. Even if Forge does eventually replace those systems, that outcome is years away.`,
+          `I pressed our senior stakeholders to stop framing the project as a replacement, even internally. If data teams heard \u201creplacement,\u201d cooperation would slow or stop entirely. Even if Forge does eventually replace those systems, that outcome would be years away.`,
         ],
         image: {
           src: "/case-studies/project-forge/screens/briefing-decision-frame-evidence-panels.png",
@@ -182,10 +190,25 @@ export const caseStudies: CaseStudyData[] = [
           "Nothing happens behind a curtain. That transparency is the trust mechanism.",
         ],
         image: {
-          src: "/case-studies/project-forge/screens/portfolio-ranked-signals-tabbed.png",
-          alt: "Forge pursuits view with Flex Felix chat sidebar and ranked pursuit signals in the main interface",
+          src: "/case-studies/project-forge/screens/wizard-step-1-engagement-details.png",
+          alt: "Forge wizard step one showing engagement creation with chat, suggestion chips, and manual entry working together",
           caption:
-            "Chat and screen in sync — Flex Felix in the sidebar while the main interface updates with pursuit signals and team activity.",
+            "The creation process users already know, completable via chat, suggestion chips, or manual entry.",
+        },
+        images: [
+          {
+            src: "/case-studies/project-forge/portfolio-overview-laptop.png",
+            alt: "Project Forge portfolio overview dashboard on a laptop, showing engagement health metrics, AI chat assistant, and attention queue",
+            caption:
+              "Portfolio overview — engagement health, AI chat assistant, and attention queue in a single unified view.",
+            afterParagraph: 3,
+          },
+        ],
+        quote: {
+          quote:
+            "I love the idea of chatting with Flex to ask questions and get answers. But eventually, chat can be frustrating when it doesn't do what you want, or when it gets things wrong. I love to see that there is still a backup way in which I can do everything in a deterministic way, by pushing the right button. I love what I see.",
+          attribution: "Research participant",
+          afterParagraph: 3,
         },
       },
       {
@@ -198,19 +221,11 @@ export const caseStudies: CaseStudyData[] = [
           "The flow lets users compare at the summary level, dive into any draft in detail, make changes and see the comparison update immediately, then choose one to move forward. Only the chosen budget proceeds to Deployment. The version confusion is eliminated by design rather than by policy.",
         ],
         image: {
-          src: "/case-studies/project-forge/portfolio-overview-laptop.png",
-          alt: "Project Forge portfolio overview dashboard on a laptop, showing engagement health metrics, AI chat assistant, and attention queue",
+          src: "/case-studies/project-forge/screens/wizard-step-2-budget-options.png",
+          alt: "Forge wizard step two showing a budget plan with three staffing options in a comparison grid",
           caption:
-            "Portfolio overview — engagement health, AI chat assistant, and attention queue in a single unified view.",
+            "The comparison wizard — three budget options and staffing details in one flow, without duplicate projects.",
         },
-        images: [
-          {
-            src: "/case-studies/project-forge/screens/wizard-step-2-budget-options.png",
-            alt: "Forge wizard step two showing a budget plan with three staffing options in a comparison grid",
-            caption:
-              "The comparison wizard — three budget options and staffing details in one flow, without duplicate projects.",
-          },
-        ],
       },
       {
         title: "Designing at the prompt",
@@ -221,10 +236,10 @@ export const caseStudies: CaseStudyData[] = [
           "This experience was the reason I asked to lead the design. For the past year, I have been pushing 80 designers toward delivering front-end code through GitHub rather than handing off Figma files. I needed to understand the friction from the inside. Every lesson from Project Forge feeds directly back into how I coach the team.",
         ],
         image: {
-          src: "/case-studies/project-forge/screens/wizard-step-1-engagement-details.png",
-          alt: "Forge wizard step one showing engagement details with briefing context carried forward into budget creation",
+          src: "/case-studies/project-forge/screens/portfolio-ranked-signals-tabbed.png",
+          alt: "Forge pursuits view with Flex Felix chat sidebar and ranked pursuit signals in the main interface",
           caption:
-            "Engagement wizard — one of the flows I designed at the prompt and shipped as front-end code in the shared repository.",
+            "Chat and screen in sync — one of the flows I designed at the prompt and shipped as front-end code in the shared repository.",
         },
         reflectionCallout:
           "Working inside a shared repository with engineers is a fundamentally different skill from designing at the prompt on your own. The collaboration patterns, the review expectations, and the discipline of small, well-organized commits changed how I think about what \"delivering design\" means.",
@@ -238,8 +253,8 @@ export const caseStudies: CaseStudyData[] = [
     reflection: {
       heading: "What Comes Next",
       paragraphs: [
-        "Project Forge is in pilot now. The engineering pod is building out the full UI and agent functionality that I designed, and I have transitioned the day-to-day design leadership to a Design Manager who will steer the direction through Beta and launch. I continue to set the design vision and provide director-level oversight.",
-        "The pilot will generate the usage data and user feedback that this case study currently lacks. I will update this page with outcomes as they become available.",
+        "Project Forge is in pilot now. The team is fleshing out full UI and agent functionality, and I've transitioned the day-to-day design leadership to a Design Manager to steer the direction through launch while I continue to set the design vision and provide director-level oversight.",
+        "As the pilot rolls out, I'll be tracking usage data and gathering user feedback to measure real-world impact.",
       ],
     },
 
