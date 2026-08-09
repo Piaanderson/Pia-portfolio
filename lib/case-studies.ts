@@ -22,6 +22,7 @@ export type Decision = {
   subtitle?: string;
   paragraphs: string[];
   image?: ImagePlacement;
+  images?: ImagePlacement[];
   quote?: QuoteBlock;
   reflectionCallout?: string;
 };
@@ -29,6 +30,7 @@ export type Decision = {
 export type OutcomeMetric = {
   label: string;
   value: string;
+  highlight?: string;
   source?: string;
 };
 
@@ -88,7 +90,7 @@ export const caseStudies: CaseStudyData[] = [
     subtitle: "AI-First Internal Platform · In Progress",
     description:
       "Leading UX vision and front-end delivery for an AI experience layer that unifies budget creation, staffing, and engagement monitoring across three legacy systems.",
-    image: "/images/case-study-forge-hero.png",
+    image: "/case-studies/project-forge/portfolio-overview-laptop.png",
     tags: ["UX Strategy", "AI/ML", "Front-End Dev", "Systems Thinking"],
     type: "hybrid",
 
@@ -101,8 +103,8 @@ export const caseStudies: CaseStudyData[] = [
         text: "Project Forge enters pilot in July 2026. This case study covers the strategic and design decisions made to date. Outcomes will be updated as pilot data becomes available.",
       },
       image: {
-        src: "/images/case-study-forge-hero.png",
-        alt: "Project Forge portfolio overview dashboard showing engagement health metrics, AI chat assistant, and attention queue",
+        src: "/case-studies/project-forge/portfolio-overview-laptop.png",
+        alt: "Project Forge portfolio overview dashboard on a laptop, showing engagement health metrics, AI chat assistant, and attention queue",
       },
       status: "In Progress – Entering Pilot July 2026",
     },
@@ -136,6 +138,12 @@ export const caseStudies: CaseStudyData[] = [
           `The precedent already existed inside PwC. An internal tool called Astro takes a similar approach with time and expense, hoteling, and metrics reporting. Astro adds AI and a better experience on top of older systems without replacing them. That metaphor resonated immediately with every stakeholder group I presented it to. It turned a threatening conversation (\u201cwe are replacing your system\u201d) into a collaborative one (\u201cwe are making your system more useful to more people\u201d).`,
           `I pressed our senior stakeholders to stop framing the project as a replacement, even internally. The messaging mattered. If data teams and product owners of the legacy systems heard \u201creplacement,\u201d cooperation would slow or stop entirely. Even if Forge does eventually replace those systems, that outcome is years away, and aiming for it now would have stalled the work that could ship in months.`,
         ],
+        image: {
+          src: "/case-studies/project-forge/screens/briefing-decision-frame-evidence-panels.png",
+          alt: "Forge briefing screen with decision frame and four evidence panels supporting AI-assisted recommendations",
+          caption:
+            "The experience layer in action — AI-synthesized briefing with a decision frame and evidence panels sitting above legacy system data.",
+        },
       },
       {
         title: "Two equally powerful paths to the same result",
@@ -145,6 +153,12 @@ export const caseStudies: CaseStudyData[] = [
           "My solution was to build both paths with equal depth and keep them in sync. AI helpers are built into the screens and flows directly: smarter defaults, suggestions based on past engagements, and one-click actions that eliminate the repetitive dropdown work from the legacy tools. The chat interface can do everything the screens can, and when a user issues a command through chat, the updates appear in the main interface in real time, as if the user had entered them manually. Nothing happens behind a curtain.",
           "That transparency is the trust mechanism. Users who are skeptical of AI chat can ignore it entirely and still benefit from the AI-assisted screens. Users who prefer chat can watch every change reflected in the interface they already understand. Over time, as users see the AI producing accurate results in the screen-based helpers, the chat path becomes less intimidating. Neither audience is a second-class experience.",
         ],
+        image: {
+          src: "/case-studies/project-forge/screens/portfolio-ranked-signals-tabbed.png",
+          alt: "Forge pursuits view with Flex Felix chat sidebar and ranked pursuit signals in the main interface",
+          caption:
+            "Chat and screen in sync — Flex Felix in the sidebar while the main interface updates with pursuit signals and team activity.",
+        },
       },
       {
         title: "Making budget comparison possible for the first time",
@@ -152,6 +166,20 @@ export const caseStudies: CaseStudyData[] = [
           "The legacy workflow for comparing budgets required teams to create full duplicate projects, toggle between them manually, and sometimes print or screenshot to compare side by side. Those duplicate projects would all show up in Deployment requesting the same resources with slight variations, and the Deployment team would have to call to sort out which one was real.",
           "In Forge, multiple draft budgets live within a single project. The comparison experience is the design problem worth unpacking here. It needed to work in two contexts: the linear format of the chat interface and a visual side-by-side view on the main screen. The challenge was information density. A single budget contains enough detail that simplifying it for comparison risked hiding the information teams need to make a decision. Showing everything made comparison impossible at any useful scale.",
           "It took three rounds of simplification to get the budget screen itself lean enough to support comparison. From there, I focused on the minimum information required to compare meaningfully and the visual hierarchy that would allow teams to scan two, three, or five options without losing the ability to dive into any single one. The flow I designed lets users compare at the summary level, select any draft to inspect in detail, make changes to any draft and see the comparison update immediately, then choose one to move forward. Only the chosen budget proceeds to Deployment and approvals. The version confusion that plagued the legacy workflow is eliminated by design rather than by policy.",
+        ],
+        image: {
+          src: "/case-studies/project-forge/budget-comparison-laptop.png",
+          alt: "Forge budget comparison on a laptop showing traditional versus AI-augmented delivery options side by side",
+          caption:
+            "Side-by-side budget comparison — multiple draft options within a single project, with Flex Felix summarizing trade-offs.",
+        },
+        images: [
+          {
+            src: "/case-studies/project-forge/screens/wizard-step-2-budget-options.png",
+            alt: "Forge wizard step two showing a budget plan with three staffing options in a comparison grid",
+            caption:
+              "The comparison wizard — three budget options and staffing details in one flow, without duplicate projects.",
+          },
         ],
       },
       {
@@ -162,6 +190,12 @@ export const caseStudies: CaseStudyData[] = [
           "The learning curve was steep and specific. I learned about meaningful commit organization, appropriate PR sizing, linter compliance, and accessibility testing that went well beyond color contrast into focus indicators and ARIA attributes. The dashboards required hand-coding because the AI tools were not yet capable of producing the combined data visualizations I needed. That constraint taught me where the tools have real limits and where a designer working at the prompt needs to be prepared to write code directly.",
           "This experience was not incidental to the project. It was the reason I asked to lead the design. For the past year, I have been pushing 80 designers toward a delivery model that puts front-end code into GitHub rather than handing off Figma files. I needed to understand the friction, the workflow, and the collaboration patterns from the inside. Every lesson from Project Forge feeds directly back into how I coach the team on AI-first delivery.",
         ],
+        image: {
+          src: "/case-studies/project-forge/screens/wizard-step-1-engagement-details.png",
+          alt: "Forge wizard step one showing engagement details with briefing context carried forward into budget creation",
+          caption:
+            "Engagement wizard — one of the flows I designed at the prompt and shipped as front-end code in the shared repository.",
+        },
         reflectionCallout:
           "I have been designing at the prompt and building my own solutions for over a year, but working inside a shared repository with engineers is a fundamentally different skill. The collaboration patterns, the review expectations, and the discipline of small, well-organized commits changed how I think about what \"delivering design\" means.",
       },
@@ -191,7 +225,7 @@ export const caseStudies: CaseStudyData[] = [
     subtitle: "Enterprise AI Platform",
     description:
       "Three teams were building the same AI agent tool in isolation. I designed the unified solution that became PwC's firm-wide platform for enterprise agentic workflows.",
-    image: "/images/case-study-agentos-hero.png",
+    image: "/case-studies/agent-os/hero-workflow-environment-review.png",
     tags: ["UX Strategy", "AI/ML", "Prototyping", "Stakeholder Alignment"],
     type: "hands-on",
 
@@ -205,7 +239,7 @@ export const caseStudies: CaseStudyData[] = [
         source: "PwC press release, April 2025",
       },
       image: {
-        src: "/images/case-study-agentos-hero.png",
+        src: "/case-studies/agent-os/hero-workflow-environment-review.png",
         alt: "Agent OS canvas builder showing the drag-and-drop workflow interface",
       },
     },
@@ -235,6 +269,12 @@ export const caseStudies: CaseStudyData[] = [
           "Nick and I spent the early weeks in discovery sessions with all three teams, mapping where the requirements overlapped and where they genuinely diverged. The overlaps were larger than anyone expected. The divergences were mostly about audience: some teams had built for engineers, others for consultants, and one was targeting client-facing use cases. The unified product needed to serve all three audiences without collapsing into a lowest-common-denominator compromise.",
           "The trade-off was speed. Building one product took longer than shipping any single team's existing tool. We had to make the case to leadership that the longer path would produce something PwC could actually scale, while three separate tools would create a maintenance and governance burden that compounded over time.",
         ],
+        image: {
+          src: "/case-studies/agent-os/journey-simple-tasks.svg",
+          alt: "Agent OS user journey diagram mapping simple tasks to be done for end users",
+          caption:
+            "Journey mapping during discovery — aligning three teams on what non-technical users actually needed to accomplish.",
+        },
       },
       {
         title: "Designing for people who do not write code",
@@ -244,11 +284,25 @@ export const caseStudies: CaseStudyData[] = [
           "The harder part was defending those design decisions to the technical stakeholders. They had built the original solutions and felt, reasonably, that simplifying the interface meant losing capability. Every abstraction I introduced had to prove that it preserved the underlying power while removing the jargon that would stop a business user from getting started. Some of those conversations were tense. The architects needed to see that the canvas builder was not dumbing down their work; it was making their work usable by the people who would actually generate revenue with it.",
         ],
         image: {
-          src: "/images/case-study-agentos-design-workflow.png",
+          src: "/case-studies/agent-os/canvas-builder-prototype.png",
           alt: "The drag-and-drop canvas builder prototype from Figma, showing a workflow being assembled visually",
           caption:
             "Agent OS canvas builder: drag-and-drop workflow assembly for non-technical users.",
         },
+        images: [
+          {
+            src: "/case-studies/agent-os/canvas-builder-laptop.png",
+            alt: "Agent OS canvas builder displayed on a laptop in a workspace setting",
+            caption:
+              "The canvas builder prototype in context — the interface designed to translate technical orchestration into visual assembly.",
+          },
+          {
+            src: "/case-studies/agent-os/workflow-orchestration-laptop.png",
+            alt: "Agent OS workflow orchestration screen on a laptop showing agent groups and compliance agents connected in a flow",
+            caption:
+              "Workflow orchestration view — agent groups, supervisors, and compliance agents connected without writing code.",
+          },
+        ],
       },
       {
         title: "Phasing the build to ship value early",
@@ -257,6 +311,12 @@ export const caseStudies: CaseStudyData[] = [
           "The phasing decisions were as much about organizational buy-in as they were about technical sequencing. Each phase needed to deliver enough visible value to keep stakeholders from the original three teams invested. If any group felt their priorities had been permanently shelved, we risked losing the coalition that made the unified product possible.",
           "I defined the UX scope for each phase and the handoff criteria for the senior designer who would carry the product through the Agile build. That handoff was deliberate: I had spent three months building the design foundation and needed to return full attention to leading the broader UX team.",
         ],
+        image: {
+          src: "/case-studies/agent-os/dashboard-home-laptop.png",
+          alt: "Agent OS dashboard home screen on a laptop showing SDLC overview, code analytics, and agent workflow entry points",
+          caption:
+            "Agent OS home — the unified entry point that replaced three separate tools with one firm-wide platform.",
+        },
       },
     ],
 
@@ -311,7 +371,7 @@ export const caseStudies: CaseStudyData[] = [
     subtitle: "Airline Operations · Internal Tooling",
     description:
       "Designed the core applications in Southwest's operational software suite and built the design system that unified them across 3,900+ daily departures and 97 cities.",
-    image: "/images/case-study-opssuite-hero.png",
+    image: "/case-studies/southwest-opssuite/hero-gate-schedule.png",
     tags: ["UX Strategy", "Operations", "Research", "Design Systems"],
     type: "hands-on",
 
@@ -324,7 +384,7 @@ export const caseStudies: CaseStudyData[] = [
         text: "1–1.8 percentage point year-over-year improvement in on-time performance during major weather events, making Southwest the top-ranked U.S. carrier in those conditions.",
       },
       image: {
-        src: "/images/case-study-opssuite-hero.png",
+        src: "/case-studies/southwest-opssuite/hero-gate-schedule.png",
         alt: "Dark-mode Baker screen showing the aircraft schedule with recovery solution",
       },
     },
@@ -335,7 +395,7 @@ export const caseStudies: CaseStudyData[] = [
         "New supervisors took two to three years to become effective. Veterans could not take real vacations because their expertise was irreplaceable during disruptions. The airline had outgrown its manual operations and needed its people to trust automated systems that did not yet exist.",
       ],
       image: {
-        src: "/images/case-study-opssuite-noc.png",
+        src: "/case-studies/southwest-opssuite/noc-environment.png",
         alt: "Network Operations Center with blue ambient lighting and multi-monitor workstations",
         caption:
           "The NOC environment: 24-hour operations with multi-monitor workstations and controlled lighting.",
@@ -360,7 +420,7 @@ export const caseStudies: CaseStudyData[] = [
           "The SODs were skeptical of an AI making decisions they had spent their careers mastering. I designed a solution that gave them a way out: three AI-generated recovery plans, each scored and ranked, plus the ability to build their own solution if they disagreed with all three. The critical detail was that the AI learned from every manual override. Trust came from the system proving, over testing cycles, that it understood what good looked like because the SODs had taught it.",
         ],
         image: {
-          src: "/images/case-study-opssuite-recovery-optimizer.png",
+          src: "/case-studies/southwest-opssuite/recovery-optimizer-noc.png",
           alt: "The Baker's recovery interface showing ranked options in the NOC environment",
           caption:
             "Recovery Optimizer in the NOC – ranked AI solutions with manual override capability.",
@@ -378,6 +438,12 @@ export const caseStudies: CaseStudyData[] = [
           "During my first research interviews in the NOC, I recognized something the existing software had ignored. The NOC operates in perpetual darkness with monitors as the primary light source, while station agents and ramp crews work on bright tarmacs and in sunlit gate areas.",
           "I pitched a dark mode to the solution architect after those interviews. They built it in a single evening because the design system I was building supported theming from the start.",
         ],
+        image: {
+          src: "/case-studies/southwest-opssuite/gate-schedule-tablet-tarmac.png",
+          alt: "Ramp crew using a gate schedule tablet in bright daylight on the airport tarmac",
+          caption:
+            "Field operations in full sun — the contrast that drove dark mode for the NOC and light, high-contrast layouts for station and ramp crews.",
+        },
       },
       {
         title: "Starting the design system wrong and recovering",
@@ -386,11 +452,19 @@ export const caseStudies: CaseStudyData[] = [
           "Because the four of us sat together and communicated constantly, the front-end lead and I evolved the system with minimal rework. The design system grew from the work rather than being imposed on it.",
         ],
         image: {
-          src: "/images/case-study-opssuite-design-system.png",
+          src: "/case-studies/southwest-opssuite/design-system.png",
           alt: "OpsSuite Design System component library showing typography, color palettes, and components for light and dark mode",
           caption:
             "Ops Suite design system: components, typography, and tokens aligned with coded components.",
         },
+        images: [
+          {
+            src: "/case-studies/southwest-opssuite/station-settings-airport-view.png",
+            alt: "Station Settings screen with Phoenix airport visible through the office window behind the monitor",
+            caption:
+              "Station Management in a sunlit gate office — light mode and dense operational data for station agents.",
+          },
+        ],
         reflectionCallout:
           "If I were starting today, I would begin the design system from the most complex screen and work outward. Starting with the easier case and scaling down worked because of the team dynamic, but that approach does not transfer automatically to larger teams.",
       },
@@ -454,7 +528,7 @@ export const caseStudies: CaseStudyData[] = [
     subtitle: "UX Maturity Transformation",
     description:
       "A team of 60+ engineers building powerful tax software had never worked with a designer. Two years later, they refused to start a sprint without one.",
-    image: "/images/case-study-tax-ux-maturity-hero.png",
+    image: "/case-studies/pwc-tax-tech/hero-ux-maturity-stages.png",
     tags: ["UX Strategy", "Leadership", "Research", "Design Systems"],
     type: "leadership",
 
@@ -467,7 +541,7 @@ export const caseStudies: CaseStudyData[] = [
         text: "60–70 team members certified in UX methods by Nielsen Norman Group. UX designers embedded on every product with a user interface. Generative research established as standard operating procedure.",
       },
       image: {
-        src: "/images/case-study-tax-ux-maturity-hero.png",
+        src: "/case-studies/pwc-tax-tech/hero-ux-maturity-stages.png",
         alt: "UX Maturity transformation hero",
       },
     },
@@ -511,11 +585,27 @@ export const caseStudies: CaseStudyData[] = [
           "This was the period when the organization moved through NN/g's Stage 3 (Emergent), where UX work was happening but inconsistently and at the initiative of individual managers, and into Stage 4 (Structured), where the organization recognized UX as a discipline with dedicated roles, processes, and a shared methodology.",
         ],
         image: {
-          src: "/images/case-study-tax-design-system-exploration-1.png",
+          src: "/case-studies/pwc-tax-tech/design-system-exploration-1.png",
           alt: "Design system exploration wall: Forms & Buttons and Grids boards covered with UI component printouts and sticky notes",
           caption:
             "Design system exploration – pulling components from multiple applications to compare variations and align on standards.",
         },
+        images: [
+          {
+            src: "/case-studies/pwc-tax-tech/design-system-exploration-team.jpeg",
+            alt: "Tax Technology design team reviewing component boards labeled Forms and Buttons, Grids and Data Viz, and Text and Icons",
+            caption:
+              "Component audit workshop — the team aligned on shared patterns across eight to ten products.",
+          },
+          {
+            src: "/case-studies/pwc-tax-tech/design-system-exploration-boards.jpeg",
+            alt: "Four design system exploration boards covering forms, grids, typography, icons, and modals",
+          },
+          {
+            src: "/case-studies/pwc-tax-tech/design-system-exploration-2.png",
+            alt: "Close-up of design system component comparison boards with sticky-note feedback",
+          },
+        ],
       },
       {
         title: "Research that redirected a project before a single screen was designed",
@@ -525,6 +615,12 @@ export const caseStudies: CaseStudyData[] = [
           "The contextual inquiries happened at the practitioners' desks, in the middle of their actual workflow. Within the first few sessions, a pattern emerged that nobody in the stakeholder conversations had mentioned. The application we had been asked to redesign was the one piece of the workflow that practitioners said worked well. The real bottleneck was a sister application upstream in the process. Practitioners had been compensating for its failures so routinely that the pain had become invisible to the people requesting the redesign.",
           "I presented the findings to stakeholders and recommended redirecting the effort to the sister application. That recommendation saved the team from rebuilding the one tool their users trusted while the actual problem continued unchecked. It also gave leadership a concrete example of what research could do that no amount of visual polish could: change what gets built, not just how it looks.",
         ],
+        image: {
+          src: "/case-studies/pwc-tax-tech/research/cars-workflow/personas-and-workflow-map-2.jpeg",
+          alt: "CARS current-state workflow map and user personas pinned to a whiteboard showing specialist, reviewer, and partner roles",
+          caption:
+            "Generative research artifacts — personas and a current-state workflow map that revealed the real bottleneck upstream.",
+        },
       },
       {
         title: "Making UX everyone's responsibility",
@@ -536,11 +632,29 @@ export const caseStudies: CaseStudyData[] = [
           "After certification, the culture shifted in ways that were hard to reverse. Engineers volunteered for whiteboarding sessions. PMs built journey mapping into their planning process. Team members asked to sit in on task validation sessions and hear user feedback firsthand. PMs required UX artifacts and deliverables before the team would begin writing user stories or entering the first sprint.",
         ],
         image: {
-          src: "/images/case-study-tax-nng-training-1.png",
+          src: "/case-studies/pwc-tax-tech/nng-training-1.png",
           alt: "NN/g trainer presenting Design Thinking to the product dev team",
           caption:
             "NNg trainers spent 5 days with the entire Tax Technology org — PMs, Devs, QA, and Stakeholders.",
         },
+        images: [
+          {
+            src: "/case-studies/pwc-tax-tech/nng-design-thinking-session.jpeg",
+            alt: "Nielsen Norman Group trainer presenting Generating Big Ideas with Design Thinking to the Tax Technology team",
+            caption:
+              "NN/g certification week — Design Thinking training for PMs, developers, QA, and stakeholders.",
+          },
+          {
+            src: "/case-studies/pwc-tax-tech/nng-training-2.png",
+            alt: "Tax Technology team in a classroom setting during NN/g UX certification training",
+          },
+          {
+            src: "/case-studies/pwc-tax-tech/empathy-map-journey-synthesis.jpeg",
+            alt: "Design thinking workshop with empathy maps and journey synthesis boards covered in sticky notes",
+            caption:
+              "Workshop synthesis — empathy mapping and journey mapping became standard planning practice after certification.",
+          },
+        ],
         reflectionCallout:
           "NN/g explicitly states that moving up a single maturity level typically takes several years and that leapfrogging levels is unrealistic. We moved four levels in two. I attribute that pace partly to the internal-user advantage, partly to having a leadership sponsor willing to invest in certification, and partly to the sequencing strategy of earning trust before requesting change. Not every organization has all three of those conditions.",
       },
@@ -595,7 +709,7 @@ export const caseStudies: CaseStudyData[] = [
     subtitle: "Org Design & Culture",
     description:
       "We grew PwC Digital's design team from 7 to 130 in under two years. Only three left voluntarily in four years — and two of them came back.",
-    image: "/images/case-study-design-org-hypergrowth-hero.png",
+    image: "/case-studies/pwc-digital-leadership/hero-onboarding-miro-board.png",
     tags: ["Team Building", "Hiring", "Culture", "Mentorship"],
     type: "leadership",
 
@@ -608,8 +722,8 @@ export const caseStudies: CaseStudyData[] = [
         text: "3 voluntary departures over four years on a 130-person team. HR modeled their firm-wide onboarding process on ours.",
       },
       image: {
-        src: "/images/case-study-design-org-hypergrowth-hero.png",
-        alt: "The onboarding Miro board zoomed out, showing the full macro structure",
+        src: "/case-studies/pwc-digital-leadership/hero-onboarding-miro-board.png",
+        alt: "Welcome graphic for the PwC Digital UX Team onboarding experience, with design tool logos arranged around a friendly robot mascot",
       },
     },
 
@@ -637,6 +751,12 @@ export const caseStudies: CaseStudyData[] = [
           "Onboarding needed the same rigor. I designed an onboarding Miro board using macro and micro navigation; the zoomed-out view shows the full map, and zooming in reveals exactly what a new joiner needs. The content covered tool setup, Figma file conventions, accessibility standards, working with developers, and product demos. Each new hire received a specific action list for their first week, first month, first 60 days, and first 90 days.",
           "On day one, a \"friendlies\" leader welcomed them, walked them through the board, and answered the questions people are sometimes embarrassed to ask their direct manager that first week.",
         ],
+        image: {
+          src: "/case-studies/pwc-digital-leadership/inside-product-team.svg",
+          alt: "Diagram showing how a new designer fits inside a product team at PwC Digital",
+          caption:
+            "Inside a product team — how we oriented new joiners to their role within an engagement pod.",
+        },
         quote: {
           quote:
             "This award is really about your impact on our collaboration. You are truly, wonderfully easy to work with and your approach to the whole team — bringing us all together regularly, coaxing contributions from multiple people and sharing best practices widely — has made us better.",
@@ -662,6 +782,12 @@ export const caseStudies: CaseStudyData[] = [
           "We ran sessions to define a team manifesto. The leadership team was consistent about one thing above all: every designer had our support to push back on bad decisions and escalate when their recommendations were being ignored to the detriment of the product. The role was not to take design orders. It was to understand the problem beneath the ask and advocate for the user.",
           "That message, repeated by every leader on the team, was part of why people stayed.",
         ],
+        image: {
+          src: "/case-studies/pwc-digital-leadership/grid-of-empowerment.svg",
+          alt: "Grid of Empowerment diagram showing how designers are supported to advocate for users and push back on bad decisions",
+          caption:
+            "The Grid of Empowerment — a team manifesto session that codified designer advocacy as cultural architecture, not ambient luck.",
+        },
         quote: {
           quote:
             "That's something I like about you. Being open, honest and human makes you relatable and, at least from my point of view, even easier to respect and appreciate. I've noticed that as people climb the ladder here there's a tendency to adopt an attitude of aloofness. If I'm ever lucky enough to make Director, I quite frankly hope to be like you. Human.",
@@ -679,8 +805,9 @@ export const caseStudies: CaseStudyData[] = [
         },
         {
           label: "Retention",
+          highlight: "2 of 3 came back",
           value:
-            "3 voluntary departures over four years. 2 returned after leaving.",
+            "Only three departures in four years and two returned crediting the culture.",
         },
         {
           label: "Org influence",

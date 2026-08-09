@@ -1,0 +1,1650 @@
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="2170.41px" height="1252.92px"
+		style="transform-origin: 0px 0px 0px;" version="1.1"
+		xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style xmlns="http://www.w3.org/2000/svg" type="text/css"><![CDATA[
+		* {
+			text-rendering: geometricprecision !important;
+		}
+		]]><![CDATA[@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("https://mirostatic.com/app/static/800985e1502d12bf.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://mirostatic.com/app/static/d8a7ca42a20caea5.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://mirostatic.com/app/static/3cc74c1d3919bd5c.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://mirostatic.com/app/static/f0481285dc248cf0.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://mirostatic.com/app/static/2f5e8dcf6e47bf00.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://mirostatic.com/app/static/0e625f45b71a26f1.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("https://mirostatic.com/app/static/645c27eb7d93eca8.woff2") format('woff2');
+}
+]]><![CDATA[@font-face {
+  font-family: 'Noto Sans Hebrew';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans Hebrew Regular'), local('Noto Sans Hebrew-Regular'), url("https://mirostatic.com/app/static/7ebe1dcf0343326c.woff2") format('woff2'), url("https://mirostatic.com/app/static/6c11f037d6968262.woff") format('woff');
+}
+@font-face {
+  font-family: 'Noto Sans Hebrew';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans Hebrew Bold'), local('Noto Sans Hebrew-Bold'), url("https://mirostatic.com/app/static/d2883e2f177d0dad.woff2") format('woff2'), url("https://mirostatic.com/app/static/8546991909eadbc9.woff") format('woff');
+}
+]]><![CDATA[@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans'), local('NotoSans'), url("https://mirostatic.com/app/static/a73798e3d459e1bc.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Noto Sans Italic'), local('NotoSans-Italic'), url("https://mirostatic.com/app/static/a8edd710f88715d4.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Noto Sans Medium'), local('NotoSans-Medium'), url("https://mirostatic.com/app/static/006d7e33e60b9e12.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Noto Sans Medium Italic'), local('NotoSans-MediumItalic'), url("https://mirostatic.com/app/static/31387059566a3171.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Noto Sans SemiBold'), local('NotoSans-SemiBold'), url("https://mirostatic.com/app/static/526dd53b40975c37.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Noto Sans SemiBold Italic'), local('NotoSans-SemiBoldItalic'), url("https://mirostatic.com/app/static/e73d4fdd87d7e319.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'), url("https://mirostatic.com/app/static/9f11d6779c14d2bc.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Noto Sans Bold Italic'), local('NotoSans-BoldItalic'), url("https://mirostatic.com/app/static/888e13e017cedc15.woff2") format('woff2');
+}
+]]><![CDATA[@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans Japanese Regular'), local('Noto Sans Japanese-Regular'), url("https://mirostatic.com/app/static/9320b3c07ab79383.woff2") format('woff2'), url("https://mirostatic.com/app/static/a43be2cbcfc0b250.woff") format('woff');
+}
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans Japanese Bold'), local('Noto Sans Japanese-Bold'), url("https://mirostatic.com/app/static/7ab032c73212439f.woff2") format('woff2'), url("https://mirostatic.com/app/static/29f177f4466bd7a1.woff") format('woff');
+}
+]]><![CDATA[@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url("https://mirostatic.com/app/static/7a5b625774730d22.woff2") format('woff2'), url("https://mirostatic.com/app/static/2d84dc606f1fb88e.woff") format('woff');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''), url("https://mirostatic.com/app/static/fa5a3d9073cdd58f.woff2") format('woff2'), url("https://mirostatic.com/app/static/7ded243557c83342.woff") format('woff');
+}
+]]><![CDATA[@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Serif'), local('NotoSerif'), url("https://mirostatic.com/app/static/119617d2220901df.woff") format('woff2');
+}
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Noto Serif Italic'), local('NotoSerif-Italic'), url("https://mirostatic.com/app/static/c5c8cc39e1265f32.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Serif Bold'), local('NotoSerif-Bold'), url("https://mirostatic.com/app/static/6644c2d4df07df9b.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Noto Serif Bold Italic'), local('NotoSerif-BoldItalic'), url("https://mirostatic.com/app/static/a915ce39e64f9f8f.woff2") format('woff2');
+}
+]]><![CDATA[@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Serif Japanese Regular'), local('Noto Serif Japanese-Regular'), url("https://mirostatic.com/app/static/a785acffade1f270.woff2") format('woff2'), url("https://mirostatic.com/app/static/bfffd5df26c28efa.woff") format('woff');
+}
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Serif Japanese Bold'), local('Noto Serif Japanese-Bold'), url("https://mirostatic.com/app/static/204612015ef3d0b4.woff2") format('woff2'), url("https://mirostatic.com/app/static/748c376afed7a2ff.woff") format('woff');
+}
+]]><![CDATA[@font-face {
+  font-family: 'Noto Serif KR';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url("https://mirostatic.com/app/static/bd7974394b630482.woff2") format('woff2'), url("https://mirostatic.com/app/static/3601949b2d238888.woff") format('woff');
+}
+@font-face {
+  font-family: 'Noto Serif KR';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''), url("https://mirostatic.com/app/static/e6e080e5c84030d6.woff2") format('woff2'), url("https://mirostatic.com/app/static/bf2fbaa107e5e389.woff") format('woff');
+}
+]]></style></defs><rect id="svg-board-background-color" width="100%" height="100%" fill="#2e2e2e"></rect><g data-widget-id="3458764680305029244"><image href="data:image/svg+xml;utf8,%3Csvg%0A%09width%3D%222170.4082745023143%22%0A%09height%3D%221252.9188850570602%22%0A%09shape-border-width%3D%22shape-background%22%0A%09style%3D%22width%3A2170.4082745023143px%3B%20height%3A%201252.9188850570602px%3B%22%0A%09class%3D%22shape-background%22%0A%09preserveAspectRatio%3D%22none%22%0A%09version%3D%221.1%22%0A%09xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%3E%0A%09%3CclipPath%20id%3D%22322409355962%22%3E%0A%09%09%3Crect%0A%09%09%09x%3D%220%22%0A%09%09%09y%3D%220%22%0A%09%09%09width%3D%222170.4082745023143%22%0A%09%09%09height%3D%221252.9188850570602%22%0A%09%09%09rx%3D%220%22%0A%09%09%09ry%3D%220%22%0A%09%09%3E%3C%2Frect%3E%0A%09%3C%2FclipPath%3E%0A%09%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%220%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%09%09%3Crect%0A%09%09%09class%3D%22shape-element%20shape-element-rect%22%0A%09%09%09stroke%3D%22%23000000%22%0A%09%09%09stroke-width%3D%220%22%0A%09%09%09stroke-dasharray%3D%22%22%0A%09%09%09stroke-opacity%3D%22%22%0A%09%09%09fill%3D%22%23ffffff%22%0A%09%09%09fill-opacity%3D%22%22%0A%09%09%09x%3D%220%22%0A%09%09%09y%3D%220%22%0A%09%09%09width%3D%222170.4082745023143%22%0A%09%09%09height%3D%221252.9188850570602%22%0A%09%09%09rx%3D%220%22%0A%09%09%09ry%3D%220%22%0A%09%09%09clip-path%3D%22url(%23322409355962)%22%0A%09%09%3E%3C%2Frect%3E%0A%09%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A" width="2170.41px" height="1252.92px" data-frame="true" preserveAspectRatio="none" data-frame-id="3458764680305029244" transform="translate(-1, -0.35) scale(1) rotate(0, 1085.205, 626.46)" /></g><g data-widget-id="3458764658377083545"><g width="816.89px" height="1252.92px"  transform="translate(1352.52, -0.35) scale(1) rotate(0, 408.445, 626.46)"><svg
+	width="816.89090248438"
+	height="1252.91888505706"
+	shape-border-width="shape-background"
+	style="width:816.89090248438px; height: 1252.91888505706px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1327452963203">
+		<rect
+			x="0"
+			y="0"
+			width="816.89090248438"
+			height="1252.91888505706"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#1a1a1a"
+			fill-opacity="1"
+			x="0"
+			y="0"
+			width="816.89090248438"
+			height="1252.91888505706"
+			rx="0"
+			ry="0"
+			clip-path="url(#1327452963203)"
+		></rect>
+	</g>
+</svg>
+</g><g width="816.89px" height="1252.92px"  transform="translate(1352.52, -0.35) rotate(0, 408.445, 626.46)"><g transform="translate(40.844545124219, 40.844545124219)"></g></g></g><g data-widget-id="3458764658377083546"><g width="617.54px" height="617.54px"  transform="translate(316.39, 317.34) scale(1) rotate(0, 308.77, 308.77)"><svg
+	width="617.544962037082"
+	height="617.544962037082"
+	style="width:617.544962037082px; height: 617.544962037082px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="455998441048">
+		<ellipse cx="308.772481018541" cy="308.772481018541" rx="308.772481018541" ry="308.772481018541"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="308.772481018541"
+			cy="308.772481018541"
+			rx="308.772481018541"
+			ry="308.772481018541"
+			stroke="#5ccbee"
+			stroke-width="16"
+			stroke-dasharray=""
+			stroke-opacity="0.3"
+			fill="#5ccbee"
+			fill-opacity="0.2"
+			clip-path="url(#455998441048)"
+		/>
+	</g>
+</svg>
+</g><g width="617.54px" height="617.54px"  transform="translate(316.39, 317.34) rotate(0, 308.77, 308.77)"><g transform="translate(90.43736584653612, 90.43736584653612)"></g></g></g><g data-widget-id="3458764658377083547"><g width="105.92px" height="105.92px"  transform="translate(713.71, 391.87) scale(1) rotate(54.8114039646684, 52.96, 52.96)"><svg
+	width="105.922641620146"
+	height="105.922641620146"
+	style="width:105.922641620146px; height: 105.922641620146px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="448807307505">
+		<ellipse cx="52.961320810073" cy="52.961320810073" rx="52.961320810073" ry="52.961320810073"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="52.961320810073"
+			cy="52.961320810073"
+			rx="52.961320810073"
+			ry="52.961320810073"
+			stroke="#5ccbee"
+			stroke-width="4"
+			stroke-dasharray=""
+			stroke-opacity="0.2"
+			fill="transparent"
+			fill-opacity="0"
+			clip-path="url(#448807307505)"
+		/>
+	</g>
+</svg>
+</g><g width="105.92px" height="105.92px"  transform="translate(713.71, 391.87) rotate(54.8114039646684, 52.96, 52.96)"><g transform="translate(15.51201172467416, 15.51201172467416)"></g></g></g><g data-widget-id="3458764658377083548"><g width="105.92px" height="105.92px"  transform="translate(740.13, 738.53) scale(1) rotate(54.8114039646684, 52.96, 52.96)"><svg
+	width="105.922641620146"
+	height="105.922641620146"
+	style="width:105.922641620146px; height: 105.922641620146px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1581044671184">
+		<ellipse cx="52.961320810073" cy="52.961320810073" rx="52.961320810073" ry="52.961320810073"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="52.961320810073"
+			cy="52.961320810073"
+			rx="52.961320810073"
+			ry="52.961320810073"
+			stroke="#5ccbee"
+			stroke-width="4"
+			stroke-dasharray=""
+			stroke-opacity="0.2"
+			fill="transparent"
+			fill-opacity="0"
+			clip-path="url(#1581044671184)"
+		/>
+	</g>
+</svg>
+</g><g width="105.92px" height="105.92px"  transform="translate(740.13, 738.53) rotate(54.8114039646684, 52.96, 52.96)"><g transform="translate(15.51201172467416, 15.51201172467416)"></g></g></g><g data-widget-id="3458764658377083549"><g width="809.67px" height="716.37px"  transform="translate(821.7, -22.43) scale(1) rotate(20.7319587940247, 404.835, 358.185)"><svg
+	width="809.666536665719"
+	height="716.37320354913"
+	style="width:809.666536665719px; height: 716.37320354913px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="837153066738">
+		<path d="M404.8332683328595,0 L809.666536665719,716.37320354913 L0,716.37320354913 L404.8332683328595,0 Z"></path>
+	</clipPath>
+	<g stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<path
+			d="M404.8332683328595,0 L809.666536665719,716.37320354913 L0,716.37320354913 L404.8332683328595,0 Z"
+			class="shape-element shape-element-path"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#1a1a1a"
+			fill-opacity="1"
+			clip-path="url(#837153066738)"
+		></path>
+	</g>
+</svg>
+</g><g width="809.67px" height="716.37px"  transform="translate(821.7, -22.43) rotate(20.7319587940247, 404.835, 358.185)"><g transform="translate(202.41663416642976, 358.186601774565)"></g></g></g><g data-widget-id="3458764658377083550"><g width="840.84px" height="555.83px"  transform="translate(799.13, 491) scale(1) rotate(40.9610575901566, 420.42, 277.915)"><svg
+	width="840.843200168043"
+	height="555.834848361344"
+	style="width:840.843200168043px; height: 555.834848361344px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="809378067752">
+		<path d="M420.4216000840215,0 L840.843200168043,555.834848361344 L0,555.834848361344 L420.4216000840215,0 Z"></path>
+	</clipPath>
+	<g stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<path
+			d="M420.4216000840215,0 L840.843200168043,555.834848361344 L0,555.834848361344 L420.4216000840215,0 Z"
+			class="shape-element shape-element-path"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#1a1a1a"
+			fill-opacity="1"
+			clip-path="url(#809378067752)"
+		></path>
+	</g>
+</svg>
+</g><g width="840.84px" height="555.83px"  transform="translate(799.13, 491) rotate(40.9610575901566, 420.42, 277.915)"><g transform="translate(210.21080004201076, 277.917424180672)"></g></g></g><g data-widget-id="3458764658377083551"><g width="716.37px" height="213.23px"  transform="translate(792.67, 523.31) scale(1) rotate(0, 358.185, 106.615)"><svg
+	width="716.37320354913"
+	height="213.225620870572"
+	shape-border-width="shape-background"
+	style="width:716.37320354913px; height: 213.225620870572px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="614964051">
+		<rect
+			x="0"
+			y="0"
+			width="716.37320354913"
+			height="213.225620870572"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#1a1a1a"
+			fill-opacity="1"
+			x="0"
+			y="0"
+			width="716.37320354913"
+			height="213.225620870572"
+			rx="0"
+			ry="0"
+			clip-path="url(#614964051)"
+		></rect>
+	</g>
+</svg>
+</g><g width="716.37px" height="213.23px"  transform="translate(792.67, 523.31) rotate(0, 358.185, 106.615)"><g transform="translate(10.6612810435286, 10.6612810435286)"></g></g></g><g data-widget-id="3458764658377083552"><g width="164.86px" height="164.86px"  transform="translate(551.51, 409.12) scale(1) rotate(54.8114039646684, 82.43, 82.43)"><svg
+	width="164.864635242817"
+	height="164.864635242817"
+	style="width:164.864635242817px; height: 164.864635242817px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1594294795636">
+		<ellipse cx="82.4323176214085" cy="82.4323176214085" rx="82.4323176214085" ry="82.4323176214085"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="82.4323176214085"
+			cy="82.4323176214085"
+			rx="82.4323176214085"
+			ry="82.4323176214085"
+			stroke="#5ccbee"
+			stroke-width="4"
+			stroke-dasharray=""
+			stroke-opacity="0.2"
+			fill="transparent"
+			fill-opacity="0"
+			clip-path="url(#1594294795636)"
+		/>
+	</g>
+</svg>
+</g><g width="164.86px" height="164.86px"  transform="translate(551.51, 409.12) rotate(54.8114039646684, 82.43, 82.43)"><g transform="translate(24.14386684238721, 24.14386684238721)"></g></g></g><g data-widget-id="3458764658377083553"><g width="235.53px" height="235.53px"  transform="translate(335.63, 470.43) scale(1) rotate(54.8114039646684, 117.765, 117.765)"><svg
+	width="235.529764172887"
+	height="235.529764172887"
+	style="width:235.529764172887px; height: 235.529764172887px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="456316917889">
+		<ellipse cx="117.7648820864435" cy="117.7648820864435" rx="117.7648820864435" ry="117.7648820864435"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="117.7648820864435"
+			cy="117.7648820864435"
+			rx="117.7648820864435"
+			ry="117.7648820864435"
+			stroke="#5ccbee"
+			stroke-width="4"
+			stroke-dasharray=""
+			stroke-opacity="0.2"
+			fill="transparent"
+			fill-opacity="0"
+			clip-path="url(#456316917889)"
+		/>
+	</g>
+</svg>
+</g><g width="235.53px" height="235.53px"  transform="translate(335.63, 470.43) rotate(54.8114039646684, 117.765, 117.765)"><g transform="translate(34.492535377485126, 34.492535377485126)"></g></g></g><g data-widget-id="3458764658377083554"><g width="105.92px" height="105.92px"  transform="translate(458.43, 369.57) scale(1) rotate(54.8114039646684, 52.96, 52.96)"><svg
+	width="105.922641620146"
+	height="105.922641620146"
+	style="width:105.922641620146px; height: 105.922641620146px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="422412943175">
+		<ellipse cx="52.961320810073" cy="52.961320810073" rx="52.961320810073" ry="52.961320810073"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="52.961320810073"
+			cy="52.961320810073"
+			rx="52.961320810073"
+			ry="52.961320810073"
+			stroke="#5ccbee"
+			stroke-width="4"
+			stroke-dasharray=""
+			stroke-opacity="0.2"
+			fill="transparent"
+			fill-opacity="0"
+			clip-path="url(#422412943175)"
+		/>
+	</g>
+</svg>
+</g><g width="105.92px" height="105.92px"  transform="translate(458.43, 369.57) rotate(54.8114039646684, 52.96, 52.96)"><g transform="translate(15.51201172467416, 15.51201172467416)"></g></g></g><g data-widget-id="3458764658377083555"><g width="164.86px" height="164.86px"  transform="translate(573.39, 683.29) scale(1) rotate(54.8114039646684, 82.43, 82.43)"><svg
+	width="164.864635242817"
+	height="164.864635242817"
+	style="width:164.864635242817px; height: 164.864635242817px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="34154266248">
+		<ellipse cx="82.4323176214085" cy="82.4323176214085" rx="82.4323176214085" ry="82.4323176214085"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="82.4323176214085"
+			cy="82.4323176214085"
+			rx="82.4323176214085"
+			ry="82.4323176214085"
+			stroke="#5ccbee"
+			stroke-width="4"
+			stroke-dasharray=""
+			stroke-opacity="0.2"
+			fill="transparent"
+			fill-opacity="0"
+			clip-path="url(#34154266248)"
+		/>
+	</g>
+</svg>
+</g><g width="164.86px" height="164.86px"  transform="translate(573.39, 683.29) rotate(54.8114039646684, 82.43, 82.43)"><g transform="translate(24.14386684238721, 24.14386684238721)"></g></g></g><g data-widget-id="3458764658377083556"><g width="105.92px" height="105.92px"  transform="translate(463.94, 699.35) scale(1) rotate(54.8114039646684, 52.96, 52.96)"><svg
+	width="105.922641620146"
+	height="105.922641620146"
+	style="width:105.922641620146px; height: 105.922641620146px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="682738854690">
+		<ellipse cx="52.961320810073" cy="52.961320810073" rx="52.961320810073" ry="52.961320810073"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="52.961320810073"
+			cy="52.961320810073"
+			rx="52.961320810073"
+			ry="52.961320810073"
+			stroke="#5ccbee"
+			stroke-width="4"
+			stroke-dasharray=""
+			stroke-opacity="0.2"
+			fill="transparent"
+			fill-opacity="0"
+			clip-path="url(#682738854690)"
+		/>
+	</g>
+</svg>
+</g><g width="105.92px" height="105.92px"  transform="translate(463.94, 699.35) rotate(54.8114039646684, 52.96, 52.96)"><g transform="translate(15.51201172467416, 15.51201172467416)"></g></g></g><g data-widget-id="3458764658377083557"><g width="105.92px" height="105.92px"  transform="translate(497.47, 805.32) scale(1) rotate(54.8114039646684, 52.96, 52.96)"><svg
+	width="105.922641620146"
+	height="105.922641620146"
+	style="width:105.922641620146px; height: 105.922641620146px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1273869039647">
+		<ellipse cx="52.961320810073" cy="52.961320810073" rx="52.961320810073" ry="52.961320810073"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="52.961320810073"
+			cy="52.961320810073"
+			rx="52.961320810073"
+			ry="52.961320810073"
+			stroke="#5ccbee"
+			stroke-width="4"
+			stroke-dasharray=""
+			stroke-opacity="0.2"
+			fill="transparent"
+			fill-opacity="0"
+			clip-path="url(#1273869039647)"
+		/>
+	</g>
+</svg>
+</g><g width="105.92px" height="105.92px"  transform="translate(497.47, 805.32) rotate(54.8114039646684, 52.96, 52.96)"><g transform="translate(15.51201172467416, 15.51201172467416)"></g></g></g><g data-widget-id="3458764658377083558"><g width="235.53px" height="235.53px"  transform="translate(680.82, 497.91) scale(1) rotate(0, 117.765, 117.765)"><svg
+	width="235.529764172887"
+	height="235.529764172887"
+	style="width:235.529764172887px; height: 235.529764172887px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1116959237589">
+		<ellipse cx="117.7648820864435" cy="117.7648820864435" rx="117.7648820864435" ry="117.7648820864435"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="117.7648820864435"
+			cy="117.7648820864435"
+			rx="117.7648820864435"
+			ry="117.7648820864435"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="0.3"
+			fill="#2d9bf0"
+			fill-opacity="1"
+			clip-path="url(#1116959237589)"
+		/>
+	</g>
+</svg>
+</g><g width="235.53px" height="235.53px"  transform="translate(680.82, 497.91) rotate(0, 117.765, 117.765)"><g transform="translate(34.492535377485126, 34.492535377485126)"><text xml:space="preserve" x="44.88172170895838" y="74.27234670895838" width="76.78125" textLength="76.78125" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="24" 
+				fill="#ffffff" direction="ltr" font-weight="bold">LARGE</text><text xml:space="preserve" x="25.71570608395838" y="107.27234670895838" width="115.11328125" textLength="115.11328125" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="24" 
+				fill="#ffffff" direction="ltr" font-weight="bold">PRODUCT</text></g></g></g><g data-widget-id="3458764658377083559"><g width="105.92px" height="105.92px"  transform="translate(570.32, 578.45) scale(1) rotate(54.8114039646684, 52.96, 52.96)"><svg
+	width="105.922641620146"
+	height="105.922641620146"
+	style="width:105.922641620146px; height: 105.922641620146px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="92496664935">
+		<ellipse cx="52.961320810073" cy="52.961320810073" rx="52.961320810073" ry="52.961320810073"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="52.961320810073"
+			cy="52.961320810073"
+			rx="52.961320810073"
+			ry="52.961320810073"
+			stroke="#5ccbee"
+			stroke-width="4"
+			stroke-dasharray=""
+			stroke-opacity="0.2"
+			fill="transparent"
+			fill-opacity="0"
+			clip-path="url(#92496664935)"
+		/>
+	</g>
+</svg>
+</g><g width="105.92px" height="105.92px"  transform="translate(570.32, 578.45) rotate(54.8114039646684, 52.96, 52.96)"><g transform="translate(15.51201172467416, 15.51201172467416)"></g></g></g><g data-widget-id="3458764658377083560"><g width="107.2px" height="107.2px"  transform="translate(271.59, 670.99) scale(1) rotate(0, 53.6, 53.6)"><svg
+	width="107.204470062621"
+	height="107.204470062621"
+	style="width:107.204470062621px; height: 107.204470062621px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1684204848221">
+		<ellipse cx="53.6022350313105" cy="53.6022350313105" rx="53.6022350313105" ry="53.6022350313105"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="53.6022350313105"
+			cy="53.6022350313105"
+			rx="53.6022350313105"
+			ry="53.6022350313105"
+			stroke="#5ccbee"
+			stroke-width="8"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#ffffff"
+			fill-opacity="1"
+			clip-path="url(#1684204848221)"
+		/>
+	</g>
+</svg>
+</g><g width="107.2px" height="107.2px"  transform="translate(271.59, 670.99) rotate(0, 53.6, 53.6)"><g transform="translate(15.699731153915728, 15.699731153915728)"></g></g></g><g data-widget-id="3458764658377083561"><image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADPUlEQVR4AexY3XnrIAyVvUGaWfJ82z28S9JdvEd7nzNLmw3q6liQgrD5CaRp+8VfFDBgcY6QkUxPv/y6E7j1At5X4M+twHA8PbK8iLxPw9HK22E4vh1aE27mQoMBTjS9sDyKuHC7PVG3H2ZC7Yg0ISCWtcAp4wKRNiSqCQh4WFfj7l6JpmcR1IN+Xo16EtUEiN2CvKt7HXcP3bjbPI277UEE9YdOyLiDsRIndje3raxeRUCs7044PQO42+LWQSYkQXt3TGm9igB51oflt8ldRkh07F5kruk2KzDwrmMQmOLjv6nkFPxufA0LdX31pWoVK/ChLNc7Vk1N266/b6WKfT+bQDhWGyMfVQWB3gNc4gYlY1NU+tSA6/Rri/eeMUrm7EsGu2NDN0AkdkfE6n7gC3XFnvX7LiYgahBppYZ/dg3Og1Bbl6XYsT463VNFYGlPBwkWtUMRoY2FCWrrp2NHjEYVAaPY29OJEJgmTqeRRp+4hLxP3M7gJ0XMX0Gjr6goILCsV/x3DQgAQ5aeRdpRZ31orSYAJXClkRM4trJaDfRqQRrRzYme7rnkvgkBO/HI2SdR9yRE7KrMgHmbxD2AIzPd8D01uZoSACK4FIiI2LQaoLecWrcDjrkgzQlA6XfKnYC1Nu/xOI0wIicQCFqhnOYx9rnasmoFDGje68/7PPZ6FgSrNUHK4caJuu/iiwgI8DNoFZxKbIoYge9iBL3LiBQTYPBsYVixBGjOWBApJ1FEwIBfsLjd6xEDUoJ4AMEzmhhInNhAun39PpvAMniAOAcnjq4bPlJJCeIBBLFh6ahlwkueTSKLAHYSjq7K8shlAKIuOCHgsW6VgoBEnjtlESDv+IT4Avj6RIwVzT8hAdebb83f7E7KaKbLKZIExPrOE3xcKBO6bfV1pCDhSqQPvZIESFn/GuDJXKIb75VpmL8tbH25jBJYsv6ympat/gEZbx5RN4oSCGH1zdLgULdt0XPoEww7TspeirX//p/bI37qtrSvh3P4GPSMCQJ6+Hfdu+9BfM4CAoiecWXX6fXfCT1HioAKMPrxlfv65ux5owTgjyN/rIu0C1wpfiXzRgmkJvoJ/XcCt16FX78CnwAAAP//NIwkTwAAAAZJREFUAwACpIVw1OtLawAAAABJRU5ErkJggg==" width="48px" height="48px"  transform="translate(294.97, 694.36) scale(1.25937313918018) rotate(0, 24, 24)" /></g><g data-widget-id="3458764658377083562"><g width="117.51px" height="117.51px"  transform="translate(383.68, 298.01) scale(1) rotate(0, 58.755, 58.755)"><svg
+	width="117.510949577864"
+	height="117.510949577864"
+	style="width:117.510949577864px; height: 117.510949577864px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="720401416716">
+		<ellipse cx="58.755474788932" cy="58.755474788932" rx="58.755474788932" ry="58.755474788932"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="58.755474788932"
+			cy="58.755474788932"
+			rx="58.755474788932"
+			ry="58.755474788932"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#5ccbee"
+			fill-opacity="1"
+			clip-path="url(#720401416716)"
+		/>
+	</g>
+</svg>
+</g><g width="117.51px" height="117.51px"  transform="translate(383.68, 298.01) rotate(0, 58.755, 58.755)"><g transform="translate(17.209080133842946, 17.209080133842946)"></g></g></g><g data-widget-id="3458764658377083563"><image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC/klEQVR4AeyYDVYrIQyFx7expyuzrkxd2Xg/ZOaEFAYY0KqnPUT+QnJvgkD7b/nlnzuBWyfwnoE/l4F1XR8lr1FU7eWi1mU24WlbSOACcAF8lTxGUbWXZ7WepUeZRmQKASEC0AZcOKsFIqypKtYUhglE8ETX+3rTwEsU2momZQqJYQKC5MG/PXx+nlRdotB+kC6EVO0FEmy3faC3MUQgRt/6fBHgJztg25pj21yRsDq97SECcmajT+QBqOFyiSTslrpNBhR97/i9DPtqJslCxtbVgtLASAY8ARvVkr/p4yMEEjDaGs0EMro+GInto84IgQRwzzbo0T0Cz9wIAdafFR/xJBg9Rk8TyGwDbuJW3/b0WjK2Wu0spwlED/40qZLQ9vFHbWIj2m2uhggocoCx6Q8POoH0W2RhTAJBH31sNAP2ikMEojEfQcDznBbelRpZpQt45tTci1+7T7Q2OgjkTSoLZKAEBMBIbjHPjqHoY3SYAEZEgkdb7rHGtBcI87gbBo/hKQQwhEBENY85MoKouwAYoQ9whP4y4zOVAIBEIjzqVIesqAYwQn8acHwh0wlg9DvlTmCL9vr5awT3ABJ+gdBYrma+dDJt5prroQwIIGDsOc9Zj3BZlYT5sEbrqYdOo1ME5BjgpcupOXpSJBN8L5bJ9RSRbgLyFCIo57MLRLpJdBGI4ImaB8/xiHAH1IT7AEHf24EEAfLjxX4zgQJ4QHDGb8IdUBPuA4Q1udub7dlMoomAwJNaH3neMoCARDFCtQlddNgmI1YVEozbsWy7iYBWcqKo2gvgmxzsKw4akQRbz2qxnXzQ7HxoVwnE6Afl+Gcq+Ghz+1bmM+EDt6nvdZWANBMjMVoanl+ibbslxzKQi/582FcWkx/IhOGQREsGrAcbHTs+s+19DBH4b5Epxd64nZ7SzvhIMHgnvRnw67+q3xyoHgL+hPgq8N5u8j/hJ2sEzoH2Xvr7zX4PCbAfJVuZdnHV+MghzxFVoRz6PSRQc/QT5u8Ebp2FX5+BDwAAAP//xgMUlAAAAAZJREFUAwD+Rklw1XJ++AAAAABJRU5ErkJggg==" width="48px" height="48px"  transform="translate(409.31, 323.63) scale(1.38044741391355) rotate(0, 24, 24)" /></g><g data-widget-id="3458764658377083564"><g width="117.51px" height="117.51px"  transform="translate(237.91, 567.35) scale(1) rotate(0, 58.755, 58.755)"><svg
+	width="117.510949577864"
+	height="117.510949577864"
+	style="width:117.510949577864px; height: 117.510949577864px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="747391291847">
+		<ellipse cx="58.755474788932" cy="58.755474788932" rx="58.755474788932" ry="58.755474788932"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="58.755474788932"
+			cy="58.755474788932"
+			rx="58.755474788932"
+			ry="58.755474788932"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#5ccbee"
+			fill-opacity="1"
+			clip-path="url(#747391291847)"
+		/>
+	</g>
+</svg>
+</g><g width="117.51px" height="117.51px"  transform="translate(237.91, 567.35) rotate(0, 58.755, 58.755)"><g transform="translate(17.209080133842946, 17.209080133842946)"></g></g></g><g data-widget-id="3458764658377083565"><image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC/klEQVR4AeyYDVYrIQyFx7expyuzrkxd2Xg/ZOaEFAYY0KqnPUT+QnJvgkD7b/nlnzuBWyfwnoE/l4F1XR8lr1FU7eWi1mU24WlbSOACcAF8lTxGUbWXZ7WepUeZRmQKASEC0AZcOKsFIqypKtYUhglE8ETX+3rTwEsU2momZQqJYQKC5MG/PXx+nlRdotB+kC6EVO0FEmy3faC3MUQgRt/6fBHgJztg25pj21yRsDq97SECcmajT+QBqOFyiSTslrpNBhR97/i9DPtqJslCxtbVgtLASAY8ARvVkr/p4yMEEjDaGs0EMro+GInto84IgQRwzzbo0T0Cz9wIAdafFR/xJBg9Rk8TyGwDbuJW3/b0WjK2Wu0spwlED/40qZLQ9vFHbWIj2m2uhggocoCx6Q8POoH0W2RhTAJBH31sNAP2ikMEojEfQcDznBbelRpZpQt45tTci1+7T7Q2OgjkTSoLZKAEBMBIbjHPjqHoY3SYAEZEgkdb7rHGtBcI87gbBo/hKQQwhEBENY85MoKouwAYoQ9whP4y4zOVAIBEIjzqVIesqAYwQn8acHwh0wlg9DvlTmCL9vr5awT3ABJ+gdBYrma+dDJt5prroQwIIGDsOc9Zj3BZlYT5sEbrqYdOo1ME5BjgpcupOXpSJBN8L5bJ9RSRbgLyFCIo57MLRLpJdBGI4ImaB8/xiHAH1IT7AEHf24EEAfLjxX4zgQJ4QHDGb8IdUBPuA4Q1udub7dlMoomAwJNaH3neMoCARDFCtQlddNgmI1YVEozbsWy7iYBWcqKo2gvgmxzsKw4akQRbz2qxnXzQ7HxoVwnE6Afl+Gcq+Ghz+1bmM+EDt6nvdZWANBMjMVoanl+ibbslxzKQi/582FcWkx/IhOGQREsGrAcbHTs+s+19DBH4b5Epxd64nZ7SzvhIMHgnvRnw67+q3xyoHgL+hPgq8N5u8j/hJ2sEzoH2Xvr7zX4PCbAfJVuZdnHV+MghzxFVoRz6PSRQc/QT5u8Ebp2FX5+BDwAAAP//xgMUlAAAAAZJREFUAwD+Rklw1XJ++AAAAABJRU5ErkJggg==" width="48px" height="48px"  transform="translate(263.53, 592.98) scale(1.38044741391355) rotate(0, 24, 24)" /></g><g data-widget-id="3458764658377083566"><g width="117.51px" height="117.51px"  transform="translate(481.79, 875.46) scale(1) rotate(0, 58.755, 58.755)"><svg
+	width="117.510949577864"
+	height="117.510949577864"
+	style="width:117.510949577864px; height: 117.510949577864px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="530306578327">
+		<ellipse cx="58.755474788932" cy="58.755474788932" rx="58.755474788932" ry="58.755474788932"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="58.755474788932"
+			cy="58.755474788932"
+			rx="58.755474788932"
+			ry="58.755474788932"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#5ccbee"
+			fill-opacity="1"
+			clip-path="url(#530306578327)"
+		/>
+	</g>
+</svg>
+</g><g width="117.51px" height="117.51px"  transform="translate(481.79, 875.46) rotate(0, 58.755, 58.755)"><g transform="translate(17.209080133842946, 17.209080133842946)"></g></g></g><g data-widget-id="3458764658377083567"><image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC/klEQVR4AeyYDVYrIQyFx7expyuzrkxd2Xg/ZOaEFAYY0KqnPUT+QnJvgkD7b/nlnzuBWyfwnoE/l4F1XR8lr1FU7eWi1mU24WlbSOACcAF8lTxGUbWXZ7WepUeZRmQKASEC0AZcOKsFIqypKtYUhglE8ETX+3rTwEsU2momZQqJYQKC5MG/PXx+nlRdotB+kC6EVO0FEmy3faC3MUQgRt/6fBHgJztg25pj21yRsDq97SECcmajT+QBqOFyiSTslrpNBhR97/i9DPtqJslCxtbVgtLASAY8ARvVkr/p4yMEEjDaGs0EMro+GInto84IgQRwzzbo0T0Cz9wIAdafFR/xJBg9Rk8TyGwDbuJW3/b0WjK2Wu0spwlED/40qZLQ9vFHbWIj2m2uhggocoCx6Q8POoH0W2RhTAJBH31sNAP2ikMEojEfQcDznBbelRpZpQt45tTci1+7T7Q2OgjkTSoLZKAEBMBIbjHPjqHoY3SYAEZEgkdb7rHGtBcI87gbBo/hKQQwhEBENY85MoKouwAYoQ9whP4y4zOVAIBEIjzqVIesqAYwQn8acHwh0wlg9DvlTmCL9vr5awT3ABJ+gdBYrma+dDJt5prroQwIIGDsOc9Zj3BZlYT5sEbrqYdOo1ME5BjgpcupOXpSJBN8L5bJ9RSRbgLyFCIo57MLRLpJdBGI4ImaB8/xiHAH1IT7AEHf24EEAfLjxX4zgQJ4QHDGb8IdUBPuA4Q1udub7dlMoomAwJNaH3neMoCARDFCtQlddNgmI1YVEozbsWy7iYBWcqKo2gvgmxzsKw4akQRbz2qxnXzQ7HxoVwnE6Afl+Gcq+Ghz+1bmM+EDt6nvdZWANBMjMVoanl+ibbslxzKQi/582FcWkx/IhOGQREsGrAcbHTs+s+19DBH4b5Epxd64nZ7SzvhIMHgnvRnw67+q3xyoHgL+hPgq8N5u8j/hJ2sEzoH2Xvr7zX4PCbAfJVuZdnHV+MghzxFVoRz6PSRQc/QT5u8Ebp2FX5+BDwAAAP//xgMUlAAAAAZJREFUAwD+Rklw1XJ++AAAAABJRU5ErkJggg==" width="48px" height="48px"  transform="translate(507.42, 901.09) scale(1.38044741391355) rotate(0, 24, 24)" /></g><g data-widget-id="3458764658377083568"><g width="71px" height="40px"  transform="translate(98.31, 592.98) scale(1.71428571428571) rotate(0, 35.5, 20)"><svg
+	width="71"
+	height="40"
+	shape-border-width="shape-background"
+	style="width:71px; height: 40px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="182562741659">
+		<rect
+			x="0"
+			y="0"
+			width="71"
+			height="40"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="0"
+			fill="transparent"
+			fill-opacity="0"
+			x="0"
+			y="0"
+			width="71"
+			height="40"
+			rx="0"
+			ry="0"
+			clip-path="url(#182562741659)"
+		></rect>
+	</g>
+</svg>
+</g><g width="121.71428571428541px" height="68.5714285714284px"  transform="translate(98.31, 592.98) rotate(0, 60.857142857142705, 34.2857142857142)"><g transform="translate(0, 0)"><text xml:space="preserve" x="7.796316964285695" y="23.99999999999994" width="120.1523437499997" textLength="120.1523437499997" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="23.99999999999994" 
+				fill="#2d9bf0" direction="ltr" >UX Design </text><text xml:space="preserve" x="30.694754464285637" y="58.285714285714135" width="91.01953124999977" textLength="91.01953124999977" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="23.99999999999994" 
+				fill="#2d9bf0" direction="ltr" >Director</text></g></g></g><g data-widget-id="3458764658377083569"><g width="58px" height="40px"  transform="translate(158.24, 694.36) scale(1.71428571428571) rotate(0, 29, 20)"><svg
+	width="58"
+	height="40"
+	shape-border-width="shape-background"
+	style="width:58px; height: 40px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1003823698034">
+		<rect
+			x="0"
+			y="0"
+			width="58"
+			height="40"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="0"
+			fill="transparent"
+			fill-opacity="0"
+			x="0"
+			y="0"
+			width="58"
+			height="40"
+			rx="0"
+			ry="0"
+			clip-path="url(#1003823698034)"
+		></rect>
+	</g>
+</svg>
+</g><g width="99.42857142857117px" height="68.5714285714284px"  transform="translate(158.24, 694.36) rotate(0, 49.71428571428559, 34.2857142857142)"><g transform="translate(0, 0)"><text xml:space="preserve" x="7.459821428571385" y="23.99999999999994" width="98.20312499999976" textLength="98.20312499999976" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="23.99999999999994" 
+				fill="#2d9bf0" direction="ltr" >Strategy </text><text xml:space="preserve" x="45.45200892857129" y="58.285714285714135" width="60.21093749999985" textLength="60.21093749999985" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="23.99999999999994" 
+				fill="#2d9bf0" direction="ltr" >Lead </text></g></g></g><g data-widget-id="3458764658377083570"><g width="95.46px" height="40px"  transform="translate(300.96, 899.93) scale(1.71428571428571) rotate(0, 47.73, 20)"><svg
+	width="95.46"
+	height="40"
+	shape-border-width="shape-background"
+	style="width:95.46px; height: 40px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1512029478688">
+		<rect
+			x="0"
+			y="0"
+			width="95.46"
+			height="40"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="0"
+			fill="transparent"
+			fill-opacity="0"
+			x="0"
+			y="0"
+			width="95.46"
+			height="40"
+			rx="0"
+			ry="0"
+			clip-path="url(#1512029478688)"
+		></rect>
+	</g>
+</svg>
+</g><g width="163.64571428571386px" height="68.5714285714284px"  transform="translate(300.96, 899.93) rotate(0, 81.82285714285693, 34.2857142857142)"><g transform="translate(0, 0)"><text xml:space="preserve" x="12.939357741283336" y="23.99999999999994" width="150.71484374999963" textLength="150.71484374999963" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="23.99999999999994" 
+				fill="#2d9bf0" direction="ltr" >Development</text><text xml:space="preserve" x="109.67763899128309" y="58.285714285714135" width="53.976562499999865" textLength="53.976562499999865" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="23.99999999999994" 
+				fill="#2d9bf0" direction="ltr" >Lead</text></g></g></g><g data-widget-id="3458764658377083571"><g width="142.57px" height="40px"  transform="translate(124.26, 322.48) scale(1.71428571428571) rotate(0, 71.285, 20)"><svg
+	width="142.57"
+	height="40"
+	shape-border-width="shape-background"
+	style="width:142.57px; height: 40px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1425393766321">
+		<rect
+			x="0"
+			y="0"
+			width="142.57"
+			height="40"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="0"
+			fill="transparent"
+			fill-opacity="0"
+			x="0"
+			y="0"
+			width="142.57"
+			height="40"
+			rx="0"
+			ry="0"
+			clip-path="url(#1425393766321)"
+		></rect>
+	</g>
+</svg>
+</g><g width="244.40571428571366px" height="68.5714285714284px"  transform="translate(124.26, 322.48) rotate(0, 122.20285714285683, 34.2857142857142)"><g transform="translate(0, 0)"><text xml:space="preserve" x="147.31464286444515" y="23.99999999999994" width="103.32421874999974" textLength="103.32421874999974" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="23.99999999999994" 
+				fill="#2d9bf0" direction="ltr" >Platform </text><text xml:space="preserve" x="20.752142864445478" y="58.285714285714135" width="223.65234374999943" textLength="223.65234374999943" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="23.99999999999994" 
+				fill="#2d9bf0" direction="ltr" >Engagement Leader</text></g></g></g><g data-widget-id="3458764658377083572"><g width="31px" height="20px"  transform="translate(1758.23, 239.94) scale(1.28571428571429) rotate(0, 15.5, 10)"><svg
+	width="31"
+	height="20"
+	shape-border-width="shape-background"
+	style="width:31px; height: 20px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="172796716025">
+		<rect
+			x="0"
+			y="0"
+			width="31"
+			height="20"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="0"
+			fill="transparent"
+			fill-opacity="0"
+			x="0"
+			y="0"
+			width="31"
+			height="20"
+			rx="0"
+			ry="0"
+			clip-path="url(#172796716025)"
+		></rect>
+	</g>
+</svg>
+</g><g width="39.85714285714299px" height="25.7142857142858px"  transform="translate(1758.23, 239.94) rotate(0, 19.928571428571495, 12.8571428571429)"><g transform="translate(0, 0)"><text xml:space="preserve" x="0.6893136160714309" y="18.00000000000006" width="38.47851562500013" textLength="38.47851562500013" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="18.00000000000006" 
+				fill="#ffffff" direction="ltr" >APM</text></g></g></g><g data-widget-id="3458764658377083573"><g width="61px" height="20px"  transform="translate(1746.13, 702.08) scale(1.28571428571429) rotate(0, 30.5, 10)"><svg
+	width="61"
+	height="20"
+	shape-border-width="shape-background"
+	style="width:61px; height: 20px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1169066716105">
+		<rect
+			x="0"
+			y="0"
+			width="61"
+			height="20"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="0"
+			fill="transparent"
+			fill-opacity="0"
+			x="0"
+			y="0"
+			width="61"
+			height="20"
+			rx="0"
+			ry="0"
+			clip-path="url(#1169066716105)"
+		></rect>
+	</g>
+</svg>
+</g><g width="78.42857142857169px" height="25.7142857142858px"  transform="translate(1746.13, 702.08) rotate(0, 39.21428571428584, 12.8571428571429)"><g transform="translate(0, 0)"><text xml:space="preserve" x="0.7709263392857078" y="18.00000000000006" width="76.88671875000026" textLength="76.88671875000026" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="18.00000000000006" 
+				fill="#ffffff" direction="ltr" >Research</text></g></g></g><g data-widget-id="3458764658377083574"><g width="88px" height="20px"  transform="translate(1731.95, 547.4) scale(1.28571428571429) rotate(0, 44, 10)"><svg
+	width="88"
+	height="20"
+	shape-border-width="shape-background"
+	style="width:88px; height: 20px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1339291692591">
+		<rect
+			x="0"
+			y="0"
+			width="88"
+			height="20"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="0"
+			fill="transparent"
+			fill-opacity="0"
+			x="0"
+			y="0"
+			width="88"
+			height="20"
+			rx="0"
+			ry="0"
+			clip-path="url(#1339291692591)"
+		></rect>
+	</g>
+</svg>
+</g><g width="113.14285714285752px" height="25.7142857142858px"  transform="translate(1731.95, 547.4) rotate(0, 56.57142857142876, 12.8571428571429)"><g transform="translate(0, 0)"><text xml:space="preserve" x="0.8355887276785651" y="18.00000000000006" width="111.47167968750037" textLength="111.47167968750037" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="18.00000000000006" 
+				fill="#ffffff" direction="ltr" >UX Designers</text></g></g></g><g data-widget-id="3458764658377083575"><g width="75px" height="20px"  transform="translate(1724.38, 961.64) scale(1.28571428571429) rotate(0, 37.5, 10)"><svg
+	width="75"
+	height="20"
+	shape-border-width="shape-background"
+	style="width:75px; height: 20px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="783156108243">
+		<rect
+			x="0"
+			y="0"
+			width="75"
+			height="20"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="0"
+			fill="transparent"
+			fill-opacity="0"
+			x="0"
+			y="0"
+			width="75"
+			height="20"
+			rx="0"
+			ry="0"
+			clip-path="url(#783156108243)"
+		></rect>
+	</g>
+</svg>
+</g><g width="96.42857142857176px" height="25.7142857142858px"  transform="translate(1724.38, 961.64) rotate(0, 48.21428571428588, 12.8571428571429)"><g transform="translate(0, 0)"><text xml:space="preserve" x="0.801688058035717" y="18.00000000000006" width="94.82519531250031" textLength="94.82519531250031" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="18.00000000000006" 
+				fill="#ffffff" direction="ltr" >Developers</text></g></g></g><g data-widget-id="3458764658377083576"><g width="95.99px" height="95.99px"  transform="translate(1724.38, 861.65) scale(1) rotate(0, 47.995, 47.995)"><svg
+	width="95.9869859635391"
+	height="95.9869859635391"
+	style="width:95.9869859635391px; height: 95.9869859635391px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1679608077382">
+		<ellipse cx="47.99349298176955" cy="47.99349298176955" rx="47.99349298176955" ry="47.99349298176955"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="47.99349298176955"
+			cy="47.99349298176955"
+			rx="47.99349298176955"
+			ry="47.99349298176955"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#2d9bf0"
+			fill-opacity="1"
+			clip-path="url(#1679608077382)"
+		/>
+	</g>
+</svg>
+</g><g width="95.99px" height="95.99px"  transform="translate(1724.38, 861.65) rotate(0, 47.995, 47.995)"><g transform="translate(14.05696864153132, 14.05696864153132)"></g></g></g><g data-widget-id="3458764658377083577"><image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC/klEQVR4AeyYDVYrIQyFx7expyuzrkxd2Xg/ZOaEFAYY0KqnPUT+QnJvgkD7b/nlnzuBWyfwnoE/l4F1XR8lr1FU7eWi1mU24WlbSOACcAF8lTxGUbWXZ7WepUeZRmQKASEC0AZcOKsFIqypKtYUhglE8ETX+3rTwEsU2momZQqJYQKC5MG/PXx+nlRdotB+kC6EVO0FEmy3faC3MUQgRt/6fBHgJztg25pj21yRsDq97SECcmajT+QBqOFyiSTslrpNBhR97/i9DPtqJslCxtbVgtLASAY8ARvVkr/p4yMEEjDaGs0EMro+GInto84IgQRwzzbo0T0Cz9wIAdafFR/xJBg9Rk8TyGwDbuJW3/b0WjK2Wu0spwlED/40qZLQ9vFHbWIj2m2uhggocoCx6Q8POoH0W2RhTAJBH31sNAP2ikMEojEfQcDznBbelRpZpQt45tTci1+7T7Q2OgjkTSoLZKAEBMBIbjHPjqHoY3SYAEZEgkdb7rHGtBcI87gbBo/hKQQwhEBENY85MoKouwAYoQ9whP4y4zOVAIBEIjzqVIesqAYwQn8acHwh0wlg9DvlTmCL9vr5awT3ABJ+gdBYrma+dDJt5prroQwIIGDsOc9Zj3BZlYT5sEbrqYdOo1ME5BjgpcupOXpSJBN8L5bJ9RSRbgLyFCIo57MLRLpJdBGI4ImaB8/xiHAH1IT7AEHf24EEAfLjxX4zgQJ4QHDGb8IdUBPuA4Q1udub7dlMoomAwJNaH3neMoCARDFCtQlddNgmI1YVEozbsWy7iYBWcqKo2gvgmxzsKw4akQRbz2qxnXzQ7HxoVwnE6Afl+Gcq+Ghz+1bmM+EDt6nvdZWANBMjMVoanl+ibbslxzKQi/582FcWkx/IhOGQREsGrAcbHTs+s+19DBH4b5Epxd64nZ7SzvhIMHgnvRnw67+q3xyoHgL+hPgq8N5u8j/hJ2sEzoH2Xvr7zX4PCbAfJVuZdnHV+MghzxFVoRz6PSRQc/QT5u8Ebp2FX5+BDwAAAP//xgMUlAAAAAZJREFUAwD+Rklw1XJ++AAAAABJRU5ErkJggg==" width="48px" height="48px"  transform="translate(1745.31, 882.58) scale(1.12759693474287) rotate(0, 24, 24)" /></g><g data-widget-id="3458764658377083578"><g width="95.99px" height="95.99px"  transform="translate(1806.26, 861.65) scale(1) rotate(0, 47.995, 47.995)"><svg
+	width="95.9869859635391"
+	height="95.9869859635391"
+	style="width:95.9869859635391px; height: 95.9869859635391px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1064623844174">
+		<ellipse cx="47.99349298176955" cy="47.99349298176955" rx="47.99349298176955" ry="47.99349298176955"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="47.99349298176955"
+			cy="47.99349298176955"
+			rx="47.99349298176955"
+			ry="47.99349298176955"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#2d9bf0"
+			fill-opacity="1"
+			clip-path="url(#1064623844174)"
+		/>
+	</g>
+</svg>
+</g><g width="95.99px" height="95.99px"  transform="translate(1806.26, 861.65) rotate(0, 47.995, 47.995)"><g transform="translate(14.05696864153132, 14.05696864153132)"></g></g></g><g data-widget-id="3458764658377083579"><image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC/klEQVR4AeyYDVYrIQyFx7expyuzrkxd2Xg/ZOaEFAYY0KqnPUT+QnJvgkD7b/nlnzuBWyfwnoE/l4F1XR8lr1FU7eWi1mU24WlbSOACcAF8lTxGUbWXZ7WepUeZRmQKASEC0AZcOKsFIqypKtYUhglE8ETX+3rTwEsU2momZQqJYQKC5MG/PXx+nlRdotB+kC6EVO0FEmy3faC3MUQgRt/6fBHgJztg25pj21yRsDq97SECcmajT+QBqOFyiSTslrpNBhR97/i9DPtqJslCxtbVgtLASAY8ARvVkr/p4yMEEjDaGs0EMro+GInto84IgQRwzzbo0T0Cz9wIAdafFR/xJBg9Rk8TyGwDbuJW3/b0WjK2Wu0spwlED/40qZLQ9vFHbWIj2m2uhggocoCx6Q8POoH0W2RhTAJBH31sNAP2ikMEojEfQcDznBbelRpZpQt45tTci1+7T7Q2OgjkTSoLZKAEBMBIbjHPjqHoY3SYAEZEgkdb7rHGtBcI87gbBo/hKQQwhEBENY85MoKouwAYoQ9whP4y4zOVAIBEIjzqVIesqAYwQn8acHwh0wlg9DvlTmCL9vr5awT3ABJ+gdBYrma+dDJt5prroQwIIGDsOc9Zj3BZlYT5sEbrqYdOo1ME5BjgpcupOXpSJBN8L5bJ9RSRbgLyFCIo57MLRLpJdBGI4ImaB8/xiHAH1IT7AEHf24EEAfLjxX4zgQJ4QHDGb8IdUBPuA4Q1udub7dlMoomAwJNaH3neMoCARDFCtQlddNgmI1YVEozbsWy7iYBWcqKo2gvgmxzsKw4akQRbz2qxnXzQ7HxoVwnE6Afl+Gcq+Ghz+1bmM+EDt6nvdZWANBMjMVoanl+ibbslxzKQi/582FcWkx/IhOGQREsGrAcbHTs+s+19DBH4b5Epxd64nZ7SzvhIMHgnvRnw67+q3xyoHgL+hPgq8N5u8j/hJ2sEzoH2Xvr7zX4PCbAfJVuZdnHV+MghzxFVoRz6PSRQc/QT5u8Ebp2FX5+BDwAAAP//xgMUlAAAAAZJREFUAwD+Rklw1XJ++AAAAABJRU5ErkJggg==" width="48px" height="48px"  transform="translate(1827.2, 882.58) scale(1.12759693474287) rotate(0, 24, 24)" /></g><g data-widget-id="3458764658377083580"><g width="95.99px" height="95.99px"  transform="translate(1891.29, 861.65) scale(1) rotate(0, 47.995, 47.995)"><svg
+	width="95.9869859635391"
+	height="95.9869859635391"
+	style="width:95.9869859635391px; height: 95.9869859635391px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1226861164431">
+		<ellipse cx="47.99349298176955" cy="47.99349298176955" rx="47.99349298176955" ry="47.99349298176955"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="47.99349298176955"
+			cy="47.99349298176955"
+			rx="47.99349298176955"
+			ry="47.99349298176955"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#2d9bf0"
+			fill-opacity="1"
+			clip-path="url(#1226861164431)"
+		/>
+	</g>
+</svg>
+</g><g width="95.99px" height="95.99px"  transform="translate(1891.29, 861.65) rotate(0, 47.995, 47.995)"><g transform="translate(14.05696864153132, 14.05696864153132)"></g></g></g><g data-widget-id="3458764658377083581"><image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC/klEQVR4AeyYDVYrIQyFx7expyuzrkxd2Xg/ZOaEFAYY0KqnPUT+QnJvgkD7b/nlnzuBWyfwnoE/l4F1XR8lr1FU7eWi1mU24WlbSOACcAF8lTxGUbWXZ7WepUeZRmQKASEC0AZcOKsFIqypKtYUhglE8ETX+3rTwEsU2momZQqJYQKC5MG/PXx+nlRdotB+kC6EVO0FEmy3faC3MUQgRt/6fBHgJztg25pj21yRsDq97SECcmajT+QBqOFyiSTslrpNBhR97/i9DPtqJslCxtbVgtLASAY8ARvVkr/p4yMEEjDaGs0EMro+GInto84IgQRwzzbo0T0Cz9wIAdafFR/xJBg9Rk8TyGwDbuJW3/b0WjK2Wu0spwlED/40qZLQ9vFHbWIj2m2uhggocoCx6Q8POoH0W2RhTAJBH31sNAP2ikMEojEfQcDznBbelRpZpQt45tTci1+7T7Q2OgjkTSoLZKAEBMBIbjHPjqHoY3SYAEZEgkdb7rHGtBcI87gbBo/hKQQwhEBENY85MoKouwAYoQ9whP4y4zOVAIBEIjzqVIesqAYwQn8acHwh0wlg9DvlTmCL9vr5awT3ABJ+gdBYrma+dDJt5prroQwIIGDsOc9Zj3BZlYT5sEbrqYdOo1ME5BjgpcupOXpSJBN8L5bJ9RSRbgLyFCIo57MLRLpJdBGI4ImaB8/xiHAH1IT7AEHf24EEAfLjxX4zgQJ4QHDGb8IdUBPuA4Q1udub7dlMoomAwJNaH3neMoCARDFCtQlddNgmI1YVEozbsWy7iYBWcqKo2gvgmxzsKw4akQRbz2qxnXzQ7HxoVwnE6Afl+Gcq+Ghz+1bmM+EDt6nvdZWANBMjMVoanl+ibbslxzKQi/582FcWkx/IhOGQREsGrAcbHTs+s+19DBH4b5Epxd64nZ7SzvhIMHgnvRnw67+q3xyoHgL+hPgq8N5u8j/hJ2sEzoH2Xvr7zX4PCbAfJVuZdnHV+MghzxFVoRz6PSRQc/QT5u8Ebp2FX5+BDwAAAP//xgMUlAAAAAZJREFUAwD+Rklw1XJ++AAAAABJRU5ErkJggg==" width="48px" height="48px"  transform="translate(1912.22, 882.58) scale(1.12759693474287) rotate(0, 24, 24)" /></g><g data-widget-id="3458764658377083582"><g width="95.99px" height="95.99px"  transform="translate(1724.38, 1015.34) scale(1) rotate(0, 47.995, 47.995)"><svg
+	width="95.9869859635391"
+	height="95.9869859635391"
+	style="width:95.9869859635391px; height: 95.9869859635391px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="694219535389">
+		<ellipse cx="47.99349298176955" cy="47.99349298176955" rx="47.99349298176955" ry="47.99349298176955"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="47.99349298176955"
+			cy="47.99349298176955"
+			rx="47.99349298176955"
+			ry="47.99349298176955"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#2d9bf0"
+			fill-opacity="1"
+			clip-path="url(#694219535389)"
+		/>
+	</g>
+</svg>
+</g><g width="95.99px" height="95.99px"  transform="translate(1724.38, 1015.34) rotate(0, 47.995, 47.995)"><g transform="translate(14.05696864153132, 14.05696864153132)"></g></g></g><g data-widget-id="3458764658377083583"><image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC/klEQVR4AeyYDVYrIQyFx7expyuzrkxd2Xg/ZOaEFAYY0KqnPUT+QnJvgkD7b/nlnzuBWyfwnoE/l4F1XR8lr1FU7eWi1mU24WlbSOACcAF8lTxGUbWXZ7WepUeZRmQKASEC0AZcOKsFIqypKtYUhglE8ETX+3rTwEsU2momZQqJYQKC5MG/PXx+nlRdotB+kC6EVO0FEmy3faC3MUQgRt/6fBHgJztg25pj21yRsDq97SECcmajT+QBqOFyiSTslrpNBhR97/i9DPtqJslCxtbVgtLASAY8ARvVkr/p4yMEEjDaGs0EMro+GInto84IgQRwzzbo0T0Cz9wIAdafFR/xJBg9Rk8TyGwDbuJW3/b0WjK2Wu0spwlED/40qZLQ9vFHbWIj2m2uhggocoCx6Q8POoH0W2RhTAJBH31sNAP2ikMEojEfQcDznBbelRpZpQt45tTci1+7T7Q2OgjkTSoLZKAEBMBIbjHPjqHoY3SYAEZEgkdb7rHGtBcI87gbBo/hKQQwhEBENY85MoKouwAYoQ9whP4y4zOVAIBEIjzqVIesqAYwQn8acHwh0wlg9DvlTmCL9vr5awT3ABJ+gdBYrma+dDJt5prroQwIIGDsOc9Zj3BZlYT5sEbrqYdOo1ME5BjgpcupOXpSJBN8L5bJ9RSRbgLyFCIo57MLRLpJdBGI4ImaB8/xiHAH1IT7AEHf24EEAfLjxX4zgQJ4QHDGb8IdUBPuA4Q1udub7dlMoomAwJNaH3neMoCARDFCtQlddNgmI1YVEozbsWy7iYBWcqKo2gvgmxzsKw4akQRbz2qxnXzQ7HxoVwnE6Afl+Gcq+Ghz+1bmM+EDt6nvdZWANBMjMVoanl+ibbslxzKQi/582FcWkx/IhOGQREsGrAcbHTs+s+19DBH4b5Epxd64nZ7SzvhIMHgnvRnw67+q3xyoHgL+hPgq8N5u8j/hJ2sEzoH2Xvr7zX4PCbAfJVuZdnHV+MghzxFVoRz6PSRQc/QT5u8Ebp2FX5+BDwAAAP//xgMUlAAAAAZJREFUAwD+Rklw1XJ++AAAAABJRU5ErkJggg==" width="48px" height="48px"  transform="translate(1745.31, 1036.27) scale(1.12759693474287) rotate(0, 24, 24)" /></g><g data-widget-id="3458764658377083584"><g width="24px" height="20px"  transform="translate(1759.77, 1119.84) scale(1.28571428571429) rotate(0, 12, 10)"><svg
+	width="24"
+	height="20"
+	shape-border-width="shape-background"
+	style="width:24px; height: 20px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="284610075994">
+		<rect
+			x="0"
+			y="0"
+			width="24"
+			height="20"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="0"
+			fill="transparent"
+			fill-opacity="0"
+			x="0"
+			y="0"
+			width="24"
+			height="20"
+			rx="0"
+			ry="0"
+			clip-path="url(#284610075994)"
+		></rect>
+	</g>
+</svg>
+</g><g width="30.85714285714296px" height="25.7142857142858px"  transform="translate(1759.77, 1119.84) rotate(0, 15.42857142857148, 12.8571428571429)"><g transform="translate(0, 0)"><text xml:space="preserve" x="2.7239815848214377" y="18.00000000000006" width="25.409179687500085" textLength="25.409179687500085" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="18.00000000000006" 
+				fill="#ffffff" direction="ltr" >QA</text></g></g></g><g data-widget-id="3458764658377083585"><g width="95.99px" height="95.99px"  transform="translate(1816.24, 447.06) scale(1) rotate(0, 47.995, 47.995)"><svg
+	width="95.9869859635391"
+	height="95.9869859635391"
+	style="width:95.9869859635391px; height: 95.9869859635391px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="318650315519">
+		<ellipse cx="47.99349298176955" cy="47.99349298176955" rx="47.99349298176955" ry="47.99349298176955"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="47.99349298176955"
+			cy="47.99349298176955"
+			rx="47.99349298176955"
+			ry="47.99349298176955"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#2d9bf0"
+			fill-opacity="1"
+			clip-path="url(#318650315519)"
+		/>
+	</g>
+</svg>
+</g><g width="95.99px" height="95.99px"  transform="translate(1816.24, 447.06) rotate(0, 47.995, 47.995)"><g transform="translate(14.05696864153132, 14.05696864153132)"></g></g></g><g data-widget-id="3458764658377083586"><image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC/klEQVR4AeyYDVYrIQyFx7expyuzrkxd2Xg/ZOaEFAYY0KqnPUT+QnJvgkD7b/nlnzuBWyfwnoE/l4F1XR8lr1FU7eWi1mU24WlbSOACcAF8lTxGUbWXZ7WepUeZRmQKASEC0AZcOKsFIqypKtYUhglE8ETX+3rTwEsU2momZQqJYQKC5MG/PXx+nlRdotB+kC6EVO0FEmy3faC3MUQgRt/6fBHgJztg25pj21yRsDq97SECcmajT+QBqOFyiSTslrpNBhR97/i9DPtqJslCxtbVgtLASAY8ARvVkr/p4yMEEjDaGs0EMro+GInto84IgQRwzzbo0T0Cz9wIAdafFR/xJBg9Rk8TyGwDbuJW3/b0WjK2Wu0spwlED/40qZLQ9vFHbWIj2m2uhggocoCx6Q8POoH0W2RhTAJBH31sNAP2ikMEojEfQcDznBbelRpZpQt45tTci1+7T7Q2OgjkTSoLZKAEBMBIbjHPjqHoY3SYAEZEgkdb7rHGtBcI87gbBo/hKQQwhEBENY85MoKouwAYoQ9whP4y4zOVAIBEIjzqVIesqAYwQn8acHwh0wlg9DvlTmCL9vr5awT3ABJ+gdBYrma+dDJt5prroQwIIGDsOc9Zj3BZlYT5sEbrqYdOo1ME5BjgpcupOXpSJBN8L5bJ9RSRbgLyFCIo57MLRLpJdBGI4ImaB8/xiHAH1IT7AEHf24EEAfLjxX4zgQJ4QHDGb8IdUBPuA4Q1udub7dlMoomAwJNaH3neMoCARDFCtQlddNgmI1YVEozbsWy7iYBWcqKo2gvgmxzsKw4akQRbz2qxnXzQ7HxoVwnE6Afl+Gcq+Ghz+1bmM+EDt6nvdZWANBMjMVoanl+ibbslxzKQi/582FcWkx/IhOGQREsGrAcbHTs+s+19DBH4b5Epxd64nZ7SzvhIMHgnvRnw67+q3xyoHgL+hPgq8N5u8j/hJ2sEzoH2Xvr7zX4PCbAfJVuZdnHV+MghzxFVoRz6PSRQc/QT5u8Ebp2FX5+BDwAAAP//xgMUlAAAAAZJREFUAwD+Rklw1XJ++AAAAABJRU5ErkJggg==" width="48px" height="48px"  transform="translate(1837.17, 467.99) scale(1.12759693474287) rotate(0, 24, 24)" /></g><g data-widget-id="3458764658377083587"><g width="95.99px" height="95.99px"  transform="translate(1730.17, 130.47) scale(1) rotate(0, 47.995, 47.995)"><svg
+	width="95.9869859635391"
+	height="95.9869859635391"
+	style="width:95.9869859635391px; height: 95.9869859635391px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="53887266599">
+		<ellipse cx="47.99349298176955" cy="47.99349298176955" rx="47.99349298176955" ry="47.99349298176955"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="47.99349298176955"
+			cy="47.99349298176955"
+			rx="47.99349298176955"
+			ry="47.99349298176955"
+			stroke="#2d9bf0"
+			stroke-width="8"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#2d9bf0"
+			fill-opacity="1"
+			clip-path="url(#53887266599)"
+		/>
+	</g>
+</svg>
+</g><g width="95.99px" height="95.99px"  transform="translate(1730.17, 130.47) rotate(0, 47.995, 47.995)"><g transform="translate(14.05696864153132, 14.05696864153132)"></g></g></g><g data-widget-id="3458764658377083588"><image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC/klEQVR4AeyYDVYrIQyFx7expyuzrkxd2Xg/ZOaEFAYY0KqnPUT+QnJvgkD7b/nlnzuBWyfwnoE/l4F1XR8lr1FU7eWi1mU24WlbSOACcAF8lTxGUbWXZ7WepUeZRmQKASEC0AZcOKsFIqypKtYUhglE8ETX+3rTwEsU2momZQqJYQKC5MG/PXx+nlRdotB+kC6EVO0FEmy3faC3MUQgRt/6fBHgJztg25pj21yRsDq97SECcmajT+QBqOFyiSTslrpNBhR97/i9DPtqJslCxtbVgtLASAY8ARvVkr/p4yMEEjDaGs0EMro+GInto84IgQRwzzbo0T0Cz9wIAdafFR/xJBg9Rk8TyGwDbuJW3/b0WjK2Wu0spwlED/40qZLQ9vFHbWIj2m2uhggocoCx6Q8POoH0W2RhTAJBH31sNAP2ikMEojEfQcDznBbelRpZpQt45tTci1+7T7Q2OgjkTSoLZKAEBMBIbjHPjqHoY3SYAEZEgkdb7rHGtBcI87gbBo/hKQQwhEBENY85MoKouwAYoQ9whP4y4zOVAIBEIjzqVIesqAYwQn8acHwh0wlg9DvlTmCL9vr5awT3ABJ+gdBYrma+dDJt5prroQwIIGDsOc9Zj3BZlYT5sEbrqYdOo1ME5BjgpcupOXpSJBN8L5bJ9RSRbgLyFCIo57MLRLpJdBGI4ImaB8/xiHAH1IT7AEHf24EEAfLjxX4zgQJ4QHDGb8IdUBPuA4Q1udub7dlMoomAwJNaH3neMoCARDFCtQlddNgmI1YVEozbsWy7iYBWcqKo2gvgmxzsKw4akQRbz2qxnXzQ7HxoVwnE6Afl+Gcq+Ghz+1bmM+EDt6nvdZWANBMjMVoanl+ibbslxzKQi/582FcWkx/IhOGQREsGrAcbHTs+s+19DBH4b5Epxd64nZ7SzvhIMHgnvRnw67+q3xyoHgL+hPgq8N5u8j/hJ2sEzoH2Xvr7zX4PCbAfJVuZdnHV+MghzxFVoRz6PSRQc/QT5u8Ebp2FX5+BDwAAAP//xgMUlAAAAAZJREFUAwD+Rklw1XJ++AAAAABJRU5ErkJggg==" width="48px" height="48px"  transform="translate(1751.1, 151.4) scale(1.12759693474287) rotate(0, 24, 24)" /></g><g data-widget-id="3458764658377083589"><g width="95.99px" height="95.99px"  transform="translate(1730.17, 447.06) scale(1) rotate(0, 47.995, 47.995)"><svg
+	width="95.9869859635391"
+	height="95.9869859635391"
+	style="width:95.9869859635391px; height: 95.9869859635391px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="781822049210">
+		<ellipse cx="47.99349298176955" cy="47.99349298176955" rx="47.99349298176955" ry="47.99349298176955"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="47.99349298176955"
+			cy="47.99349298176955"
+			rx="47.99349298176955"
+			ry="47.99349298176955"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#2d9bf0"
+			fill-opacity="1"
+			clip-path="url(#781822049210)"
+		/>
+	</g>
+</svg>
+</g><g width="95.99px" height="95.99px"  transform="translate(1730.17, 447.06) rotate(0, 47.995, 47.995)"><g transform="translate(14.05696864153132, 14.05696864153132)"></g></g></g><g data-widget-id="3458764658377083590"><image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC/klEQVR4AeyYDVYrIQyFx7expyuzrkxd2Xg/ZOaEFAYY0KqnPUT+QnJvgkD7b/nlnzuBWyfwnoE/l4F1XR8lr1FU7eWi1mU24WlbSOACcAF8lTxGUbWXZ7WepUeZRmQKASEC0AZcOKsFIqypKtYUhglE8ETX+3rTwEsU2momZQqJYQKC5MG/PXx+nlRdotB+kC6EVO0FEmy3faC3MUQgRt/6fBHgJztg25pj21yRsDq97SECcmajT+QBqOFyiSTslrpNBhR97/i9DPtqJslCxtbVgtLASAY8ARvVkr/p4yMEEjDaGs0EMro+GInto84IgQRwzzbo0T0Cz9wIAdafFR/xJBg9Rk8TyGwDbuJW3/b0WjK2Wu0spwlED/40qZLQ9vFHbWIj2m2uhggocoCx6Q8POoH0W2RhTAJBH31sNAP2ikMEojEfQcDznBbelRpZpQt45tTci1+7T7Q2OgjkTSoLZKAEBMBIbjHPjqHoY3SYAEZEgkdb7rHGtBcI87gbBo/hKQQwhEBENY85MoKouwAYoQ9whP4y4zOVAIBEIjzqVIesqAYwQn8acHwh0wlg9DvlTmCL9vr5awT3ABJ+gdBYrma+dDJt5prroQwIIGDsOc9Zj3BZlYT5sEbrqYdOo1ME5BjgpcupOXpSJBN8L5bJ9RSRbgLyFCIo57MLRLpJdBGI4ImaB8/xiHAH1IT7AEHf24EEAfLjxX4zgQJ4QHDGb8IdUBPuA4Q1udub7dlMoomAwJNaH3neMoCARDFCtQlddNgmI1YVEozbsWy7iYBWcqKo2gvgmxzsKw4akQRbz2qxnXzQ7HxoVwnE6Afl+Gcq+Ghz+1bmM+EDt6nvdZWANBMjMVoanl+ibbslxzKQi/582FcWkx/IhOGQREsGrAcbHTs+s+19DBH4b5Epxd64nZ7SzvhIMHgnvRnw67+q3xyoHgL+hPgq8N5u8j/hJ2sEzoH2Xvr7zX4PCbAfJVuZdnHV+MghzxFVoRz6PSRQc/QT5u8Ebp2FX5+BDwAAAP//xgMUlAAAAAZJREFUAwD+Rklw1XJ++AAAAABJRU5ErkJggg==" width="48px" height="48px"  transform="translate(1751.1, 467.99) scale(1.12759693474287) rotate(0, 24, 24)" /></g><g data-widget-id="3458764658377083591"><g width="95.99px" height="95.99px"  transform="translate(1730.17, 601.74) scale(1) rotate(0, 47.995, 47.995)"><svg
+	width="95.9869859635391"
+	height="95.9869859635391"
+	style="width:95.9869859635391px; height: 95.9869859635391px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="340691885427">
+		<ellipse cx="47.99349298176955" cy="47.99349298176955" rx="47.99349298176955" ry="47.99349298176955"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="47.99349298176955"
+			cy="47.99349298176955"
+			rx="47.99349298176955"
+			ry="47.99349298176955"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#2d9bf0"
+			fill-opacity="1"
+			clip-path="url(#340691885427)"
+		/>
+	</g>
+</svg>
+</g><g width="95.99px" height="95.99px"  transform="translate(1730.17, 601.74) rotate(0, 47.995, 47.995)"><g transform="translate(14.05696864153132, 14.05696864153132)"></g></g></g><g data-widget-id="3458764658377083592"><image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC/klEQVR4AeyYDVYrIQyFx7expyuzrkxd2Xg/ZOaEFAYY0KqnPUT+QnJvgkD7b/nlnzuBWyfwnoE/l4F1XR8lr1FU7eWi1mU24WlbSOACcAF8lTxGUbWXZ7WepUeZRmQKASEC0AZcOKsFIqypKtYUhglE8ETX+3rTwEsU2momZQqJYQKC5MG/PXx+nlRdotB+kC6EVO0FEmy3faC3MUQgRt/6fBHgJztg25pj21yRsDq97SECcmajT+QBqOFyiSTslrpNBhR97/i9DPtqJslCxtbVgtLASAY8ARvVkr/p4yMEEjDaGs0EMro+GInto84IgQRwzzbo0T0Cz9wIAdafFR/xJBg9Rk8TyGwDbuJW3/b0WjK2Wu0spwlED/40qZLQ9vFHbWIj2m2uhggocoCx6Q8POoH0W2RhTAJBH31sNAP2ikMEojEfQcDznBbelRpZpQt45tTci1+7T7Q2OgjkTSoLZKAEBMBIbjHPjqHoY3SYAEZEgkdb7rHGtBcI87gbBo/hKQQwhEBENY85MoKouwAYoQ9whP4y4zOVAIBEIjzqVIesqAYwQn8acHwh0wlg9DvlTmCL9vr5awT3ABJ+gdBYrma+dDJt5prroQwIIGDsOc9Zj3BZlYT5sEbrqYdOo1ME5BjgpcupOXpSJBN8L5bJ9RSRbgLyFCIo57MLRLpJdBGI4ImaB8/xiHAH1IT7AEHf24EEAfLjxX4zgQJ4QHDGb8IdUBPuA4Q1udub7dlMoomAwJNaH3neMoCARDFCtQlddNgmI1YVEozbsWy7iYBWcqKo2gvgmxzsKw4akQRbz2qxnXzQ7HxoVwnE6Afl+Gcq+Ghz+1bmM+EDt6nvdZWANBMjMVoanl+ibbslxzKQi/582FcWkx/IhOGQREsGrAcbHTs+s+19DBH4b5Epxd64nZ7SzvhIMHgnvRnw67+q3xyoHgL+hPgq8N5u8j/hJ2sEzoH2Xvr7zX4PCbAfJVuZdnHV+MghzxFVoRz6PSRQc/QT5u8Ebp2FX5+BDwAAAP//xgMUlAAAAAZJREFUAwD+Rklw1XJ++AAAAABJRU5ErkJggg==" width="48px" height="48px"  transform="translate(1751.1, 622.67) scale(1.12759693474287) rotate(0, 24, 24)" /></g><g data-widget-id="3458764658377083593"><g width="107.47px" height="16px"  transform="translate(924.41, 601.96) scale(1.71428571428571) rotate(0, 53.735, 8)"><svg
+	width="107.47"
+	height="16"
+	shape-border-width="shape-background"
+	style="width:107.47px; height: 16px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="132468081700">
+		<rect
+			x="0"
+			y="0"
+			width="107.47"
+			height="16"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="0"
+			fill="transparent"
+			fill-opacity="0"
+			x="0"
+			y="0"
+			width="107.47"
+			height="16"
+			rx="0"
+			ry="0"
+			clip-path="url(#132468081700)"
+		></rect>
+	</g>
+</svg>
+</g><g width="184.23428571428525px" height="27.42857142857136px"  transform="translate(924.41, 601.96) rotate(0, 92.11714285714262, 13.71428571428568)"><g transform="translate(0, 0)"><text xml:space="preserve" x="12.144415600823406" y="23.99999999999994" width="159.9374999999996" textLength="159.9374999999996" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"Georgia", Georgia, Times, "Times New Roman", serif, Noto Sans Hebrew, Noto Serif, Noto Serif JP, Noto Serif KR' font-size="23.99999999999994" 
+				fill="#5ccbee" direction="ltr" >(size may vary)</text></g></g></g><g data-widget-id="3458764658377083594"><g width="92.24px" height="20px"  transform="translate(441.18, 608.97) scale(1.71428571428571) rotate(0, 46.12, 10)"><svg
+	width="92.24"
+	height="20"
+	shape-border-width="shape-background"
+	style="width:92.24px; height: 20px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="972833630225">
+		<rect
+			x="0"
+			y="0"
+			width="92.24"
+			height="20"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="0"
+			fill="transparent"
+			fill-opacity="0"
+			x="0"
+			y="0"
+			width="92.24"
+			height="20"
+			rx="0"
+			ry="0"
+			clip-path="url(#972833630225)"
+		></rect>
+	</g>
+</svg>
+</g><g width="158.12571428571388px" height="34.2857142857142px"  transform="translate(441.18, 608.97) rotate(0, 79.06285714285694, 17.1428571428571)"><g transform="translate(0, 0)"><text xml:space="preserve" x="14.145020095315777" y="23.99999999999994" width="129.8320312499997" textLength="129.8320312499997" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="23.99999999999994" 
+				fill="#2d9bf0" direction="ltr" font-weight="bold">PLATFORM</text></g></g></g><g data-widget-id="3458764658377083595"><g width="95.99px" height="95.99px"  transform="translate(1339.84, 372.01) scale(1) rotate(0, 47.995, 47.995)"><svg
+	width="95.9869859635391"
+	height="95.9869859635391"
+	style="width:95.9869859635391px; height: 95.9869859635391px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1199802924639">
+		<ellipse cx="47.99349298176955" cy="47.99349298176955" rx="47.99349298176955" ry="47.99349298176955"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="47.99349298176955"
+			cy="47.99349298176955"
+			rx="47.99349298176955"
+			ry="47.99349298176955"
+			stroke="#2d9bf0"
+			stroke-width="8"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#ffffff"
+			fill-opacity="1"
+			clip-path="url(#1199802924639)"
+		/>
+	</g>
+</svg>
+</g><g width="95.99px" height="95.99px"  transform="translate(1339.84, 372.01) rotate(0, 47.995, 47.995)"><g transform="translate(14.05696864153132, 14.05696864153132)"></g></g></g><g data-widget-id="3458764658377083596"><image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADPUlEQVR4AeyYi5XTMBBFbSpg+wBaICkmdexuHSkmoQWgj6UCwruO5MgTRdaPcJaTPZ7oN5p5bySPtP4wvPO/B4F/vYCPFfjvVuDT/m3zef/r4OSkcpIv+7cXpDfhblvIAx+H8SCQGycqzs9pGJ8RCPUk0oUAgALgZ8SJX4gwJ6GSPdRMACAAing8jsPpFdHYUbJ4mMPcRWdFo5kAQIzf44/dx1Gy/b57ekGoS0ZHZlZnLltv7qioNBGwEQSggG5v4YAMOuG4tt5z2C6tNxEggoHDIwCDdrTqdMItxQsf1c3prCZgl16R/ZbjEJ2T3g1KL9aW788pqwlo4iJyv4chjOpwrz/h6OPq5+4pm4DVFYhFMEoQaW6J+kXXRrxkG5ToXjzGa9UE4ubyeuV0EXEbjDwrZy3ZOldKf+02UDrkCpFlxmSvwdrKMuKUqgkwX5nnldKL7jmrJGJnh59fUzYRiOV0SMT2OH2M2eg7GzXYpzlNBLBgc7r6NmwngeUaPV+r6WNMMj92BeeBgkoBgbhV9m8CCC8rcjWZOa3Rx2gzAYwARHegq8saYxE5atWmi15krLirCwHvFSKAI7qI6+eAm67WjInollVzY81FVwKgARxEEIGdrtUqp4gzhk5P6U6gJ7gcWw8CPkrkeS8cVrfE6/h5rWXTCgBG+Z5cfyLPe+GwuiVeR/OmcwKiLSSqCDjgE2g5j+Z59ec8G4hCppZIMQE5OxDFHHQlOhCpIVFEAPACFYv4lOvJ82vC+YDIDnNUXB5IOB+XzpVaNgFn2IKfTlXyPEKeXxPOBwR9Sez0nj5NruCeh7MIuKVdgCeKAtB8qkIGWzOic2XjfJ5bid8sAixtaAOHOA77WurYYuuFNvBJsgj7YvVVAjYSvcF7UGw9bPs2pZLF6kevVQJEAmNeiJav9y6d7fDlXmzbmL8kgVj0Y0Z69mkVFh/I1rZRkoAF1vL1wNq61bY+BDC5Chq/ZWoYtH2+hqPs07D9N+rWh8VgfSYJWOU7tsP3IOk2m4D25uITStJqx0H5XbwT1nSSgHJzHWjrpbBd4jdJgP2o05Z/C0eX4gqh1KmX+E0SqHN/31kPAveN97W3d78CfwAAAP//3NTm0QAAAAZJREFUAwBauqZwckOVPQAAAABJRU5ErkJggg==" width="48px" height="48px"  transform="translate(1360.77, 392.94) scale(1.12759693474287) rotate(0, 24, 24)" /></g><g data-widget-id="3458764658377083597"><g width="336.2px" height="241.54px"  transform="translate(1414.9, 178.46) scale(1) rotate(0, 168.1, 120.77)"><path  stroke-dasharray="12,12" stroke-linecap="butt" 
+			stroke="#5ccbee" stroke-width="3" fill="transparent"
+			d="M 0 241.53979411397813 L 336.20000426373616 0" /></g></g><g data-widget-id="3458764658377083598"><g width="95.99px" height="95.99px"  transform="translate(1339.84, 523.31) scale(1) rotate(0, 47.995, 47.995)"><svg
+	width="95.9869859635391"
+	height="95.9869859635391"
+	style="width:95.9869859635391px; height: 95.9869859635391px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="542740012922">
+		<ellipse cx="47.99349298176955" cy="47.99349298176955" rx="47.99349298176955" ry="47.99349298176955"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="47.99349298176955"
+			cy="47.99349298176955"
+			rx="47.99349298176955"
+			ry="47.99349298176955"
+			stroke="#2d9bf0"
+			stroke-width="8"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#ffffff"
+			fill-opacity="1"
+			clip-path="url(#542740012922)"
+		/>
+	</g>
+</svg>
+</g><g width="95.99px" height="95.99px"  transform="translate(1339.84, 523.31) rotate(0, 47.995, 47.995)"><g transform="translate(14.05696864153132, 14.05696864153132)"></g></g></g><g data-widget-id="3458764658377083599"><image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADPUlEQVR4AeyYi5XTMBBFbSpg+wBaICkmdexuHSkmoQWgj6UCwruO5MgTRdaPcJaTPZ7oN5p5bySPtP4wvPO/B4F/vYCPFfjvVuDT/m3zef/r4OSkcpIv+7cXpDfhblvIAx+H8SCQGycqzs9pGJ8RCPUk0oUAgALgZ8SJX4gwJ6GSPdRMACAAing8jsPpFdHYUbJ4mMPcRWdFo5kAQIzf44/dx1Gy/b57ekGoS0ZHZlZnLltv7qioNBGwEQSggG5v4YAMOuG4tt5z2C6tNxEggoHDIwCDdrTqdMItxQsf1c3prCZgl16R/ZbjEJ2T3g1KL9aW788pqwlo4iJyv4chjOpwrz/h6OPq5+4pm4DVFYhFMEoQaW6J+kXXRrxkG5ToXjzGa9UE4ubyeuV0EXEbjDwrZy3ZOldKf+02UDrkCpFlxmSvwdrKMuKUqgkwX5nnldKL7jmrJGJnh59fUzYRiOV0SMT2OH2M2eg7GzXYpzlNBLBgc7r6NmwngeUaPV+r6WNMMj92BeeBgkoBgbhV9m8CCC8rcjWZOa3Rx2gzAYwARHegq8saYxE5atWmi15krLirCwHvFSKAI7qI6+eAm67WjInollVzY81FVwKgARxEEIGdrtUqp4gzhk5P6U6gJ7gcWw8CPkrkeS8cVrfE6/h5rWXTCgBG+Z5cfyLPe+GwuiVeR/OmcwKiLSSqCDjgE2g5j+Z59ec8G4hCppZIMQE5OxDFHHQlOhCpIVFEAPACFYv4lOvJ82vC+YDIDnNUXB5IOB+XzpVaNgFn2IKfTlXyPEKeXxPOBwR9Sez0nj5NruCeh7MIuKVdgCeKAtB8qkIGWzOic2XjfJ5bid8sAixtaAOHOA77WurYYuuFNvBJsgj7YvVVAjYSvcF7UGw9bPs2pZLF6kevVQJEAmNeiJav9y6d7fDlXmzbmL8kgVj0Y0Z69mkVFh/I1rZRkoAF1vL1wNq61bY+BDC5Chq/ZWoYtH2+hqPs07D9N+rWh8VgfSYJWOU7tsP3IOk2m4D25uITStJqx0H5XbwT1nSSgHJzHWjrpbBd4jdJgP2o05Z/C0eX4gqh1KmX+E0SqHN/31kPAveN97W3d78CfwAAAP//3NTm0QAAAAZJREFUAwBauqZwckOVPQAAAABJRU5ErkJggg==" width="48px" height="48px"  transform="translate(1360.77, 544.24) scale(1.12759693474287) rotate(0, 24, 24)" /></g><g data-widget-id="3458764658377083601"><g width="389.03px" height="79.59px"  transform="translate(1386.69, 575.25) scale(1) rotate(0, 194.515, 39.795)"><path  stroke-dasharray="12,12" stroke-linecap="butt" 
+			stroke="#5ccbee" stroke-width="3" fill="transparent"
+			d="M 389.028286022801 79.58712827659838 L 0 0" /></g></g><g data-widget-id="3458764658377083600"><g width="386.1px" height="73.44px"  transform="translate(1388.59, 498.37) scale(1) rotate(0, 193.05, 36.72)"><path  stroke-dasharray="12,12" stroke-linecap="butt" 
+			stroke="#5ccbee" stroke-width="3" fill="transparent"
+			d="M 0 73.44494449392732 L 386.09556446181085 0" /></g></g><g data-widget-id="3458764658377083602"><g width="95.99px" height="95.99px"  transform="translate(1339.26, 684) scale(1) rotate(0, 47.995, 47.995)"><svg
+	width="95.9869859635391"
+	height="95.9869859635391"
+	style="width:95.9869859635391px; height: 95.9869859635391px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1434883189433">
+		<ellipse cx="47.99349298176955" cy="47.99349298176955" rx="47.99349298176955" ry="47.99349298176955"></ellipse>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<ellipse
+			class="shape-element shape-element-ellipse"
+			cx="47.99349298176955"
+			cy="47.99349298176955"
+			rx="47.99349298176955"
+			ry="47.99349298176955"
+			stroke="#2d9bf0"
+			stroke-width="8"
+			stroke-dasharray=""
+			stroke-opacity="1"
+			fill="#ffffff"
+			fill-opacity="1"
+			clip-path="url(#1434883189433)"
+		/>
+	</g>
+</svg>
+</g><g width="95.99px" height="95.99px"  transform="translate(1339.26, 684) rotate(0, 47.995, 47.995)"><g transform="translate(14.05696864153132, 14.05696864153132)"></g></g></g><g data-widget-id="3458764658377083603"><image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADPUlEQVR4AeyYi5XTMBBFbSpg+wBaICkmdexuHSkmoQWgj6UCwruO5MgTRdaPcJaTPZ7oN5p5bySPtP4wvPO/B4F/vYCPFfjvVuDT/m3zef/r4OSkcpIv+7cXpDfhblvIAx+H8SCQGycqzs9pGJ8RCPUk0oUAgALgZ8SJX4gwJ6GSPdRMACAAing8jsPpFdHYUbJ4mMPcRWdFo5kAQIzf44/dx1Gy/b57ekGoS0ZHZlZnLltv7qioNBGwEQSggG5v4YAMOuG4tt5z2C6tNxEggoHDIwCDdrTqdMItxQsf1c3prCZgl16R/ZbjEJ2T3g1KL9aW788pqwlo4iJyv4chjOpwrz/h6OPq5+4pm4DVFYhFMEoQaW6J+kXXRrxkG5ToXjzGa9UE4ubyeuV0EXEbjDwrZy3ZOldKf+02UDrkCpFlxmSvwdrKMuKUqgkwX5nnldKL7jmrJGJnh59fUzYRiOV0SMT2OH2M2eg7GzXYpzlNBLBgc7r6NmwngeUaPV+r6WNMMj92BeeBgkoBgbhV9m8CCC8rcjWZOa3Rx2gzAYwARHegq8saYxE5atWmi15krLirCwHvFSKAI7qI6+eAm67WjInollVzY81FVwKgARxEEIGdrtUqp4gzhk5P6U6gJ7gcWw8CPkrkeS8cVrfE6/h5rWXTCgBG+Z5cfyLPe+GwuiVeR/OmcwKiLSSqCDjgE2g5j+Z59ec8G4hCppZIMQE5OxDFHHQlOhCpIVFEAPACFYv4lOvJ82vC+YDIDnNUXB5IOB+XzpVaNgFn2IKfTlXyPEKeXxPOBwR9Sez0nj5NruCeh7MIuKVdgCeKAtB8qkIGWzOic2XjfJ5bid8sAixtaAOHOA77WurYYuuFNvBJsgj7YvVVAjYSvcF7UGw9bPs2pZLF6kevVQJEAmNeiJav9y6d7fDlXmzbmL8kgVj0Y0Z69mkVFh/I1rZRkoAF1vL1wNq61bY+BDC5Chq/ZWoYtH2+hqPs07D9N+rWh8VgfSYJWOU7tsP3IOk2m4D25uITStJqx0H5XbwT1nSSgHJzHWjrpbBd4jdJgP2o05Z/C0eX4gqh1KmX+E0SqHN/31kPAveN97W3d78CfwAAAP//3NTm0QAAAAZJREFUAwBauqZwckOVPQAAAABJRU5ErkJggg==" width="48px" height="48px"  transform="translate(1360.2, 704.93) scale(1.12759693474287) rotate(0, 24, 24)" /></g><g data-widget-id="3458764658377083606"><g width="1.59px" height="311.36px"  transform="translate(1386.64, 419.91) scale(1) rotate(0, 0.795, 155.68)"><path stroke-linecap="butt" 
+			stroke="#5ccbee" stroke-width="5" fill="transparent"
+			d="M 1.5929521277284948 0 L 0 311.35773743306345" /></g></g><g data-widget-id="3458764658377083605"><g width="384.23px" height="327.69px"  transform="translate(1388.87, 733.42) scale(1) rotate(0, 192.115, 163.845)"><path  stroke-dasharray="12,12" stroke-linecap="butt" 
+			stroke="#5ccbee" stroke-width="3" fill="transparent"
+			d="M 0 0 L 384.2325581590381 327.6933408991499" /></g></g><g data-widget-id="3458764658377083604"><g width="384.25px" height="176.87px"  transform="translate(1387.42, 733.01) scale(1) rotate(0, 192.125, 88.435)"><path  stroke-dasharray="12,12" stroke-linecap="butt" 
+			stroke="#5ccbee" stroke-width="3" fill="transparent"
+			d="M 0 0 L 384.2476658073044 176.867110907584" /></g></g><g data-widget-id="3458764658377083607"><g width="24px" height="20px"  transform="translate(1292.65, 407.14) scale(1.28571428571429) rotate(0, 12, 10)"><svg
+	width="24"
+	height="20"
+	shape-border-width="shape-background"
+	style="width:24px; height: 20px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="106331252674">
+		<rect
+			x="0"
+			y="0"
+			width="24"
+			height="20"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="0"
+			fill="transparent"
+			fill-opacity="0"
+			x="0"
+			y="0"
+			width="24"
+			height="20"
+			rx="0"
+			ry="0"
+			clip-path="url(#106331252674)"
+		></rect>
+	</g>
+</svg>
+</g><g width="30.85714285714296px" height="25.7142857142858px"  transform="translate(1292.65, 407.14) rotate(0, 15.42857142857148, 12.8571428571429)"><g transform="translate(0, 0)"><text xml:space="preserve" x="3.7692522321428696" y="18.00000000000006" width="27.087890625000092" textLength="27.087890625000092" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="18.00000000000006" 
+				fill="#ffffff" direction="ltr" >PM</text></g></g></g><g data-widget-id="3458764658377083608"><g width="54px" height="20px"  transform="translate(1254.08, 558.45) scale(1.28571428571429) rotate(0, 27, 10)"><svg
+	width="54"
+	height="20"
+	shape-border-width="shape-background"
+	style="width:54px; height: 20px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="374681965515">
+		<rect
+			x="0"
+			y="0"
+			width="54"
+			height="20"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="0"
+			fill="transparent"
+			fill-opacity="0"
+			x="0"
+			y="0"
+			width="54"
+			height="20"
+			rx="0"
+			ry="0"
+			clip-path="url(#374681965515)"
+		></rect>
+	</g>
+</svg>
+</g><g width="69.42857142857166px" height="25.7142857142858px"  transform="translate(1254.08, 558.45) rotate(0, 34.71428571428583, 12.8571428571429)"><g transform="translate(0, 0)"><text xml:space="preserve" x="0.3886021205357156" y="18.00000000000006" width="68.65136718750023" textLength="68.65136718750023" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="18.00000000000006" 
+				fill="#ffffff" direction="ltr" >UX Lead</text></g></g></g><g data-widget-id="3458764658377083609"><g width="67px" height="20px"  transform="translate(1237.36, 719.14) scale(1.28571428571429) rotate(0, 33.5, 10)"><svg
+	width="67"
+	height="20"
+	shape-border-width="shape-background"
+	style="width:67px; height: 20px;"
+	class="shape-background"
+	preserveAspectRatio="none"
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<clipPath id="1707113292297">
+		<rect
+			x="0"
+			y="0"
+			width="67"
+			height="20"
+			rx="0"
+			ry="0"
+		></rect>
+	</clipPath>
+	<g id="Page-1" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">
+		<rect
+			class="shape-element shape-element-rect"
+			stroke="transparent"
+			stroke-width="0"
+			stroke-dasharray=""
+			stroke-opacity="0"
+			fill="transparent"
+			fill-opacity="0"
+			x="0"
+			y="0"
+			width="67"
+			height="20"
+			rx="0"
+			ry="0"
+			clip-path="url(#1707113292297)"
+		></rect>
+	</g>
+</svg>
+</g><g width="86.14285714285744px" height="25.7142857142858px"  transform="translate(1237.36, 719.14) rotate(0, 43.07142857142872, 12.8571428571429)"><g transform="translate(0, 0)"><text xml:space="preserve" x="0.6554129464285736" y="18.00000000000006" width="84.83203125000028" textLength="84.83203125000028" lengthAdjust="spacingAndGlyphs" letter-spacing="0" font-family='"OpenSans", Arial, sans-serif, Noto Sans Hebrew, Noto Sans, Noto Sans JP, Noto Sans KR' font-size="18.00000000000006" 
+				fill="#ffffff" direction="ltr" >Tech Lead</text></g></g></g></svg>

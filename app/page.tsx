@@ -143,7 +143,7 @@ export default function Page() {
               Pia Anderson
             </h1>
             <p className="mb-8 max-w-[30em] text-[18.5px] leading-[1.55] text-pa-body">
-              I lead design teams that deliver in code, not just Figma files. Over 20 years I have built UX practices inside resistant organizations, designed complex operational software, and now I am shaping how enterprise teams work with AI.
+              As a child I was always told I asked too many questions. I've turned that nagging curiosity into a career making complex software feel simple for the people who depend on it.
             </p>
             <RotatingQuotes />
             <div className="flex flex-wrap gap-[14px]">

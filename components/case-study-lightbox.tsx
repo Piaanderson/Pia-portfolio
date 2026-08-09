@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type CSSProperties, type KeyboardEvent, type MouseEvent } from "react";
 import Image from "next/image";
 import {
   Dialog,
@@ -16,6 +16,32 @@ type CaseStudyLightboxProps = {
   caption?: string;
 };
 
+function CaseStudyImage({
+  src,
+  alt,
+  className,
+  style,
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+  style?: CSSProperties;
+}) {
+  if (src.endsWith(".svg")) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={src}
+        alt={alt}
+        className={cn("absolute inset-0 h-full w-full", className)}
+        style={style}
+      />
+    );
+  }
+
+  return <Image src={src} alt={alt} fill className={className} style={style} />;
+}
+
 export function CaseStudyLightbox({
   src,
   alt,
@@ -23,8 +49,9 @@ export function CaseStudyLightbox({
 }: CaseStudyLightboxProps) {
   const [isZoomed, setIsZoomed] = useState(false);
   const [origin, setOrigin] = useState({ x: 50, y: 50 });
+  const isSvg = src.endsWith(".svg");
 
-  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
     if (!isZoomed) return;
     const bounds = event.currentTarget.getBoundingClientRect();
     const x = ((event.clientX - bounds.left) / bounds.width) * 100;
@@ -32,7 +59,7 @@ export function CaseStudyLightbox({
     setOrigin({ x, y });
   };
 
-  function handleZoomKeyDown(e: React.KeyboardEvent) {
+  function handleZoomKeyDown(e: KeyboardEvent) {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       setIsZoomed((v) => !v);
@@ -45,10 +72,17 @@ export function CaseStudyLightbox({
         <DialogTrigger asChild>
           <button
             type="button"
-            className="relative block w-full aspect-[16/9] overflow-hidden rounded-xl cursor-zoom-in text-left"
+            className={cn(
+              "relative block w-full overflow-hidden rounded-xl cursor-zoom-in text-left",
+              isSvg ? "aspect-[4/3] bg-muted/20 p-6" : "aspect-[16/9]"
+            )}
             aria-label={`View larger image: ${alt}`}
           >
-            <Image src={src} alt={alt} fill className="object-cover" />
+            <CaseStudyImage
+              src={src}
+              alt={alt}
+              className={isSvg ? "relative h-full w-full object-contain" : "object-cover"}
+            />
             <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity hover:opacity-100 focus-visible:opacity-100" />
           </button>
         </DialogTrigger>
@@ -72,16 +106,14 @@ export function CaseStudyLightbox({
             onKeyDown={handleZoomKeyDown}
             className="relative h-full w-full"
           >
-            <Image
+            <CaseStudyImage
               src={src}
               alt={alt}
-              fill
               className={cn(
                 "object-contain transition-transform duration-200",
                 isZoomed ? "scale-150 cursor-zoom-out" : "scale-100 cursor-zoom-in"
               )}
               style={{ transformOrigin: `${origin.x}% ${origin.y}%` }}
-              onContextMenu={(event) => event.preventDefault()}
             />
           </div>
           <div className="pointer-events-none absolute inset-0 bg-black/5" aria-hidden="true" />

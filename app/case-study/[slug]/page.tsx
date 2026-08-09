@@ -76,6 +76,25 @@ function ImageBlock({ image }: { image: ImagePlacement }) {
   );
 }
 
+function ImageBlocks({
+  image,
+  images,
+}: {
+  image?: ImagePlacement;
+  images?: ImagePlacement[];
+}) {
+  if (!image && !images?.length) return null;
+
+  return (
+    <>
+      {image && <ImageBlock image={image} />}
+      {images?.map((item, index) => (
+        <ImageBlock key={`${item.src ?? item.alt}-${index}`} image={item} />
+      ))}
+    </>
+  );
+}
+
 function QuoteCallout({ quote }: { quote: QuoteBlock }) {
   if (quote.placeholder || /\bTBD\b/i.test(quote.quote)) {
     return null;
@@ -286,7 +305,7 @@ export default async function CaseStudyPage({
                     </p>
                   ))}
 
-                  {decision.image && <ImageBlock image={decision.image} />}
+                  <ImageBlocks image={decision.image} images={decision.images} />
 
                   {decision.reflectionCallout && (
                     <aside className="mt-4 rounded-xl border-l-4 border-pink/40 bg-pink/5 p-6 md:p-8">
@@ -326,7 +345,12 @@ export default async function CaseStudyPage({
                           <p className="text-sm font-bold uppercase tracking-widest text-pink">
                             {metric.label}
                           </p>
-                          <p className="mt-3 text-lg leading-relaxed text-foreground/90">
+                          {metric.highlight && (
+                            <p className="mt-4 font-serif text-3xl font-bold text-foreground md:text-4xl">
+                              {metric.highlight}
+                            </p>
+                          )}
+                          <p className={`${metric.highlight ? "mt-2" : "mt-3"} text-lg leading-relaxed text-foreground/90`}>
                             {metric.value}
                           </p>
                           {metric.source && (
