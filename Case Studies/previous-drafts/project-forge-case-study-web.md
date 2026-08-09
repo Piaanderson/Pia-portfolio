@@ -1,16 +1,16 @@
 # Project Forge (Working Title)
 
-**Status: In Progress – Currently in Pilot**
+**Status: In Progress – Entering Pilot July 2026**
 
 ---
 
 ## Hero Section
 
-**Headline:** PwC's engagement tools could tell teams what happened yesterday but nothing about tomorrow. I designed an AI experience layer that unifies budgeting, staffing, and monitoring into a single predictive platform.
+**Headline:** PwC's budget and staffing tools were so painful that teams exported to Excel, edited there, and imported back. I designed the AI experience layer that makes that workaround unnecessary.
 
 **Subhead:** I led the UX vision and strategy for Project Forge, an AI-first platform that unifies budget creation, staffing, and engagement monitoring across three legacy systems. I also delivered front-end code directly into the codebase alongside the engineering pod, opening PRs, responding to code reviews, and merging my own work.
 
-> **Status callout:** Project Forge is currently in pilot. This case study covers the strategic and design decisions made to date. Outcomes will be updated as pilot data becomes available.
+> **Status callout:** Project Forge enters pilot in July 2026. This case study covers the strategic and design decisions made to date. Outcomes will be updated as pilot data becomes available.
 
 [Hero image: Project Forge interface showing the budget builder or comparison view]
 
@@ -38,7 +38,7 @@ I asked to lead the design personally. For the past year, I have been upskilling
 
 Within ten days, the proof of concept escalated from a pet project to a Priority One initiative for Advisory. It was announced on an All Hands call before our second week demo. The stakeholders became senior partners. The scope expanded to cross-line-of-service collaboration. Sarah Halverson, the engineering pod lead, kept the team running while I stepped into the lead strategist and stakeholder alignment role on top of the design and front-end development work. I went from leading a small proof of concept to serving as lead designer, lead strategist, front-end developer, and stakeholder alignment lead, all while continuing to run the 80-person design capability.
 
-I brought in Mitali Kamat, Sr UX Researcher, from my team to support generative research and stakeholder interviews once the project's scope outgrew what I could cover alone. Before and during the pilot, Mitali and I created the proof of concept that earned buy-in, then I evolved much of the UI to span the happy path across four main experience flows: pursuit, budget, staffing, and monitoring. Now that the pilot is underway and the engineering pod is working to catch up to the full UI and agent functionality, I am transitioning the project to a Design Manager who will steer the direction through Beta and launch.
+I brought in Mitali Kamat from my team to support generative research and stakeholder interviews once the project's scope outgrew what I could cover alone. I am now preparing the handoff to a senior designer who will carry the product through the Agile build alongside a newly added front-end developer. The designer will continue to design at the prompt and deliver in code.
 
 > **Context callout:** Directors go deep when the work calls for their specific specialty. Mine is seeing a complex ecosystem, understanding how its pieces connect, and simplifying it into something centralized and usable. That is what this project needed, and the hands-on investment is what made the strategic vision credible to the people building it.
 
@@ -106,7 +106,7 @@ This experience was not incidental to the project. It was the reason I asked to 
 
 ## What Comes Next
 
-Project Forge is in pilot now. The engineering pod is building out the full UI and agent functionality that I designed, and I have transitioned the day-to-day design leadership to a Design Manager who will take what we have learned and steer the direction through Beta and launch. I continue to set the design vision and provide director-level oversight.
+Project Forge enters pilot in July 2026 with a partner team. I am handing the day-to-day design to a senior designer who will work with the newly added front-end developer and the engineering pod. I will continue to set the design vision and direction, lead stakeholder alignment, and provide director-level oversight.
 
 The pilot will generate the usage data and user feedback that this case study currently lacks. I will update this page with outcomes as they become available.
 

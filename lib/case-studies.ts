@@ -92,7 +92,7 @@ export const caseStudies: CaseStudyData[] = [
   /* ================================================================== */
   {
     slug: "project-forge",
-    title: "Project Forge",
+    title: "Concept to Code",
     subtitle: "AI-First Internal Platform · In Progress",
     description:
       "Leading UX vision and front-end delivery for an AI experience layer that unifies budget creation, staffing, and engagement monitoring across three legacy systems.",
@@ -102,15 +102,15 @@ export const caseStudies: CaseStudyData[] = [
 
     hero: {
       headline:
-        "PwC's budget and staffing tools were so painful that teams exported to Excel, edited there, and imported back. I designed the AI experience layer that makes that workaround unnecessary.",
+        "PwC's engagement tools could tell teams what happened yesterday but nothing about tomorrow. I designed an AI experience layer that unifies budgeting, staffing, and monitoring into a single predictive platform.",
       subhead:
         "I led the UX vision and strategy for Project Forge, an AI-first platform that unifies budget creation, staffing, and engagement monitoring across three legacy systems. I also delivered front-end code directly into the codebase alongside the engineering pod, opening PRs, responding to code reviews, and merging my own work.",
       metricCallout: {
-        text: "Project Forge enters pilot in July 2026. This case study covers the strategic and design decisions made to date. Outcomes will be updated as pilot data becomes available.",
+        text: "Project Forge entered pilot in July 2026. This case study covers the strategic and design decisions made to date. Outcomes will be updated as pilot data becomes available.",
       },
       image: {
-        src: "/case-studies/project-forge/portfolio-overview-laptop.png",
-        alt: "Project Forge portfolio overview dashboard on a laptop, showing engagement health metrics, AI chat assistant, and attention queue",
+        src: "/case-studies/project-forge/budget-comparison-laptop.png",
+        alt: "Forge budget comparison on a laptop showing traditional versus AI-augmented delivery options side by side",
       },
       status: "In Progress – Entering Pilot July 2026",
     },
@@ -174,10 +174,10 @@ export const caseStudies: CaseStudyData[] = [
           "It took three rounds of simplification to get the budget screen itself lean enough to support comparison. From there, I focused on the minimum information required to compare meaningfully and the visual hierarchy that would allow teams to scan two, three, or five options without losing the ability to dive into any single one. The flow I designed lets users compare at the summary level, select any draft to inspect in detail, make changes to any draft and see the comparison update immediately, then choose one to move forward. Only the chosen budget proceeds to Deployment and approvals. The version confusion that plagued the legacy workflow is eliminated by design rather than by policy.",
         ],
         image: {
-          src: "/case-studies/project-forge/budget-comparison-laptop.png",
-          alt: "Forge budget comparison on a laptop showing traditional versus AI-augmented delivery options side by side",
+          src: "/case-studies/project-forge/portfolio-overview-laptop.png",
+          alt: "Project Forge portfolio overview dashboard on a laptop, showing engagement health metrics, AI chat assistant, and attention queue",
           caption:
-            "Side-by-side budget comparison — multiple draft options within a single project, with Flex Felix summarizing trade-offs.",
+            "Portfolio overview — engagement health, AI chat assistant, and attention queue in a single unified view.",
         },
         images: [
           {
@@ -922,7 +922,7 @@ const homepageCardCopy: Record<
   Pick<HomepageWorkCard, "title" | "desc" | "role">
 > = {
   "project-forge": {
-    title: "AI and Experience Layer",
+    title: "Concept to Code",
     desc: "I designed at the prompt and shipped code alongside engineers to build an AI experience layer across three disconnected internal systems. Every lesson feeds back into the AI-first delivery model I am building for 80 designers.",
     role: "Lead Designer, Strategist & Front-End Developer",
   },
