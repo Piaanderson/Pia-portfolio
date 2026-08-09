@@ -333,7 +333,9 @@ export const caseStudies: CaseStudyData[] = [
           "That was the right level of abstraction for the people building the tools. But it was wrong for the consultants and business users needing to create agent workflows at scale.",
           "My job was to understand what the technical teams had built well enough to translate it into an interface that a non-technical user could operate confidently.",
           "The drag-and-drop canvas builder became the centerpiece of that translation. Users could assemble agents into workflows visually, connect them to enterprise systems, and see the data flow without writing a line of code.",
-          "The harder part was defending those design decisions to the technical stakeholders. They had built the original solutions and felt, reasonably, that simplifying the interface meant losing capability. Every abstraction I introduced had to prove that it preserved the underlying power while removing the jargon that would stop a business user from getting started. Some of those conversations were tense. The architects needed to see that the canvas builder was not dumbing down their work; it was making their work usable by the people who would actually generate revenue with it.",
+          "The harder part was defending those design decisions to the original technical stakeholders. They felt, reasonably, that simplifying the interface meant losing capability.",
+          "Every abstraction I introduced to remove the jargon that would stop a business user from getting started had to prove it preserved the underlying power.",
+          "Some of those conversations were tense. The architects grew to trust that the canvas builder wasn't dumbing down their work; it was making their work usable by a different persona with a different mental model about agents.",
         ],
         image: {
           src: "/case-studies/agent-os/canvas-builder-prototype.png",
@@ -357,8 +359,8 @@ export const caseStudies: CaseStudyData[] = [
       {
         title: "Phasing the build to ship value early",
         paragraphs: [
-          "With three teams' worth of requirements consolidated into one product, we had more scope than any single release could carry. Nick, the solution architects, and I worked together to break the product into three phases: an alpha that proved the core orchestration concept, a beta that opened it to internal users, and a v1 that was client-ready.",
-          "The phasing decisions were as much about organizational buy-in as they were about technical sequencing. Each phase needed to deliver enough visible value to keep stakeholders from the original three teams invested. If any group felt their priorities had been permanently shelved, we risked losing the coalition that made the unified product possible.",
+          "With three teams' worth of requirements rolled up, our scope was deep. The PM, Architects, and I broke the product into three phases: an alpha proving the core orchestration concept, a beta for internal users, and a client-ready v1.",
+          "Each phase needed to deliver enough visible value to keep stakeholders from the original three teams invested. If any group felt their priorities had been shelved, we risked losing the coalition making the unified product possible.",
           "I defined the UX scope for each phase and the handoff criteria for the senior designer who would carry the product through the Agile build. That handoff was deliberate: I had spent three months building the design foundation and needed to return full attention to leading the broader UX team.",
         ],
         image: {
