@@ -526,7 +526,7 @@ export const caseStudies: CaseStudyData[] = [
   /* ================================================================== */
   {
     slug: "pwc-tax-tech",
-    title: "PwC Tax Technology: UX from Zero",
+    title: "UX Maturity from Zero",
     subtitle: "UX Maturity Transformation",
     description:
       "A team of 60+ engineers building powerful tax software had never worked with a designer. Two years later, they refused to start a sprint without one.",
@@ -707,7 +707,7 @@ export const caseStudies: CaseStudyData[] = [
   /* ================================================================== */
   {
     slug: "pwc-digital-leadership",
-    title: "Building the Team That Built the Products",
+    title: "Hyperscale with Culture",
     subtitle: "Org Design & Culture",
     description:
       "We grew PwC Digital's design team from 7 to 130 in under two years. Only three left voluntarily in four years — and two of them came back.",
@@ -941,12 +941,12 @@ const homepageCardCopy: Record<
     role: "UX Manager, Design System Founder",
   },
   "pwc-digital-leadership": {
-    title: "Design Org in Hypergrowth",
+    title: "Hyperscale with Culture",
     desc: "I grew a design team from a small group to 130 people in under two years, with retention that outpaced the industry.",
     role: "UX Director",
   },
   "pwc-tax-tech": {
-    title: "UX Maturity Transformation",
+    title: "UX Maturity from Zero",
     desc: "A team of 60+ engineers had never worked with a designer. Two years later, they refused to start a sprint without one.",
     role: "UX Manager",
   },
