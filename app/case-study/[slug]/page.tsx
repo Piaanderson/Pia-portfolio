@@ -282,26 +282,43 @@ export default async function CaseStudyPage({
                     {study.problem.heading || "The Problem"}
                   </h2>
                 </div>
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-4">
                   {(() => {
                     const allImages: ImagePlacement[] = study.problem.image
                       ? [study.problem.image]
                       : [];
+                    const contentParagraphs = study.problem.paragraphs.filter(
+                      (p) => !p.startsWith("## "),
+                    );
                     const imagePositions = distributeImages(
-                      study.problem.paragraphs.length,
+                      contentParagraphs.length,
                       allImages,
                     );
 
-                    return study.problem.paragraphs.map((p, i) => (
-                      <Fragment key={i}>
-                        <p className="text-lg leading-[1.75] text-foreground/80 md:text-xl md:leading-[1.75]">
-                          {p}
-                        </p>
-                        {imagePositions.get(i)?.map((img, k) => (
-                          <ImageBlock key={`img-${i}-${k}`} image={img} />
-                        ))}
-                      </Fragment>
-                    ));
+                    let contentIdx = 0;
+                    return study.problem.paragraphs.map((p, i) => {
+                      if (p.startsWith("## ")) {
+                        return (
+                          <h3
+                            key={i}
+                            className="mt-6 font-serif text-xl font-bold text-foreground md:text-2xl"
+                          >
+                            {p.slice(3)}
+                          </h3>
+                        );
+                      }
+                      const idx = contentIdx++;
+                      return (
+                        <Fragment key={i}>
+                          <p className="text-lg leading-[1.75] text-foreground/80 md:text-xl md:leading-[1.75]">
+                            {p}
+                          </p>
+                          {imagePositions.get(idx)?.map((img, k) => (
+                            <ImageBlock key={`img-${i}-${k}`} image={img} />
+                          ))}
+                        </Fragment>
+                      );
+                    });
                   })()}
                   {study.problem.contextCallout && (
                     <aside className="mt-4 rounded-xl border-l-4 border-pink/40 bg-pink/5 p-6 md:p-8">
@@ -328,7 +345,7 @@ export default async function CaseStudyPage({
                     My Role
                   </h2>
                 </div>
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-4">
                   {study.role.paragraphs.map((p, i) => (
                     <p
                       key={i}
@@ -367,7 +384,7 @@ export default async function CaseStudyPage({
                   </h2>
                 </div>
 
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-4">
                   {(() => {
                     const allImages: ImagePlacement[] = [
                       ...(decision.image ? [decision.image] : []),
@@ -387,7 +404,7 @@ export default async function CaseStudyPage({
                         return (
                           <h3
                             key={j}
-                            className="mt-4 font-serif text-xl font-bold text-foreground md:text-2xl"
+                            className="mt-6 font-serif text-xl font-bold text-foreground md:text-2xl"
                           >
                             {p.slice(3)}
                           </h3>
@@ -501,7 +518,7 @@ export default async function CaseStudyPage({
                     {study.reflection.heading || "Reflection"}
                   </h2>
                 </div>
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-4">
                   {study.reflection.paragraphs.map((paragraph, i) => (
                     <p
                       key={i}

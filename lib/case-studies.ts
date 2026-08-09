@@ -116,22 +116,29 @@ export const caseStudies: CaseStudyData[] = [
     },
 
     problem: {
+      heading: "The Problems",
       paragraphs: [
-        "PwC's internal budget creation, staffing, and engagement monitoring tools span three separate systems carrying more than a decade of business logic. The tools work. The experience of using them does not.",
-        "Every resource must be entered through dropdowns that do not remember the previous entry. When teams grow beyond a dozen people, they export to Excel, edit there, and import back rather than fight the tool directly.",
-        "To give a client multiple budget alternatives, teams must create full duplicate projects. There is no way to hold multiple budgets within a single project, no side-by-side comparison, and no way to adjust one while referencing another. Those duplicate projects all flow into Deployment requesting the same resources with slight variations, and the Deployment team has to make calls and send emails to sort out which version to staff.",
-        "Dashboards report on yesterday and today with no predictive capability. If a resource is overbilling, it can take 30 days or more to surface without manual weekly checks. Teams run reports outside the system to see what is coming.",
+        "PwC's internal budget creation, staffing, and engagement monitoring tools span three separate systems carrying more than a decade of business logic.",
+        "The tools work. The experience of using them does not.",
+        "## Budget creation is manual and repetitive",
+        "Adding resources is so tedious, most teams export to Excel, edit, then reimport rather than fight the tool directly.",
+        "## Comparing options creates downstream chaos",
+        "To give a budget options, teams must create duplicate projects. There is no way to hold multiple budgets within a single project, no side-by-side comparison, and no way to adjust one while referencing another.",
+        "Those duplicate projects often flow to Deployment requesting mostly the same resources, forcing Deployment to make calls and send emails.",
+        "## Monitoring only looks backward",
+        "Dashboards report on yesterday and today with no predictive capability. If a resource is overbilling or expenses are hot, it can take 30+ days to surface, requiring weekly manual exports and reporting for every team.",
       ],
     },
 
     role: {
       paragraphs: [
-        "I was brought in for my systems thinking and ability to envision how interwoven systems should connect. I asked to lead the design personally \u2014 for the past year I have been pushing 80 designers toward delivering front-end code through GitHub, and I needed to understand the friction from the inside to lead that transformation credibly.",
-        "The project started as a small proof of concept. Within ten days, it escalated to a Priority One initiative for Advisory and was announced on an All Hands before our second week demo. Sarah Halverson, the engineering pod lead, kept the team running while I stepped into the lead strategist and stakeholder alignment role on top of the design and front-end development work. I brought in Mitali Kamat, Sr UX Researcher, once the scope outgrew what I could cover alone.",
+        "I was brought in for my systems thinking and ability to envision how interwoven systems should connect.",
+        "I asked to lead the design for this quick PoC. For the past year I\u2019ve been pushing 68 designers toward delivering front-end code through GitHub, and I needed to understand the friction from the inside to lead that transformation credibly.",
+        "The project started as a small proof of concept. Within ten days, it escalated to a Priority One initiative for Advisory and was announced on an All Hands before our second week demo. Sarah, the engineering pod lead, kept the team running while I stepped into the lead strategist and stakeholder alignment role on top of the design and FED work. I brought in Mitali, Sr UX Researcher, once the scope outgrew what I could cover alone.",
         "Before and during the pilot, Mitali and I created the proof of concept that earned buy-in, then I evolved the UI across four main experience flows: pursuit, budget, staffing, and monitoring. I am now transitioning the project to a Design Manager who will steer the direction through Beta and launch.",
       ],
       contextCallout:
-        "Directors go deep when the work calls for their specific specialty. Mine is seeing a complex ecosystem, understanding how its pieces connect, and simplifying it into something centralized and usable. That is what this project needed, and the hands-on investment is what made the strategic vision credible to the people building it.",
+        "Directors go deep when the work calls for their specific specialty. Mine is seeing a complex ecosystem, understanding how its pieces connect, and simplifying it into something centralized and usable. That is what this project needed, and the hands-on investment solidified the strategic vision for the people building it.",
     },
 
     decisions: [
