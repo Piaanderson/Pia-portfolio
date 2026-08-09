@@ -293,16 +293,17 @@ export const caseStudies: CaseStudyData[] = [
 
     problem: {
       paragraphs: [
-        "PwC had three separate teams building agent workflow tools. Each team reported to different stakeholders, with different audiences, and different technical approaches.",
-        "Three parallel investments solving the same problem differently, with no path to a unified product was a business risk. Left unchecked, the firm would have shipped three competing tools but only one could reach clients.",
+        "PwC had three separate teams building agent workflow tools. Each team reported to different stakeholders, served different audiences, and used different technical approaches. None were coordinating with each other.",
+        "Three parallel investments solving the same problem differently — with no path to a unified product — was a business risk. Left unchecked, the firm would have shipped three competing tools before any of them could reach a client.",
       ],
     },
 
     role: {
       paragraphs: [
-        "A Director-level PM and I were brought in to make sense of the situation. Before forming a full team, the two of us would align on how to bring three solutions together.",
-        "I met with each of the teams to understand their requirements and roadmap, conducted stakeholder and user research. I then created the Figma prototype for the unified solution, produced the demo video, and wrote the Partner demo script to present Agent OS to clients.",
-        "I led the UX direction for the first three months, then worked with Nick and the solution architects to break the product into an alpha, beta, and v1 release roadmap before handing it off to a senior designer who joined the Agile build team.",
+        "A Director-level PM and I were brought in to make sense of the situation. Before forming a full team, the two of us aligned on how to bring three solutions together.",
+        "I met with each team to understand their requirements and roadmaps, and conducted stakeholder and user research.",
+        "I created the Figma prototype for the unified solution, produced the demo video, and wrote the partner demo script used to present Agent OS to clients.",
+        "I led the UX direction for the first three months, then worked with the PM and solution architects to break the product into an alpha, beta, and v1 release roadmap before handing it off to a senior designer who joined the Agile build team.",
       ],
       contextCallout:
         "This was a Director-level engagement where I chose to go deep into the hands-on design work. The complexity of unifying three technical architectures into one coherent interface demanded it. It meant late nights balancing prototype work with leading the broader UX team, but the impact on the firm justified the investment.",
@@ -314,9 +315,9 @@ export const caseStudies: CaseStudyData[] = [
         paragraphs: [
           "The first and most consequential decision was not a design decision at all. It was the recommendation that the firm build a single unified platform rather than pick a winner among the three existing efforts.",
           "The early weeks were spent in discovery sessions with all three teams, mapping where the requirements overlapped and diverged.",
-          "The overlaps were mostly around audience. One team had built for engineers, another for consultants, and one client-facing use cases. The unified product needed to serve all three audiences without succumbing into a lowest-common-denominator compromise.",
-          "Each team had built something valuable and their stakeholders had unique goals to be achieved. Rethinking from the higher level was needed, rather than merging such varying solutions.",
-          "The trade-off was speed. Building from scratch took longer than modifying an existing tool. We had to make the case to leadership that the longer path would produce something PwC could actually scale, while separate tools would create a compounding maintenance and governance burden.",
+          "The overlaps were larger than anyone expected. The divergences were mostly about audience: one team had built for engineers, another for consultants, and one was targeting client-facing use cases. The unified product needed to serve all three audiences without succumbing to a lowest-common-denominator compromise.",
+          "Each team had built something valuable, and each stakeholder group had goals they did not want to give up. We needed to rethink from a higher level rather than merge three incompatible visions.",
+          "The trade-off was speed. Building one unified product took longer than shipping any single team's existing tool. We had to make the case to leadership that the longer path would produce something PwC could actually scale, while separate tools would create a compounding maintenance and governance burden.",
         ],
         image: {
           src: "/case-studies/agent-os/journey-simple-tasks.svg",
@@ -330,12 +331,12 @@ export const caseStudies: CaseStudyData[] = [
         title: "Designing for people who do not write code",
         paragraphs: [
           "The three existing tools had been built by technical teams for technical users. The architects and engineers who created them thought in terms of SDKs, orchestration graphs, and API integrations.",
-          "That was the right level of abstraction for the people building the tools. But it was wrong for the consultants and business users needing to create agent workflows at scale.",
+          "That was the right level of abstraction for the people building the tools. But it was wrong for the consultants and business users who needed to create agent workflows at scale.",
           "My job was to understand what the technical teams had built well enough to translate it into an interface that a non-technical user could operate confidently.",
           "The drag-and-drop canvas builder became the centerpiece of that translation. Users could assemble agents into workflows visually, connect them to enterprise systems, and see the data flow without writing a line of code.",
           "The harder part was defending those design decisions to the original technical stakeholders. They felt, reasonably, that simplifying the interface meant losing capability.",
-          "Every abstraction I introduced to remove the jargon that would stop a business user from getting started had to prove it preserved the underlying power.",
-          "Some of those conversations were tense. The architects grew to trust that the canvas builder wasn't dumbing down their work; it was making their work usable by a different persona with a different mental model about agents.",
+          "Every abstraction I introduced to remove the jargon that would stop a business user from getting started had to prove that it preserved the underlying power.",
+          "Some of those conversations were tense. The architects grew to trust that the canvas builder wasn't dumbing down their work; it was making their work usable by a different persona with a distinct mental model of how agents work.",
         ],
         image: {
           src: "/case-studies/agent-os/canvas-builder-prototype.png",
@@ -359,7 +360,7 @@ export const caseStudies: CaseStudyData[] = [
       {
         title: "Phasing the build to ship value early",
         paragraphs: [
-          "With three teams' worth of requirements rolled up, our scope was deep. The PM, Architects, and I broke the product into three phases: an alpha proving the core orchestration concept, a beta for internal users, and a client-ready v1.",
+          "With three teams' worth of requirements rolled up, the scope ran deep. The PM, architects, and I broke the product into three phases: an alpha proving the core orchestration concept, a beta for internal users, and a client-ready v1.",
           "Each phase needed to deliver enough visible value to keep stakeholders from the original three teams invested. If any group felt their priorities had been shelved, we risked losing the coalition making the unified product possible.",
           "I defined the UX scope for each phase and the handoff criteria for the senior designer who would carry the product through the Agile build. That handoff was deliberate: I had spent three months building the design foundation and needed to return full attention to leading the broader UX team.",
         ],
@@ -406,8 +407,8 @@ export const caseStudies: CaseStudyData[] = [
     reflection: {
       heading: "What I Carried Forward",
       paragraphs: [
-        "After I rolled off, Agent OS continued to evolve. The next designer was more junior, and without a senior UX voice in the room, the technical stakeholders reintroduced some of the jargon and complexity. The product is still strong, but the gap between the prototype and shipped interface reminded me of something essential – UX advocacy that depends on a single person's presence is fragile.",
-        "If I were starting again, I'd build more of the design rationale into documentation that could survive my departure. Decisions about why the interface was simplified, what user research supported each abstraction, and which technical capabilities were preserved beneath the simpler surface all lived in meeting notes and our heads. When I left, that context left with me.",
+        "After I rolled off, Agent OS continued to evolve. The next designer was more junior, and without a senior UX voice in the room, the technical stakeholders reintroduced some of the jargon and complexity. The product is still strong, but the gap between the prototype and the shipped interface reminded me of something essential – UX advocacy that depends on a single person's presence is fragile.",
+        "If I were starting again, I'd build more of the design rationale into documentation that could survive my departure. Decisions about why the interface was simplified, what user research supported each abstraction, and which technical capabilities were preserved beneath the simpler surface all lived in meeting notes and our heads. That context did not survive the handoff.",
       ],
     },
 
