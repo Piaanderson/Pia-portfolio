@@ -8,7 +8,7 @@
 
 **Headline:** PwC's engagement tools could tell teams what happened yesterday but nothing about tomorrow. I designed an AI experience layer that unifies budgeting, staffing, and monitoring into a single predictive platform.
 
-**Subhead:** I led the UX vision and strategy for Project Forge, an AI-first platform that unifies budget creation, staffing, and engagement monitoring across three legacy systems. I also delivered front-end code directly into the codebase alongside the engineering pod, opening PRs, responding to code reviews, and merging my own work.
+**Subhead:** I led the UX vision and strategy for Project Forge, an AI-first platform that unifies budget creation, staffing, and engagement monitoring across three legacy systems. I delivered front-end code directly into the codebase alongside the engineering pod.
 
 > **Status callout:** Project Forge is currently in pilot. This case study covers the strategic and design decisions made to date. Outcomes will be updated as pilot data becomes available.
 
@@ -16,33 +16,39 @@
 
 ---
 
+
+
 ## The Problem
 
 PwC's internal budget creation and staffing tools carry more than a decade of business logic across three separate systems. The tools work, but the experience of using them has driven teams to build their own workarounds.
 
-To create a budget, every resource must be entered manually through a series of dropdowns that do not remember the previous entry. When teams grow beyond a dozen people, the interface becomes untenable. Teams export to Excel, make their edits there, then import back rather than fight the tool directly.
+To create a budget, every resource must be entered manually through a series of dropdowns that don't persist between entries. Teams export to Excel, make their edits there, then import back rather than fight the tool directly.
 
-Comparing budget options is where the downstream problems start. To give a client two or three alternatives, teams must create full duplicate projects as drafts because there is no way to hold multiple budgets within a single project. There is no side-by-side view, no way to adjust one draft while referencing another. Those duplicate projects all flow into Deployment requesting the same resources with slight variations, and the Deployment team has to make calls and send emails to sort out which version to staff.
+Comparing budget options is where the downstream problems start. To give a client two or three alternatives, teams must create duplicate projects as drafts. There is no side-by-side view, no way to adjust one draft while referencing another. Those duplicate projects often cause duplicate deployment requests with slight variations. The Deployment team has to make calls and send emails to sort out which version to staff.
 
-The monitoring side is just as limited. Dashboards report on yesterday and today with no predictive capability. If a resource is overbilling, the system can take 30 days or more to surface a red flag without manual weekly checks. Teams download spreadsheets and run reports outside the system to see what is coming rather than what has already happened. Compounding all of this, users have little confidence in the data itself. There is no transparency into where numbers originate, when they were last refreshed, or whether conflicting data sources exist behind the scenes.
+The monitoring side is just as limited. Dashboards report on yesterday and today with no predictive capability. If a resource is overbilling, the system can take 30 days or more to surface a red flag requiring manual weekly checks. Teams download spreadsheets and run reports outside the system to see what is coming rather than what has already happened. 
 
 [Image: Diagram showing the three legacy systems and the pain points across budget creation, staffing, and monitoring]
 
 ---
 
+
+
 ## My Role
 
-I was brought in for my systems thinking and ability to envision how interwoven systems should connect. The project started as a small proof of concept: could an AI-first approach replace what three legacy systems were doing separately?
+I was brought in for my systems thinking and ability to envision how interwoven systems should connect. The project started as a small proof of concept:[Callout: could an AI-first approach replace what three legacy systems were doing separately?]
 
-I asked to lead the design personally. For the past year, I have been upskilling a team of 80 designers to evolve their delivery from Figma artifacts to front-end code delivered directly through GitHub. To lead that transformation credibly, I needed to have done it myself, not just understand the mechanics from hearing about them in standups. Project Forge became my proving ground.
+I asked to lead the design personally. For the past year, I have been upskilling a team of 80 designers to evolve their delivery from Figma artifacts to front-end code delivered directly through GitHub. To lead that transformation credibly, I needed to have deeper experience myself. Project Forge became my proving ground.
 
-Within ten days, the proof of concept escalated from a pet project to a Priority One initiative for Advisory. It was announced on an All Hands call before our second week demo. The stakeholders became senior partners. The scope expanded to cross-line-of-service collaboration. Sarah Halverson, the engineering pod lead, kept the team running while I stepped into the lead strategist and stakeholder alignment role on top of the design and front-end development work. I went from leading a small proof of concept to serving as lead designer, lead strategist, front-end developer, and stakeholder alignment lead, all while continuing to run the 80-person design capability.
+Within ten days, the proof of concept escalated from a pet project to a Priority One initiative for Advisory. It was announced on an All Hands call before our second week demo. The stakeholders became senior partners. The scope expanded to cross-line-of-service collaboration. Sarah Halverson, the engineering pod lead, kept the team running while I stepped into the lead strategist and stakeholder alignment role on top of the design and front-end development work. I went from leading a small proof of concept to serving as lead designer, lead strategist, front-end developer, and stakeholder alignment lead, all while continuing to run the 65-person design capability.
 
 I brought in Mitali Kamat, Sr UX Researcher, from my team to support generative research and stakeholder interviews once the project's scope outgrew what I could cover alone. Before and during the pilot, Mitali and I created the proof of concept that earned buy-in, then I evolved much of the UI to span the happy path across four main experience flows: pursuit, budget, staffing, and monitoring. Now that the pilot is underway and the engineering pod is working to catch up to the full UI and agent functionality, I am transitioning the project to a Design Manager who will steer the direction through Beta and launch.
 
 > **Context callout:** Directors go deep when the work calls for their specific specialty. Mine is seeing a complex ecosystem, understanding how its pieces connect, and simplifying it into something centralized and usable. That is what this project needed, and the hands-on investment is what made the strategic vision credible to the people building it.
 
 ---
+
+
 
 ## Decision 1: An experience layer, not a replacement
 
@@ -60,6 +66,8 @@ I pressed our senior stakeholders to stop framing the project as a replacement, 
 
 ---
 
+
+
 ## Decision 2: Two equally powerful paths to the same result
 
 The lead stakeholder on the project prefers AI-driven voice and chat interaction. He wanted a chat-first experience, with the ability to reach Forge through Claude, ChatGPT, or other AI assistants via MCP. That vision is real and worth building toward.
@@ -76,6 +84,8 @@ That transparency is the trust mechanism. Users who are skeptical of AI chat can
 
 ---
 
+
+
 ## Decision 3: Making budget comparison possible for the first time
 
 The legacy workflow for comparing budgets required teams to create full duplicate projects, toggle between them manually, and sometimes print or screenshot to compare side by side. Those duplicate projects would all show up in Deployment requesting the same resources with slight variations, and the Deployment team would have to call to sort out which one was real.
@@ -89,6 +99,8 @@ It took three rounds of simplification to get the budget screen itself lean enou
 [Image: The budget comparison view showing multiple drafts side by side with visual hierarchy for scanning]
 
 ---
+
+
 
 ## How I delivered: designing at the prompt
 
@@ -104,6 +116,8 @@ This experience was not incidental to the project. It was the reason I asked to 
 
 ---
 
+
+
 ## What Comes Next
 
 Project Forge is in pilot now. The engineering pod is building out the full UI and agent functionality that I designed, and I have transitioned the day-to-day design leadership to a Design Manager who will take what we have learned and steer the direction through Beta and launch. I continue to set the design vision and provide director-level oversight.
@@ -111,6 +125,8 @@ Project Forge is in pilot now. The engineering pod is building out the full UI a
 The pilot will generate the usage data and user feedback that this case study currently lacks. I will update this page with outcomes as they become available.
 
 ---
+
+
 
 ## Writing and visual notes (remove before publishing)
 
@@ -127,6 +143,7 @@ The pilot will generate the usage data and user feedback that this case study cu
 **Connection to the 80-person design team transformation:** The case study references Pia's role leading the AI-first upskilling initiative. If the PwC Digital Leadership case study is also in the portfolio, consider a brief cross-reference or let them stand independently and trust that a reader reviewing both will connect the dots.
 
 **Images needed from Pia:**
+
 - Budget builder interface (screen-based with AI helpers visible)
 - Chat interface showing real-time updates to the budget
 - Budget comparison view (multiple drafts side by side)
@@ -136,12 +153,15 @@ The pilot will generate the usage data and user feedback that this case study cu
 - Optional: before/after showing legacy tool vs. Forge equivalent
 
 **Quote placeholders:** Three quote placeholders are embedded in the draft, each with a description of what to look for. To find matching quotes in the Forge Claude project, search for:
+
 - Decision 1: Stakeholder or partner reactions to the experience-layer framing, the Astro metaphor, or the shift from "replacement" to "layer" messaging
 - Decision 2: User reactions from research sessions or demos about the AI helpers, the chat transparency, or the dual-path approach
 - Decision 3: Reactions to the budget comparison view, the contrast with the old process, or the single-budget-moves-forward workflow
 
 **Resolved questions:**
+
 1. Sarah Halverson is named as pod lead.
 2. Astro is named directly. Internal tool, password-protected page, no business risk.
 3. Mitali Kamat is credited as the researcher.
 4. Quote placeholders are in place with specific search criteria. Pia will source from the Forge Claude project when on Mac.
+

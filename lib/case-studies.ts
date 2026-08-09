@@ -104,32 +104,31 @@ export const caseStudies: CaseStudyData[] = [
       headline:
         "PwC's engagement tools could tell teams what happened yesterday but nothing about tomorrow. I designed an AI experience layer that unifies budgeting, staffing, and monitoring into a single predictive platform.",
       subhead:
-        "I led the UX vision and strategy for Project Forge, an AI-first platform that unifies budget creation, staffing, and engagement monitoring across three legacy systems. I also delivered front-end code directly into the codebase alongside the engineering pod, opening PRs, responding to code reviews, and merging my own work.",
+        "I led the UX vision and strategy for Project Forge, an AI-first platform unifying three legacy systems. I also delivered front-end code directly into the codebase alongside the engineering pod using Claude Code, Claude Design, and Cursor.",
       metricCallout: {
-        text: "Project Forge entered pilot in July 2026. This case study covers the strategic and design decisions made to date. Outcomes will be updated as pilot data becomes available.",
+        text: "Project Forge is currently in pilot. Outcomes will be updated as pilot data becomes available.",
       },
       image: {
         src: "/case-studies/project-forge/budget-comparison-laptop.png",
         alt: "Forge budget comparison on a laptop showing traditional versus AI-augmented delivery options side by side",
       },
-      status: "In Progress – Entering Pilot July 2026",
+      status: "In Progress – Currently in Pilot",
     },
 
     problem: {
       paragraphs: [
-        "PwC's internal budget creation and staffing tools carry more than a decade of business logic across three separate systems. The tools work, but the experience of using them has driven teams to build their own workarounds.",
-        "To create a budget, every resource must be entered manually through a series of dropdowns that do not remember the previous entry. When teams grow beyond a dozen people, the interface becomes untenable. Teams export to Excel, make their edits there, then import back rather than fight the tool directly.",
-        "Comparing budget options is where the downstream problems start. To give a client two or three alternatives, teams must create full duplicate projects as drafts because there is no way to hold multiple budgets within a single project. There is no side-by-side view, no way to adjust one draft while referencing another. Those duplicate projects all flow into Deployment requesting the same resources with slight variations, and the Deployment team has to make calls and send emails to sort out which version to staff.",
-        "The monitoring side is just as limited. Dashboards report on yesterday and today with no predictive capability. If a resource is overbilling, the system can take 30 days or more to surface a red flag without manual weekly checks. Teams download spreadsheets and run reports outside the system to see what is coming rather than what has already happened. Compounding all of this, users have little confidence in the data itself. There is no transparency into where numbers originate, when they were last refreshed, or whether conflicting data sources exist behind the scenes.",
+        "PwC's internal budget creation, staffing, and engagement monitoring tools span three separate systems carrying more than a decade of business logic. The tools work. The experience of using them does not.",
+        "Every resource must be entered through dropdowns that do not remember the previous entry. When teams grow beyond a dozen people, they export to Excel, edit there, and import back rather than fight the tool directly.",
+        "To give a client multiple budget alternatives, teams must create full duplicate projects. There is no way to hold multiple budgets within a single project, no side-by-side comparison, and no way to adjust one while referencing another. Those duplicate projects all flow into Deployment requesting the same resources with slight variations, and the Deployment team has to make calls and send emails to sort out which version to staff.",
+        "Dashboards report on yesterday and today with no predictive capability. If a resource is overbilling, it can take 30 days or more to surface without manual weekly checks. Teams run reports outside the system to see what is coming.",
       ],
     },
 
     role: {
       paragraphs: [
-        "I was brought in for my systems thinking and ability to envision how interwoven systems should connect. The project started as a small proof of concept: could an AI-first approach replace what three legacy systems were doing separately?",
-        "I asked to lead the design personally. For the past year, I have been upskilling a team of 80 designers to evolve their delivery from Figma artifacts to front-end code delivered directly through GitHub. To lead that transformation credibly, I needed to have done it myself, not just understand the mechanics from hearing about them in standups. Project Forge became my proving ground.",
-        "Within ten days, the proof of concept escalated from a pet project to a Priority One initiative for Advisory. It was announced on an All Hands call before our second week demo. The stakeholders became senior partners. The scope expanded to cross-line-of-service collaboration. Sarah Halverson, the engineering pod lead, kept the team running while I stepped into the lead strategist and stakeholder alignment role on top of the design and front-end development work. I went from leading a small proof of concept to serving as lead designer, lead strategist, front-end developer, and stakeholder alignment lead, all while continuing to run the 80-person design capability.",
-        "I brought in Mitali Kamat from my team to support generative research and stakeholder interviews once the project's scope outgrew what I could cover alone. I am now preparing the handoff to a senior designer who will carry the product through the Agile build alongside a newly added front-end developer. The designer will continue to design at the prompt and deliver in code.",
+        "I was brought in for my systems thinking and ability to envision how interwoven systems should connect. I asked to lead the design personally \u2014 for the past year I have been pushing 80 designers toward delivering front-end code through GitHub, and I needed to understand the friction from the inside to lead that transformation credibly.",
+        "The project started as a small proof of concept. Within ten days, it escalated to a Priority One initiative for Advisory and was announced on an All Hands before our second week demo. Sarah Halverson, the engineering pod lead, kept the team running while I stepped into the lead strategist and stakeholder alignment role on top of the design and front-end development work. I brought in Mitali Kamat, Sr UX Researcher, once the scope outgrew what I could cover alone.",
+        "Before and during the pilot, Mitali and I created the proof of concept that earned buy-in, then I evolved the UI across four main experience flows: pursuit, budget, staffing, and monitoring. I am now transitioning the project to a Design Manager who will steer the direction through Beta and launch.",
       ],
       contextCallout:
         "Directors go deep when the work calls for their specific specialty. Mine is seeing a complex ecosystem, understanding how its pieces connect, and simplifying it into something centralized and usable. That is what this project needed, and the hands-on investment is what made the strategic vision credible to the people building it.",
@@ -139,10 +138,13 @@ export const caseStudies: CaseStudyData[] = [
       {
         title: "An experience layer, not a replacement",
         paragraphs: [
-          "The three legacy systems carry more than a decade of business rules, data structures, and organizational ownership. Each system has its own stakeholders, its own data teams, and its own political gravity. Proposing to replace them would have been dangerous on two fronts: technically, because hastily rewriting that much embedded logic invites serious errors; and politically, because the teams who own those systems would have had every reason to block cooperation.",
-          "I pushed for a different approach. Project Forge would be an AI and experience layer that sits above the existing systems, pulling in their data and orchestrating it through a unified interface. The underlying systems remain intact. If a user needs to do something advanced that Forge does not yet support, they can drop into the legacy tool and the data stays in sync.",
-          `The precedent already existed inside PwC. An internal tool called Astro takes a similar approach with time and expense, hoteling, and metrics reporting. Astro adds AI and a better experience on top of older systems without replacing them. That metaphor resonated immediately with every stakeholder group I presented it to. It turned a threatening conversation (\u201cwe are replacing your system\u201d) into a collaborative one (\u201cwe are making your system more useful to more people\u201d).`,
-          `I pressed our senior stakeholders to stop framing the project as a replacement, even internally. The messaging mattered. If data teams and product owners of the legacy systems heard \u201creplacement,\u201d cooperation would slow or stop entirely. Even if Forge does eventually replace those systems, that outcome is years away, and aiming for it now would have stalled the work that could ship in months.`,
+          "## The risk of replacing",
+          "The three legacy systems carry more than a decade of business rules, data structures, and organizational ownership. Replacing them would have been dangerous technically and politically. The teams who own those systems would have had every reason to block cooperation.",
+          "## The Astro precedent",
+          "I pushed for Project Forge to be an AI and experience layer that sits above the existing systems rather than replacing them. PwC already had an internal precedent: Astro, which adds AI and a better experience on top of time and expense, hoteling, and metrics reporting without replacing the underlying systems.",
+          `That metaphor resonated immediately. It turned a threatening conversation (\u201cwe are replacing your system\u201d) into a collaborative one (\u201cwe are making your system more useful to more people\u201d).`,
+          "## Controlling the message",
+          `I pressed our senior stakeholders to stop framing the project as a replacement, even internally. If data teams heard \u201creplacement,\u201d cooperation would slow or stop entirely. Even if Forge does eventually replace those systems, that outcome is years away.`,
         ],
         image: {
           src: "/case-studies/project-forge/screens/briefing-decision-frame-evidence-panels.png",
@@ -154,10 +156,13 @@ export const caseStudies: CaseStudyData[] = [
       {
         title: "Two equally powerful paths to the same result",
         paragraphs: [
-          "The lead stakeholder on the project prefers AI-driven voice and chat interaction. He wanted a chat-first experience, with the ability to reach Forge through Claude, ChatGPT, or other AI assistants via MCP. That vision is real and worth building toward.",
-          "The users told a different story. In our first round of research, two out of five participants immediately closed the chat panel. The other three did not interact with it unless prompted. These are people who build budgets and staff engagements every week. They wanted faster, smarter versions of the screens they already understood, not a new interaction paradigm on top of a new tool.",
-          "My solution was to build both paths with equal depth and keep them in sync. AI helpers are built into the screens and flows directly: smarter defaults, suggestions based on past engagements, and one-click actions that eliminate the repetitive dropdown work from the legacy tools. The chat interface can do everything the screens can, and when a user issues a command through chat, the updates appear in the main interface in real time, as if the user had entered them manually. Nothing happens behind a curtain.",
-          "That transparency is the trust mechanism. Users who are skeptical of AI chat can ignore it entirely and still benefit from the AI-assisted screens. Users who prefer chat can watch every change reflected in the interface they already understand. Over time, as users see the AI producing accurate results in the screen-based helpers, the chat path becomes less intimidating. Neither audience is a second-class experience.",
+          "## Stakeholders wanted chat-first",
+          "The lead stakeholder prefers AI-driven voice and chat interaction. He wanted a chat-first experience, with the ability to reach Forge through Claude, ChatGPT, or other AI assistants via MCP.",
+          "## Users closed the chat window",
+          "In our first round of research, two out of five participants immediately closed the chat panel. The other three did not interact with it unless prompted. They wanted faster, smarter versions of the screens they already understood.",
+          "## Both paths, equal depth",
+          "My solution was to build both with equal depth and keep them in sync. AI helpers are built into the screens directly: smarter defaults, suggestions based on past engagements, and one-click actions that eliminate the repetitive work. The chat interface can do everything the screens can, and when a user issues a command through chat, the updates appear in the main interface in real time.",
+          "Nothing happens behind a curtain. That transparency is the trust mechanism.",
         ],
         image: {
           src: "/case-studies/project-forge/screens/portfolio-ranked-signals-tabbed.png",
@@ -169,9 +174,11 @@ export const caseStudies: CaseStudyData[] = [
       {
         title: "Making budget comparison possible for the first time",
         paragraphs: [
-          "The legacy workflow for comparing budgets required teams to create full duplicate projects, toggle between them manually, and sometimes print or screenshot to compare side by side. Those duplicate projects would all show up in Deployment requesting the same resources with slight variations, and the Deployment team would have to call to sort out which one was real.",
-          "In Forge, multiple draft budgets live within a single project. The comparison experience is the design problem worth unpacking here. It needed to work in two contexts: the linear format of the chat interface and a visual side-by-side view on the main screen. The challenge was information density. A single budget contains enough detail that simplifying it for comparison risked hiding the information teams need to make a decision. Showing everything made comparison impossible at any useful scale.",
-          "It took three rounds of simplification to get the budget screen itself lean enough to support comparison. From there, I focused on the minimum information required to compare meaningfully and the visual hierarchy that would allow teams to scan two, three, or five options without losing the ability to dive into any single one. The flow I designed lets users compare at the summary level, select any draft to inspect in detail, make changes to any draft and see the comparison update immediately, then choose one to move forward. Only the chosen budget proceeds to Deployment and approvals. The version confusion that plagued the legacy workflow is eliminated by design rather than by policy.",
+          "## The old way",
+          "Teams created full duplicate projects, toggled between them manually, and sometimes printed or took screenshots to compare. Those duplicate projects would all show up in Deployment requesting the same resources with slight variations, and the Deployment team would have to call to sort out which one was real.",
+          "## The new way",
+          "In Forge, multiple draft budgets live within a single project. It took three rounds of simplifying the budget screen itself before it was lean enough to support comparison. From there, I focused on the minimum information required to compare meaningfully and the visual hierarchy that would allow teams to scan two to five options at once.",
+          "The flow lets users compare at the summary level, dive into any draft in detail, make changes and see the comparison update immediately, then choose one to move forward. Only the chosen budget proceeds to Deployment. The version confusion is eliminated by design rather than by policy.",
         ],
         image: {
           src: "/case-studies/project-forge/portfolio-overview-laptop.png",
@@ -192,9 +199,9 @@ export const caseStudies: CaseStudyData[] = [
         title: "Designing at the prompt",
         subtitle: "How I delivered",
         paragraphs: [
-          "This was my first experience delivering front-end code directly into a shared codebase with an engineering pod. I used a combination of Claude Design for ideation, then Claude Code and Cursor to build. I opened pull requests, responded to comments from the engineering reviewers, and merged my own code.",
-          "The learning curve was steep and specific. I learned about meaningful commit organization, appropriate PR sizing, linter compliance, and accessibility testing that went well beyond color contrast into focus indicators and ARIA attributes. The dashboards required hand-coding because the AI tools were not yet capable of producing the combined data visualizations I needed. That constraint taught me where the tools have real limits and where a designer working at the prompt needs to be prepared to write code directly.",
-          "This experience was not incidental to the project. It was the reason I asked to lead the design. For the past year, I have been pushing 80 designers toward a delivery model that puts front-end code into GitHub rather than handing off Figma files. I needed to understand the friction, the workflow, and the collaboration patterns from the inside. Every lesson from Project Forge feeds directly back into how I coach the team on AI-first delivery.",
+          "This was my first experience delivering front-end code directly into a shared codebase with an engineering pod. I used Claude Design for ideation, then Claude Code and Cursor to build. I opened pull requests, responded to comments from the engineering reviewers, and merged my own code.",
+          "The learning curve was steep and specific: meaningful commit organization, appropriate PR sizing, linter compliance, and accessibility testing beyond color contrast into focus indicators and ARIA attributes. The dashboards required hand-coding because the AI tools were not yet capable of producing the combined data visualizations I needed.",
+          "This experience was the reason I asked to lead the design. For the past year, I have been pushing 80 designers toward delivering front-end code through GitHub rather than handing off Figma files. I needed to understand the friction from the inside. Every lesson from Project Forge feeds directly back into how I coach the team.",
         ],
         image: {
           src: "/case-studies/project-forge/screens/wizard-step-1-engagement-details.png",
@@ -203,7 +210,7 @@ export const caseStudies: CaseStudyData[] = [
             "Engagement wizard — one of the flows I designed at the prompt and shipped as front-end code in the shared repository.",
         },
         reflectionCallout:
-          "I have been designing at the prompt and building my own solutions for over a year, but working inside a shared repository with engineers is a fundamentally different skill. The collaboration patterns, the review expectations, and the discipline of small, well-organized commits changed how I think about what \"delivering design\" means.",
+          "Working inside a shared repository with engineers is a fundamentally different skill from designing at the prompt on your own. The collaboration patterns, the review expectations, and the discipline of small, well-organized commits changed how I think about what \"delivering design\" means.",
       },
     ],
 
@@ -214,7 +221,7 @@ export const caseStudies: CaseStudyData[] = [
     reflection: {
       heading: "What Comes Next",
       paragraphs: [
-        "Project Forge enters pilot in July 2026 with a partner team. I am handing the day-to-day design to a senior designer who will work with the newly added front-end developer and the engineering pod. I will continue to set the design vision and direction, lead stakeholder alignment, and provide director-level oversight.",
+        "Project Forge is in pilot now. The engineering pod is building out the full UI and agent functionality that I designed, and I have transitioned the day-to-day design leadership to a Design Manager who will steer the direction through Beta and launch. I continue to set the design vision and provide director-level oversight.",
         "The pilot will generate the usage data and user feedback that this case study currently lacks. I will update this page with outcomes as they become available.",
       ],
     },
