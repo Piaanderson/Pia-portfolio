@@ -233,7 +233,7 @@ export const caseStudies: CaseStudyData[] = [
         paragraphs: [
           "This was my first experience delivering front-end code directly into a shared codebase with an engineering pod. I used Claude Design for ideation, then Claude Code and Cursor to build. I opened pull requests, responded to comments from the engineering reviewers, and merged my own code.",
           "The learning curve was steep and specific: meaningful commit organization, appropriate PR sizing, linter compliance, and accessibility testing beyond color contrast into focus indicators and ARIA attributes. The dashboards required hand-coding because the AI tools were not yet capable of producing the combined data visualizations I needed.",
-          "This experience was the reason I asked to lead the design. For the past year, I have been pushing 80 designers toward delivering front-end code through GitHub rather than handing off Figma files. I needed to understand the friction from the inside. Every lesson from Project Forge feeds directly back into how I coach the team.",
+          "This experience was the reason I asked to lead the design. For the past year, I have been pushing 68 designers toward delivering front-end code through GitHub rather than handing off Figma files. I needed to understand the friction from the inside. Every lesson from Project Forge feeds directly back into how I coach the team.",
         ],
         image: {
           src: "/case-studies/project-forge/screens/portfolio-ranked-signals-tabbed.png",
