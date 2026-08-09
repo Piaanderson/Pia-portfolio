@@ -406,9 +406,8 @@ export const caseStudies: CaseStudyData[] = [
     reflection: {
       heading: "What I Carried Forward",
       paragraphs: [
-        "After I moved to a different team, Agent OS continued to evolve. The designer who replaced me was more junior, and without a senior UX voice in the room, the technical stakeholders reintroduced some of the jargon and complexity I had worked to remove. The product is still strong, but the gap between my prototype and the shipped interface taught me something I now consider essential: UX advocacy that depends on a single person's presence is fragile.",
-        "If I were starting this project again, I would build more of the design rationale into documentation that could survive my departure. The decisions about why the interface was simplified, what user research supported each abstraction, and which technical capabilities were preserved beneath the simpler surface all lived in my head and in conversations with Nick. When I left, that context left with me.",
-        "The other lesson was personal. Directors do not always need to stay at altitude. This project required me to go deep into Figma and stay there for months, and that hands-on investment is what made the unified vision credible to the technical teams. Knowing when to lead from the front and when to step back is a judgment call that gets easier with practice but never becomes automatic.",
+        "After I rolled off, Agent OS continued to evolve. The next designer was more junior, and without a senior UX voice in the room, the technical stakeholders reintroduced some of the jargon and complexity. The product is still strong, but the gap between the prototype and shipped interface reminded me of something essential – UX advocacy that depends on a single person's presence is fragile.",
+        "If I were starting again, I'd build more of the design rationale into documentation that could survive my departure. Decisions about why the interface was simplified, what user research supported each abstraction, and which technical capabilities were preserved beneath the simpler surface all lived in meeting notes and our heads. When I left, that context left with me.",
       ],
     },
 
