@@ -76,5 +76,15 @@ export async function POST(request: Request) {
     path: "/",
   });
 
+  response.cookies.set({
+    name: `${CASE_STUDY_COOKIE_NAME}-unlocked`,
+    value: "1",
+    httpOnly: false,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax",
+    maxAge: CASE_STUDY_SESSION_SECONDS,
+    path: "/",
+  });
+
   return response;
 }

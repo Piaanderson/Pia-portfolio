@@ -65,7 +65,15 @@ export default function Page() {
 
   useEffect(() => {
     setMounted(true);
-    setHasAccess(document.cookie.includes(CASE_STUDY_COOKIE_NAME));
+    const checkAccess = () =>
+      setHasAccess(document.cookie.includes(`${CASE_STUDY_COOKIE_NAME}-unlocked`));
+    checkAccess();
+    document.addEventListener("visibilitychange", checkAccess);
+    window.addEventListener("focus", checkAccess);
+    return () => {
+      document.removeEventListener("visibilitychange", checkAccess);
+      window.removeEventListener("focus", checkAccess);
+    };
   }, []);
 
   useEffect(() => {
@@ -227,7 +235,7 @@ export default function Page() {
                     src={study.image}
                     alt={study.title}
                     fill
-                    className={`object-cover transition-[filter] duration-500 ${idx < 2 && !hasAccess ? "blur-md" : ""}`}
+                    className={`object-cover transition-[filter] duration-500 ${!hasAccess ? "blur-md" : ""}`}
                   />
                 </div>
                 <div className="px-[26px] pb-7 pt-6">
