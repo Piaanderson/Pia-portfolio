@@ -189,7 +189,7 @@ export default function Page() {
           {/* Featured card */}
           <Link
             href={`/case-study/${homepageFeaturedCard.slug}`}
-            className="featured-work-card mb-[22px] grid grid-cols-1 overflow-hidden rounded-2xl border border-pa-border bg-pa-bg2 text-inherit no-underline transition-colors hover:border-[#e23e7e]/50 md:grid-cols-2"
+            className="featured-work-card mb-[22px] grid grid-cols-1 overflow-hidden rounded-2xl border border-pa-border bg-pa-bg2 text-inherit no-underline transition-colors hover:border-[#e23e7e]/50 focus-visible:border-[hsl(var(--ring))] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[hsl(var(--ring))] md:grid-cols-2"
           >
             <div className="relative aspect-[16/11] overflow-hidden">
               <Image
@@ -228,7 +228,7 @@ export default function Page() {
               <Link
                 key={study.slug}
                 href={`/case-study/${study.slug}`}
-                className="block overflow-hidden rounded-[14px] border border-pa-border bg-pa-bg2 text-inherit no-underline transition-colors hover:border-[#e23e7e]/40"
+                className="block overflow-hidden rounded-[14px] border border-pa-border bg-pa-bg2 text-inherit no-underline transition-colors hover:border-[#e23e7e]/40 focus-visible:border-[hsl(var(--ring))] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[hsl(var(--ring))]"
               >
                 <div className="relative aspect-[16/8] overflow-hidden">
                   <Image

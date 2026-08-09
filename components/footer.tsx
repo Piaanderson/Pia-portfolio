@@ -15,20 +15,20 @@ export function Footer({ insetForSidebar = false }: { insetForSidebar?: boolean 
             href="https://www.linkedin.com/in/uxpiaanderson/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-inherit no-underline transition-opacity hover:opacity-80"
+            className="rounded-sm text-inherit no-underline transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[hsl(var(--ring))]"
           >
             LinkedIn
           </a>
           <a
             href="mailto:pia@piaanderson.com"
-            className="text-inherit no-underline transition-opacity hover:opacity-80"
+            className="rounded-sm text-inherit no-underline transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[hsl(var(--ring))]"
           >
             pia@piaanderson.com
           </a>
           <a
             href={RESUME_HREF}
             download={RESUME_DOWNLOAD_NAME}
-            className="inline-flex items-center gap-[5px] text-inherit no-underline transition-opacity hover:opacity-80"
+            className="inline-flex items-center gap-[5px] rounded-sm text-inherit no-underline transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[hsl(var(--ring))]"
           >
             Resume PDF
             <svg
@@ -42,7 +42,7 @@ export function Footer({ insetForSidebar = false }: { insetForSidebar?: boolean 
             </svg>
           </a>
         </div>
-        <div className="text-xs text-pa-copy">
+        <div className="text-xs text-pa-muted3">
           &copy; 2026 Pia Anderson
         </div>
       </div>
