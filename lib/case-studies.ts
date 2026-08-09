@@ -753,7 +753,8 @@ export const caseStudies: CaseStudyData[] = [
           "I brought the leads together to align on questions we valued and why. We sorted the strongest into a two-interview template.",
           "Interviewers took notes in a shared copy during each call. The second-round team opened that same document and found the candidate's first-round answers alongside their own questions.",
           "## Onboarding",
-          "Onboarding needed the same rigor. I designed an onboarding Miro board using macro and micro navigation; the zoomed-out view shows the full map, and zooming in reveals exactly what a new joiner needs. The content covered tool setup, Figma file conventions, accessibility standards, working with developers, and product demos. Each new hire received a specific action list for their first week, first month, first 60 days, and first 90 days.",
+          "Onboarding needed the same rigor. I designed an onboarding Miro board using macro and micro navigation; the zoomed-out view shows the full map, and zooming in reveals exactly what a new joiner needs.",
+          "The content covered team info, tool setup, templates, training, and more. Each new hire received a specific action list for their first week, month, 60 days, and 90 days.",
           "On day one, a \"friendlies\" leader welcomed them, walked them through the board, and answered the questions people are sometimes embarrassed to ask their direct manager that first week.",
         ],
         images: [
@@ -785,7 +786,7 @@ export const caseStudies: CaseStudyData[] = [
             alt: "Use case flow template from the onboarding board showing trigger, dashboard, and business value stages",
             caption:
               "Onboarding board template — a reusable use-case flow new designers learned to apply on product engagements.",
-            afterParagraph: 4,
+            afterParagraph: 5,
           },
         ],
         quote: {
