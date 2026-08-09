@@ -799,10 +799,20 @@ export const caseStudies: CaseStudyData[] = [
       {
         title: "Recognizing when the work had outgrown me",
         paragraphs: [
-          "I was spending 60 to 70 percent of my time on hiring logistics: portfolio reviews, recruiter calls, moving interview notes between rounds, following up on pending decisions, managing onboarding. Other managers shared the load, and we were all still drowning.",
+          "I was spending 60 to 70 percent of my time on hiring logistics: portfolio reviews, recruiter calls, following up on pending decisions, coordinating onboarding. Other managers shared the load, and we were all still drowning.",
           "The work was not wrong. It just did not require a Director.",
-          "I petitioned our Partner to create a Design Ops role. Once that person was up to speed, I shifted to reviewing portfolios and second interviews alongside the other directors. She and I met two to three times a week to stay aligned on everything else. I stayed connected to every new hire. The difference was that I could also lead the team that was already there.",
+          "I petitioned our Partner to create a Design Ops role.",
+          "Once that person was up to speed, Directors shifted to reviewing portfolios and second interviews. She and I met two to three times a week to stay aligned on everything else.",
+          "I stayed connected to every new hire. I could now also lead the growing team.",
         ],
+        image: {
+          src: "/case-studies/pwc-digital-leadership/design-ops-illustration.png",
+          alt: "Illustration showing the shift from a director overwhelmed by hiring logistics to a Design Ops role handling coordination, freeing directors to focus on portfolio reviews and second interviews",
+          caption:
+            "Enter Design Ops — freeing directors to focus on portfolios and interviews instead of logistics.",
+          flexHeight: true,
+          afterParagraph: 2,
+        },
         reflectionCallout:
           "That decision is the one I am most glad I made quickly. The right time to build operational support is before you feel the strain, not after.",
       },
@@ -810,29 +820,37 @@ export const caseStudies: CaseStudyData[] = [
         title: "Keeping the culture intact at 20x scale",
         paragraphs: [
           "When a team is seven people, culture is ambient. Everyone is in the same conversations, the same review sessions. When a team is 130, culture is architecture.",
-          "I started weekly peer review sessions early, when the whole team could still fit in one call. As we grew, those evolved into team-wide show-and-tells. I worked with each Design Manager to stand up smaller peer reviews within their individual teams. The rhythm stayed; the format adapted.",
-          "We ran sessions to define a team manifesto. The leadership team was consistent about one thing above all: every designer had our support to push back on bad decisions and escalate when their recommendations were being ignored to the detriment of the product. The role was not to take design orders. It was to understand the problem beneath the ask and advocate for the user.",
+          "## Peer Reviews & Team Meetings",
+          "I started weekly peer review sessions early, when the whole team could still fit in one call.",
+          "As we grew, those evolved into team-wide show-and-tells. I worked with Design Managers to begin smaller peer reviews within their teams.",
+          "The connection stayed. The format adapted.",
+          "## Manifesto & Empowerment",
+          "We ran sessions to define a team manifesto.",
+          "The leadership team was consistent about one thing above all: every designer had our support to push back on bad decisions and escalate when their recommendations were being ignored to the detriment of the product.",
+          "The role was not to take design orders, but rather to understand the problem beneath the ask and advocate for the user.",
           "That message, repeated by every leader on the team, was part of why people stayed.",
         ],
         image: {
-          src: "/case-studies/pwc-digital-leadership/grid-of-empowerment.svg",
-          alt: "Grid of Empowerment diagram showing how designers are supported to advocate for users and push back on bad decisions",
+          src: "/case-studies/pwc-digital-leadership/client-experience-manifestos.png",
+          alt: "Client Experience team manifesto boards including mission, values, and design principles",
           caption:
-            "The Grid of Empowerment — a team manifesto session that codified designer advocacy as cultural architecture, not ambient luck.",
+            "Team manifesto sessions — we made the cultural principles visible so they could survive scale.",
+          afterParagraph: 4,
         },
         images: [
           {
-            src: "/case-studies/pwc-digital-leadership/client-experience-manifestos.png",
-            alt: "Client Experience team manifesto boards including mission, values, and design principles",
+            src: "/case-studies/pwc-digital-leadership/grid-of-empowerment.svg",
+            alt: "Grid of Empowerment diagram showing how designers are supported to advocate for users and push back on bad decisions",
             caption:
-              "Team manifesto sessions — we made the cultural principles visible so they could survive scale.",
+              "The Grid of Empowerment — codified designer advocacy as cultural architecture, not ambient luck.",
+            afterParagraph: 6,
           },
         ],
         quote: {
           quote:
             "That's something I like about you. Being open, honest and human makes you relatable and, at least from my point of view, even easier to respect and appreciate. I've noticed that as people climb the ladder here there's a tendency to adopt an attitude of aloofness. If I'm ever lucky enough to make Director, I quite frankly hope to be like you. Human.",
           attribution: "Jason Lunsford",
-          role: "Designer, PwC Digital",
+          role: "Sr Developer, PwC",
         },
       },
     ],
