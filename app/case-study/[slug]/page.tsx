@@ -346,14 +346,26 @@ export default async function CaseStudyPage({
                   </h2>
                 </div>
                 <div className="flex flex-col gap-4">
-                  {study.role.paragraphs.map((p, i) => (
-                    <p
-                      key={i}
-                      className="text-lg leading-[1.75] text-foreground/80 md:text-xl md:leading-[1.75]"
-                    >
-                      {p}
-                    </p>
-                  ))}
+                  {study.role.paragraphs.map((p, i) => {
+                    if (p.startsWith("## ")) {
+                      return (
+                        <h3
+                          key={i}
+                          className="mt-6 font-serif text-xl font-bold text-foreground md:text-2xl"
+                        >
+                          {p.slice(3)}
+                        </h3>
+                      );
+                    }
+                    return (
+                      <p
+                        key={i}
+                        className="text-lg leading-[1.75] text-foreground/80 md:text-xl md:leading-[1.75]"
+                      >
+                        {p}
+                      </p>
+                    );
+                  })}
                   {study.role.contextCallout && (
                     <aside className="mt-4 rounded-xl border-l-4 border-pink/40 bg-pink/5 p-6 md:p-8">
                       <p className="text-base leading-relaxed text-foreground/80">
@@ -422,6 +434,9 @@ export default async function CaseStudyPage({
                               image={img}
                             />
                           ))}
+                          {decision.quote?.afterParagraph === idx && (
+                            <QuoteCallout quote={decision.quote} />
+                          )}
                         </Fragment>
                       );
                     });
@@ -435,7 +450,7 @@ export default async function CaseStudyPage({
                     </aside>
                   )}
 
-                  {decision.quote && (
+                  {decision.quote && decision.quote.afterParagraph === undefined && (
                     <QuoteCallout quote={decision.quote} />
                   )}
                 </div>

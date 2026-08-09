@@ -17,6 +17,7 @@ export type QuoteBlock = {
   attribution?: string;
   role?: string;
   placeholder?: boolean;
+  afterParagraph?: number;
 };
 
 export type Decision = {
@@ -133,8 +134,11 @@ export const caseStudies: CaseStudyData[] = [
     role: {
       paragraphs: [
         "I was brought in for my systems thinking and ability to envision how interwoven systems should connect.",
+        "## Quick PoC for GitHub collab",
         "I asked to lead the design for this quick PoC. For the past year I\u2019ve been pushing 68 designers toward delivering front-end code through GitHub, and I needed to understand the friction from the inside to lead that transformation credibly.",
+        "## To Priority One \u2014 strategic lead + design + FED, still \u201cpart time\u201d",
         "The project started as a small proof of concept. Within ten days, it escalated to a Priority One initiative for Advisory and was announced on an All Hands before our second week demo. Sarah, the engineering pod lead, kept the team running while I stepped into the lead strategist and stakeholder alignment role on top of the design and FED work. I brought in Mitali, Sr UX Researcher, once the scope outgrew what I could cover alone.",
+        "## Strategic vision then hand off",
         "Before and during the pilot, Mitali and I created the proof of concept that earned buy-in, then I evolved the UI across four main experience flows: pursuit, budget, staffing, and monitoring. I am now transitioning the project to a Design Manager who will steer the direction through Beta and launch.",
       ],
       contextCallout:
@@ -146,7 +150,7 @@ export const caseStudies: CaseStudyData[] = [
         title: "An experience layer, not a replacement",
         paragraphs: [
           "## The risk of replacing",
-          "The three legacy systems carry more than a decade of business rules, data structures, and organizational ownership. Replacing them would have been dangerous technically and politically. The teams who own those systems would have had every reason to block cooperation.",
+          "The three legacy systems carry more than a decade of business rules, data structures, and org ownership. Replacing them would have been dangerous technically and politically. The teams who own those systems would have had every reason to block cooperation.",
           "## The Astro precedent",
           "I pushed for Project Forge to be an AI and experience layer that sits above the existing systems rather than replacing them. PwC already had an internal precedent: Astro, which adds AI and a better experience on top of time and expense, hoteling, and metrics reporting without replacing the underlying systems.",
           `That metaphor resonated immediately. It turned a threatening conversation (\u201cwe are replacing your system\u201d) into a collaborative one (\u201cwe are making your system more useful to more people\u201d).`,
@@ -158,6 +162,12 @@ export const caseStudies: CaseStudyData[] = [
           alt: "Forge briefing screen with decision frame and four evidence panels supporting AI-assisted recommendations",
           caption:
             "The experience layer in action — AI-synthesized briefing with a decision frame and evidence panels sitting above legacy system data.",
+        },
+        quote: {
+          quote:
+            "Pia, your Astro analogy is brilliant. It eases the legacy stakeholders in these demos and invites collaboration.",
+          attribution: "Engineering Pod Lead",
+          afterParagraph: 2,
         },
       },
       {
