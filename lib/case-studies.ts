@@ -8,6 +8,8 @@ export type ImagePlacement = {
   alt: string;
   caption?: string;
   placeholder?: string;
+  flexHeight?: boolean;
+  afterParagraph?: number;
 };
 
 export type QuoteBlock = {
@@ -731,8 +733,8 @@ export const caseStudies: CaseStudyData[] = [
       heading: "The Situation and My Role",
       sideLabel: "Context",
       paragraphs: [
-        "PwC Digital was a new venture inside PwC Advisory. Sector teams across the firm had built internal tools with commercial potential, and PwC wanted to sell them as products. New engagements came in every week. The design team needed to grow from 7 people to over a hundred, fast, with no playbook for how to do it.",
-        "When I arrived as a Senior Manager, there was no structured hiring process, no coordination between interview rounds, and no formal onboarding. New designers learned the team through proximity and luck. I was promoted to Director as the team scaled and became the head of design's deputy. I created or led the creation of every system described in this case study.",
+        "PwC Digital was a new venture inside PwC Advisory. It was growing fast with new engagements rolling in every week. The design team needed to grow from 7 people to over a hundred, fast, with no playbook for how to do it.",
+        "When I arrived, there was no structured hiring process, no coordination between interview rounds, and no formal onboarding. New designers learned the team through proximity and luck. I created or led the creation of every system described in this case study.",
       ],
       contextCallout:
         "There was no inherited process, no design ops support, and no template for what a 130-person consulting product design team was supposed to look like. We built it while running it.",
@@ -746,17 +748,46 @@ export const caseStudies: CaseStudyData[] = [
       {
         title: "Building the infrastructure to hire 130 people without losing control",
         paragraphs: [
-          "The ad-hoc interview process was not just inefficient. When different candidates get different questions from different interviewers, evaluations become inconsistent in ways that are hard to defend and easy to misread as bias. We needed structure before the next round of hiring, not after.",
-          "I brought the leads together to surface the questions we actually valued and why. We sorted the strongest into two interview templates, one per round. Interviewers took notes directly in a shared copy during each call. The second-round team opened that same document before their call and found the candidate's first-round answers in a second tab alongside their own questions. We also screened hard for soft skills and cultural fit, not just portfolio strength. That choice compounded over time.",
+          "## Interview Process",
+          "We needed structure to grow the strongest team possible. The ad-hoc process made it impossible to compare candidates evenly and easy to introduce unconscious bias.",
+          "I brought the leads together to align on questions we valued and why. We sorted the strongest into a two-interview template.",
+          "Interviewers took notes in a shared copy during each call. The second-round team opened that same document and found the candidate's first-round answers alongside their own questions.",
+          "## Onboarding",
           "Onboarding needed the same rigor. I designed an onboarding Miro board using macro and micro navigation; the zoomed-out view shows the full map, and zooming in reveals exactly what a new joiner needs. The content covered tool setup, Figma file conventions, accessibility standards, working with developers, and product demos. Each new hire received a specific action list for their first week, first month, first 60 days, and first 90 days.",
           "On day one, a \"friendlies\" leader welcomed them, walked them through the board, and answered the questions people are sometimes embarrassed to ask their direct manager that first week.",
         ],
-        image: {
-          src: "/case-studies/pwc-digital-leadership/inside-product-team.svg",
-          alt: "Diagram showing how a new designer fits inside a product team at PwC Digital",
-          caption:
-            "Inside a product team — how we oriented new joiners to their role within an engagement pod.",
-        },
+        images: [
+          {
+            src: "/case-studies/pwc-digital-leadership/interview-process-illustration.png",
+            alt: "Illustration of two interviewers conducting candidate evaluations with a shared document showing Round 1 answers and Round 2 questions in a tabbed interface",
+            caption:
+              "Structured interview process — Round 1 notes fed directly into Round 2 questions through a shared candidate evaluation document.",
+            afterParagraph: 1,
+          },
+          {
+            src: "/case-studies/pwc-digital-leadership/onboarding-miro-macro.png",
+            alt: "Full onboarding Miro board zoomed out showing all sections: Where We Sit, Get to Know Us, Career, Processes, Tools, Workshop Assets, Brand Guidance, Glossary, Strategy, and Tutorials",
+            caption:
+              "The macro view — the full onboarding board with every section visible at a glance.",
+            flexHeight: true,
+            afterParagraph: 3,
+          },
+          {
+            src: "/case-studies/pwc-digital-leadership/team-structure-empower-support.png",
+            alt: "Empower and Support org diagram showing leadership structure with designers at the center",
+            caption:
+              "The micro view — zooming in on how the team is structured, with every role orbiting the people doing the work.",
+            flexHeight: true,
+            afterParagraph: 3,
+          },
+          {
+            src: "/case-studies/pwc-digital-leadership/use-case-flow-template.png",
+            alt: "Use case flow template from the onboarding board showing trigger, dashboard, and business value stages",
+            caption:
+              "Onboarding board template — a reusable use-case flow new designers learned to apply on product engagements.",
+            afterParagraph: 4,
+          },
+        ],
         quote: {
           quote:
             "This award is really about your impact on our collaboration. You are truly, wonderfully easy to work with and your approach to the whole team — bringing us all together regularly, coaxing contributions from multiple people and sharing best practices widely — has made us better.",
@@ -788,6 +819,14 @@ export const caseStudies: CaseStudyData[] = [
           caption:
             "The Grid of Empowerment — a team manifesto session that codified designer advocacy as cultural architecture, not ambient luck.",
         },
+        images: [
+          {
+            src: "/case-studies/pwc-digital-leadership/client-experience-manifestos.png",
+            alt: "Client Experience team manifesto boards including mission, values, and design principles",
+            caption:
+              "Team manifesto sessions — we made the cultural principles visible so they could survive scale.",
+          },
+        ],
         quote: {
           quote:
             "That's something I like about you. Being open, honest and human makes you relatable and, at least from my point of view, even easier to respect and appreciate. I've noticed that as people climb the ladder here there's a tendency to adopt an attitude of aloofness. If I'm ever lucky enough to make Director, I quite frankly hope to be like you. Human.",

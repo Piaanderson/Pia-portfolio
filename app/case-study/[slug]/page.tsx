@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ImageIcon } from "lucide-react";
@@ -50,6 +51,7 @@ function ImageBlock({ image }: { image: ImagePlacement }) {
         src={image.src}
         alt={image.alt}
         caption={image.caption}
+        flexHeight={image.flexHeight}
       />
     );
   }
@@ -93,6 +95,45 @@ function ImageBlocks({
       ))}
     </>
   );
+}
+
+/**
+ * Maps each image to the content-paragraph index it should appear after.
+ * Images with an explicit `afterParagraph` are pinned to that position.
+ * The rest are distributed evenly across the remaining gaps.
+ */
+function distributeImages(
+  paragraphCount: number,
+  allImages: ImagePlacement[],
+): Map<number, ImagePlacement[]> {
+  const imageMap = new Map<number, ImagePlacement[]>();
+  if (allImages.length === 0 || paragraphCount === 0) return imageMap;
+
+  const autoImages: ImagePlacement[] = [];
+
+  for (const img of allImages) {
+    if (img.afterParagraph !== undefined) {
+      const pos = Math.min(img.afterParagraph, paragraphCount - 1);
+      if (!imageMap.has(pos)) imageMap.set(pos, []);
+      imageMap.get(pos)!.push(img);
+    } else {
+      autoImages.push(img);
+    }
+  }
+
+  for (let i = 0; i < autoImages.length; i++) {
+    let position: number;
+    if (autoImages.length >= paragraphCount) {
+      position = Math.min(i, paragraphCount - 1);
+    } else {
+      const step = paragraphCount / (autoImages.length + 1);
+      position = Math.round(step * (i + 1)) - 1;
+    }
+    if (!imageMap.has(position)) imageMap.set(position, []);
+    imageMap.get(position)!.push(autoImages[i]);
+  }
+
+  return imageMap;
 }
 
 function QuoteCallout({ quote }: { quote: QuoteBlock }) {
@@ -220,17 +261,26 @@ export default async function CaseStudyPage({
                   </h2>
                 </div>
                 <div className="flex flex-col gap-6">
-                  {study.problem.paragraphs.map((p, i) => (
-                    <p
-                      key={i}
-                      className="text-lg leading-[1.75] text-foreground/80 md:text-xl md:leading-[1.75]"
-                    >
-                      {p}
-                    </p>
-                  ))}
-                  {study.problem.image && (
-                    <ImageBlock image={study.problem.image} />
-                  )}
+                  {(() => {
+                    const allImages: ImagePlacement[] = study.problem.image
+                      ? [study.problem.image]
+                      : [];
+                    const imagePositions = distributeImages(
+                      study.problem.paragraphs.length,
+                      allImages,
+                    );
+
+                    return study.problem.paragraphs.map((p, i) => (
+                      <Fragment key={i}>
+                        <p className="text-lg leading-[1.75] text-foreground/80 md:text-xl md:leading-[1.75]">
+                          {p}
+                        </p>
+                        {imagePositions.get(i)?.map((img, k) => (
+                          <ImageBlock key={`img-${i}-${k}`} image={img} />
+                        ))}
+                      </Fragment>
+                    ));
+                  })()}
                   {study.problem.contextCallout && (
                     <aside className="mt-4 rounded-xl border-l-4 border-pink/40 bg-pink/5 p-6 md:p-8">
                       <p className="text-base leading-relaxed text-foreground/80">
@@ -296,16 +346,47 @@ export default async function CaseStudyPage({
                 </div>
 
                 <div className="flex flex-col gap-6">
-                  {decision.paragraphs.map((p, j) => (
-                    <p
-                      key={j}
-                      className="text-lg leading-[1.75] text-foreground/80"
-                    >
-                      {p}
-                    </p>
-                  ))}
+                  {(() => {
+                    const allImages: ImagePlacement[] = [
+                      ...(decision.image ? [decision.image] : []),
+                      ...(decision.images ?? []),
+                    ];
+                    const contentParagraphs = decision.paragraphs.filter(
+                      (p) => !p.startsWith("## "),
+                    );
+                    const imagePositions = distributeImages(
+                      contentParagraphs.length,
+                      allImages,
+                    );
 
-                  <ImageBlocks image={decision.image} images={decision.images} />
+                    let contentIdx = 0;
+                    return decision.paragraphs.map((p, j) => {
+                      if (p.startsWith("## ")) {
+                        return (
+                          <h3
+                            key={j}
+                            className="mt-4 font-serif text-xl font-bold text-foreground md:text-2xl"
+                          >
+                            {p.slice(3)}
+                          </h3>
+                        );
+                      }
+                      const idx = contentIdx++;
+                      return (
+                        <Fragment key={j}>
+                          <p className="text-lg leading-[1.75] text-foreground/80">
+                            {p}
+                          </p>
+                          {imagePositions.get(idx)?.map((img, k) => (
+                            <ImageBlock
+                              key={`img-${j}-${k}`}
+                              image={img}
+                            />
+                          ))}
+                        </Fragment>
+                      );
+                    });
+                  })()}
 
                   {decision.reflectionCallout && (
                     <aside className="mt-4 rounded-xl border-l-4 border-pink/40 bg-pink/5 p-6 md:p-8">

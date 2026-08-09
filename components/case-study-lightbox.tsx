@@ -14,6 +14,7 @@ type CaseStudyLightboxProps = {
   src: string;
   alt: string;
   caption?: string;
+  flexHeight?: boolean;
 };
 
 function CaseStudyImage({
@@ -46,6 +47,7 @@ export function CaseStudyLightbox({
   src,
   alt,
   caption,
+  flexHeight,
 }: CaseStudyLightboxProps) {
   const [isZoomed, setIsZoomed] = useState(false);
   const [origin, setOrigin] = useState({ x: 50, y: 50 });
@@ -74,15 +76,28 @@ export function CaseStudyLightbox({
             type="button"
             className={cn(
               "relative block w-full overflow-hidden rounded-xl cursor-zoom-in text-left",
-              isSvg ? "aspect-[4/3] bg-muted/20 p-6" : "aspect-[16/9]"
+              isSvg
+                ? "aspect-[4/3] bg-muted/20 p-6"
+                : flexHeight
+                  ? ""
+                  : "aspect-[16/9]"
             )}
             aria-label={`View larger image: ${alt}`}
           >
-            <CaseStudyImage
-              src={src}
-              alt={alt}
-              className={isSvg ? "relative h-full w-full object-contain" : "object-cover"}
-            />
+            {flexHeight && !isSvg ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={src}
+                alt={alt}
+                className="w-full h-auto rounded-xl"
+              />
+            ) : (
+              <CaseStudyImage
+                src={src}
+                alt={alt}
+                className={isSvg ? "relative h-full w-full object-contain" : "object-cover"}
+              />
+            )}
             <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity hover:opacity-100 focus-visible:opacity-100" />
           </button>
         </DialogTrigger>
