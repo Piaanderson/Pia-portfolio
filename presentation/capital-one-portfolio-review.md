@@ -8,10 +8,12 @@
 
 ## PRESENTATION OVERVIEW
 
-**Format:** Two case study walkthroughs, 20 min presenting + 10 min Q&A each
-**Total runtime:** ~60 minutes (2-3 min intro + two 30-min blocks)
+**Format:** Two 30-minute case study blocks, each with ~20 min presenting + 10 min Q&A
+**Total runtime:** 60 minutes (opening is included in the first presentation block; closing is included in the second)
 **Audience:** Design leadership evaluating craft, process, leadership, and strategic thinking
 **Delivery:** Virtual (screen share of slide deck)
+**Deck structure:** 28 slides, including a dedicated Q&A card after each case study
+**Current visual baseline:** `Design_9-28-26bsm_1.pdf`. The master below matches that deck, except Slide 26 contains the newer Forge reflection that still needs to be applied in Claude Design.
 
 **The narrative arc across the whole presentation:**
 
@@ -21,65 +23,59 @@
 
 ---
 
-
-
 ## SLIDE-BY-SLIDE SCRIPT
 
 ---
 
-
-
-### OPENING (3-4 minutes, 5 slides)
+### OPENING (~3 minutes, 5 slides)
 
 ---
 
-
-
 #### SLIDE 1 — Title
 
-**Visual:** Your name, simple and clean. No clutter.
+**Visual:** Dark gradient title card with the PA monogram.
 
 > Pia Anderson
 > Design Director
 > Portfolio Review — September 2026
 
+**WHAT TO SAY (10 seconds):**
+
+"Hi, I'm Pia Anderson. Thank you for having me."
+
 ---
-
-
 
 #### SLIDE 2 — Agenda
 
-**Visual:** Simple list — sets expectations before they get to know you
+**Visual:** Three numbered agenda rows with descriptions and timing aligned on the right.
 
-> **About Me**
-> **Case Study 1:** Southwest Airlines Ops Suite
-> **Case Study 2:** Project Forge
+> **01 About me:** Who I am, and how I've gotten here · A few minutes up front
+> **02 Southwest Airlines Ops Suite:** AI-powered operational tools for the people who run the airline · 20 min including intro + 10 min questions
+> **03 PwC Project Forge:** AI-first enterprise platform unifying three legacy systems · 20 min + 10 min questions
 
-**WHAT TO SAY (15 seconds):**
+**WHAT TO SAY (20 seconds):**
 
-"Here's what we'll cover today. I'll start with a bit about who I am, then walk through two case studies. Both are about internal tools, both involve AI, and both required earning the trust of expert users who were skeptical that technology could do what they do."
+"We have two 30-minute blocks. I'll use about 20 minutes in each block for the work and hold 10 for questions. I'll use the first few minutes of the Southwest block to introduce myself. Both case studies are about internal tools and AI, and both required earning the trust of expert users who were skeptical that technology could do what they do."
 
 ---
-
-
 
 #### SLIDE 3 — About Me: The Person
 
-**Visual:** Family photo collage — similar to the layout from Claude Design (beach photo, circles with family moments, holiday shots). Warm, personal. This isn't curated perfection — it's your actual life.
+**Visual:** Headline and short personal copy on the left. Family photo collage on the right.
 
-**WHAT TO SAY (45 seconds):**
+> **My favorite way to make tech feel approachable.**
 
-"I'm Pia. I live with my husband — my best friend — our two daughters, 11 and 14, and two dogs. Outside work I'm either deep in an AI rabbit hole, reading, gaming, or on a Pilates reformer. And yes, I dye my own hair — the sunset is intentional.
+**WHAT TO SAY (25 seconds):**
 
-I was Design Chair for the UXPA 2026 Conference this past June. And I lead activities teaching generative AI at both of my kids' schools — when they were younger it was Christmas ornaments with beads; now we upload selfies and have fun with image generation. It's my favorite way to make tech feel approachable."
+"I'm Pia. I live with my husband — my best friend — our two daughters, 11 and 14, and two dogs. I was Design Chair for the UXPA 2026 Conference this past June. And I lead activities teaching generative AI at both of my kids' schools. When they were younger it was Christmas ornaments with beads. Now we upload selfies and have fun with image generation. It's my favorite way to make tech feel approachable."
 
 ---
 
-
-
 #### SLIDE 4 — About Me: Credentials
 
-**Visual:** Clean layout. Three certification badges/logos, current role, Agent OS callout. Not a resume — just enough to establish credibility if the interviewer hasn't read yours.
+**Visual:** Three certification cards across the top with Current, Recent, and Community below.
+
+> **I'll let the work do the talking.**
 
 > **Certifications**
 > · Nielsen Norman Group (NN/g) UX Certification
@@ -87,7 +83,7 @@ I was Design Chair for the UXPA 2026 Conference this past June. And I lead activ
 > · Anthropic Claude Certified Associate
 >
 > **Current:** Design Director, PwC — 67 designers (US + Mexico) + 10 contractors
-> **Recent:** Led UX vision for Agent OS — PwC's AI agent platform · patent-pending · 250+ deployed agents
+> **Recent:** Led UX vision for Agent OS — PwC's AI agent platform · patent-pending · hundreds of deployed agents
 > **Community:** Design Chair, UXPA 2026 Conference
 
 **WHAT TO SAY (15 seconds):**
@@ -98,33 +94,31 @@ I was Design Chair for the UXPA 2026 Conference this past June. And I lead activ
 
 ---
 
-
-
 #### SLIDE 5 — About Me: The Origin Story
 
-**Visual:** Minimal — maybe a subtle career timeline (AA → SWA → PwC Tax Tech → PwC Digital), or just text on a clean background. Let your voice carry this one.
+**Visual:** Sparse, typography-led dark slide using the existing gradient and one restrained pink accent. No timeline, résumé content, photo, or service-design definition.
 
-**WHAT TO SAY (75 seconds):**
+> **Why this work**
+>
+> **I got to make people's days easier.**
+>
+> Internal tools let me improve the experience of the work itself.
+>
+> *That changed the kind of work I chose to do.*
 
-"I started my career at American Airlines, went into consulting, and my first assignment was Southwest. That project — building operational software for the people who run the airline — is where I fell in love with internal-facing software.
+**WHAT TO SAY (~45 seconds):**
 
-I got to make people's days easier. Help them like their jobs more. The veteran supervisors who were too valuable to the operation to take more than a day off — I helped build the tools that let them take real vacations. And I was hooked. That was so much better than selling cell phone subscriptions or airline tickets.
+"Southwest changed the kind of work I wanted to do. I had spent years designing customer-facing experiences. At Southwest, I was designing for the people who make the operation work, and the impact felt more immediate.
 
-I left Southwest, tried a few other assignments, and knew I wanted to get back to internal-facing work. A friend interviewed for a role on PwC's tax technology team and told me it sounded like me. He was right. I've spent the years since helping tax interns go home earlier in the evenings, research consultants travel less through better efficiency tools, supply chain teams make smarter predictions by seeing the right data layered together.
+I could remove friction from a difficult job and give people time back. That became the through-line in the work I chose after Southwest. It is also why this role at Capital One feels like such a natural fit. I care about the people using complex systems all day, and I want design to make that work easier.
 
-When you run task validation tests and your users get so excited that they're going to get these features — those are the very best days."
+Southwest is where that shift happened."
 
-*[Let "the very best days" breathe. Pause one beat before continuing.]*
-
-"I'm going to walk you through two projects that map directly to what your team is building. Let's start with Southwest."
-
-**SPEAKER NOTE:** The bridge into Case Study 1 is built right into the end of the origin story. No need for a separate transition — just keep moving.
+**SPEAKER NOTE:** Let the sparse slide breathe. Pause briefly after the final sentence, then advance to the Southwest title card.
 
 ---
 
 ---
-
-
 
 ## CASE STUDY 1: SOUTHWEST AIRLINES OPS SUITE
 
@@ -133,8 +127,6 @@ When you run task validation tests and your users get so excited that they're go
 **Tone:** This is where you show you can design. Deep, specific, confident.
 
 ---
-
-
 
 #### SLIDE 6 — Case Study 1 Title Card
 
@@ -152,11 +144,13 @@ When you run task validation tests and your users get so excited that they're go
 
 ---
 
-
-
 #### SLIDE 7 — The Problem
 
-**Visual:** NOC environment wide shot (noc-environment.png)
+**Visual:** NOC environment wide shot with four metrics across the bottom.
+
+> **One of the country's most complex flight networks, run mostly on paper.**
+>
+> **3,900** daily departures · **97** cities · **2–3 years** for a new supervisor to become effective · **24/7** windowless operation
 
 **WHAT TO SAY (2 minutes):**
 
@@ -168,11 +162,11 @@ New supervisors took two to three years to become effective. Veterans couldn't t
 
 ---
 
-
-
 #### SLIDE 8 — My Role & The Suite
 
-**Visual:** Arrange key app screenshots showing the breadth of the suite — Gate Schedule (hero-gate-schedule.png), Station Settings (station-settings-phx.png), Recovery Optimizer (recovery-optimizer-noc.png)
+**Visual:** Three labeled app screenshots: The Baker, Gate Management, and Station Management. Role summary sits above the screenshots.
+
+> **Three applications, one design system.**
 
 **WHAT TO SAY (1 minute):**
 
@@ -182,17 +176,21 @@ I led the user research for The Baker, working directly with three veteran super
 
 ---
 
-
-
 #### SLIDE 9 — Decision 1: Teaching an AI to Earn Trust (Part 1)
 
-**Visual:** Recovery Optimizer on screen in the NOC (recovery-optimizer-noc.png or noc-workstation-vview.png)
+**Visual:** Recovery Optimizer on screen in the NOC with three concise callouts.
+
+> **Teaching an AI to earn trust**
+>
+> **20+** operational factors weighed
+> **3** recovery plans, each scored and ranked
+> **1** way out: build a solution manually at any time
 
 **WHAT TO SAY (3 minutes):**
 
 "The Baker was designed to replace a manual recovery process that consumed four to six hours during a mega-station weather shutdown. The algorithm considered more than 20 operational factors — aircraft position, crew legality, customer connections, gate availability, the cascade effects of moving one flight on dozens of others.
 
-The interface challenge was not the algorithm. It was the people.
+The design challenge was connecting the algorithm's recommendations to the supervisors' expertise and judgment.
 
 The SODs had spent entire careers mastering this process. They could look at a disruption and make decisions that would take a computer hundreds of variables to model. And here we were, telling them an AI could do it in minutes.
 
@@ -200,15 +198,19 @@ I designed a solution that gave them a way out. Three AI-generated recovery plan
 
 ---
 
-
-
 #### SLIDE 10 — Decision 1: Teaching an AI to Earn Trust (Part 2)
 
-**Visual:** Close-up of The Baker's "View Solution" screen showing the three options (if you can crop/detail from recovery-optimizer-noc.png), or a diagram of the trust model
+**Visual:** Dark NOC image with three cards across the bottom.
+
+> **The AI learned from every manual override.**
+>
+> **Show:** Three ranked and scored plans to compare
+> **Override:** Build a solution manually if all three are wrong
+> **Learn:** Every selection or override feeds back into the model
 
 **WHAT TO SAY (3 minutes):**
 
-"The critical design decision was this: the AI learned from every manual override. When a supervisor rejected all three options and built their own, the system incorporated that judgment into future recommendations.
+"That manual path became more than a fallback. The engineering team agreed to make it part of the learning loop, evolving the system so the supervisors' manual solutions could inform future recommendations.
 
 Trust wasn't demanded. It was earned iteratively. Over testing cycles, the SODs saw the system prove it understood what 'good' looked like — because they had taught it. The interface wasn't replacing their expertise. It was amplifying it.
 
@@ -216,35 +218,44 @@ Some of those early testing sessions were tense. The supervisors were looking fo
 
 *[Pause. Then the C1 connection:]*
 
-"This is the same trust dynamic your team will face. Your customer service agents have deep expertise with cardmembers. The AI tools you're building need to amplify that expertise, not replace it. The pattern I used — show options, let humans override, let the AI learn from the overrides — is directly transferable."
+"This is the same trust dynamic your team will face. Your customer service agents have deep expertise with cardmembers. The AI tools you're building need to amplify that expertise, not replace it. The pattern I used — show options, let humans override, let the AI learn from the overrides — is directly transferable. And when those agents have tools they trust, the cardmember on the other end of the call gets a better experience. That's the second user in this work."
 
 **SPEAKER NOTE:** This is the centerpiece of Case Study 1. Take your time. The C1 connection should feel like a natural observation, not a sales pitch.
 
 ---
 
-
-
 #### SLIDE 11 — Decision 2: The Design System (Part 1)
 
-**Visual:** Dark mode / light mode comparison — The Baker in the NOC (recovery-optimizer-noc.png) alongside Gate Schedule in the station office (hero-gate-schedule.png) or Station Settings in the airport (station-settings-airport-view.png)
+**Visual:** Dark-mode NOC image beside two light-mode station images.
+
+> **One system, two environments**
+>
+> **Dark mode:** NOC · 12-hour shifts · no daylight
+> **Light mode:** Stations · sunlit gates and tarmacs
 
 **WHAT TO SAY (2-3 minutes):**
 
-"Five applications being built in parallel, each with different needs but the same users. I founded the OpsSuite Design System to unify them.
+"The Baker was the most dramatic application in the suite, but it was only one of five operational tools being built in parallel.
 
-One of the earliest design decisions came from my first research sessions in the NOC. The NOC operates in perpetual darkness — monitors are the only light source. But station agents and ramp crews work on bright tarmacs and in sunlit gate areas."
+Earning trust in one product was not enough. If every application looked and behaved differently, we would recreate the complexity we were trying to remove. That is why I founded the OpsSuite Design System.
+
+Consistency did not mean treating every environment the same. The Network Operations Control center operates in perpetual darkness, with monitors as the primary light source. Station agents and ramp crews work in sunlit gates and on bright tarmacs.
+
+That contrast led to one of our earliest architectural decisions: the system needed to support theming from the start."
 
 *[Gesture to the side-by-side]*
 
-"I pitched a dark mode to the solution architect after those first interviews. He built it in a single evening — because the design system I was building supported theming from the start. That wasn't luck. It was architecture."
+"After my first research session in the NOC, I brought the need for dark mode to our solution architect. I spent a day remapping our design tokens to dark-mode equivalents. He updated the code that evening, and the new theme was ready to test the following morning.
+
+Supervisors in the NOC and agents on the ramp used the same OpsSuite. The theme changed; the product did not."
 
 ---
 
-
-
 #### SLIDE 12 — Decision 2: The Design System (Part 2)
 
-**Visual:** Design system component library (design-system.png) and/or the tablet on the tarmac (gate-schedule-tablet-tarmac.png)
+**Visual:** OpsSuite component library with three cards: The Pivot, The Lesson, and Non-Negotiable.
+
+> **The OpsSuite Design System**
 
 **WHAT TO SAY (2 minutes):** 
 
@@ -252,19 +263,21 @@ One of the earliest design decisions came from my first research sessions in the
 
 Because the four of us sat together and communicated constantly, the front-end lead and I evolved the system with minimal rework. It grew from the work rather than being imposed on it.
 
-If I were starting today, I would begin the design system from the most complex screen and work outward. That lesson has stayed with me."
+If I were starting today, I would begin the design system from the most complex screen and work outward. That lesson has stayed with me.
+
+Accessibility was non-negotiable from the start — keyboard navigation, focus management, and WCAG AA contrast were baked into every component. In a 24-hour operations center, accessible design isn't a compliance checkbox. It's the difference between a tool people can use for a 12-hour shift and one they can't."
 
 *[Brief C1 connection:]*
 
-"Your JD mentions 'the value of design systems in reducing technical debt and designer swirl.' I've built one from scratch under real constraints — and I know what it takes because I've also made the mistakes that teach you how to do it right."
+"Starting from the most complex screen and designing outward — that's the principle I'd bring to any design system at scale. I've built one from scratch under real constraints, and the mistakes are what teach you how to do it right."
 
 ---
 
-
-
 #### SLIDE 13 — Research & Growing the Team
 
-**Visual:** Tablet on tarmac (gate-schedule-tablet-tarmac.png) — this photo is one of your most powerful because it shows the tool in the real environment with a real user
+**Visual:** Tablet on tarmac as the hero image. Three cards on the right: The Research, The Team, and Teaching Design Value.
+
+> **Research with the experts, scaling the practice.**
 
 **WHAT TO SAY (2 minutes):**
 
@@ -272,11 +285,11 @@ If I were starting today, I would begin the design system from the most complex 
 
 My job was to design an interface that respected that expertise while making the AI's capabilities accessible. That meant spending time in the NOC observing actual disruptions, understanding the decision-making mental models, and designing information hierarchy based on what they actually looked at first during a crisis — not what the system architecture suggested.
 
-As the project expanded, I onboarded additional designers on Flight Audit and Turn Management. I'd been running weekly peer-review sessions since American Airlines — they were our favorite meeting of the week there and helped us rebrand most of the website in perfect alignment. I brought that practice to Southwest to keep the expanding design team aligned across applications. Same structure, same rhythm — and it worked just as well with a different team on more complex software."
+As the project expanded, I onboarded additional designers on Flight Audit and Turn Management. I'd been running weekly peer-review sessions since American Airlines — they were our favorite meeting of the week there and helped us rebrand most of the website in perfect alignment. I brought that practice to Southwest to keep the expanding design team aligned across applications. Same structure, same rhythm — and it worked just as well with a different team on more complex software.
+
+In both of these environments, part of the job was helping non-design partners understand why the design process matters — not just what it produces. The SODs had never worked with a designer. The engineers hadn't seen user research drive architecture decisions. Teaching design value while delivering design work has been a constant across my career."
 
 ---
-
-
 
 #### SLIDE 14 — Outcomes
 
@@ -299,31 +312,55 @@ As the project expanded, I onboarded additional designers on Flight Audit and Tu
 
 ---
 
-
-
 #### SLIDE 15 — Reflection
 
-**Visual:** Minimal — just text, or a small photo of the team/environment
+**Visual:** Two cards on a clean background under the eyebrow "Looking Back."
 
-**WHAT TO SAY (1 minute):**
+> **Two things I hold from this work**
 
-"Two things from this project stayed with me more than any other.
+- **What I believe**
+  > Trust is a design deliverable — not a byproduct of good design.
+- **What I'd do differently**
+  > Start every design system from the most complex screen.
 
-First, the dual-track agile process — discovery and delivery running in parallel without collision — was something the scrum masters on this project created and maintained. I've tried to recreate that rhythm on every team since, with partial success. Not every organization has dedicated scrum masters, and without them you need more overhead from design and engineering leads.
+No paragraph body copy on slide.
 
-Second, the side-by-side collaboration with engineers. I'd worked with front-end developers at American Airlines and other roles, but at Southwest we were truly teamed — sitting together, solving problems together, pivoting together. That closeness made a world of difference when we needed to move fast. When a research finding changed the direction on a Friday, we could redesign and re-engineer by Monday because the whole team shared the context. That was the model I've tried to bring to every team since."
+**WHAT TO SAY (~55 seconds):**
 
-*[Smile]*
+"Two things I hold from this work.
 
-"Ask me about it sometime. It was scrum magic."
+The conviction: trust is a design deliverable — not a byproduct of good design. For anything truly new — and AI in an operations environment absolutely counts — you build *with* the users, not just validate at the end. The three veteran supervisors in the NOC weren't participants in a research plan. They were co-authors of the system. That's why they trusted it. And trust is what adoption actually rides on.
 
-**SPEAKER NOTE:** This is a natural handoff to Q&A. The "ask me about it" is an invitation. If no one asks, that's fine — it just signals warmth and openness.
+The revision: I'd start every design system from the most complex screen. I did the opposite at Southwest, and it cost us rework. It's the first thing I do differently now.
+
+*[Beat.]*
+
+Same conviction, at a different altitude — let's talk about Forge."
+
+**SPEAKER NOTE:** This is the handoff into Case Study 2. The last line is the bridge — don't rush it. Hold a half-beat of eye contact before advancing. The scrum-master and side-by-side-engineering story is now Q&A material only (see Q&A prep below) — not on the slide and not in the talk track.
+
+---
+
+#### SLIDE 16 — Case Study 1 Q&A
+
+**Visual:** Dark gradient card.
+
+> **Case Study 01 · Southwest Airlines**
+> **Questions**
+> *~10 minutes*
+
+**WHAT TO SAY:**
+
+"I'd love to hear your questions."
 
 ---
 
 **→ Q&A for Case Study 1 (10 minutes)**
 
 **Likely questions and how to handle them:**
+
+**Q: "How did the system learn from manual plans?"**
+A: "When a trusted SOD rejected the three plans and built a manual plan, that plan became training input for the machine-learning framework. Only a small set of veteran supervisors had permission to create manual plans, so the learning loop was controlled."
 
 **Q: "This project is older — how has your thinking evolved since?"**
 A: "The core principles haven't changed — AI trust models, design systems as infrastructure, embedded research. What's evolved is my altitude. At Southwest I was in the room doing the design. Now I lead teams doing equivalent work and I set the strategic direction. The Forge case study you're about to see shows that evolution."
@@ -337,11 +374,12 @@ A: "I didn't try to convince them the AI was better. I designed an interface tha
 **Q: "What would you do differently?"**
 A: "Start the design system from the most complex screen. And document the decision rationale more formally — when I moved on, some of the 'why' behind design decisions lived only in my head and meeting notes."
 
----
+**Q: "What made that team work so well?" / "Tell me more about how you worked with engineering."**
+A: "Two things. First, the dual-track agile process — discovery and delivery running in parallel without collision. The scrum masters on this project created and maintained that rhythm. I've tried to recreate it on every team since, with partial success. Not every organization has dedicated scrum masters, and without them you need more overhead from design and engineering leads. Second, the side-by-side collaboration with engineers — we were truly teamed, sitting together, solving problems together, pivoting together. When a research finding changed the direction on a Friday, we could redesign and re-engineer by Monday because the whole team shared the context. Ask me about it sometime — it was scrum magic."
 
 ---
 
-
+---
 
 ## CASE STUDY 2: PROJECT FORGE
 
@@ -351,37 +389,41 @@ A: "Start the design system from the most complex screen. And document the decis
 
 ---
 
-
-
-#### SLIDE 16 — Case Study 2 Title Card
+#### SLIDE 17 — Case Study 2 Title Card
 
 **Visual:** Forge hero dashboard (hero.png)
 
 > **Project Forge — AI-First Enterprise Platform**
-> Design Director · PwC (Player-Coach)
+> Design Director · PwC
 > *Currently in pilot*
 
 **WHAT TO SAY (20 seconds):**
 
-"I'm showing this project because it's the closest parallel to what you're building. It's an AI-first platform designed to unify three legacy enterprise systems into a single experience. It's in pilot, which means I can speak to the decisions we're testing, not just the ones that worked."
+"I'm showing this project because it's the closest parallel to what you're building. It's an AI-first platform designed to unify three legacy enterprise systems into a single experience. When I started, there was no product spec, no design brief, no clear end state — three legacy systems, a stakeholder vision that was half-formed, and a mandate to show something compelling fast. It's in pilot now, which means I can speak to the decisions we're testing, not just the ones that worked."
 
 ---
 
+#### SLIDE 18 — The Problem
 
+**Visual:** Three numbered system cards with a shared footer.
 
-#### SLIDE 17 — The Problem
-
-**Visual:** CREATE a simple architecture diagram showing three legacy system boxes (Budget Creation, Staffing/Deployment, Monitoring) with pain points annotated
+> **The tools work. The experience of using them does not.**
+>
+> **System 01 · Budget Creation**
+> **System 02 · Staffing / Deployment**
+> **System 03 · Monitoring & Reporting**
+>
+> *10+ years of business logic each · No integration between systems*
 
 **WHAT TO SAY (2-3 minutes):**
 
-"PwC's internal tools for budget creation, staffing, and engagement monitoring span three separate systems with more than a decade of business logic each. The tools work. The experience of using them does not.
+"PwC's internal tools for budget creation, staffing, and engagement monitoring span three separate systems with more than a decade of business logic each. The tools work. The experience of using them does not. Three problems:
 
-Budget creation is manual and repetitive. Every resource has to be entered through dropdowns that don't remember the previous entry. When teams grow beyond a dozen people, they export to Excel, edit there, and import back rather than fight the tool.
+First — budget creation is manual and repetitive. Every resource has to be entered through dropdowns that don't remember the previous entry. When teams grow beyond a dozen people, they export to Excel, edit there, and import back rather than fight the tool.
 
-To give a client multiple budget alternatives, you have to create full duplicate projects. There's no way to compare options side by side. Those duplicate projects all flow into Deployment requesting the same resources with slight variations — and the deployment team has to make calls and send emails to sort out which one is real.
+Second — the systems don't talk to each other. To give a client multiple budget alternatives, you have to create full duplicate projects. No way to compare options side by side. Those duplicates all flow into Deployment requesting the same resources with slight variations — and the deployment team has to make calls and send emails to sort out which one is real.
 
-Monitoring only looks backward. Dashboards report on yesterday and today with no predictive capability. If a resource is overbilling, it can take 30 days to surface without manual weekly checks."
+Third — monitoring only looks backward. Dashboards report on yesterday and today with no predictive capability. If a resource is overbilling, it can take 30 days to surface without manual weekly checks."
 
 *[Pause]*
 
@@ -391,27 +433,31 @@ Monitoring only looks backward. Dashboards report on yesterday and today with no
 
 ---
 
+#### SLIDE 19 — My Role
 
+**Visual:** Role summary and metrics on the left, Forge dashboard on the right.
 
-#### SLIDE 18 — My Role
-
-**Visual:** Minimal — maybe the Forge hero dashboard again at smaller scale, or just text
+> **Lead strategist, designer, and front-end contributor.**
+>
+> **10 days:** From quick proof of concept to a Priority One initiative for all of Advisory
+>
+> **4 flows:** UI designed for full POC buy-in
 
 **WHAT TO SAY (1-2 minutes):**
 
-"I was brought in for my systems thinking — my ability to see how interwoven systems connect and simplify them into something centralized and usable. I asked to lead the design personally. For the past year, I've been pushing 67 designers toward delivering front-end code through GitHub, and I needed to understand the friction from the inside to lead that transformation credibly.
+"I was brought in for my systems thinking — my ability to see how interwoven systems connect and simplify them into something centralized and usable. I asked to lead the design personally. For the past year, I've been pushing 67 designers toward delivering front-end code through GitHub, and I needed to understand the friction from the inside to lead that transformation credibly. Leading a team that size means building structure that scales — weekly Director syncs, peer reviews at the pod level, our associates running their own design ops programs, and career-prep sessions for Managers ready to level up. But this project needed me in the work, not above it.
 
 The project started as a small proof of concept. Within ten days, it escalated to a Priority One initiative for all of Advisory and was announced on an All Hands before our second weekly demo.
 
 I led the UX vision and strategy, created the proof of concept that earned buy-in, then designed the UI across four main experience flows. Sarah Halverson, the engineering pod lead, kept the team running while I stepped into the lead strategist and stakeholder alignment role on top of design and front-end development work. I brought in Mitali Kamat, a Senior UX Researcher, once the scope outgrew what I could cover alone. I'm now transitioning the project to a Design Manager who will steer it through Beta and launch."
 
+**SPEAKER NOTE:** If they ask about team management in Q&A, go deeper: "I mentor and grow our Senior Managers as their direct leader. We have what we call Super-ssociates — our associates and senior associates — who run and manage parts of our design operations themselves: scheduling and agenda for our bi-weekly designers call with brown bags, our shadowing program, and other initiatives they own and report back on. For Managers and Senior Managers, I added group discussion sessions this year specifically to prepare them for the next step in their careers. The team is too large for a single peer-review circle, so I encourage my Directors and SMs to run their own within their pods, while the full team does show-and-tells and brown bags."
+
 ---
 
+#### SLIDE 20 — Decision 1: Experience Layer, Not Replacement
 
-
-#### SLIDE 19 — Decision 1: Experience Layer, Not Replacement
-
-**Visual:** CREATE an architecture diagram showing three legacy systems at the bottom, a clear "Experience + AI Layer" above them, and the user-facing Forge interface at the top. Label the connection points.
+**Visual:** Three legacy systems at the bottom feeding one unified layer labeled "Forge — AI + Experience Layer." Capability pills inside the Forge layer: Flex Felix AI Agent, Smart Defaults, Predictive Monitoring, and Budget Comparison.
 
 **WHAT TO SAY (4-5 minutes):**
 
@@ -431,27 +477,30 @@ I pressed our senior stakeholders to stop framing the project as a replacement, 
 
 ---
 
+#### SLIDE 21 — Decision 2: Research That Changed the Direction (Part 1)
 
+**Visual:** Pursuit signals and briefing screens side by side with the research result above.
 
-#### SLIDE 20 — Decision 2: Research That Changed the Direction (Part 1)
-
-**Visual:** The pursuit signals screen (portfolio-ranked-signals-tabbed.png) alongside the briefing/decision frame (briefing-decision-frame-evidence-panels.png) — showing the AI integrated INTO the screens, not in a separate chat window
+> **Research that changed the direction**
+>
+> **2 of 5** closed the chat panel immediately
+> **3 of 5** never used it unless prompted
 
 **WHAT TO SAY (2-3 minutes):**
 
 "The lead stakeholder wanted a chat-first experience. He's a believer in AI-driven interaction and wanted users to be able to reach Forge through Claude, ChatGPT, or other AI assistants.
 
-In our first round of research, two out of five participants immediately closed the chat panel. The other three didn't interact with it unless prompted. They wanted faster, smarter versions of the screens they already understood.
+In our first round of research, two out of five participants immediately closed the chat panel. The other three didn't interact with it unless prompted. They wanted faster, smarter versions of the screens they already understood. That was an early qualitative signal, and the pattern was strong enough to change the design direction. The pilot is where we're validating it at scale.
 
 Those findings created a tension. The stakeholder's vision wasn't wrong — there's a future where conversational AI is the primary interface. But our users weren't there yet. And designing for where you think users should be, rather than where they are, is one of the most common design leadership mistakes."
 
 ---
 
+#### SLIDE 22 — Decision 2: Research That Changed the Direction (Part 2)
 
+**Visual:** Forge dashboard with chat beside the budget wizard with AI helpers inside the form.
 
-#### SLIDE 21 — Decision 2: Research That Changed the Direction (Part 2)
-
-**Visual:** The Forge hero dashboard (hero.png) showing both the AI chat panel AND the screen-based interface together — or the budget wizard (wizard-step-1-engagement-details.png) showing the AI helpers built into the form
+> **Two paths, equal depth, always in sync**
 
 **WHAT TO SAY (2 minutes):**
 
@@ -465,11 +514,14 @@ Nothing happens behind a curtain. That transparency is the trust mechanism — t
 
 ---
 
+#### SLIDE 23 — Decision 3: Leading Through Making (Part 1)
 
+**Visual:** Budget comparison laptop beside the full flow with step indicator.
 
-#### SLIDE 22 — Decision 3: Leading Through Making (Part 1)
-
-**Visual:** The budget comparison view (budget-comparison-laptop.png) showing three delivery model options — Traditional, AI-Augmented, AI-Forward
+> **Version confusion, eliminated by design**
+>
+> Traditional · AI-Augmented · AI-Forward, compared side by side
+> Role-based access governs create, edit, and approve
 
 **WHAT TO SAY (2-3 minutes):**
 
@@ -479,15 +531,17 @@ In the legacy system, to give a client multiple budget alternatives, you had to 
 
 In Forge, multiple draft budgets live within a single project. It took three rounds of simplifying the budget screen itself before it was lean enough to support comparison. From there, I focused on the minimum information required to compare meaningfully and the visual hierarchy that lets teams scan two to five options at once. 
 
-The flow lets users compare at the summary level, dive into any draft, make changes and see the comparison update immediately, then choose one to move forward. Only the chosen budget proceeds downstream. The version confusion is eliminated by design, not by policy."
+The flow lets users compare at the summary level, dive into any draft, make changes and see the comparison update immediately, then choose one to move forward. Only the chosen budget proceeds downstream — and role-based access governs who can create, edit, and approve at every stage. The version confusion and the governance gaps are eliminated by design, not by policy."
 
 ---
 
+#### SLIDE 24 — Decision 3: Leading Through Making (Part 2)
 
+**Visual:** Story and learning-curve chips on the left, product screens on the right.
 
-#### SLIDE 23 — Decision 3: Leading Through Making (Part 2)
-
-**Visual:** The budget wizard with AI pre-fill (wizard-step-1-engagement-details.png) — showing AI agent's pre-filled fields labeled "From briefing"
+> **Leading through making**
+>
+> Meaningful commit organization · PR sizing · Linter compliance · Focus indicators and ARIA · Hand-coded data visualization
 
 **WHAT TO SAY (2-3 minutes):**
 
@@ -501,29 +555,31 @@ Every lesson from Forge feeds directly back into how I coach the team. The leade
 
 *[C1 connection:]*
 
-"Your JD says 'player-coach who remains hands-on, who will lead the team not just through management but by prototyping, visualizing complex workflows, and learning through the act of building.' That's what this is."
+"That's the player-coach model this work demanded. I lead by making, then I hand the foundation to someone who can carry it."
 
-**SPEAKER NOTE:** Quote their JD back to them. You've read it carefully. They'll notice.
+**SPEAKER NOTE:** Do not quote the JD. They will hear the match without the citation.
 
 ---
 
+#### SLIDE 25 — Outcomes & What's Next
 
+**Visual:** Large leadership statement followed by four outcome cards and a tracking bar.
 
-#### SLIDE 24 — Outcomes & What's Next
+> **Go deep when the problem needs your specific skill. Then hand it to someone who can carry it.**
 
-**Visual:** Minimal — clean text with perhaps a small image of the dashboard
-
-> **POC → Priority One** in 10 days — announced on Advisory All Hands before our second demo
+> **10 days:** POC to Priority One — announced on the Advisory All Hands before our second demo.
 >
-> **Team I built:** Engineering pod lead + Sr UX Researcher + Design Manager (transitioning for Beta)
+> **The team I built:** Engineering pod lead, Senior UX Researcher, and a Design Manager taking it into Beta.
 >
-> **Pilot status:** Engineering pod building full production UI from my designs. Pilot generating data.
+> **Pilot status:** Engineering pod building the full production UI from my designs. Pilot generating data.
 >
-> **What I'm transitioning:** Design vision and strategic direction set. Design Manager taking day-to-day through Beta and launch. I continue to provide director-level oversight.
+> **What I'm transitioning:** Vision and strategic direction set. Design Manager takes day-to-day through Beta and launch; I stay on for director-level oversight.
+>
+> **Tracking:** Time to budget creation · reduction in duplicate projects sent to Deployment · satisfaction with multi-draft comparison and the pursuit dashboard
 
 **WHAT TO SAY (1-2 minutes):**
 
-"I don't have adoption metrics yet — the project is in pilot. What I can tell you is that the proof of concept was compelling enough to become the highest-priority initiative in Advisory within two weeks.
+"The project is in pilot, and we're tracking the metrics that matter: time to budget creation for sample projects, reduction in duplicate projects sent to deployment, user satisfaction with the multi-draft comparison versus the old duplicate-project workflow, and whether the Partner pursuit dashboard's ranked signals and suggested angles are actually helping teams make better pursuit decisions. What I can tell you is that the proof of concept was compelling enough to become the highest-priority initiative in Advisory within two weeks.
 
 I've set the design vision, built the team, and designed the core experience across four flows. The engineering pod is building the production version from my designs. I'm transitioning day-to-day leadership to a Design Manager, which is the right move — I built the foundation, set the direction, and now someone else carries it through Beta and launch while I continue to set vision and provide oversight.
 
@@ -531,17 +587,40 @@ That transition pattern — go deep when the problem needs your specific skill, 
 
 ---
 
+#### SLIDE 26 — Reflection
 
+**Visual:** Two cards on a clean background. Slide title: "What I'm taking from Forge."
 
-#### SLIDE 25 — Reflection
+- **What worked**
+  > The right solution had to work for users and for the teams responsible for the existing systems.
+- **What I'd change**
+  > We should have separated design review from code review as the POC became a product.
 
-**Visual:** Minimal
+**WHAT TO SAY (~1 minute):**
 
-**WHAT TO SAY (1 minute):**
+"Two things I am taking from Forge.
 
-"Working inside a shared repository with engineers is a fundamentally different skill from designing on your own. The collaboration patterns, the review expectations, the discipline of small well-organized commits — it changed how I think about what 'delivering design' means.
+First, the experience-layer strategy worked because it met the needs of both users and the teams responsible for the existing systems. It gave users one simpler experience while allowing those teams to preserve the business logic and ownership behind their systems. We did not begin with a preferred architecture and force it through. We found an approach that users could adopt and stakeholders could support.
 
-The bigger lesson from Forge is about the experience-layer strategy. It works because it turns potential adversaries into collaborators. The teams who own the legacy systems aren't being displaced — they're being elevated. That framing made every subsequent conversation easier."
+Second, I would establish separate design and code review processes earlier. During the POC, design and front-end development happened together, and that speed helped us move quickly. As Forge became a product, that same informality created confusion. Some features reached code review before the backend was ready, and we waited three or four weeks too long to create cleaner review steps.
+
+The hands-on work still gave me practical lessons in commit hygiene, PR sizing, and pre-reviews. Those lessons now feed directly into training materials for my team.
+
+That's Forge. I am happy to take your questions."
+
+---
+
+#### SLIDE 27 — Case Study 2 Q&A
+
+**Visual:** Dark gradient card.
+
+> **Case Study 02 · Project Forge**
+> **Questions**
+> *~10 minutes*
+
+**WHAT TO SAY:**
+
+"I am happy to take your questions."
 
 ---
 
@@ -564,38 +643,42 @@ A: "Two reasons. First, I'm leading 67 designers toward code delivery. I needed 
 **Q: "How is this project different from what we're building at Capital One?"**
 A: "At the core, it's the same problem: taking backend complexity across multiple systems and unifying it into an AI-powered experience for internal users. The domain is different — PwC budget and staffing versus Capital One card servicing — but the design challenges are nearly identical. Enterprise users with deep domain expertise, AI assistance that needs to earn trust, legacy systems that can't be ripped out, and the need for a design system to scale consistently. That pattern is what I'm built for."
 
----
+**Questions to ask them (if time at the end of Q&A 2 or closing):**
+
+1. "How do you think about authoring and governance across servicing experiences? Who owns the pattern when a new workflow needs to be created, versus when an existing one needs to be governed?"
+2. "When ops, content, and platform disagree on a servicing experience, where does design sit in that conversation?"
 
 ---
 
-
+---
 
 ### CLOSING (30 seconds)
 
 ---
 
+#### SLIDE 28 — Thank You
 
+**Visual:** Dark gradient closing card with the PA monogram.
 
-#### SLIDE 26 — Thank You
-
-**Visual:** Clean, simple
-
-> Pia Anderson
-> [pia@email.com](mailto:pia@email.com) (replace with real)
-> "Happy to go deeper on Agent OS or any other work."
+> **Thank you**
+> *Happy to go deeper on anything we've discussed.*
+>
+> **Pia Anderson**
+> [career@piaanderson.com](mailto:career@piaanderson.com)
+> [pia@piaanderson.com](mailto:pia@piaanderson.com)
+> [linkedin.com/in/uxpiaanderson](https://linkedin.com/in/uxpiaanderson)
 
 **WHAT TO SAY:**
 
-"Thank you for your time. I'm happy to go deeper on anything we discussed — or on Agent OS, or any other work in my portfolio."
+"Thank you for your time. I'm happy to go deeper on anything we discussed. I also have a couple of questions about how this team works, if we have a few minutes."
+
+**SPEAKER NOTE:** Do not invite Agent OS here. If they ask, go deep. Close on the through-line: internal tools, trust with expert operators, building the layer when the end state is not known.
 
 ---
 
-
 ---
 
 ---
-
-
 
 ## IMAGE INVENTORY
 
@@ -603,36 +686,42 @@ A: "At the core, it's the same problem: taking backend complexity across multipl
 
 **Southwest Ops Suite:**
 
-| Image | Use on slide | Notes |
-|---|---|---|
-| `noc-environment.png` | Slide 6 (title bg) + Slide 7 (problem) | Wide panoramic NOC shot — sets the scene |
-| `recovery-optimizer-noc.png` | Slide 9 (AI trust) | The Baker on screen in the NOC — purple lighting, dramatic |
-| `noc-workstation-vview.png` | Slide 10 (AI trust detail) | Close-up variant of Baker in NOC |
-| `hero-gate-schedule.png` | Slide 8 (suite overview) + Slide 11 (dark/light comparison - light side) | Gate Schedule in a bright office with airport visible |
-| `station-settings-phx.png` or `station-settings-airport-view.png` | Slide 11 (dark/light comparison - light side) | Station Settings with Southwest planes through window |
-| `gate-schedule-tablet-tarmac.png` | Slide 13 (research/users in context) | Worker using tablet on the tarmac — your most visceral photo |
-| `design-system.png` | Slide 12 (design system) | Full component library spread |
+
+| Image                                                             | Use on slide                                                             | Notes                                                        |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------ |
+| `noc-environment.png`                                             | Slide 6 (title bg) + Slide 7 (problem)                                   | Wide panoramic NOC shot — sets the scene                     |
+| `recovery-optimizer-noc.png`                                      | Slide 9 (AI trust)                                                       | The Baker on screen in the NOC — purple lighting, dramatic   |
+| `noc-workstation-vview.png`                                       | Slide 10 (AI trust detail)                                               | Close-up variant of Baker in NOC                             |
+| `hero-gate-schedule.png`                                          | Slide 8 (suite overview) + Slide 11 (dark/light comparison - light side) | Gate Schedule in a bright office with airport visible        |
+| `station-settings-phx.png` or `station-settings-airport-view.png` | Slide 11 (dark/light comparison - light side)                            | Station Settings with Southwest planes through window        |
+| `gate-schedule-tablet-tarmac.png`                                 | Slide 13 (research/users in context)                                     | Worker using tablet on the tarmac — your most visceral photo |
+| `design-system.png`                                               | Slide 12 (design system)                                                 | Full component library spread                                |
+
 
 **Project Forge:**
 
-| Image | Use on slide | Notes |
-|---|---|---|
-| `hero.png` or `portfolio-overview-laptop.png` | Slide 16 (title) + Slide 18 (role) | Dashboard with Flex Felix, portfolio health, attention queue |
-| `briefing-decision-frame-evidence-panels.png` | Slide 20 (research/direction) | AI briefing with recommendation, confidence score, evidence panels |
-| `portfolio-ranked-signals-tabbed.png` | Slide 20 (alongside briefing) | Pursuit signals with ranked fit scores |
-| `wizard-step-1-engagement-details.png` | Slide 23 (leading through making) | Form pre-filled by AI, "From briefing" labels |
-| `wizard-step-2-budget-options.png` or `budget-comparison-laptop.png` | Slide 22 (budget comparison) | Three delivery model options side by side |
+
+| Image                                                                | Use on slide                       | Notes                                                              |
+| -------------------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------------ |
+| `hero.png` or `portfolio-overview-laptop.png`                        | Slide 17 (title) + Slide 19 (role) | Dashboard with Flex Felix, portfolio health, attention queue       |
+| `briefing-decision-frame-evidence-panels.png`                        | Slide 21 (research/direction)      | AI briefing with recommendation, confidence score, evidence panels |
+| `portfolio-ranked-signals-tabbed.png`                                | Slide 21 (alongside briefing)      | Pursuit signals with ranked fit scores                             |
+| `wizard-step-1-engagement-details.png`                               | Slide 24 (leading through making)  | Form pre-filled by AI, "From briefing" labels                      |
+| `wizard-step-2-budget-options.png` or `budget-comparison-laptop.png` | Slide 23 (budget comparison)       | Three delivery model options side by side                          |
+
 
 **Agent OS (for intro/backup):**
 
-| Image | Use on slide | Notes |
-|---|---|---|
+
+| Image                       | Use on slide                     | Notes                                                 |
+| --------------------------- | -------------------------------- | ----------------------------------------------------- |
 | `canvas-builder-laptop.png` | Slide 4 (Credentials) — optional | Agent OS canvas builder for visual reference if asked |
+
 
 ### Diagrams to create
 
-**1. Forge Architecture Diagram (for Slide 19)**
-Show three boxes at the bottom: "Budget Creation," "Staffing / Deployment," "Monitoring & Reporting" — each labeled "10+ years of business logic." Above them, a connecting layer labeled "Forge — AI + Experience Layer." Above that, the Forge UI. Arrows show data flowing up through the experience layer. Keep it simple — three colors max.
+**1. Forge Architecture Diagram (for Slide 20)**
+Show three boxes at the bottom: "Budget Creation," "Staffing / Deployment," and "Monitoring & Reporting," each labeled "10+ years of business logic." Above them, show one unified layer labeled "Forge — AI + Experience Layer." Include the four capability pills inside that layer. Arrows show data flowing up from each legacy system. Do not add a separate Forge interface layer.
 
 **2. Southwest Suite Map (for Slide 8 — optional)**
 If you want a visual showing the five applications in the suite: The Baker (Recovery Optimizer), Gate Management, Station Management, Turn Management, Flight Audit. Show them connected through the OpsSuite Design System. This is optional — you could also just show screenshots of multiple apps side by side.
@@ -641,44 +730,48 @@ If you want a visual showing the five applications in the suite: The Baker (Reco
 
 ## TIMING GUIDE
 
-| Section | Target Time | Running Total |
-|---|---|---|
-| **Opening** | | |
-| Slide 1: Title | 0:15 | 0:15 |
-| Slide 2: Agenda | 0:15 | 0:30 |
-| Slide 3: About Me — Personal | 0:45 | 1:15 |
-| Slide 4: About Me — Credentials | 0:15 | 1:30 |
-| Slide 5: About Me — Origin Story | 1:30 | 3:00 |
-| **Case Study 1: Southwest** | | |
-| Slide 6: Title card | 0:30 | 3:30 |
-| Slide 7: Problem | 2:00 | 5:30 |
-| Slide 8: Role & Suite | 1:00 | 6:30 |
-| Slides 9-10: AI Trust | 6:00 | 12:30 |
-| Slides 11-12: Design System | 4:00 | 16:30 |
-| Slide 13: Research & Team | 2:00 | 18:30 |
-| Slide 14: Outcomes | 1:00 | 19:30 |
-| Slide 15: Reflection | 1:00 | 20:30 |
-| **Q&A 1** | 10:00 | 30:30 |
-| **Case Study 2: Forge** | | |
-| Slide 16: Title card | 0:20 | 30:50 |
-| Slide 17: Problem | 2:30 | 33:20 |
-| Slide 18: Role | 1:30 | 34:50 |
-| Slide 19: Experience Layer | 4:30 | 39:20 |
-| Slides 20-21: Research/Direction | 4:30 | 43:50 |
-| Slides 22-23: Leading Through Making | 5:00 | 48:50 |
-| Slide 24: Outcomes | 1:30 | 50:20 |
-| Slide 25: Reflection | 1:00 | 51:20 |
-| **Q&A 2** | 10:00 | 61:20 |
-| Slide 26: Thank you | 0:15 | ~61:30 |
 
-**SPEAKER NOTE:** If you're running long, the first place to compress is Decision 2 (Design System) in Southwest. The AI trust story and outcomes are non-negotiable. In Forge, the experience-layer decision can be shortened — the key point lands in 2 minutes even if you have 4. The About Me section should feel conversational, not rushed — but 3 minutes is the ceiling.
+| Section                              | Target Time | Running Total |
+| ------------------------------------ | ----------- | ------------- |
+| **Opening**                          |             |               |
+| Slide 1: Title                       | 0:15        | 0:15          |
+| Slide 2: Agenda                      | 0:20        | 0:35          |
+| Slide 3: About Me — Personal         | 0:25        | 1:00          |
+| Slide 4: About Me — Credentials      | 0:15        | 1:15          |
+| Slide 5: About Me — Origin Story     | 1:30        | 2:45          |
+| **Case Study 1: Southwest**          |             |               |
+| Slide 6: Title card                  | 0:15        | 3:00          |
+| Slide 7: Problem                     | 2:00        | 5:00          |
+| Slide 8: Role & Suite                | 1:00        | 6:00          |
+| Slides 9-10: AI Trust                | 6:00        | 12:00         |
+| Slides 11-12: Design System          | 4:00        | 16:00         |
+| Slide 13: Research & Team            | 2:00        | 18:00         |
+| Slide 14: Outcomes                   | 1:00        | 19:00         |
+| Slide 15: Reflection                 | 1:00        | 20:00         |
+| Slide 16: Southwest Q&A card         | —           | 20:00         |
+| **Q&A 1**                            | 10:00       | 30:00         |
+| **Case Study 2: Forge**              |             |               |
+| Slide 17: Title card                 | 0:15        | 30:15         |
+| Slide 18: Problem                    | 2:30        | 32:45         |
+| Slide 19: Role                       | 1:30        | 34:15         |
+| Slide 20: Experience Layer           | 3:30        | 37:45         |
+| Slides 21-22: Research/Direction     | 4:30        | 42:15         |
+| Slides 23-24: Leading Through Making | 5:00        | 47:15         |
+| Slide 25: Outcomes                   | 1:30        | 48:45         |
+| Slide 26: Reflection                 | 1:00        | 49:45         |
+| Slide 27: Forge Q&A card             | —           | 49:45         |
+| **Q&A 2**                            | 10:00       | 59:45         |
+| Slide 28: Thank you                  | 0:15        | 60:00         |
+
+
+**SPEAKER NOTE:** If you're running long, the first place to compress is Decision 2 (Design System) in Southwest. The AI trust story and outcomes are non-negotiable. In Forge, the experience-layer decision can be shortened — the key point lands in 2 minutes even if you have 4. The About Me section should feel conversational, not rushed — but 3 minutes is the ceiling. Protect Forge. Do not cut the research pivot or the player-coach making story.
 
 ---
 
 ## GENERAL Q&A PREP
 
 **Q: "Why are you leaving PwC?"**
-A: Keep it positive and forward-looking. "I've had an incredible run — building teams, shipping products, leading org-wide transformations. I'm looking for a role where I can go deep on a single product domain with a team that's building at this level of complexity. The Card Servicing & Support Platform role is exactly that."
+A: "I've had a great run at PwC — building teams, shipping products, leading transformations. But our work has evolved toward creating experiences sold to clients, and I find myself designing for users I'll never meet. What drew me to this career was designing for the people in the room — the supervisors, the agents, the teams working the tools every day. Capital One's Card Servicing & Support role is exactly that: internal platforms for real operational users whose work you can observe, whose feedback you can hear, and whose days you can make better. That's the kind of design leadership I want to do."
 
 **Q: "How do you think about AI in design tools versus AI in the products you design?"**
 A: "They're the same fundamental problem: making AI useful to someone who has domain expertise. Whether that's a designer using AI to write code or a customer service agent using AI to help a cardmember, the design challenge is transparency, trust, and preserving human judgment. I've now experienced both sides — designing AI into products (Baker, Agent OS, Forge) and using AI as a design tool (Forge code delivery)."
@@ -696,36 +789,12 @@ A: Pull from the Forge stakeholder story (chat-first → research → dual path)
 
 ## PROMPT FOR CLAUDE DESIGN
 
-When you're ready to build the visual deck, use this prompt:
+**Use `claude-design-prompt.md`** (in this same folder). It preserves the current visual deck and replaces all presenter notes from this master script.
 
----
+**Attach two files when you open the Claude Design conversation:**
+1. The current slide deck PDF (`Design_9-28-26bsm_1.pdf`) — visual baseline
+2. This script file (`capital-one-portfolio-review.md`) — presenter-notes source of truth
 
-**Prompt:**
-
-"I need to create a 26-slide presentation deck for a Director-level portfolio review at Capital One. The presentation covers two case studies: Southwest Airlines Ops Suite and Project Forge (PwC).
-
-**Design direction:**
-- Clean, modern, minimal. Let the work speak — the slides should frame it, not compete with it.
-- Dark background slides for section transitions / title cards. Light background for content slides.
-- Typography-forward. Large headlines, generous whitespace.
-- Images should be large and contextual — these are real products in real environments, not mockups.
-- No decorative elements. No icons for the sake of icons. Every element earns its place.
-
-**Structure:**
-- Slides 1-2: Title + Agenda
-- Slides 3-5: About Me (Personal photo collage, Credentials with 3 certifications, Origin story)
-- Slides 6-15: Case Study 1 — Southwest Airlines Ops Suite
-- Slides 16-25: Case Study 2 — Project Forge
-- Slide 26: Closing / thank you
-
-**The full content, speaker notes, and image placements are in the attached script document.**
-
-**Images I'll provide:** [list the images from the slides/ folder]
-
-**Diagrams I need you to help create:**
-1. Forge architecture diagram — three legacy systems with an AI/experience layer above them (Slide 19)
-2. Optionally, a Southwest suite application map (Slide 8)
-
-**Tone:** Confident, warm, direct. This is a senior designer who loves the work and knows it cold. The deck should feel like her — not a template."
+Then paste the contents of `claude-design-prompt.md` as your prompt.
 
 ---
